@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme Simply Me</title>
+  <title>학교 정보 통합 알리미</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -51,6 +51,10 @@
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
+  #school{
+  	color: #808080;
+  }
+  
   </style>
 </head>
 <body>
@@ -68,9 +72,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">WHO</a></li>
-        <li><a href="#">WHAT</a></li>
-        <li><a href="#">WHERE</a></li>
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#"></a></li>
       </ul>
     </div>
   </div>
@@ -78,35 +82,36 @@
 
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
-  <h3 class="margin">ㅎㅇ</h3>
+  <h3 class="margin">학교 이름</h3>
   <img src="${resPath}/img/sc.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-  <h3>ㅎㅇㅎㅇ</h3>
+  <h3>학교정보</h3>
 </div>
 
 <!-- Second Container -->
 <div class="container-fluid bg-2 text-center">
-  <h3 class="margin">What Am I?</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+  <h3 class="margin">학교 검색 방법</h3>	
+  <p>학교명 예) 부천정보산업고등학교<br>※ 학교명을 최소 2글자 이상 입력해야합니다<br>※ 띄어쓰기 없이 입력해야 합니다</p>
+  <input type="text" id="school">
   <a href="#" class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-search"></span> Search
+    <span class="glyphicon glyphicon-search"></span> 검색	
   </a>
 </div>
 
 <!-- Third Container (Grid) -->
 <div class="container-fluid bg-3 text-center">    
-  <h3 class="margin">Where To Find Me?</h3><br>
+  <h3 class="margin">학교 검색 순위</h3><br>
   <div class="row">
     <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <p>학교 이름</p>
+       <img src="${resPath}/img/sc.jpg" class="img-circle" style="display:inline" alt="Bird" width="350" height="350">
     </div>
     <div class="col-sm-4"> 
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <img src="${resPath}/img/sc.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
     </div>
     <div class="col-sm-4"> 
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <img src="${resPath}/img/sc.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
     </div>
   </div>
 </div>
