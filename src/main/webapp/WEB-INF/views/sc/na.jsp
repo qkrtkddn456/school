@@ -68,7 +68,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">학교 정보 통합 알리미</a>
+      <a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합 알리미</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -114,6 +114,12 @@
       <img src="${resPath}/img/sc.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
     </div>
   </div>
+  
+  <script>
+  	function mainPage(){
+  		
+  	}
+  </script>
 </div>
 
 <!-- Footer -->
