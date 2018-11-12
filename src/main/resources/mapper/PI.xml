@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdi.sc.PI">
+	<select id="selectPIList" resultType="com.bdi.sc.vo.PIVO">
+		select * from p_info
+	</select>
+
+	<select id="selectPI" resultType="com.bdi.sc.vo.PIVO">
+		select * from p_info
+		where pnum=#{pnum}
+	</select>
+	
+	<insert id="insertPI" >
+		insert into p_info(ptitle,ptext,pgrade,pviews,stnum)
+		values(#{ptitle},#{ptext},#{pgrade},#{pviews},#{stnum})
+	</insert>
+
+	<update id="updatePI" parameterType="com.bdi.sc.vo.PIVO">
+		update p_info
+		set ptitle=#{ptitle},
+		ptext=#{ptext},
+		pgrade=#{pgrade},
+		pviews=#{pviews},
+		stnum=#{stnum}
+		where pnum=#{pnum}
+	</update>
+
+	<delete id="deletePI" parameterType="com.bdi.sc.vo.PIVO">
+		delete from p_info
+		where pnum=#{pnum}
+	</delete>
+</mapper>

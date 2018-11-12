@@ -1,5 +1,6 @@
 package com.bdi.sc.vo;
 
+
 import lombok.Data;
 
 @Data
