@@ -1,7 +1,8 @@
 package com.bdi.sc.vo;
 
+import lombok.Data;
 
-
+@Data
 public class PIVO {
 	private Integer pnum;
 	private String ptitle;
