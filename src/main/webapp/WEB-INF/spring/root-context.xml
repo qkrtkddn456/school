@@ -18,8 +18,20 @@
 		<constructor-arg ref="hc"/>
 	</bean>
 	
+	<bean class="net.sf.log4jdbc.Log4jdbcProxyDataSource" id="ds">
+		<constructor-arg ref="hds"/>
+		<property name="logFormatter">
+			<bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
+				<property name="loggingType" value="MULTI_LINE"/>
+				<property name="sqlPrefix" value="SQL : "></property>
+			</bean>
+		</property>
+	</bean>
+	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="hds"/>
+		<property name="dataSource" ref="ds"/>
+		<property name="typeAliasesPackage" value="com.bdi.sc.vo"/>
+		<property name="mapperLocations" value="classpath:mapper/*.xml"/>
 	</bean>
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactory"/>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdi.sc.ST">
+  <select id="selectSTList" resultType="st">
+    select * from st_info
+  </select>
+   <select id="selectST" resultType="st">
+    select * from st_info
+    where stnum=#{stnum}
+  </select>
+  <insert id="insertST" parameterType="st">
+	insert into st_info(stname,stage,stschool,stgen,stid,stpwd)
+	values(#{stname},#{stage},#{stschool},#{stgen},#{stid},#{stpwd})
+  </insert>
+  <update id="updateST" parameterType="st">
+  	update st_info
+  	set stname=#{stname},stage=#{stage},stschool=#{stschool},stgen=#{stgen},stid=#{stid},stpwd=#{stpwd}
+  	where stnum =#{stnum}
+  </update>
+  <delete id="deleteST" parameterType="st">
+  	delete from st_info
+  	where stnum = #{stnum}
+  </delete>
+</mapper>
