@@ -72,7 +72,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" onclick="goLogin()">로그인</a></li>
+        <li><a href="#">로그인</a></li>
         <li><a href="#">회원가입</a></li>
         <li><a href="#"></a></li>
       </ul>
@@ -117,11 +117,7 @@
   
   <script>
   	function mainPage(){
-  		location = "/uri/sc/na";
-  	}
-  
-  	function goLogin(){
-  		location = "/uri/sc/login";
+  		
   	}
   </script>
 </div>
