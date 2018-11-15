@@ -34,7 +34,7 @@ body {
 	transition: all 0.1s linear;
 }
 .panel-login>.panel-heading a.active{
-	color: #029f5b;
+	color: #6EE5A3;
 	font-size: 18px;
 }
 .panel-login>.panel-heading hr{
@@ -109,6 +109,7 @@ body {
 	border-color: #1CA347;
 }
 
+
 </style>
 </head>
 <body>
@@ -122,7 +123,7 @@ body {
 								<a href="#" class="active" id="login-form-link">로그인</a>
 							</div>
 							<div class="col-xs-6">
-								<a href="#" id="register-form-link">게스트 로그인</a>
+								<a href="#" id="register-form-link">회원가입</a>
 							</div>
 						</div>
 						<hr>
@@ -130,7 +131,7 @@ body {
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
+								<form id="login-form" action="" method="post" role="form" style="display: block;">
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
@@ -158,7 +159,7 @@ body {
 										</div>
 									</div>
 								</form>
-								<form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
+								<form id="register-form" action="" method="post" role="form" style="display: none;">
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
@@ -186,6 +187,9 @@ body {
 			</div>
 		</div>
 		<script>
+		function mainPage(){
+	  		location = "/uri/sc/na";
+	  	}
 		$(function() {
 
 		    $('#login-form-link').click(function(e) {
