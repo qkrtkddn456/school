@@ -16,7 +16,7 @@
 		<property name="minimumIdle" value="${db.minimumIdle}"/>
 		<property name="maximumPoolSize" value="${db.maximumPoolSize}"/>
 	</bean>
-	<bean id="hds" class="com.zaxxer.hikari.HikariDataSource">
+	<bean id="hds" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
 		<constructor-arg ref="hc"/>
 	</bean>
 	
