@@ -56,7 +56,8 @@
   	color: #808080;
   }
   #main-image{
-  margin: 0 -30px 20px 0;
+  border-radius: 50%;
+  margin: 0 0 0 -50px;
   }
   
  
@@ -67,15 +68,15 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-default">
-<a href="/uri/sc/na"><img src="${resPath}/img/sc.jpg" id="main-image" style="display:line" alt="Main" width="60" height="60"></a>
   <div class="container">
     <div class="navbar-header">
+    <a href="/uri/sc/na"><img src="${resPath}/img/school.png" id="main-image" style="display:line" alt="Main" width="60" height="60"></a>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합 알리미</a>
+      <a id="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합 알리미</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
