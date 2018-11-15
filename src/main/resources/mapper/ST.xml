@@ -23,4 +23,9 @@
   	delete from st_info
   	where stnum = #{stnum}
   </delete>
+  
+  <select id="login" parameterType="st" resultType="int">
+  	select * from st_info
+  	where stid=#{stid} and stpwd=#{stpwd}
+  </select>
 </mapper>

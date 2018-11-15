@@ -6,7 +6,7 @@ import com.bdi.sc.vo.PIVO;
 
 public interface PIService {
 
-	public List<PIVO> selectPIList();
+	public List<PIVO> selectPIList(PIVO pi);
 	public PIVO selectPI(Integer pnum);
 	public int insertPI(PIVO pi);
 	public int updatePI(PIVO pi);

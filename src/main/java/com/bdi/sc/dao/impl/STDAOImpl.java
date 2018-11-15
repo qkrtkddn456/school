@@ -17,32 +17,38 @@ public class STDAOImpl implements STDAO {
 
 	@Override
 	public List<STVO> selectSTList(STVO st) {
-		// TODO Auto-generated method stub
+		
 		return ss.selectList("com.bdi.sc.ST.selectSTList",st);
 	}
 
 	@Override
 	public STVO selectST(int stnum) {
-		// TODO Auto-generated method stub
+		
 		return ss.selectOne("com.bdi.sc.ST.selectST",stnum);
 	}
 
 	@Override
 	public int insertST(STVO st) {
-		// TODO Auto-generated method stub
+		
 		return ss.insert("com.bdi.sc.ST.insertST",st);
 	}
 
 	@Override
 	public int updateST(STVO st) {
-		// TODO Auto-generated method stub
+		
 		return ss.update("com.bdi.sc.ST.updateST",st);
 	}
 
 	@Override
 	public int deleteST(int stnum) {
-		// TODO Auto-generated method stub
+		
 		return ss.delete("com.bdi.sc.ST.deleteST",stnum);
+	}
+
+	@Override
+	public int login(STVO st) {
+		
+		return ss.selectOne("com.bdi.sc.ST.login",st);
 	}
 
 }

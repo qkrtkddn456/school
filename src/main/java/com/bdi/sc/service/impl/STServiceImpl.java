@@ -44,4 +44,10 @@ public class STServiceImpl implements STService {
 		return sdao.deleteST(stnum);
 	}
 
+	@Override
+	public int login(STVO st) {
+		// TODO Auto-generated method stub
+		return sdao.login(st);
+	}
+
 }

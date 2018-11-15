@@ -22,27 +22,27 @@ public class PIController {
 	private PIService ps;
 	
 	@GetMapping(value="/pis")
-	public @ResponseBody List<PIVO> selectExamList() {
-		return ps.selectPIList();
+	public @ResponseBody List<PIVO> selectPIList(@RequestBody PIVO pi) {
+		return ps.selectPIList(pi);
 	}
 	
 	@GetMapping(value="/pis/{pnum}")
-	public @ResponseBody PIVO getExam(@PathVariable Integer pnum) {
+	public @ResponseBody PIVO selectPI(@PathVariable Integer pnum) {
 		return ps.selectPI(pnum);
 	}
 	
 	@PostMapping(value="/pis/{pnum}")
-	public @ResponseBody int insertExam(@RequestBody PIVO pi) {
+	public @ResponseBody int insertPI(@RequestBody PIVO pi) {
 		return ps.insertPI(pi);
 	}
 	
 	@PutMapping(value="/pis/{pnum}")
-	public @ResponseBody int updateExam(@RequestBody PIVO pi) {
+	public @ResponseBody int updatePI(@RequestBody PIVO pi) {
 		return ps.updatePI(pi);
 	}
 	
 	@DeleteMapping(value="/pis/{pnum}")
-	public @ResponseBody int deleteExam(@PathVariable Integer pnum) {
+	public @ResponseBody int deletePI(@PathVariable Integer pnum) {
 		return ps.deletePI(pnum);
 	}
 	

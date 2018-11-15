@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.bdi.sc.dao.STDAO;
+import com.bdi.sc.service.STService;
 import com.bdi.sc.vo.STVO;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -16,7 +18,7 @@ import com.bdi.sc.vo.STVO;
 public class mybatisTest {
 
 	@Autowired
-	private SqlSession ss;
+	private STService dao;
 	
 	@Test
 	public void test() {
@@ -27,7 +29,7 @@ public class mybatisTest {
 		st.setStgen(3);
 		st.setStid("ddzz");
 		st.setStpwd("dfsdf");
-		System.out.println(ss.selectList("com.bdi.sc.ST.deleteST",6));
+		System.out.println(dao.selectSTList(st));
 	}
 
 }

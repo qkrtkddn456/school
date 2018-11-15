@@ -16,7 +16,7 @@
 		<property name="minimumIdle" value="${db.minimumIdle}"/>
 		<property name="maximumPoolSize" value="${db.maximumPoolSize}"/>
 	</bean>
-	<bean id="hds" class="com.zaxxer.hikari.HikariDataSource">
+	<bean id="hds" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
 		<constructor-arg ref="hc"/>
 	</bean>
 	
@@ -38,4 +38,6 @@
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactory"/>
 	</bean>
+	<context:component-scan base-package="com.bdi.sc.dao" />
+	<context:component-scan base-package="com.bdi.sc.service" />
 </beans>
