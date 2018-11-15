@@ -16,8 +16,8 @@ public class PIDAOImpl implements PIDAO {
 	private SqlSession ss;
 	
 	@Override
-	public List<PIVO> selectPIList() {
-		return ss.selectList("com.bdi.sc.PI.selectPIList");
+	public List<PIVO> selectPIList(PIVO pi) {
+		return ss.selectList("com.bdi.sc.PI.selectPIList",pi);
 	}
 
 	@Override

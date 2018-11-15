@@ -16,8 +16,8 @@ public class PIServiceImpl implements PIService {
 	private PIDAO pd;
 	
 	@Override
-	public List<PIVO> selectPIList() {
-		return pd.selectPIList();
+	public List<PIVO> selectPIList(PIVO pi) {
+		return pd.selectPIList(pi);
 	}
 
 	@Override
