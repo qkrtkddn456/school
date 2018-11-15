@@ -22,7 +22,7 @@ public class CIController {
 	@Autowired
 	CIService cs;
 	
-	@GetMapping(value="/cis")
+	@GetMapping(value="/cis")	
 	public @ResponseBody List<CIVO> selectCIList(@RequestBody CIVO ci) {
 		return cs.selectCIList(ci);
 	}
