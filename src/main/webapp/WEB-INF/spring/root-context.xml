@@ -13,6 +13,8 @@
 		<property name="password" value="${db.password}"/>
 		<property name="driverClassName" value="${db.className}"/>
 		<property name="autoCommit" value="${db.autoCommit}"/>
+		<property name="minimumIdle" value="${db.minimumIdle}"/>
+		<property name="maximumPoolSize" value="${db.maximumPoolSize}"/>
 	</bean>
 	<bean id="hds" class="com.zaxxer.hikari.HikariDataSource">
 		<constructor-arg ref="hc"/>
