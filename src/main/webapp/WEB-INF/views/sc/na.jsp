@@ -56,8 +56,8 @@
   	color: #808080;
   }
   #main-image{
-  border-radius: 50%;
-  margin: 0 0 0 -50px;
+  float:left;
+  margin-right:20px;
   }
   
  
@@ -76,7 +76,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a id="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합 알리미</a>
+      <a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합 알리미</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">

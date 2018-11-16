@@ -51,9 +51,16 @@
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
+ 
   #school{
   	color: #808080;
   }
+  #main-image{
+  border-radius: 50%;
+  margin: 0 0 0 -50px;
+  }
+  
+ 
   
   </style>
 </head>
@@ -63,17 +70,18 @@
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
+    <a href="/uri/sc/na"><img src="${resPath}/img/school.png" id="main-image" style="display:line" alt="Main" width="60" height="60"></a>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합 알리미</a>
+      <a id="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합 알리미</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">로그인</a></li>
-        <li><a href="#">회원가입</a></li>
+        <li><a href="#" onclick="goLogin()">로그인</a></li>
+        <li><a href="#" onclick="goSignin()">회원가입</a></li>
         <li><a href="#"></a></li>
       </ul>
     </div>
@@ -82,8 +90,9 @@
 
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
+	<img src="${resPath}/img/sc.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">	
   <h3 class="margin">학교 이름</h3>
-  <img src="${resPath}/img/sc.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+  
   <h3>학교정보</h3>
 </div>
 
@@ -117,7 +126,14 @@
   
   <script>
   	function mainPage(){
-  		
+  		location = "/uri/sc/na";
+  	}
+  
+  	function goLogin(){
+  		location = "/uri/sc/login";
+  	}
+  	function goSignin(){
+  		location = "/uri/sc/login";
   	}
   </script>
 </div>
