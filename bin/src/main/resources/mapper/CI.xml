@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdi.sc.CI">
+  <select id="selectCIList" resultType="ci">
+    select * from c_info
+  </select>
+   <select id="selectCI" resultType="ci">
+    select * from c_info
+    where cnum=#{cnum}
+  </select>
+  <insert id="insertCI" parameterType="ci">
+	insert into c_info(ctext,pnum,stnum)
+	values(#{ctext},#{pnum},#{stnum})
+  </insert>
+  <update id="updateCI" parameterType="ci">
+  	update c_info
+  	set ctext=#{ctext}
+  	where cnum =#{cnum}
+  </update>
+  <delete id="deleteCI" parameterType="ci">
+  	delete from c_info
+  	where cnum = #{cnum}
+  </delete>
+</mapper>
