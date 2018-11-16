@@ -172,11 +172,11 @@ body {
 								<form id="login-form" action="" method="post" role="form"
 									style="display: block;">
 									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1"
+										<input type="text" name="loginid" id="loginid" tabindex="1"
 											class="form-control" placeholder="Username" value="">
 									</div>
 									<div class="form-group">
-										<input type="password" name="password" id="password"
+										<input type="password" name="loginpwd" id="loginpwd"
 											tabindex="2" class="form-control" placeholder="Password">
 									</div>
 									<div class="form-group text-center">
@@ -304,6 +304,14 @@ body {
 				var school = document.getElementById("school").value;
 				var gender = document.getElementById("gender").value;
 				alert(pwd2);
+			}
+			
+			function login(){			
+				var id = document.getElementById('loginid').value;
+				var pwd = document.getElementById('loginpwd').value;
+				
+				
+				
 			}
 			
 		</script>
