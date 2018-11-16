@@ -172,20 +172,12 @@ body {
 								<form id="login-form" action="" method="post" role="form"
 									style="display: block;">
 									<div class="form-group">
-<<<<<<< HEAD
 										<input type="text" name="username" id="username" tabindex="1"
 											class="form-control" placeholder="Username" value="">
-=======
-										<input type="text" name="loginid" id="loginid" tabindex="1" class="form-control" placeholder="Username" value="">
->>>>>>> branch 'master' of https://github.com/qkrtkddn456/school.git
 									</div>
 									<div class="form-group">
-<<<<<<< HEAD
 										<input type="password" name="password" id="password"
 											tabindex="2" class="form-control" placeholder="Password">
-=======
-										<input type="password" name="loginpwd" id="loginpwd" tabindex="2" class="form-control" placeholder="Password">
->>>>>>> branch 'master' of https://github.com/qkrtkddn456/school.git
 									</div>
 									<div class="form-group text-center">
 										<input type="checkbox" tabindex="3" class="" name="remember"
@@ -195,13 +187,9 @@ body {
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-<<<<<<< HEAD
 												<input type="submit" name="login-submit" id="login-submit"
 													tabindex="4" class="form-control btn btn-login"
 													value="Log In">
-=======
-												<input type="botton" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In" onclick="login()">
->>>>>>> branch 'master' of https://github.com/qkrtkddn456/school.git
 											</div>
 
 										</div>
@@ -296,7 +284,6 @@ body {
 					e.preventDefault();
 				});
 
-<<<<<<< HEAD
 			});
 			
 			$('#radioBtn a').on('click', function(){
@@ -319,18 +306,6 @@ body {
 				alert(pwd2);
 			}
 			
-=======
-		});
-		function login(){
-			
-			var id = document.getElementById('loginid').value;
-			var pwd = document.getElementById('loginpwd').value;
-			
-			
-			
-		}
-		
->>>>>>> branch 'master' of https://github.com/qkrtkddn456/school.git
 		</script>
 	</div>
 </body>
