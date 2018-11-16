@@ -52,7 +52,7 @@
       color: #1abc9c !important;
   }
  
-  #school{
+  #sname{
   	color: #808080;
   }
   #main-image{
@@ -100,8 +100,8 @@
 <div class="container-fluid bg-2 text-center">
   <h3 class="margin">학교 검색 방법</h3>	
   <p>학교명 예) 부천정보산업고등학교<br>※ 학교명을 최소 2글자 이상 입력해야합니다<br>※ 띄어쓰기 없이 입력해야 합니다</p>
-  <input type="text" id="school">
-  <a href="#" class="btn btn-default btn-lg">
+  <input type="text" id="sname">
+  <a onclick="goSearch()" class="btn btn-default btn-lg">
     <span class="glyphicon glyphicon-search"></span> 검색	
   </a>
 </div>
@@ -126,7 +126,7 @@
   
   <script>
   	function mainPage(){
-  		location = "/uri/sc/na";
+  		location = "/uri/sc/main";
   	}
   
   	function goLogin(){
@@ -134,6 +134,11 @@
   	}
   	function goSignin(){
   		location = "/uri/sc/login";
+  	}
+  	function goSearch(){
+  		var sname = document.querySelector("#sname").value;
+  		
+  		alert(sname);	
   	}
   </script>
 </div>
