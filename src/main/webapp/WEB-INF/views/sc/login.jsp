@@ -319,10 +319,10 @@ body {
 						stpwd:pwd}),
 						success : function(res){
 							res = JSON.parse(res);
-<<<<<<< HEAD
+
 							alert(res.msg);
 								location.href="/uri/sc/main";
-=======
+
 							if(res == 2){
 								alert("아이디가 중복되었습니다");
 							}else if(res == 1){
@@ -331,7 +331,7 @@ body {
 							}else{
 								alert("회원가입에 실패하였습니다");
 							}	
->>>>>>> branch 'master' of https://github.com/qkrtkddn456/school.git
+
 						}
 				}
 
