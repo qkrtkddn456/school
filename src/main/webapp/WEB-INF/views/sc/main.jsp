@@ -52,16 +52,36 @@
       color: #1abc9c !important;
   }
  
-  #sname{
+  #school{
   	color: #808080;
   }
   #main-image{
-  border-radius: 50%;
-  margin: 0 0 0 -50px;
+  float:left;
+  margin-right:20px;
   }
   
  
-  
+  #imaginary_container{
+    margin-top:20%; /* Don't copy this */
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}.col-sm-6 {
+    width: 50%;
+}
+
+.col-sm-offset-3 {
+    margin: -50px 0px 0px 10px;
+}
   </style>
 </head>
 <body>
@@ -76,8 +96,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a id="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합 알리미</a>
+      <a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합 알리미</a>
     </div>
+    <div class="container">
+	<div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div id="imaginary_container"> 
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control"  placeholder="학교명 예) 부천정보산업고등학교" >
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>  
+                    </span>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#" onclick="goLogin()">로그인</a></li>
@@ -96,15 +132,22 @@
   <h3>학교정보</h3>
 </div>
 
+<<<<<<< HEAD
+<!-- Second Container 
+=======
 <!-- Second Container -->
+<iframe src="//www.career.go.kr/cnet/iframe/School.do?apiKey=57bf0d07a594923af77931ec7ad5e668&gubun=high_list" scrolling="no" name="ce" width="680" height="1080" frameborder="0" style="border-width:0px;border-color:white; border-style:solid;"> </iframe>
+>>>>>>> branch 'master' of https://github.com/qkrtkddn456/school.git
 <div class="container-fluid bg-2 text-center">
   <h3 class="margin">학교 검색 방법</h3>	
   <p>학교명 예) 부천정보산업고등학교<br>※ 학교명을 최소 2글자 이상 입력해야합니다<br>※ 띄어쓰기 없이 입력해야 합니다</p>
-  <input type="text" id="sname">
-  <a onclick="goSearch()" class="btn btn-default btn-lg">
+  <input type="text" id="school">
+  <a href="#" class="btn btn-default btn-lg">
     <span class="glyphicon glyphicon-search"></span> 검색	
   </a>
 </div>
+-->
+
 
 <!-- Third Container (Grid) -->
 <div class="container-fluid bg-3 text-center">    
@@ -126,7 +169,7 @@
   
   <script>
   	function mainPage(){
-  		location = "/uri/sc/main";
+  		location = "/uri/sc/na";
   	}
   
   	function goLogin(){
@@ -134,11 +177,6 @@
   	}
   	function goSignin(){
   		location = "/uri/sc/login";
-  	}
-  	function goSearch(){
-  		var sname = document.querySelector("#sname").value;
-  		
-  		alert(sname);	
   	}
   </script>
 </div>
