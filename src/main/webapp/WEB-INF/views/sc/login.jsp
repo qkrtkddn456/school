@@ -265,7 +265,7 @@ body {
 		</div>
 		<script>
 			function mainPage() {
-				location = "/uri/sc/na";
+				location = "/uri/sc/main";
 			}
 			$(function() {
 
@@ -320,7 +320,7 @@ body {
 						success : function(res){
 							res = JSON.parse(res);
 							alert(res.msg);
-								location.href="/uri/sc/na";
+								location.href="/uri/sc/main";
 						}
 				}
 
