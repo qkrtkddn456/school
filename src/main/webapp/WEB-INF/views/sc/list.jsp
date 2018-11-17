@@ -26,10 +26,16 @@ p {
 }
 .margin {
 	margin-bottom: 45px;
-}
+	margin-top:-3%;
+	margin:10px;
+	color:#474e5d;
+	}
 .bg-1 {
-	background-color: #1abc9c; /* Green */
+	background-color: #FAFAFA; /* Green */
 	color: #ffffff;
+	background-image:url("http://cafefiles.naver.net/20140815_50/ohyama2014_1408065561725jUott_PNG/30447508_big_p6.png");
+	background-size:cover;
+
 }
 .bg-2 {
 	background-color: #474e5d; /* Dark Blue */
@@ -50,11 +56,14 @@ p {
 .navbar {
 	padding-top: 15px;
 	padding-bottom: 15px;
-	border: 20px;
+	border: 1px solid;
+	border-color: #BDBDBD;
 	border-radius: 0;
 	margin-bottom: 0;
 	font-size: 12px;
 	letter-spacing: 5px;
+	background-color:#FFFFFF;
+	
 }
 .navbar-nav  li a:hover {
 	color: #1abc9c !important;
@@ -86,10 +95,12 @@ p {
 	font-size: 15px;
 }
 #imaginary_container {
-	margin-top: 20%; /* Don't copy this */
+	margin-top: 20%;
+	
 }
 .stylish-input-group .input-group-addon {
 	background: white !important;
+
 }
 .stylish-input-group .form-control {
 	border-right: 0;
@@ -99,6 +110,7 @@ p {
 .stylish-input-group button {
 	border: 0;
 	background: transparent;
+	margin-top:-10%;
 }
 .col-sm-6 {
 	width: 50%;
@@ -112,11 +124,26 @@ p {
 .navbar-right { .pull-right ();
 	margin-top:-40px;
 }
+
+.border-primary{
+color:#BDBDBD;
+opacity:0.5;
+}
+
+.border-primary  {
+    display: inline-block;
+    width: 100rem;
+    height: 100rem;
+    margin: .25rem;
+    background-color: #f5f5f5;
+    border: 1px solid;
+    border-color:#A4A4A4;
+    color:#1C1C1C;
 }
 </style>
 </head>
 <body>
-${sessionScope.user}
+
 	<!-- Navbar -->
 	<nav class="navbar navbar-default">
 		<div class="container">
@@ -151,110 +178,39 @@ ${sessionScope.user}
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#" onclick="goLogin()" id="login">로그인/회원가입</a></li>	
+					<li><a href="#" onclick="goLogin()">로그인</a></li>
+					<li><a href="#" onclick="goSignin()">회원가입</a></li>
 				</ul>
 			</div>
 			<div class="collapse navbar-collapse" id="mySubbar">
 				<ul class="nav navbar-nav navbar-left">
-					<li id="a"><a href="#" onclick="goschool()">학교찾기</a></li>
+					<li id="a"><a href="#">학교찾기</a></li>
 					<li id="b"><a href="#">학교찾기</a></li>
 					<li id="c"><a href="#">학교찾기</a></li>
 					<li id="d"><a href="#">학교찾기</a></li>
 				</ul>
 			</div>
 		</div>
-	</nav> 
-
-	<!-- First Container -->
-	<div class="container-fluid bg-1 text-center">
-		<img src="${resPath}/img/학생.jpg"
-			class="rounded-circle img-circle margin" style="display: inline"
-			alt="Bird" width="120" height="120"> <img
-			src="${resPath}/img/a.jpg" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120"> <img
-			src="${resPath}/img/sc.jpg" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120"> <img
-			src="${resPath}/img/음식.jpg" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120"> <img
-			src="${resPath}/img/지도.png" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120">
-		<h3 class="margin">학교 이름</h3>
-
-		<h3>학교정보</h3>
-	</div>
-
-	<!-- Second Container -->
-	<div class="container-fluid bg-2 text-center">
-		<h3 class="margin">학교 검색 방법</h3>
-		<p>
-			학교명 예) 부천정보산업고등학교<br>※ 학교명을 최소 2글자 이상 입력해야합니다<br>※ 띄어쓰기 없이
-			입력해야 합니다
-		</p>
-		<input type="text" id="school"> <a href="#"
-			class="btn btn-default btn-lg"> <span
-			class="glyphicon glyphicon-search"></span> 검색
-		</a>
-	</div>
-
-	<!-- Third Container (Grid) -->
-	<div class="container-fluid bg-3 text-center">
-		<h3 class="margin">학교 검색 순위</h3>
+	</nav>
+<div class="container-fluid bg-1 text-center">
+		<div class="margin">학교 검색</div>
 		<br>
 		<div class="row">
-			<div class="col-sm-4">
+			<div class="border border-primary">
 				<p>학교 이름</p>
-				<img src="${resPath}/img/sc.jpg" class="img-circle"
-					style="display: inline" alt="Bird" width="350" height="350">
-			</div>
-			<div class="col-sm-4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<img src="${resPath}/img/sc.jpg"
-					class="img-responsive img-circle margin" style="display: inline"
-					alt="Bird" width="350" height="350">
-			</div>
-			<div class="col-sm-4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<img src="${resPath}/img/sc.jpg"
-					class="img-responsive img-circle margin" style="display: inline"
-					alt="Bird" width="350" height="350">
 			</div>
 		</div>
-
 		<script>
-			
-			var ses = '${sessionScope.ses}';
-			var loginBtn = document.getElementById("login");
-			if(!ses){
-				loginBtn.innerHTML = "로그인";
-			}else{
-				loginBtn.innerHTML = "로그아웃";
-			}
 			function mainPage() {
 				location = "/uri/sc/main";
 			}
-
-
-			function goLogin() {	
-				if(!ses){
-					location = "/uri/sc/login";
-				}else{
-					location = "/logout";
-				}
-
-			function goschool() {
-				location = "/uri/sc/list";
+			function goLogin() {
+				location = "/uri/sc/login";
+			}
+			function goSignin() {
+				location = "/uri/sc/login";
 			}
 		</script>
 	</div>
-
-	<!-- Footer -->
-	<footer class="container-fluid bg-4 text-center">
-		<p>
-			Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a>
-		</p>
-	</footer>
-
 </body>
 </html>
