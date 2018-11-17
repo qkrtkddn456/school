@@ -25,7 +25,7 @@ p {
 	font-size: 16px;
 }
 .margin {
-	margin-bottom: 45px;
+	margin-bottom: 20px;
 }
 .bg-1 {
 	background-color: #1abc9c; /* Green */
@@ -49,7 +49,7 @@ p {
 }
 .navbar {
 	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-bottom: 8px;
 	border: 20px;
 	border-radius: 0;
 	margin-bottom: 0;
@@ -96,6 +96,7 @@ p {
 	box-shadow: 0 0 0;
 	border-color: #ccc;
 }
+
 .stylish-input-group button {
 	border: 0;
 	background: transparent;
@@ -191,15 +192,14 @@ p {
 			학교명 예) 부천정보산업고등학교<br>※ 학교명을 최소 2글자 이상 입력해야합니다<br>※ 띄어쓰기 없이
 			입력해야 합니다
 		</p>
-		<input type="text" id="school"> <a href="#"
-			class="btn btn-default btn-lg"> <span
-			class="glyphicon glyphicon-search"></span> 검색
+		<input type="text" id="school"> <a href="#" class="btn btn-default btn-lg"> 
+		<span class="glyphicon glyphicon-search"></span> 검색
 		</a>
 	</div>
 
 	<!-- Third Container (Grid) -->
 	<div class="container-fluid bg-3 text-center">
-		<h3 class="margin">학교 검색 순위</h3>
+		<h3 class="school-ranking">학교 검색 순위</h3>
 		<br>
 		<div class="row">
 			<div class="col-sm-4">

@@ -62,7 +62,8 @@ p {
 .navbar {
 	padding-top: 15px;
 	padding-bottom: 15px;
-	border: 20px;
+	border: 1px solid;
+	border-color: #2E2E2E;
 	border-radius: 0;
 	margin-bottom: 0;
 	font-size: 12px;
