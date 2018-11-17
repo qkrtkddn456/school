@@ -187,9 +187,9 @@ body {
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="login-submit" id="login-submit"
+												<input type="button" name="login-submit" id="login-submit"
 													tabindex="4" class="form-control btn btn-login"
-													value="Log In">
+													value="Log In" onclick="login()">
 											</div>
 
 										</div>
@@ -295,6 +295,16 @@ body {
 			    $('a[data-toggle="'+tog+'"][data-title="'+sel+'"]').removeClass('notActive').addClass('active');
 			})
 			
+			var gender = 0;
+			
+			function male() {
+				gender = 0;
+			}
+			
+			function female() {
+				gender = 1;
+			}
+			
 			function signup() {
 				var id = document.getElementById("id").value;
 				var pwd = document.getElementById("password").value;
@@ -302,16 +312,35 @@ body {
 				var name = document.getElementById("username").value;
 				var age = document.getElementById("age").value;
 				var school = document.getElementById("school").value;
-				var gender = document.getElementById("gender").value;
-				alert(pwd2);
-			}
+				var conf = {
+						url:'/sts',
+						method:'POST',
+						param:JSON.stringify({stname:name,stage:age,stschool:school,stgen:gender,stid:id,
+						stpwd:pwd}),
+						success : function(res){
+							res = JSON.parse(res);
+							alert(res.msg);
+								location.href="/uri/sc/na";
+						}
+				}
+
+				au.send(conf);
+				
+			}			
 			
 			function login(){			
-				var id = document.getElementById('loginid').value;
-				var pwd = document.getElementById('loginpwd').value;
-				
-				
-				
+				var loginid = document.getElementById('loginid').value;
+				var loginpwd = document.getElementById('loginpwd').value;
+				var conf = {
+						 url:'/login',
+						 method:'POST',
+						 param : JSON.stringify({stid:loginid,stpwd:loginpwd}),
+						 success : function(res){
+							 res = JSON.parse(res);
+							 alert(res.msg);
+						 }
+				 }
+				 au.send(conf);
 			}
 			
 		</script>

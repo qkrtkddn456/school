@@ -4,6 +4,10 @@
 <c:set var="rootPath" value="${pageContext.request.contextPath}"/>
 <c:set var="resPath" value="${rootPath}/resources"/>
 <c:set var="bPath" value="${resPath}/bootstrap-3.3.2-dist"/>
+<script src="${resPath}/js/AjaxUtil.js"></script>
+<script>
+var au = new AjaxUtil();
+</script>
 <!--  <script src="${resPath}/js/AjaxUtil.js"></script>
 <script>
 var au = new AjaxUtil();

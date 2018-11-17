@@ -26,7 +26,7 @@
   	where stnum = #{stnum}
   </delete>
   
-  <select id="login" parameterType="st" resultType="int">
+  <select id="login" parameterType="st" resultType="st">
   	select * from st_info
   	where stid=#{stid} and stpwd=#{stpwd}
   </select>

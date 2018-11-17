@@ -11,5 +11,5 @@ public interface STService {
 	public int insertST(STVO st);
 	public int updateST(STVO st);
 	public int deleteST(int stnum);
-	public int login(STVO st);
+	public Map<String, String> login(STVO st);
 }

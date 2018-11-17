@@ -18,37 +18,44 @@ public class STServiceImpl implements STService {
 	STDAO sdao;
 	@Override
 	public List<STVO> selectSTList(STVO st) {
-		// TODO Auto-generated method stub
+
 		return sdao.selectSTList(st);
 	}
 
 	@Override
 	public STVO selectST(int stnum) {
-		// TODO Auto-generated method stub
+
 		return sdao.selectST(stnum);
 	}
 
 	@Override
 	public int insertST(STVO st) {
-		// TODO Auto-generated method stub
+
 		return sdao.insertST(st);
 	}
 
 	@Override
 	public int updateST(STVO st) {
-		// TODO Auto-generated method stub
+
 		return sdao.updateST(st);
 	}
 
 	@Override
 	public int deleteST(int stnum) {
-		// TODO Auto-generated method stub
+
 		return sdao.deleteST(stnum);
 	}
 
 	@Override
-	public int login(STVO st) {
-		// TODO Auto-generated method stub
-		return sdao.login(st);
+	public Map<String,String> login(STVO st) {
+		Map<String, String> rMap = new HashMap<String,String>();
+		
+		STVO login = sdao.login(st);
+		if(login == null) {
+			rMap.put("msg", "아이디와 비밀번호를 확인해주세요");
+		}else {
+			rMap.put("msg", login.getStname() + "님 환영합니다");
+		}
+		return rMap;
 	}
 }
