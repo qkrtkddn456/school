@@ -126,7 +126,8 @@ p {
 }
 
 .border-primary{
-color:#3104B4;
+color:#BDBDBD;
+opacity:0.5;
 }
 
 .border-primary  {
@@ -147,7 +148,7 @@ color:#3104B4;
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/uri/sc/na"><img src="${resPath}/img/school.png"
+				<a href="/uri/sc/main"><img src="${resPath}/img/school.png"
 					id="main-image" style="display: line" alt="Main" width="60"
 					height="60"></a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -201,7 +202,7 @@ color:#3104B4;
 		</div>
 		<script>
 			function mainPage() {
-				location = "/uri/sc/na";
+				location = "/uri/sc/main";
 			}
 			function goLogin() {
 				location = "/uri/sc/login";
