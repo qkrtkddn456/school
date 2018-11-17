@@ -20,8 +20,7 @@ body {
 	font: 20px Montserrat, sans-serif;
 	line-height: 1.8;
 	color: #f5f6f7;
-	background-image:url('https://png.pngtree.com/element_origin_min_pic/17/07/26/93f54a2b114daa1f450779831a0d0745.jpg');
-	background-size:cover;
+	
      
 }
 
@@ -37,6 +36,7 @@ p {
 .bg-1 {
 	background-color: #1abc9c; /* Green */
 	color: #ffffff;
+	
 }
 
 .bg-2 {
@@ -74,7 +74,11 @@ p {
 }
 
 #school {
-	color: #808080;
+	color: #000000;
+}
+
+#back {
+	 background-color: #f8f8f8;
 }
 
 #main-image {
@@ -157,6 +161,10 @@ p {
 	margin-left:450px;
 }
 
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
 </style>
 </head>
 <body>
@@ -209,10 +217,12 @@ p {
 			</div>
 		</div>
 	</nav>
+	<div id="back">
 	<div id="school">학교</div>
 	<div class="bd-example-border-utils">
 		<div class="bd-example" >
 			<span class="border border-primary"></span>
+		</div>
 		</div>
 	</div>
 </body>
