@@ -30,4 +30,8 @@
   	select * from st_info
   	where stid=#{stid} and stpwd=#{stpwd}
   </select>
+  <select id="idcheck" resultType="int">
+   	select count(stid) from st_info
+  	where stid=#{stid}
+  </select>
 </mapper>

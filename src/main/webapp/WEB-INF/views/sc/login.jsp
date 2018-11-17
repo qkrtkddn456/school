@@ -173,11 +173,11 @@ body {
 									style="display: block;">
 									<div class="form-group">
 										<input type="text" name="loginid" id="loginid" tabindex="1"
-											class="form-control" placeholder="Username" value="">
+											class="form-control" placeholder="아이디" value="">
 									</div>
 									<div class="form-group">
 										<input type="password" name="loginpwd" id="loginpwd"
-											tabindex="2" class="form-control" placeholder="Password">
+											tabindex="2" class="form-control" placeholder="비밀번호">
 									</div>
 									<div class="form-group text-center">
 										<input type="checkbox" tabindex="3" class="" name="remember"
@@ -189,7 +189,7 @@ body {
 											<div class="col-sm-6 col-sm-offset-3">
 												<input type="button" name="login-submit" id="login-submit"
 													tabindex="4" class="form-control btn btn-login"
-													value="Log In" onclick="login()">
+													value="로그인" onclick="login()">
 											</div>
 
 										</div>
@@ -209,28 +209,28 @@ body {
 									role="form" style="display: none;">
 									<div class="form-group">
 										<input type="text" name="id" id="id" tabindex="1"
-											class="form-control" placeholder="Id" value="">
+											class="form-control idck" placeholder="아이디" value="">
 									</div>
 									<div class="form-group">
 										<input type="password" name="password" id="password"
-											tabindex="2" class="form-control" placeholder="Password">
+											tabindex="2" class="form-control" placeholder="비밀번호">
 									</div>
 									<div class="form-group">
 										<input type="password" name="confirm-password"
 											id="confirm-password" tabindex="2" class="form-control"
-											placeholder="Confirm Password">
+											placeholder="비밀번호 확인">
 									</div>
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1"
-											class="form-control" placeholder="Username" value="">
+											class="form-control" placeholder="이름" value="">
 									</div>
 									<div class="form-group">
 										<input type="number" name="age" id="age" tabindex="1"
-											class="form-control" placeholder="Age" value="">
+											class="form-control" placeholder="나이" value="">
 									</div>
 									<div class="form-group">
 										<input type="text" name="school" id="school" tabindex="1"
-											class="form-control" placeholder="School" value="">
+											class="form-control" placeholder="학교" value="">
 									</div>
 
 
@@ -238,9 +238,9 @@ body {
 											<div class="input-group">
 												<div id="radioBtn" class="btn-group">
 													<a class="btn btn-primary btn-sm active"
-														data-toggle="happy" data-title="Y" id="gender">Male</a> <a
+														data-toggle="happy" data-title="Y" id="gender" onclick="male()">남</a> <a
 														class="btn btn-primary btn-sm notActive"
-														data-toggle="happy" data-title="N" id="gender">Female</a>
+														data-toggle="happy" data-title="N" id="gender" onclick="female()">여</a>
 												</div>
 												<input type="hidden" name="happy" id="happy">
 											
@@ -252,7 +252,7 @@ body {
 											<div class="col-sm-6 col-sm-offset-3">
 												<input type="button" onclick="signup()" name="register-submit"
 													id="register-submit" tabindex="4"
-													class="form-control btn btn-register" value="Sign Up">
+													class="form-control btn btn-register" value="회원가입">
 											</div>
 										</div>
 									</div>
@@ -319,8 +319,14 @@ body {
 						stpwd:pwd}),
 						success : function(res){
 							res = JSON.parse(res);
-							alert(res.msg);
-								location.href="/uri/sc/na";
+							if(res == 2){
+								alert("아이디가 중복되었습니다");
+							}else if(res == 1){
+								alert("회원가입이 완료되었습니다");
+								location.href="/uri/sc/main";
+							}else{
+								alert("회원가입에 실패하였습니다");
+							}	
 						}
 				}
 
@@ -328,7 +334,7 @@ body {
 				
 			}			
 			
-			function login(){			
+			function login(){
 				var loginid = document.getElementById('loginid').value;
 				var loginpwd = document.getElementById('loginpwd').value;
 				var conf = {
@@ -338,11 +344,11 @@ body {
 						 success : function(res){
 							 res = JSON.parse(res);
 							 alert(res.msg);
+							 location.href="/uri/sc/main"
 						 }
 				 }
 				 au.send(conf);
 			}
-			
 		</script>
 	</div>
 </body>
