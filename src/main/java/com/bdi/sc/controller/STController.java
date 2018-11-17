@@ -1,6 +1,8 @@
 package com.bdi.sc.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import com.bdi.sc.service.STService;
 import com.bdi.sc.vo.STVO;
@@ -42,7 +45,7 @@ public class STController {
 		return sts.deleteST(stnum);
 	}
 	@PostMapping(value="/login")
-	public @ResponseBody int login(@RequestBody STVO st) {
+	public @ResponseBody Map<String, String> login(@RequestBody STVO st) {
 		return sts.login(st);
 	}
 }

@@ -9,7 +9,10 @@ import org.springframework.stereotype.Repository;
 import com.bdi.sc.dao.STDAO;
 import com.bdi.sc.vo.STVO;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Repository
+@Slf4j
 public class STDAOImpl implements STDAO {
 
 	@Autowired
@@ -46,8 +49,7 @@ public class STDAOImpl implements STDAO {
 	}
 
 	@Override
-	public int login(STVO st) {
-		
+	public STVO login(STVO st) {
 		return ss.selectOne("com.bdi.sc.ST.login",st);
 	}
 

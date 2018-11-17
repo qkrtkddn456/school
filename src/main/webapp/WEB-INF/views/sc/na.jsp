@@ -97,6 +97,7 @@
 </div>
 
 <!-- Second Container -->
+<iframe src="//www.career.go.kr/cnet/iframe/School.do?apiKey=57bf0d07a594923af77931ec7ad5e668&gubun=high_list" scrolling="no" name="ce" width="680" height="1080" frameborder="0" style="border-width:0px;border-color:white; border-style:solid;"> </iframe>
 <div class="container-fluid bg-2 text-center">
   <h3 class="margin">학교 검색 방법</h3>	
   <p>학교명 예) 부천정보산업고등학교<br>※ 학교명을 최소 2글자 이상 입력해야합니다<br>※ 띄어쓰기 없이 입력해야 합니다</p>

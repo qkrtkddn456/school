@@ -187,9 +187,9 @@ body {
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="login-submit" id="login-submit"
+												<input type="button" name="login-submit" id="login-submit"
 													tabindex="4" class="form-control btn btn-login"
-													value="Log In">
+													value="Log In" onclick="login()">
 											</div>
 
 										</div>
@@ -307,11 +307,18 @@ body {
 			}
 			
 			function login(){			
-				var id = document.getElementById('loginid').value;
-				var pwd = document.getElementById('loginpwd').value;
-				
-				
-				
+				var loginid = document.getElementById('loginid').value;
+				var loginpwd = document.getElementById('loginpwd').value;
+				var conf = {
+						 url:'/login',
+						 method:'POST',
+						 param : JSON.stringify({stid:loginid,stpwd:loginpwd}),
+						 success : function(res){
+							 res = JSON.parse(res);
+							 alert(res.msg);
+						 }
+				 }
+				 au.send(conf);
 			}
 			
 		</script>
