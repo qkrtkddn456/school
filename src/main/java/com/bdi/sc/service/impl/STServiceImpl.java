@@ -51,14 +51,17 @@ public class STServiceImpl implements STService {
 	}
 
 	@Override
-	public Map<String,String> login(STVO st) {
-		Map<String, String> rMap = new HashMap<String,String>();
+	public Map<String,Object> login(STVO st) {
+		Map<String, Object> rMap = new HashMap<String,Object>();
 		
-		STVO login = sdao.login(st);
-		if(login == null) {
+		STVO user = sdao.login(st);
+		rMap.put("user", user);
+		if(user == null) {
+			rMap.put("login", "0");
 			rMap.put("msg", "아이디와 비밀번호를 확인해주세요");
 		}else {
-			rMap.put("msg", login.getStname() + "님 환영합니다");
+			rMap.put("login", "1");
+			rMap.put("msg", user.getStname() + "님 환영합니다");
 		}
 		return rMap;
 	}

@@ -21,32 +21,40 @@ body {
 	line-height: 1.8;
 	color: #f5f6f7;
 }
+
 p {
 	font-size: 16px;
 }
+
 .margin {
 	margin-bottom: 20px;
 }
+
 .bg-1 {
 	background-color: #1abc9c; /* Green */
 	color: #ffffff;
 }
+
 .bg-2 {
 	background-color: #474e5d; /* Dark Blue */
 	color: #ffffff;
 }
+
 .bg-3 {
 	background-color: #ffffff; /* White */
 	color: #555555;
 }
+
 .bg-4 {
 	background-color: #2f2f2f; /* Black Gray */
 	color: #fff;
 }
+
 .container-fluid {
 	padding-top: 70px;
 	padding-bottom: 70px;
 }
+
 .navbar {
 	padding-top: 15px;
 	padding-bottom: 8px;
@@ -56,41 +64,52 @@ p {
 	font-size: 12px;
 	letter-spacing: 5px;
 }
+
 .navbar-nav  li a:hover {
 	color: #1abc9c !important;
 }
+
 #school {
 	color: #808080;
 }
+
 #main-image {
 	float: left;
 	margin-right: 20px;
 	margin-left: -10%;
 }
+
 #mySubbar {
 	margin-left: 20%;
 }
+
 #a {
 	font-size: 15px;
 }
+
 #b {
 	margin-left: 20px;
 	font-size: 15px;
 }
+
 #c {
 	margin-left: 20px;
 	font-size: 15px;
 }
+
 #d {
 	margin-left: 20px;
 	font-size: 15px;
 }
+
 #imaginary_container {
 	margin-top: 20%; /* Don't copy this */
 }
+
 .stylish-input-group .input-group-addon {
 	background: white !important;
 }
+
 .stylish-input-group .form-control {
 	border-right: 0;
 	box-shadow: 0 0 0;
@@ -101,23 +120,211 @@ p {
 	border: 0;
 	background: transparent;
 }
+
 .col-sm-6 {
 	width: 50%;
 }
+
 .col-sm-offset-3 {
 	margin: -50px 0px 0px 10px;
 }
+
 .navbar-left { .pull-left ();
 	
 }
+
 .navbar-right { .pull-right ();
-	margin-top:-40px;
+	margin-top: -40px;
 }
+
+}
+
+/* carousel */
+#quote-carousel {
+	padding: 0 10px 30px 10px;
+	margin-top: 30px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control {
+	background: none;
+	color: #222;
+	font-size: 2.3em;
+	text-shadow: none;
+	margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left {
+	left: -12px;
+	margin-top:-45px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right {
+	right: -12px;
+	margin-top:-45px;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators {
+	right: 50%;
+	top: auto;
+	bottom: 0px;
+	margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li {
+	background: #c0c0c0;
+}
+
+#quote-carousel .carousel-indicators .active {
+	background: #333333;
+}
+
+#quote-carousel img {
+	width: 250px;
+	height: 100px
+}
+/* End carousel */
+.item blockquote {
+	border-left: none;
+	margin: 0;
+}
+
+.item blockquote img {
+	margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+	content: "\f10d";
+	font-family: 'Fontawesome';
+	float: left;
+	margin-right: 10px;
+}
+
+.carousel-control:hover, .carousel-control:focus {
+    color: #fff;
+    text-decoration: none;
+    filter: alpha(opacity=90);
+    outline: 0;
+    opacity: .9;
+}
+.carousel-control.right {
+    right: 0;
+    left: auto;
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+    background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)));
+    background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    background-repeat: repeat-x;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+a:hover, a:focus {
+    color: #2a6496;
+    text-decoration: underline;
+}
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media ( min-width : 768px) {
+	#quote-carousel {
+		margin-bottom: 0;
+		padding: 0 40px 30px 40px;
+	}
+}
+
+/* Small devices (tablets, up to 768px) */
+@media ( max-width : 768px) {
+	/* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+	#quote-carousel .carousel-indicators {
+		bottom: -20px !important;
+	}
+	#quote-carousel .carousel-indicators li {
+		display: inline-block;
+		margin: 0px 5px;
+		width: 15px;
+		height: 15px;
+	}
+	#quote-carousel .carousel-indicators li.active {
+		margin: 0px 5px;
+		width: 20px;
+		height: 20px;
+	}
+}
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media ( min-width : 768px) {
+	#quote-carousel {
+		margin-bottom: 0;
+		padding: 0 40px 30px 40px;
+	}
+}
+
+/* Small devices (tablets, up to 768px) */
+@media ( max-width : 768px) {
+	/* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+	#quote-carousel .carousel-indicators {
+		bottom: -20px !important;
+	}
+	#quote-carousel .carousel-indicators li {
+		display: inline-block;
+		margin: 0px 5px;
+		width: 15px;
+		height: 15px;
+	}
+	#quote-carousel .carousel-indicators li.active {
+		margin: 0px 5px;
+		width: 20px;
+		height: 20px;
+	}
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.glyphicon-chevron-left:before {
+	
+}
+
+.fa-chevron-right:before {
+    content: "\f054";
+}
+:before, :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 </style>
 </head>
 <body>
-
+${sessionScope.user}
 	<!-- Navbar -->
 	<nav class="navbar navbar-default">
 		<div class="container">
@@ -152,8 +359,7 @@ p {
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#" onclick="goLogin()">로그인</a></li>
-					<li><a href="#" onclick="goSignin()">회원가입</a></li>
+					<li><a href="#" onclick="goLogin()" id="login">로그인/회원가입</a></li>	
 				</ul>
 			</div>
 			<div class="collapse navbar-collapse" id="mySubbar">
@@ -165,7 +371,7 @@ p {
 				</ul>
 			</div>
 		</div>
-	</nav> 
+	</nav>
 
 	<!-- First Container -->
 	<div class="container-fluid bg-1 text-center">
@@ -185,17 +391,76 @@ p {
 		<h3>학교정보</h3>
 	</div>
 
-	<!-- Second Container -->
-	<div class="container-fluid bg-2 text-center">
-		<h3 class="margin">학교 검색 방법</h3>
-		<p>
-			학교명 예) 부천정보산업고등학교<br>※ 학교명을 최소 2글자 이상 입력해야합니다<br>※ 띄어쓰기 없이
-			입력해야 합니다
-		</p>
-		<input type="text" id="school"> <a href="#" class="btn btn-default btn-lg"> 
-		<span class="glyphicon glyphicon-search"></span> 검색
-		</a>
-	</div>
+
+
+	<div class="container">
+  <div class="row">
+  </div>
+  <div class='row'>
+    <div class='col-md-offset-2 col-md-8'>
+      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+        <!-- Bottom Carousel Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#quote-carousel" data-slide-to="1"></li>
+          <li data-target="#quote-carousel" data-slide-to="2"></li>
+        </ol>
+        
+        <!-- Carousel Slides / Quotes -->
+        <div class="carousel-inner">
+        
+          <!-- Quote 1 -->
+          <div class="item active">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="http://www.reactiongifs.com/r/overbite.gif" style="width: 100px;height:100px;">
+                  <!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
+                </div>
+                <div class="col-sm-9">
+                  <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
+                  <small>Someone famous</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <!-- Quote 2 -->
+          <div class="item">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" style="width: 100px;height:100px;">
+                </div>
+                <div class="col-sm-9">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.</p>
+                  <small>Someone famous</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <!-- Quote 3 -->
+          <div class="item">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/keizgoesboom/128.jpg" style="width: 100px;height:100px;">
+                </div>
+                <div class="col-sm-9">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.</p>
+                  <small>Someone famous</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+        
+        <!-- Carousel Buttons Next/Prev -->
+        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="glyphicon glyphicon-chevron-right"></i></a>
+      </div>                          
+    </div>
+  </div>
+</div>
 
 	<!-- Third Container (Grid) -->
 	<div class="container-fluid bg-3 text-center">
@@ -224,18 +489,36 @@ p {
 		</div>
 
 		<script>
+			
+			var ses = '${sessionScope.ses}';
+			var loginBtn = document.getElementById("login");
+			if(!ses){
+				loginBtn.innerHTML = "로그인";
+			}else{
+				loginBtn.innerHTML = "로그아웃";
+			}
 			function mainPage() {
 				location = "/uri/sc/main";
 			}
-			function goLogin() {
-				location = "/uri/sc/login";
-			}
-			function goSignin() {
-				location = "/uri/sc/login";
+
+
+			function goLogin() {	
+				if(!ses){
+					location = "/uri/sc/login";
+				}else{
+					location = "/logout";
+				}
 			}
 			function goschool() {
 				location = "/uri/sc/list";
 			}
+
+			$(document).ready(function() {
+				$('#quote-carousel').carousel({
+					pause : true,
+					interval : 4000,
+				});
+			});
 		</script>
 	</div>
 
