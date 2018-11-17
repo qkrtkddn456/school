@@ -140,12 +140,12 @@ p {
 </style>
 </head>
 <body>
-
+${sessionScope.user}
 	<!-- Navbar -->
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/uri/sc/na"><img src="${resPath}/img/school.png"
+				<a href="/uri/sc/main"><img src="${resPath}/img/school.png"
 					id="main-image" style="display: line" alt="Main" width="60"
 					height="60"></a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -175,8 +175,7 @@ p {
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#" onclick="goLogin()">로그인</a></li>
-					<li><a href="#" onclick="goSignin()">회원가입</a></li>
+					<li><a href="#" onclick="goLogin()" id="login">로그인/회원가입</a></li>	
 				</ul>
 			</div>
 			<div class="collapse navbar-collapse" id="mySubbar">
@@ -248,15 +247,24 @@ p {
 		</div>
 
 		<script>
+			
+			var ses = '${sessionScope.ses}';
+			var loginBtn = document.getElementById("login");
+			if(!ses){
+				loginBtn.innerHTML = "로그인";
+			}else{
+				loginBtn.innerHTML = "로그아웃";
+			}
 			function mainPage() {
-				location = "/uri/sc/na";
+				location = "/uri/sc/main";
 			}
 
-			function goLogin() {
-				location = "/uri/sc/login";
-			}
-			function goSignin() {
-				location = "/uri/sc/login";
+			function goLogin() {	
+				if(!ses){
+					location = "/uri/sc/login";
+				}else{
+					location = "/logout";
+				}
 			}
 		</script>
 	</div>

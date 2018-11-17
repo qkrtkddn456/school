@@ -1,8 +1,9 @@
 package com.bdi.sc.controller;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,17 +14,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import com.bdi.sc.service.STService;
 import com.bdi.sc.vo.STVO;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Controller
+
 public class STController {
 
 	@Autowired
 	STService sts;
-	
+		
 	@GetMapping(value="/sts")
 	public @ResponseBody List<STVO> selectSTList(@RequestBody STVO st) {
 		return sts.selectSTList(st);
@@ -45,7 +48,17 @@ public class STController {
 		return sts.deleteST(stnum);
 	}
 	@PostMapping(value="/login")
-	public @ResponseBody Map<String, String> login(@RequestBody STVO st) {
-		return sts.login(st);
+	public @ResponseBody Map<String, Object> login(@RequestBody STVO st, HttpSession hSession) {
+		Map<String, Object> rMap = sts.login(st);
+		if("1".equals(rMap.get("login"))) {
+			hSession.setAttribute("user", rMap.get("user"));
+			hSession.setAttribute("ses", 1);
+		}
+		return rMap;
+	}
+	@GetMapping(value="/logout")
+	public String logout(HttpSession hSession) {
+		hSession.invalidate();
+		return "/sc/main";
 	}
 }
