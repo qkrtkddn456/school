@@ -242,7 +242,7 @@ ${sessionScope.user}
 				}else{
 					location = "/logout";
 				}
-
+			}
 			function goschool() {
 				location = "/uri/sc/list";
 			}
