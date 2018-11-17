@@ -121,7 +121,7 @@ p {
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/uri/sc/na"><img src="${resPath}/img/school.png"
+				<a href="/uri/sc/main"><img src="${resPath}/img/school.png"
 					id="main-image" style="display: line" alt="Main" width="60"
 					height="60"></a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -157,14 +157,14 @@ p {
 			</div>
 			<div class="collapse navbar-collapse" id="mySubbar">
 				<ul class="nav navbar-nav navbar-left">
-					<li id="a"><a href="#">학교찾기</a></li>
+					<li id="a"><a href="#" onclick="goschool()">학교찾기</a></li>
 					<li id="b"><a href="#">학교찾기</a></li>
 					<li id="c"><a href="#">학교찾기</a></li>
 					<li id="d"><a href="#">학교찾기</a></li>
 				</ul>
 			</div>
 		</div>
-	</nav>
+	</nav> 
 
 	<!-- First Container -->
 	<div class="container-fluid bg-1 text-center">
@@ -225,13 +225,16 @@ p {
 
 		<script>
 			function mainPage() {
-				location = "/uri/sc/na";
+				location = "/uri/sc/main";
 			}
 			function goLogin() {
 				location = "/uri/sc/login";
 			}
 			function goSignin() {
 				location = "/uri/sc/login";
+			}
+			function goschool() {
+				location = "/uri/sc/list";
 			}
 		</script>
 	</div>
