@@ -42,7 +42,7 @@
   .navbar {
       padding-top: 15px;
       padding-bottom: 15px;
-      border: 0;
+      border: 20px;
       border-radius: 0;
       margin-bottom: 0;
       font-size: 12px;
@@ -51,15 +51,36 @@
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
+  
  
   #school{
   	color: #808080;
+  	
   }
   #main-image{
-  border-radius: 50%;
-  margin: 0 0 0 -50px;
+  float:left;
+  margin-right:20px;
+  margin-left:-10%;
   }
+  #mySubbar{
+  margin-left:20%;
   
+  }
+  #a{
+  font-size:15px;
+  }
+   #b{
+  margin-left:20px;
+  font-size:15px;
+  }
+  #c{
+  margin-left:20px;
+  font-size:15px;
+  }
+  #d{
+  margin-left:20px;
+  font-size:15px;
+  }
  
   
   </style>
@@ -76,13 +97,20 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a id="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합 알리미</a>
+      <a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합 알리미</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#" onclick="goLogin()">로그인</a></li>
         <li><a href="#" onclick="goSignin()">회원가입</a></li>
-        <li><a href="#"></a></li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="mySubbar">
+      <ul class="nav navbar-nav navbar-left">
+        <li id="a"><a href="#">학교찾기</a></li>
+        <li id="b"><a href="#">학교찾기</a></li>
+        <li id="c"><a href="#">학교찾기</a></li>
+        <li id="d"><a href="#">학교찾기</a></li>
       </ul>
     </div>
   </div>
@@ -90,7 +118,11 @@
 
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
-	<img src="${resPath}/img/sc.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">	
+	<img src="${resPath}/img/학생.jpg" class="rounded-circle img-circle margin" style="display:inline" alt="Bird" width="120" height="120">
+	<img src="${resPath}/img/a.jpg" class="rounded-circle img-circle margin" style="display:inline" alt="Bird" width="120" height="120">
+	<img src="${resPath}/img/sc.jpg" class="rounded-circle img-circle margin" style="display:inline" alt="Bird" width="120" height="120">
+	<img src="${resPath}/img/음식.jpg" class="rounded-circle img-circle margin" style="display:inline" alt="Bird" width="120" height="120">
+	<img src="${resPath}/img/지도.png" class="rounded-circle img-circle margin" style="display:inline" alt="Bird" width="120" height="120">	
   <h3 class="margin">학교 이름</h3>
   
   <h3>학교정보</h3>

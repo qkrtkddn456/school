@@ -6,10 +6,12 @@
   <select id="selectSTList" resultType="st">
     select * from st_info
   </select>
+  
    <select id="selectST" resultType="st">
     select * from st_info
     where stnum=#{stnum}
   </select>
+  
   <insert id="insertST" parameterType="st">
 	insert into st_info(stname,stage,stschool,stgen,stid,stpwd)
 	values(#{stname},#{stage},#{stschool},#{stgen},#{stid},#{stpwd})
