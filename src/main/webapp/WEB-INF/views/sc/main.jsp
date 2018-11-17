@@ -324,7 +324,7 @@ html {
 </style>
 </head>
 <body>
-
+${sessionScope.user}
 	<!-- Navbar -->
 	<nav class="navbar navbar-default">
 		<div class="container">
@@ -359,8 +359,7 @@ html {
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#" onclick="goLogin()">로그인</a></li>
-					<li><a href="#" onclick="goSignin()">회원가입</a></li>
+					<li><a href="#" onclick="goLogin()" id="login">로그인/회원가입</a></li>	
 				</ul>
 			</div>
 			<div class="collapse navbar-collapse" id="mySubbar">
@@ -488,14 +487,25 @@ html {
 		</div>
 
 		<script>
+			
+			var ses = '${sessionScope.ses}';
+			var loginBtn = document.getElementById("login");
+			if(!ses){
+				loginBtn.innerHTML = "로그인";
+			}else{
+				loginBtn.innerHTML = "로그아웃";
+			}
 			function mainPage() {
 				location = "/uri/sc/main";
 			}
-			function goLogin() {
-				location = "/uri/sc/login";
-			}
-			function goSignin() {
-				location = "/uri/sc/login";
+
+
+			function goLogin() {	
+				if(!ses){
+					location = "/uri/sc/login";
+				}else{
+					location = "/logout";
+				}
 			}
 			function goschool() {
 				location = "/uri/sc/list";

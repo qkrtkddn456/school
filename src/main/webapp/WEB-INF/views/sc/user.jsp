@@ -152,16 +152,13 @@ body {
 </head>
 <body>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<div class="panel panel-login">
+		<div class="row ">
+			<div class="col-md-6 col-md-offset-3 ">
+				<div class="panel panel-login ">
 					<div class="panel-heading">
-						<div class="row">
-							<div class="col-xs-6">
-								<a href="#" class="active" id="login-form-link">로그인</a>
-							</div>
-							<div class="col-xs-6">
-								<a href="#" id="register-form-link">회원가입</a>
+						<div class="row ">	
+							<div class="col-xs-6 ">		
+								<a href="#" class="active" id="login-form-link">회원수정</a>
 							</div>
 						</div>
 						<hr>
@@ -171,42 +168,6 @@ body {
 							<div class="col-lg-12">
 								<form id="login-form" action="" method="post" role="form"
 									style="display: block;">
-									<div class="form-group">
-										<input type="text" name="loginid" id="loginid" tabindex="1"
-											class="form-control" placeholder="아이디" value="">
-									</div>
-									<div class="form-group">
-										<input type="password" name="loginpwd" id="loginpwd"
-											tabindex="2" class="form-control" placeholder="비밀번호">
-									</div>
-									<div class="form-group text-center">
-										<input type="checkbox" tabindex="3" class="" name="remember"
-											id="remember"> <label for="remember"> 아이디 저장
-										</label>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-sm-6 col-sm-offset-3">
-												<input type="button" name="login-submit" id="login-submit"
-													tabindex="4" class="form-control btn btn-login"
-													value="로그인" onclick="login()">
-											</div>
-
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-12">
-												<div class="text-center">
-													<a href="" tabindex="5" class="forgot-password">비밀번호 찾기</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</form>
-								<form id="register-form"
-									action="https://phpoll.com/register/process" method="post"
-									role="form" style="display: none;">
 									<div class="form-group">
 										<input type="text" name="id" id="id" tabindex="1"
 											class="form-control idck" placeholder="아이디" value="">
@@ -257,7 +218,7 @@ body {
 										</div>
 									</div>
 								</form>
-							</div>
+															</div>
 						</div>
 					</div>
 				</div>
@@ -265,7 +226,7 @@ body {
 		</div>
 		<script>
 			function mainPage() {
-				location = "/uri/sc/main";
+				location = "/uri/sc/na";
 			}
 			$(function() {
 
@@ -319,10 +280,6 @@ body {
 						stpwd:pwd}),
 						success : function(res){
 							res = JSON.parse(res);
-
-							alert(res.msg);
-								location.href="/uri/sc/main";
-
 							if(res == 2){
 								alert("아이디가 중복되었습니다");
 							}else if(res == 1){
@@ -331,7 +288,6 @@ body {
 							}else{
 								alert("회원가입에 실패하였습니다");
 							}	
-
 						}
 				}
 
@@ -349,9 +305,7 @@ body {
 						 success : function(res){
 							 res = JSON.parse(res);
 							 alert(res.msg);
-							 if(res.login==1){
-							 	location.href="/uri/sc/main";
-							 }
+							 location.href="/uri/sc/main"
 						 }
 				 }
 				 au.send(conf);
