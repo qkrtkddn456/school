@@ -53,5 +53,11 @@ public class STDAOImpl implements STDAO {
 		return ss.selectOne("com.bdi.sc.ST.login",st);
 	}
 
+	@Override
+	public int idcheck(STVO stid) {
+		// TODO Auto-generated method stub
+		return ss.selectOne("com.bdi.sc.ST.idcheck",stid);
+	}
+
 
 }

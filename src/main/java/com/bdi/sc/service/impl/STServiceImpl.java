@@ -24,14 +24,18 @@ public class STServiceImpl implements STService {
 
 	@Override
 	public STVO selectST(int stnum) {
-
+		
 		return sdao.selectST(stnum);
 	}
 
 	@Override
 	public int insertST(STVO st) {
-
-		return sdao.insertST(st);
+		int idc = this.idcheck(st);
+		if(idc == 0) {
+			return sdao.insertST(st);
+		}else {
+			return 2;
+		}
 	}
 
 	@Override
@@ -57,5 +61,11 @@ public class STServiceImpl implements STService {
 			rMap.put("msg", login.getStname() + "님 환영합니다");
 		}
 		return rMap;
+	}
+
+	@Override
+	public int idcheck(STVO stid) {
+		// TODO Auto-generated method stub
+		return sdao.idcheck(stid);
 	}
 }

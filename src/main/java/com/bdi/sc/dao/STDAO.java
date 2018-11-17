@@ -13,4 +13,5 @@ public interface STDAO {
 	public int updateST(STVO st);
 	public int deleteST(int stnum);
 	public STVO login(STVO st);
+	public int idcheck(STVO stid);
 }

@@ -12,4 +12,5 @@ public interface STService {
 	public int updateST(STVO st);
 	public int deleteST(int stnum);
 	public Map<String, String> login(STVO st);
+	public int idcheck(STVO stid);
 }
