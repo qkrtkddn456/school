@@ -128,6 +128,15 @@ p {
 .col-sm-offset-3 {
 	margin: -50px 0px 0px 10px;
 }
+
+.navbar-left { .pull-left ();
+	
+}
+
+.navbar-right { .pull-right ();
+	margin-top:-40px;
+}
+}
 </style>
 </head>
 <body>
