@@ -126,7 +126,7 @@ p {
 }
 
 .col-sm-offset-3 {
-	margin: -50px 0px 0px 10px;
+	margin: -50px 0px 0px 0px;
 }
 
 .navbar-left { .pull-left ();
@@ -329,13 +329,10 @@ ${sessionScope.user}
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/uri/sc/main"><img src="${resPath}/img/school.png"
-					id="main-image" style="display: line" alt="Main" width="60"
+				<a href="/uri/sc/main"><img src="${resPath}/img/school.png" id="main-image" style="display: line" alt="Main" width="60"
 					height="60"></a>
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합
 					알리미</a>
@@ -346,8 +343,7 @@ ${sessionScope.user}
 						<div id="imaginary_container">
 							<div class="input-group stylish-input-group">
 								<input type="text" class="form-control"
-									placeholder="학교명 예) 부천정보산업고등학교"> <span
-									class="input-group-addon">
+									placeholder="학교명 예) 부천정보산업고등학교"> <span class="input-group-addon">
 									<button type="submit">
 										<span class="glyphicon glyphicon-search"></span>
 									</button>
