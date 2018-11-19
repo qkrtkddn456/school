@@ -111,10 +111,10 @@ p {
 }
 
 .stylish-input-group .form-control {
-	border-right: 0;
+	border-right: 0;	
 	box-shadow: 0 0 0;
 	border-color: #ccc;
-}
+}	
 
 .stylish-input-group button {
 	border: 0;
@@ -125,8 +125,10 @@ p {
 	width: 50%;
 }
 
-.col-sm-offset-3 {
-	margin: -50px 0px 0px 10px;
+.col-sm-offset-3 {						
+	margin: -50px 0px 0px -60px;	
+	
+		
 }
 
 .navbar-left { .pull-left ();
@@ -321,6 +323,9 @@ html {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+#mySubbar{
+	margin-left:300px;
+}
 </style>
 </head>
 <body>
@@ -418,8 +423,9 @@ ${sessionScope.user}
                   <!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
                 </div>
                 <div class="col-sm-9">
-                  <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
-                  <small>Someone famous</small>
+                 <p>서울대 합격자를 많이 낸 고교는서울예술고(67명), 
+                 서울과학고(57명)하나고, 용인외대부고(55명), 대원외고(53명)경기과학고(51명) 등 순</p>
+                  <small></small>
                 </div>
               </div>
             </blockquote>
@@ -432,8 +438,8 @@ ${sessionScope.user}
                   <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" style="width: 100px;height:100px;">
                 </div>
                 <div class="col-sm-9">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.</p>
-                  <small>Someone famous</small>
+                  <p>1. 부천정보산업고등학교 2. 운봉공업고등학교 3. 도봉산고등학교</p>
+                  <small>똥통학교 순위</small>
                 </div>
               </div>
             </blockquote>
