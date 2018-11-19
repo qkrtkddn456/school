@@ -7,18 +7,13 @@
 <title>학교 정보 통합 알리미</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat"
-	rel="stylesheet">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript"
-	src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=40DD129zgMn8zIBTCRvP"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=40DD129zgMn8zIBTCRvP"></script>
 <style>
-body {	
+body {
 	font: 20px Montserrat, sans-serif;
 	line-height: 1.8;
 	color: #f5f6f7;
@@ -87,6 +82,7 @@ p {
 
 #a {
 	font-size: 15px;
+	margin-left:-5%;
 }
 
 #b {
@@ -131,12 +127,14 @@ p {
 	margin: -50px 0px 0px -60px;
 }
 
-.navbar-left { .pull-left ();
+.navbar-left { 
+    .pull-left ();
 	
 }
 
-.navbar-right { .pull-right ();
-	margin-top: -40px;
+.navbar-right { 
+	.pull-right ();
+	 margin-top: -40px;
 }
 
 }
@@ -336,6 +334,12 @@ html {
 #mySubbar {
 	margin-left: 300px;
 }
+.rounded-circle{
+	margin-right: 55px;
+}
+ul{
+   list-style:none;
+   }
 </style>
 </head>
 <body>
@@ -390,26 +394,22 @@ html {
 
 	<!-- First Container -->
 	<div class="container-fluid bg-1 text-center">
-		<img src="/resources/img/학생.jpg"
-			class="rounded-circle img-circle margin" style="display: inline"
-			alt="Bird" width="120" height="120"> <img
-			src="/resources/img/a.jpg" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120"> <img
-			src="/resources/img/sc.jpg" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120"> <img
-			src="/resources/img/음식.jpg" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120"> <img
-			src="/resources/img/지도.png" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120">
+	<ul>
+		<li><img src="/resources/img/학생.jpg" class="rounded-circle img-circle margin" style="display: inline" alt="Bird" width="120" height="120">
+		<img src="/resources/img/a.jpg" class="rounded-circle img-circle margin" style="display: inline" alt="Bird" width="120" height="120">
+		<img src="/resources/img/sc.jpg" class="rounded-circle img-circle margin" style="display: inline" alt="Bird" width="120" height="120">
+		<img src="/resources/img/음식.jpg" class="rounded-circle img-circle margin" style="display: inline" alt="Bird" width="120" height="120">
+		<img src="/resources/img/지도.png" class="rounded-circle img-circle margin" style="display: inline" alt="Bird" width="120" height="120"></li>
+	</ul>
 		<h3 class="margin">학교 이름</h3>
 
 		<h3>학교정보</h3>
-		<div id="map" style="width: 100%; height: 400px;"></div>
+		<div id="map" style="width:1800px;height:400px;"></div>
 	</div>
 
 
 
-	<div class="container">
+	<div class="container">	
 		<div class="row"></div>
 		<div class='row'>
 			<div class='col-md-offset-2 col-md-8'>
@@ -553,12 +553,13 @@ html {
 			});
 		});
 
-		var mapOptions = {
-			center : new naver.maps.LatLng(37.3595704, 127.105399),
-			zoom : 10
+		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+		var options = { //지도를 생성할 때 필요한 기본 옵션
+			center: new daum.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+			level: 3 //지도의 레벨(확대, 축소 정도)
 		};
 
-		var map = new naver.maps.Map('map', mapOptions);
+		var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
 	</script>
 </body>
 </html>
