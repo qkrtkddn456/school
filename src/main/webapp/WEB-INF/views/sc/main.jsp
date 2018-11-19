@@ -7,14 +7,10 @@
 <title>학교 정보 통합 알리미</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat"
-	rel="stylesheet">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 body {
 	font: 20px Montserrat, sans-serif;
@@ -85,6 +81,7 @@ p {
 
 #a {
 	font-size: 15px;
+	margin-left:-5%;
 }
 
 #b {
@@ -265,12 +262,6 @@ a:hover, a:focus {
 		height: 20px;
 	}
 }
-
-/**
-  MEDIA QUERIES
-*/
-
-/* Small devices (tablets, 768px and up) */
 @media ( min-width : 768px) {
 	#quote-carousel {
 		margin-bottom: 0;
@@ -278,9 +269,7 @@ a:hover, a:focus {
 	}
 }
 
-/* Small devices (tablets, up to 768px) */
 @media ( max-width : 768px) {
-	/* Make the indicators larger for easier clicking with fingers/thumb on mobile */
 	#quote-carousel .carousel-indicators {
 		bottom: -20px !important;
 	}
@@ -324,9 +313,11 @@ html {
 #mySubbar{
 	margin-left:300px;
 }
+
 </style>
 </head>
 <body>
+
 ${sessionScope.user}
 	<!-- Navbar -->
 	<nav class="navbar navbar-default">
@@ -364,9 +355,9 @@ ${sessionScope.user}
 			<div class="collapse navbar-collapse" id="mySubbar">
 				<ul class="nav navbar-nav navbar-left">
 					<li id="a"><a href="#" onclick="goschool()">학교찾기</a></li>
-					<li id="b"><a href="#">학교찾기</a></li>
-					<li id="c"><a href="#">학교찾기</a></li>
-					<li id="d"><a href="#">학교찾기</a></li>
+					<li id="b"><a href="#">학교 안내</a></li>
+					<li id="c"><a href="#">학교 일정</a></li>
+					<li id="d"><a href="#">학교 시간표</a></li>
 				</ul>
 			</div>
 		</div>
