@@ -1,4 +1,4 @@
-package com.bdi.sc;
+package com.bdi.sc.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
