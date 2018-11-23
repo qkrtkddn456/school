@@ -148,7 +148,7 @@ opacity:0.5;
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/uri/sc/main"><img src="${resPath}/img/school.png"
+				<a href="/"><img src="${resPath}/img/school.png"
 					id="main-image" style="display: line" alt="Main" width="60"
 					height="60"></a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -202,7 +202,7 @@ opacity:0.5;
 		</div>
 		<script>
 			function mainPage() {
-				location = "/uri/sc/main";
+				location = "/";
 			}
 			function goLogin() {
 				location = "/uri/sc/login";
