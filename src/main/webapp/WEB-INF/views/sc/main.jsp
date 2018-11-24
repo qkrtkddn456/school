@@ -18,11 +18,11 @@ body {
 }
 #scinfo{
 	float:left;
-	width:30%;
+	width:20%;
 }
 #map{
 	float:right;
-	width:70%;	
+	width:80%;	
 	height:1000px;
 }
 .bg-4 {
@@ -98,6 +98,9 @@ body {
 	.pull-right ();
 	 margin-top: -40px;
 	 }
+p{
+	font-size:15px;
+}
 </style>
 </head>
 <body>
@@ -153,14 +156,16 @@ body {
 		<div id="scinfo">
 			<h2>학교 이름</h2>
 			<h3 id="scname"></h3>
-			<h3>학교 정보</h3>
-			<h3>급식 정보</h3>	
+			<h2>학교 정보</h2>
+			<h2>급식 정보</h2>	
+			<h3 id="meals"></h3>
 		</div>
 		<div id="map"></div>
 	</div>
 
 	<!-- Footer -->
 	<footer class="container-fluid bg-4 text-center">
+		<button onclick="meals()">급식정보</button>
 		<p>
 			Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a>
 		</p>
@@ -186,13 +191,6 @@ body {
 		function goList() {
 			location = "/uri/sc/list";
 		}
-		/* 
-		$(document).ready(function() {
-			$('#quote-carousel').carousel({
-				pause : true,
-				interval : 4000,
-			});
-		}); */
 		
 		
 		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
@@ -222,6 +220,13 @@ body {
 
 			// 지도를 생성합니다    		
 			var map = new daum.maps.Map(mapContainer, mapOption); 
+			
+			// 지도에 확대 축소 컨트롤을 생성한다
+			var zoomControl = new daum.maps.ZoomControl();
+
+			// 지도의 우측에 확대 축소 컨트롤을 추가한다
+			map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
 			
 			// 장소 검색 객체를 생성합니다
 			var ps = new daum.maps.services.Places(map); 
@@ -253,6 +258,8 @@ body {
 				        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
 				        infowindow.setContent('<div style="padding:5px;font-size:12px;color:black;">' + place.place_name + '</div>');
 				        infowindow.open(map, marker);
+				       	document.querySelector('#scname').innerHTML = place.place_name;
+				       	meals();
 				    });
 				}
 			}
@@ -261,6 +268,21 @@ body {
 			});
 			scSearch();
 		});
+		
+		
+		
+		function meals(){
+			var conf = {
+					 url:'https://schoolmenukr.ml/api/elementary/B100001246',
+					 method:'GET',
+					// param : JSON.stringify({stid:loginid,stpwd:loginpwd}),
+					 success : function(res){
+						 res = JSON.parse(res);
+						 document.querySelector('#meals').innerHTML = res.menu[0].lunch;
+					 }
+			 }
+			 au.send(conf);
+		}
 	</script>
 </body>
 </html>

@@ -28,7 +28,7 @@ public class STController {
 	STService sts;
 		
 	@GetMapping(value="/sts")
-	public @ResponseBody List<STVO> selectSTList(@RequestBody STVO st) {
+	public @ResponseBody List<STVO> selectSTList(STVO st) {
 		return sts.selectSTList(st);
 	}
 	@GetMapping(value="/sts/{stnum}")
