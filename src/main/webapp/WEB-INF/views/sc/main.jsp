@@ -101,6 +101,22 @@ body {
 p{
 	font-size:15px;
 }
+/* /*박상우 카카오맵 css
+html, body {width:100%;height:100%;margin:0;padding:0;} 
+.map_wrap {position:relative;overflow:hidden;width:100%;height:350px;}
+.radius_border{border:1px solid #919191;border-radius:5px;}     
+.custom_typecontrol {position:absolute;top:10px;right:10px;overflow:hidden;width:130px;height:30px;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
+.custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
+.custom_typecontrol .btn {background:#fff;background:linear-gradient(#fff,  #e6e6e6);}       
+.custom_typecontrol .btn:hover {background:#f5f5f5;background:linear-gradient(#f5f5f5,#e3e3e3);}
+.custom_typecontrol .btn:active {background:#e6e6e6;background:linear-gradient(#e6e6e6, #fff);}    
+.custom_typecontrol .selected_btn {color:#fff;background:#425470;background:linear-gradient(#425470, #5b6d8a);}
+.custom_typecontrol .selected_btn:hover {color:#fff;}   
+.custom_zoomcontrol {position:absolute;top:50px;right:10px;width:36px;height:80px;overflow:hidden;z-index:1;background-color:#f5f5f5;} 
+.custom_zoomcontrol span {display:block;width:36px;height:40px;text-align:center;cursor:pointer;}     
+.custom_zoomcontrol span img {width:15px;height:15px;padding:12px 0;border:none;}             
+.custom_zoomcontrol span:first-child{border-bottom:1px solid #bfbfbf;}
+/*박상우 카카오맵css    */         
 </style>
 </head>
 <body>
@@ -160,7 +176,14 @@ p{
 			<h2>급식 정보</h2>	
 			<h3 id="meals"></h3>
 		</div>
-		<div id="map"></div>
+		<div class="map_wrap">
+			<div id="map" style="position:relative;overflow:hidden;"></div>
+			<div class="custom_typecontrol radius_border">
+		        	<span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
+		        	<span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
+    		</div> 
+		</div>
+		
 	</div>
 
 	<!-- Footer -->
@@ -226,6 +249,22 @@ p{
 
 			// 지도의 우측에 확대 축소 컨트롤을 추가한다
 			map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+			
+			// 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수입니다
+			function setMapType(maptype) { 
+			    var roadmapControl = document.getElementById('btnRoadmap');
+			    var skyviewControl = document.getElementById('btnSkyview'); 
+			    if (maptype === 'roadmap') {
+			        map.setMapTypeId(daum.maps.MapTypeId.ROADMAP);    
+			        roadmapControl.className = 'selected_btn';
+			        skyviewControl.className = 'btn';
+			    } else {
+			        map.setMapTypeId(daum.maps.MapTypeId.HYBRID);    
+			        skyviewControl.className = 'selected_btn';
+			        roadmapControl.className = 'btn';
+			    }
+			}
+
 
 			
 			// 장소 검색 객체를 생성합니다
