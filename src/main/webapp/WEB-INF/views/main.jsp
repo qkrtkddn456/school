@@ -573,7 +573,7 @@ html {
 			// 키워드로 장소를 검색합니다
 			//ps.keywordSearch('고등학교', placesSearchCB); 
 
-			
+				
 			
 			// 키워드 검색 완료 시 호출되는 콜백함수 입니다
 			function placesSearchCB (data, status, pagination) {
