@@ -7,9 +7,6 @@ body {
 	line-height: 1.8;
 	color: #f5f6f7;
 }
-p {
-	font-size: 16px;
-}
 .margin {
 	margin-bottom: 20px;
 }
@@ -347,116 +344,6 @@ html {
 		
 		<div id="map" style="width: 700px; height: 700px;"></div>
 	</div>
-
-
-	<!-- 
-	<div class="container">
-		<div class="row"></div>
-		<div class='row'>
-			<div class='col-md-offset-2 col-md-8'>
-				<div class="carousel slide" data-ride="carousel" id="quote-carousel">
-					Bottom Carousel Indicators
-					<ol class="carousel-indicators">
-						<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-						<li data-target="#quote-carousel" data-slide-to="1"></li>
-						<li data-target="#quote-carousel" data-slide-to="2"></li>
-					</ol>
-
-					Carousel Slides / Quotes
-					<div class="carousel-inner">
-
-						Quote 1
-						<div class="item active">
-							<blockquote>
-								<div class="row">
-									<div class="col-sm-3 text-center">
-										<img class="img-circle"
-											src="http://www.reactiongifs.com/r/overbite.gif"
-											style="width: 100px; height: 100px;">
-										<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">
-									</div>
-									<div class="col-sm-9">
-										<p>서울대 합격자를 많이 낸 고교는서울예술고(67명), 서울과학고(57명)하나고,
-											용인외대부고(55명), 대원외고(53명)경기과학고(51명) 등 순</p>
-										<small></small>
-									</div>
-								</div>
-							</blockquote>
-						</div>
-						Quote 2
-						<div class="item">
-							<blockquote>
-								<div class="row">
-									<div class="col-sm-3 text-center">
-										<img class="img-circle"
-											src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg"
-											style="width: 100px; height: 100px;">
-									</div>
-									<div class="col-sm-9">
-										<p>1. 부천정보산업고등학교 2. 운봉공업고등학교 3. 도봉산고등학교</p>
-										<small>똥통학교 순위</small>
-									</div>
-								</div>
-							</blockquote>
-						</div>
-						Quote 3
-						<div class="item">
-							<blockquote>
-								<div class="row">
-									<div class="col-sm-3 text-center">
-										<img class="img-circle"
-											src="https://s3.amazonaws.com/uifaces/faces/twitter/keizgoesboom/128.jpg"
-											style="width: 100px; height: 100px;">
-									</div>
-									<div class="col-sm-9">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing
-											elit. Ut rutrum elit in arcu blandit, eget pretium nisl
-											accumsan. Sed ultricies commodo tortor, eu pretium mauris.</p>
-										<small>Someone famous</small>
-									</div>
-								</div>
-							</blockquote>
-						</div>
-					</div>
-
-					Carousel Buttons Next/Prev
-					<a data-slide="prev" href="#quote-carousel"
-						class="left carousel-control"><span
-						class="glyphicon glyphicon-chevron-left"></span></a> <a
-						data-slide="next" href="#quote-carousel"
-						class="right carousel-control"><i
-						class="glyphicon glyphicon-chevron-right"></i></a>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-	<!--  Third Container (Grid) 
-	<div class="container-fluid bg-3 text-center">
-		<h3 class="school-ranking">학교 검색 순위</h3>
-		<br>
-		<div class="row">
-			<div class="col-sm-4">
-				<p>학교 이름</p>
-				<img src="/resources/img/sc.jpg" class="img-circle"
-					style="display: inline" alt="Bird" width="350" height="350">
-			</div>
-			<div class="col-sm-4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<img src="/resources/img/sc.jpg"
-					class="img-responsive img-circle margin" style="display: inline"
-					alt="Bird" width="350" height="350">
-			</div>
-			<div class="col-sm-4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<img src="/resources/img/sc.jpg"
-					class="img-responsive img-circle margin" style="display: inline"
-					alt="Bird" width="350" height="350">
-			</div>
-		</div>
-	</div>	 -->
 
 	<!-- Footer -->
 	<footer class="container-fluid bg-4 text-center">
