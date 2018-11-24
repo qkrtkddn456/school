@@ -22,7 +22,7 @@ public class PIController {
 	private PIService ps;
 	
 	@GetMapping(value="/pis")
-	public @ResponseBody List<PIVO> selectPIList(@RequestBody PIVO pi) {
+	public @ResponseBody List<PIVO> selectPIList( PIVO pi) {
 		return ps.selectPIList(pi);
 	}
 	

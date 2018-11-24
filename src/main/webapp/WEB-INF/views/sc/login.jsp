@@ -319,10 +319,7 @@ body {
 						stpwd:pwd}),
 						success : function(res){
 							res = JSON.parse(res);
-
-							alert(res.msg);
 								location.href="/";
-
 							if(res == 2){
 								alert("아이디가 중복되었습니다");
 							}else if(res == 1){
