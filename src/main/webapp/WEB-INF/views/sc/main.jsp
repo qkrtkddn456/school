@@ -109,6 +109,7 @@ body {
 	margin-top: 3%;
 	width: 260px;
 	margin-right: 30px;
+	height:28px;
 }
 
 #login {
@@ -143,7 +144,7 @@ body {
 }
 .btn-default {
     margin-left: 258px;
-    margin-top: -55px;
+    margin-top:-28px;
 }
 </style>
 </head>
