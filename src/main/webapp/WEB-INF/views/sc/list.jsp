@@ -1,41 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<!-- Theme Made By www.w3schools.com - No Copyright -->
 <title>학교 정보 통합 알리미</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat"
-	rel="stylesheet">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 body {
 	font: 20px Montserrat, sans-serif;
 	line-height: 1.8;
 	color: #f5f6f7;
 }
-p {
-	font-size: 16px;
-}
 .margin {
-	margin-bottom: 45px;
-	margin-top:-3%;
-	margin:10px;
-	color:#474e5d;
-	}
+	margin-bottom: 20px;
+}
 .bg-1 {
-	background-color: #FAFAFA; /* Green */
+	background-color: #1abc9c; /* Green */
 	color: #ffffff;
-	background-image:url("http://cafefiles.naver.net/20140815_50/ohyama2014_1408065561725jUott_PNG/30447508_big_p6.png");
-	background-size:cover;
-
 }
 .bg-2 {
 	background-color: #474e5d; /* Dark Blue */
@@ -55,15 +32,12 @@ p {
 }
 .navbar {
 	padding-top: 15px;
-	padding-bottom: 15px;
-	border: 1px solid;
-	border-color: #BDBDBD;
+	padding-bottom: 8px;
+	border: 20px;
 	border-radius: 0;
 	margin-bottom: 0;
 	font-size: 12px;
 	letter-spacing: 5px;
-	background-color:#FFFFFF;
-	
 }
 .navbar-nav  li a:hover {
 	color: #1abc9c !important;
@@ -95,12 +69,10 @@ p {
 	font-size: 15px;
 }
 #imaginary_container {
-	margin-top: 20%;
-	
+	margin-top: 10%; /* Don't copy this */
 }
 .stylish-input-group .input-group-addon {
 	background: white !important;
-
 }
 .stylish-input-group .form-control {
 	border-right: 0;
@@ -110,45 +82,35 @@ p {
 .stylish-input-group button {
 	border: 0;
 	background: transparent;
-	margin-top:-10%;
 }
 .col-sm-6 {
 	width: 50%;
 }
 .col-sm-offset-3 {
-	margin: -50px 0px 0px 10px;
+	margin: -47px 0px 0px -30px;
 }
-.navbar-left { .pull-left ();
-	
-}
-.navbar-right { .pull-right ();
-	margin-top:-40px;
+.navbar-left { 
+    .pull-left ();
 }
 
-.border-primary{
-color:#BDBDBD;
-opacity:0.5;
+
+.navbar-right { 
+	.pull-right ();
+	 margin-top: -40px;
+	 }
+#mySubbar {
+	margin-left: 300px;
 }
 
-.border-primary  {
-    display: inline-block;
-    width: 100rem;
-    height: 100rem;
-    margin: .25rem;
-    background-color: #f5f5f5;
-    border: 1px solid;
-    border-color:#A4A4A4;
-    color:#1C1C1C;
-}
 </style>
 </head>
 <body>
-
+	${sessionScope.user}
 	<!-- Navbar -->
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/"><img src="${resPath}/img/school.png"
+				<a href="/"><img src="/resources/img/school.png"
 					id="main-image" style="display: line" alt="Main" width="60"
 					height="60"></a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -178,13 +140,12 @@ opacity:0.5;
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#" onclick="goLogin()">로그인</a></li>
-					<li><a href="#" onclick="goSignin()">회원가입</a></li>
+					<li><a href="#" onclick="goLogin()" id="login">로그인/회원가입</a></li>
 				</ul>
 			</div>
 			<div class="collapse navbar-collapse" id="mySubbar">
 				<ul class="nav navbar-nav navbar-left">
-					<li id="a"><a href="#">학교찾기</a></li>
+					<li id="a"><a href="#" onclick="goschool()">학교찾기</a></li>
 					<li id="b"><a href="#">학교찾기</a></li>
 					<li id="c"><a href="#">학교찾기</a></li>
 					<li id="d"><a href="#">학교찾기</a></li>
@@ -192,25 +153,49 @@ opacity:0.5;
 			</div>
 		</div>
 	</nav>
-<div class="container-fluid bg-1 text-center">
-		<div class="margin">학교 검색</div>
-		<br>
-		<div class="row">
-			<div class="border border-primary">
-				<p>학교 이름</p>
-			</div>
-		</div>
-		<script>
-			function mainPage() {
-				location = "/";
-			}
-			function goLogin() {
-				location = "/uri/sc/login";
-			}
-			function goSignin() {
-				location = "/uri/sc/login";
-			}
-		</script>
+
+	<!-- First Container -->
+	<div class="container-fluid bg-1 text-center">
+		<h3 class="margin">학교 이름</h3>
+		<h3>학교정보</h3>
+		
+		<div id="map" style="width: 700px; height: 700px;"></div>
 	</div>
+
+	<!-- Footer -->
+	<footer class="container-fluid bg-4 text-center">
+		<p>
+			Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a>
+		</p>
+	</footer>
+	<script>
+		var ses = '${sessionScope.ses}';
+		var loginBtn = document.getElementById("login");
+		if (!ses) {
+			loginBtn.innerHTML = "로그인";
+		} else {
+			loginBtn.innerHTML = "로그아웃";
+		}
+		function mainPage() {
+			location = "/";
+		}
+		function goLogin() {
+			if (!ses) {
+				location = "/uri/sc/login";
+			} else {
+				location = "/logout";
+			}
+		}
+		function goschool() {
+			location = "/uri/sc/list";
+		}
+		$(document).ready(function() {
+			$('#quote-carousel').carousel({
+				pause : true,
+				interval : 4000,
+			});
+		});
+
+	</script>
 </body>
 </html>

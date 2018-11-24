@@ -87,7 +87,7 @@ body {
 	width: 50%;
 }
 .col-sm-offset-3 {
-	margin: -50px 0px 0px -60px;
+	margin: -47px 0px 0px -30px;
 }
 .navbar-left { 
     .pull-left ();
@@ -327,18 +327,6 @@ html {
 
 	<!-- First Container -->
 	<div class="container-fluid bg-1 text-center">
-		
-		<img src="/resources/img/학생.jpg"
-			class="rounded-circle img-circle margin" style="display: inline"
-			alt="Bird" width="120" height="120"> <img
-			src="/resources/img/a.jpg" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120"> <img
-			src="/resources/img/sc.jpg" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120"> <img
-			src="/resources/img/음식.jpg" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120"> <img
-			src="/resources/img/지도.png" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120">
 		<h3 class="margin">학교 이름</h3>
 		<h3>학교정보</h3>
 		
