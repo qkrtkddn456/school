@@ -580,8 +580,8 @@ html {
 
 			daum.maps.event.addListener(map, 'zoom_changed', function() {        
 				// 카테고리로 은행을 검색합니다
-				//ps.categorySearch('SC4', placesSearchCB, {useMapBounds:true}); 
-				ps.keywordSearch('고등학교', placesSearchCB); 
+				ps.categorySearch('SC4', placesSearchCB, {useMapBounds:true}); 
+				//ps.keywordSearch('고등학교', placesSearchCB); 
 
 				// 키워드 검색 완료 시 호출되는 콜백함수 입니다
 				function placesSearchCB (data, status, pagination) {
@@ -608,10 +608,10 @@ html {
 				    });
 				}
 			});
-			// 카테고리로 은행을 검색합니다
-			//ps.categorySearch('SC4', placesSearchCB, {useMapBounds:true}); 
+			카//카테고리로 은행을 검색합니다
+			ps.categorySearch('SC4', placesSearchCB, {useMapBounds:true}); 
 			// 키워드로 장소를 검색합니다
-			ps.keywordSearch('고등학교', placesSearchCB); 
+			//ps.keywordSearch('고등학교', placesSearchCB); 
 
 			
 			
