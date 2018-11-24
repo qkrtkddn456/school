@@ -2,3 +2,5 @@
 http://www.career.go.kr/cnet/openapi/getOpenApi?apiKey=57bf0d07a594923af77931ec7ad5e668&svcType=api&svcCode=SCHOOL&contentType=json&gubun=high_list
 
 네이버 : 40DD129zgMn8zIBTCRvP
+
+카카오 : 7ccd2d702579bace0a42e9c8e643187d

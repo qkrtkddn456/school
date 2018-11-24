@@ -7,11 +7,16 @@
 <title>학교 정보 통합 알리미</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=40DD129zgMn8zIBTCRvP"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat"
+	rel="stylesheet">
+<script type="text/javascript"
+	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ccd2d702579bace0a42e9c8e643187d&libraries=services"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 body {
 	font: 20px Montserrat, sans-serif;
@@ -69,7 +74,6 @@ p {
 }
 #a {
 	font-size: 15px;
-	margin-left:-5%;
 }
 #b {
 	margin-left: 20px;
@@ -106,19 +110,18 @@ p {
 }
 .navbar-left { 
     .pull-left ();
-	
 }
+
+
 .navbar-right { 
 	.pull-right ();
 	 margin-top: -40px;
-}
-}
-/* carousel */
+	 }
+
 #quote-carousel {
 	padding: 0 10px 30px 10px;
 	margin-top: 30px;
 }
-/* Control buttons  */
 #quote-carousel .carousel-control {
 	background: none;
 	color: #222;
@@ -288,12 +291,9 @@ html {
 #mySubbar {
 	margin-left: 300px;
 }
-.rounded-circle{
-	margin-right: 55px;
+#map{
+	float:left;	
 }
-ul{
-   list-style:none;
-   }
 </style>
 </head>
 <body>
@@ -302,7 +302,7 @@ ul{
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/uri/sc/main"><img src="/resources/img/school.png"
+				<a href="/"><img src="/resources/img/school.png"
 					id="main-image" style="display: line" alt="Main" width="60"
 					height="60"></a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -348,22 +348,25 @@ ul{
 
 	<!-- First Container -->
 	<div class="container-fluid bg-1 text-center">
-	<ul>
-		<li><img src="/resources/img/학생.jpg" class="rounded-circle img-circle margin" style="display: inline" alt="Bird" width="120" height="120">
-		<img src="/resources/img/a.jpg" class="rounded-circle img-circle margin" style="display: inline" alt="Bird" width="120" height="120">
-		<img src="/resources/img/sc.jpg" class="rounded-circle img-circle margin" style="display: inline" alt="Bird" width="120" height="120">
-		<img src="/resources/img/음식.jpg" class="rounded-circle img-circle margin" style="display: inline" alt="Bird" width="120" height="120">
-		<img src="/resources/img/지도.png" class="rounded-circle img-circle margin" style="display: inline" alt="Bird" width="120" height="120"></li>
-	</ul>
+		<div id="map" style="width: 700px; height: 700px;"></div>
+		<img src="/resources/img/학생.jpg"
+			class="rounded-circle img-circle margin" style="display: inline"
+			alt="Bird" width="120" height="120"> <img
+			src="/resources/img/a.jpg" class="rounded-circle img-circle margin"
+			style="display: inline" alt="Bird" width="120" height="120"> <img
+			src="/resources/img/sc.jpg" class="rounded-circle img-circle margin"
+			style="display: inline" alt="Bird" width="120" height="120"> <img
+			src="/resources/img/음식.jpg" class="rounded-circle img-circle margin"
+			style="display: inline" alt="Bird" width="120" height="120"> <img
+			src="/resources/img/지도.png" class="rounded-circle img-circle margin"
+			style="display: inline" alt="Bird" width="120" height="120">
 		<h3 class="margin">학교 이름</h3>
-
 		<h3>학교정보</h3>
-		<div id="map" style="width:1800px;height:400px;"></div>
 	</div>
 
 
-
-	<div class="container">	
+	
+	<div class="container">
 		<div class="row"></div>
 		<div class='row'>
 			<div class='col-md-offset-2 col-md-8'>
@@ -469,7 +472,7 @@ ul{
 					alt="Bird" width="350" height="350">
 			</div>
 		</div>
-	</div>
+	</div>	
 
 	<!-- Footer -->
 	<footer class="container-fluid bg-4 text-center">
@@ -486,7 +489,7 @@ ul{
 			loginBtn.innerHTML = "로그아웃";
 		}
 		function mainPage() {
-			location = "/uri/sc/main";
+			location = "/";
 		}
 		function goLogin() {
 			if (!ses) {
@@ -510,6 +513,95 @@ ul{
 			level: 3 //지도의 레벨(확대, 축소 정도)
 		};
 		var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+
+		var latitude;
+		var longitude;
+		var mapContainer, map, mapTypeControl, ps, maker,infowindow;
+
+		navigator.geolocation.getCurrentPosition(function(pos) {
+			latitude = pos.coords.latitude;
+			longitude = pos.coords.longitude;
+	
+			// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
+			var infowindow = new daum.maps.InfoWindow({zIndex:1});
+
+			var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+			    mapOption = {
+			        center: new daum.maps.LatLng(latitude, longitude), // 지도의 중심좌표
+			        level: 4		 // 지도의 확대 레벨
+			    };  	
+
+			// 지도를 생성합니다    	
+			var map = new daum.maps.Map(mapContainer, mapOption); 
+			
+			// 장소 검색 객체를 생성합니다
+			var ps = new daum.maps.services.Places(map); 
+
+			daum.maps.event.addListener(map, 'zoom_changed', function() {        
+				// 카테고리로 은행을 검색합니다
+				//ps.categorySearch('SC4', placesSearchCB, {useMapBounds:true}); 
+				ps.keywordSearch('고등학교', placesSearchCB); 
+
+				// 키워드 검색 완료 시 호출되는 콜백함수 입니다
+				function placesSearchCB (data, status, pagination) {
+				    if (status === daum.maps.services.Status.OK) {
+				        for (var i=0; i<data.length; i++) {
+				            displayMarker(data[i]);    
+				        }       
+				    }
+				}
+
+				// 지도에 마커를 표시하는 함수입니다
+				function displayMarker(place) {
+				    // 마커를 생성하고 지도에 표시합니다
+				    var marker = new daum.maps.Marker({
+				        map: map,
+				        position: new daum.maps.LatLng(place.y, place.x) 
+				    });
+
+				    // 마커에 클릭이벤트를 등록합니다
+				    daum.maps.event.addListener(marker, 'click', function() {
+				        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
+				        infowindow.setContent('<div style="padding:5px;font-size:12px;color:black;">' + place.place_name + '</div>');
+				        infowindow.open(map, marker);
+				    });
+				}
+			});
+			// 카테고리로 은행을 검색합니다
+			//ps.categorySearch('SC4', placesSearchCB, {useMapBounds:true}); 
+			// 키워드로 장소를 검색합니다
+			ps.keywordSearch('고등학교', placesSearchCB); 
+
+			
+			
+			// 키워드 검색 완료 시 호출되는 콜백함수 입니다
+			function placesSearchCB (data, status, pagination) {
+			    if (status === daum.maps.services.Status.OK) {
+			        for (var i=0; i<data.length; i++) {
+			            displayMarker(data[i]);    
+			        }       
+			    }
+			}
+
+			// 지도에 마커를 표시하는 함수입니다
+			function displayMarker(place) {
+			    // 마커를 생성하고 지도에 표시합니다
+			    var marker = new daum.maps.Marker({
+			        map: map,
+			        position: new daum.maps.LatLng(place.y, place.x) 
+			    });
+
+			    // 마커에 클릭이벤트를 등록합니다
+			    daum.maps.event.addListener(marker, 'click', function() {
+			        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
+			        infowindow.setContent('<div style="padding:5px;font-size:12px;color:black;">' + place.place_name + '</div>');
+			        infowindow.open(map, marker);
+			    });
+			}
+		
+			
+		});
 	</script>
 </body>
 </html>

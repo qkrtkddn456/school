@@ -59,6 +59,6 @@ public class STController {
 	@GetMapping(value="/logout")
 	public String logout(HttpSession hSession) {
 		hSession.invalidate();
-		return "/sc/main";
+		return "main";
 	}
 }
