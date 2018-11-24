@@ -1,22 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<!-- Theme Made By www.w3schools.com - No Copyright -->
 <title>학교 정보 통합 알리미</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat"
-	rel="stylesheet">
-<script type="text/javascript"
-	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ccd2d702579bace0a42e9c8e643187d&libraries=services"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 body {
 	font: 20px Montserrat, sans-serif;
@@ -291,9 +275,7 @@ html {
 #mySubbar {
 	margin-left: 300px;
 }
-#map{
-	float:left;	
-}
+
 </style>
 </head>
 <body>
@@ -348,7 +330,7 @@ html {
 
 	<!-- First Container -->
 	<div class="container-fluid bg-1 text-center">
-		<div id="map" style="width: 700px; height: 700px;"></div>
+		
 		<img src="/resources/img/학생.jpg"
 			class="rounded-circle img-circle margin" style="display: inline"
 			alt="Bird" width="120" height="120"> <img
@@ -362,26 +344,28 @@ html {
 			style="display: inline" alt="Bird" width="120" height="120">
 		<h3 class="margin">학교 이름</h3>
 		<h3>학교정보</h3>
+		
+		<div id="map" style="width: 700px; height: 700px;"></div>
 	</div>
 
 
-	
+	<!-- 
 	<div class="container">
 		<div class="row"></div>
 		<div class='row'>
 			<div class='col-md-offset-2 col-md-8'>
 				<div class="carousel slide" data-ride="carousel" id="quote-carousel">
-					<!-- Bottom Carousel Indicators -->
+					Bottom Carousel Indicators
 					<ol class="carousel-indicators">
 						<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
 						<li data-target="#quote-carousel" data-slide-to="1"></li>
 						<li data-target="#quote-carousel" data-slide-to="2"></li>
 					</ol>
 
-					<!-- Carousel Slides / Quotes -->
+					Carousel Slides / Quotes
 					<div class="carousel-inner">
 
-						<!-- Quote 1 -->
+						Quote 1
 						<div class="item active">
 							<blockquote>
 								<div class="row">
@@ -389,7 +373,7 @@ html {
 										<img class="img-circle"
 											src="http://www.reactiongifs.com/r/overbite.gif"
 											style="width: 100px; height: 100px;">
-										<!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
+										<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">
 									</div>
 									<div class="col-sm-9">
 										<p>서울대 합격자를 많이 낸 고교는서울예술고(67명), 서울과학고(57명)하나고,
@@ -399,7 +383,7 @@ html {
 								</div>
 							</blockquote>
 						</div>
-						<!-- Quote 2 -->
+						Quote 2
 						<div class="item">
 							<blockquote>
 								<div class="row">
@@ -415,7 +399,7 @@ html {
 								</div>
 							</blockquote>
 						</div>
-						<!-- Quote 3 -->
+						Quote 3
 						<div class="item">
 							<blockquote>
 								<div class="row">
@@ -435,7 +419,7 @@ html {
 						</div>
 					</div>
 
-					<!-- Carousel Buttons Next/Prev -->
+					Carousel Buttons Next/Prev
 					<a data-slide="prev" href="#quote-carousel"
 						class="left carousel-control"><span
 						class="glyphicon glyphicon-chevron-left"></span></a> <a
@@ -445,9 +429,9 @@ html {
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
-	<!-- Third Container (Grid) -->
+	<!--  Third Container (Grid) 
 	<div class="container-fluid bg-3 text-center">
 		<h3 class="school-ranking">학교 검색 순위</h3>
 		<br>
@@ -472,7 +456,7 @@ html {
 					alt="Bird" width="350" height="350">
 			</div>
 		</div>
-	</div>	
+	</div>	 -->
 
 	<!-- Footer -->
 	<footer class="container-fluid bg-4 text-center">
