@@ -11,23 +11,25 @@ body {
 	margin-bottom: 20px;
 }
 .bg-1 {
+	widht:100%;
+	height:1000px;
 	background-color: #1abc9c; /* Green */
-	color: #ffffff;
+	color: #ffffff
 }
-.bg-2 {
-	background-color: #474e5d; /* Dark Blue */
-	color: #ffffff;
+#scinfo{
+	float:left;
+	width:30%;
 }
-.bg-3 {
-	background-color: #ffffff; /* White */
-	color: #555555;
+#map{
+	float:right;
+	width:70%;	
+	height:1000px;
 }
 .bg-4 {
 	background-color: #2f2f2f; /* Black Gray */
 	color: #fff;
 }
 .container-fluid {
-	padding-top: 70px;
 	padding-bottom: 70px;
 }
 .navbar {
@@ -42,9 +44,6 @@ body {
 .navbar-nav  li a:hover {
 	color: #1abc9c !important;
 }
-#school {
-	color: #808080;
-}
 #main-image {
 	float: left;
 	margin-right: 20px;
@@ -52,6 +51,7 @@ body {
 }
 #mySubbar {
 	margin-left: 20%;
+	margin-left: 300px;
 }
 #a {
 	font-size: 15px;
@@ -98,181 +98,6 @@ body {
 	.pull-right ();
 	 margin-top: -40px;
 	 }
-
-#quote-carousel {
-	padding: 0 10px 30px 10px;
-	margin-top: 30px;
-}
-#quote-carousel .carousel-control {
-	background: none;
-	color: #222;
-	font-size: 2.3em;
-	text-shadow: none;
-	margin-top: 30px;
-}
-/* Previous button  */
-#quote-carousel .carousel-control.left {
-	left: -12px;
-	margin-top: -45px;
-}
-/* Next button  */
-#quote-carousel .carousel-control.right {
-	right: -12px;
-	margin-top: -45px;
-}
-/* Changes the position of the indicators */
-#quote-carousel .carousel-indicators {
-	right: 50%;
-	top: auto;
-	bottom: 0px;
-	margin-right: -19px;
-}
-/* Changes the color of the indicators */
-#quote-carousel .carousel-indicators li {
-	background: #c0c0c0;
-}
-#quote-carousel .carousel-indicators .active {
-	background: #333333;
-}
-#quote-carousel img {
-	width: 250px;
-	height: 100px
-}
-/* End carousel */
-.item blockquote {
-	border-left: none;
-	margin: 0;
-}
-.item blockquote img {
-	margin-bottom: 10px;
-}
-.item blockquote p:before {
-	content: "\f10d";
-	font-family: 'Fontawesome';
-	float: left;
-	margin-right: 10px;
-}
-.carousel-control:hover, .carousel-control:focus {
-	color: #fff;
-	text-decoration: none;
-	filter: alpha(opacity = 90);
-	outline: 0;
-	opacity: .9;
-}
-.carousel-control.right {
-	right: 0;
-	left: auto;
-	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0,
-		rgba(0, 0, 0, .5) 100%);
-	background-image: -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0,
-		rgba(0, 0, 0, .5) 100%);
-	background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)),
-		to(rgba(0, 0, 0, .5)));
-	background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0,
-		rgba(0, 0, 0, .5) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',
-		endColorstr='#80000000', GradientType=1);
-	background-repeat: repeat-x;
-}
-.carousel-control {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	width: 15%;
-	font-size: 20px;
-	color: #fff;
-	text-align: center;
-	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
-	filter: alpha(opacity = 50);
-	opacity: .5;
-}
-a:hover, a:focus {
-	color: #2a6496;
-	text-decoration: underline;
-}
-/**
-  MEDIA QUERIES
-*/
-/* Small devices (tablets, 768px and up) */
-@media ( min-width : 768px) {
-	#quote-carousel {
-		margin-bottom: 0;
-		padding: 0 40px 30px 40px;
-	}
-}
-/* Small devices (tablets, up to 768px) */
-@media ( max-width : 768px) {
-	/* Make the indicators larger for easier clicking with fingers/thumb on mobile */
-	#quote-carousel .carousel-indicators {
-		bottom: -20px !important;
-	}
-	#quote-carousel .carousel-indicators li {
-		display: inline-block;
-		margin: 0px 5px;
-		width: 15px;
-		height: 15px;
-	}
-	#quote-carousel .carousel-indicators li.active {
-		margin: 0px 5px;
-		width: 20px;
-		height: 20px;
-	}
-}
-/**
-  MEDIA QUERIES
-*/
-/* Small devices (tablets, 768px and up) */
-@media ( min-width : 768px) {
-	#quote-carousel {
-		margin-bottom: 0;
-		padding: 0 40px 30px 40px;
-	}
-}
-/* Small devices (tablets, up to 768px) */
-@media ( max-width : 768px) {
-	/* Make the indicators larger for easier clicking with fingers/thumb on mobile */
-	#quote-carousel .carousel-indicators {
-		bottom: -20px !important;
-	}
-	#quote-carousel .carousel-indicators li {
-		display: inline-block;
-		margin: 0px 5px;
-		width: 15px;
-		height: 15px;
-	}
-	#quote-carousel .carousel-indicators li.active {
-		margin: 0px 5px;
-		width: 20px;
-		height: 20px;
-	}
-}
-body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.42857143;
-	color: #333;
-	background-color: #fff;
-}
-html {
-	font-size: 10px;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-.glyphicon-chevron-left:before {
-	
-}
-.fa-chevron-right:before {
-	content: "\f054";
-}
-:before, :after {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-#mySubbar {
-	margin-left: 300px;
-}
-
 </style>
 </head>
 <body>
@@ -281,34 +106,32 @@ html {
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/"><img src="/resources/img/school.png"
+				<a href="#" onclick="mainPage()"><img src="/resources/img/school.png"
 					id="main-image" style="display: line" alt="Main" width="60"
 					height="60"></a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
 					data-target="#myNavbar">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합
 					알리미</a>
 			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6 col-sm-offset-3">
-						<div id="imaginary_container">
-							<div class="input-group stylish-input-group">
-								<input type="text" class="form-control"
-									placeholder="학교명 예) 부천정보산업고등학교"> <span
-									class="input-group-addon">
-									<button type="submit">
-										<span class="glyphicon glyphicon-search"></span>
-									</button>
-								</span>
-							</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<div id="imaginary_container">
+						<div class="input-group stylish-input-group">
+							<input type="text" class="form-control"
+								placeholder="학교명 예) 부천정보산업고등학교"> <span
+								class="input-group-addon">
+								<button type="button" onclick="goList()">
+									<span class="glyphicon glyphicon-search"></span>
+								</button>
+							</span>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#" onclick="goLogin()" id="login">로그인/회원가입</a></li>
@@ -316,7 +139,7 @@ html {
 			</div>
 			<div class="collapse navbar-collapse" id="mySubbar">
 				<ul class="nav navbar-nav navbar-left">
-					<li id="a"><a href="#" onclick="goschool()">학교찾기</a></li>
+					<li id="a"><a href="#" onclick="goList()">학교찾기</a></li>
 					<li id="b"><a href="#">학교찾기</a></li>
 					<li id="c"><a href="#">학교찾기</a></li>
 					<li id="d"><a href="#">학교찾기</a></li>
@@ -327,22 +150,13 @@ html {
 
 	<!-- First Container -->
 	<div class="container-fluid bg-1 text-center">
-		
-		<img src="/resources/img/학생.jpg"
-			class="rounded-circle img-circle margin" style="display: inline"
-			alt="Bird" width="120" height="120"> <img
-			src="/resources/img/a.jpg" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120"> <img
-			src="/resources/img/sc.jpg" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120"> <img
-			src="/resources/img/음식.jpg" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120"> <img
-			src="/resources/img/지도.png" class="rounded-circle img-circle margin"
-			style="display: inline" alt="Bird" width="120" height="120">
-		<h3 class="margin">학교 이름</h3>
-		<h3>학교정보</h3>
-		
-		<div id="map" style="width: 700px; height: 700px;"></div>
+		<div id="scinfo">
+			<h2>학교 이름</h2>
+			<h3 id="scname"></h3>
+			<h3>학교 정보</h3>
+			<h3>급식 정보</h3>	
+		</div>
+		<div id="map"></div>
 	</div>
 
 	<!-- Footer -->
@@ -360,7 +174,7 @@ html {
 			loginBtn.innerHTML = "로그아웃";
 		}
 		function mainPage() {
-			location = "/";
+			location = "/uri/sc/main";
 		}
 		function goLogin() {
 			if (!ses) {
@@ -369,15 +183,18 @@ html {
 				location = "/logout";
 			}
 		}
-		function goschool() {
+		function goList() {
 			location = "/uri/sc/list";
 		}
+		/* 
 		$(document).ready(function() {
 			$('#quote-carousel').carousel({
 				pause : true,
 				interval : 4000,
 			});
-		});
+		}); */
+		
+		
 		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 		var options = { //지도를 생성할 때 필요한 기본 옵션
 			center: new daum.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
@@ -403,13 +220,13 @@ html {
 			        level: 4		 // 지도의 확대 레벨
 			    };  	
 
-			// 지도를 생성합니다    	
+			// 지도를 생성합니다    		
 			var map = new daum.maps.Map(mapContainer, mapOption); 
 			
 			// 장소 검색 객체를 생성합니다
 			var ps = new daum.maps.services.Places(map); 
 
-			daum.maps.event.addListener(map, 'zoom_changed', function() {        
+			function scSearch(){
 				// 카테고리로 은행을 검색합니다
 				ps.categorySearch('SC4', placesSearchCB, {useMapBounds:true}); 
 				//ps.keywordSearch('고등학교', placesSearchCB); 
@@ -438,40 +255,11 @@ html {
 				        infowindow.open(map, marker);
 				    });
 				}
+			}
+			daum.maps.event.addListener(map, 'zoom_changed', function() {        
+				scSearch();
 			});
-			카//카테고리로 은행을 검색합니다
-			ps.categorySearch('SC4', placesSearchCB, {useMapBounds:true}); 
-			// 키워드로 장소를 검색합니다
-			//ps.keywordSearch('고등학교', placesSearchCB); 
-
-				
-			
-			// 키워드 검색 완료 시 호출되는 콜백함수 입니다
-			function placesSearchCB (data, status, pagination) {
-			    if (status === daum.maps.services.Status.OK) {
-			        for (var i=0; i<data.length; i++) {
-			            displayMarker(data[i]);    
-			        }       
-			    }
-			}
-
-			// 지도에 마커를 표시하는 함수입니다
-			function displayMarker(place) {
-			    // 마커를 생성하고 지도에 표시합니다
-			    var marker = new daum.maps.Marker({
-			        map: map,
-			        position: new daum.maps.LatLng(place.y, place.x) 
-			    });
-
-			    // 마커에 클릭이벤트를 등록합니다
-			    daum.maps.event.addListener(marker, 'click', function() {
-			        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
-			        infowindow.setContent('<div style="padding:5px;font-size:12px;color:black;">' + place.place_name + '</div>');
-			        infowindow.open(map, marker);
-			    });
-			}
-		
-			
+			scSearch();
 		});
 	</script>
 </body>
