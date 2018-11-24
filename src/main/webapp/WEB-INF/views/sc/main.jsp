@@ -20,7 +20,6 @@
 <style>
 body {
 	background: #FFFFFF;
-	font-size:14px;
 }
 
 .navbar, .dropdown-menu {
