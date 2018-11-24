@@ -19,12 +19,21 @@
 	src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=40DD129zgMn8zIBTCRvP"></script>
 <style>
 body {
-	background: #E6E6E6;
+	background: #FFFFFF;
+	font-size:14px;
 }
 
 .navbar, .dropdown-menu {
 	background: rgba(255, 255, 255, 0.25);
 	border: none;
+	margin-top: 15px;
+	margin-left: -5%;
+	margin-right: -5%;
+}
+
+.navbar-header {
+	margin-bottom: 10px;
+	background-color: #FFFFFF;
 }
 
 .nav>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover,
@@ -40,7 +49,7 @@ body {
 
 .navbar a, .dropdown-menu>li>a, .dropdown-menu>li>a:focus,
 	.dropdown-menu>li>a:hover, .navbar-toggle {
-	color: #fff;
+	color: #000000;
 }
 
 .dropdown-menu {
@@ -81,12 +90,60 @@ body {
 }
 
 .navbar-toggle .icon-bar {
-	color: #fff;
+	color: #2E64FE;
 	background: #fff;
 }
-#main-image{
-	float:left;
-	margin-right:10px;
+
+.bg-1 {
+	background-color: #1abc9c; /* Green */
+	color: #ffffff;
+}
+
+#main-image {
+	float: left;
+	margin-right: 10px;
+}
+
+.form-control {
+	margin-right: -10px;
+	margin-top: 3%;
+	width: 260px;
+	margin-right: 30px;
+}
+
+#login {
+	margin-left: 50px;
+}
+
+#imaginary_container {
+	margin-top: 10%; /* Don't copy this */
+}
+
+.stylish-input-group .input-group-addon {
+	background: white !important;
+}
+
+.stylish-input-group .form-control {
+	border-right: 0;
+	box-shadow: 0 0 0;
+	border-color: #ccc;
+}
+
+.stylish-input-group button {
+	border: 0;
+	background: transparent;
+}
+
+.col-sm-6 {
+	width: 260px;
+}
+.col-sm-offset-3 {
+	margin-left:-20%; 
+	margin-right: ;
+}
+.btn-default {
+    margin-left: 258px;
+    margin-top: -55px;
 }
 </style>
 </head>
@@ -113,28 +170,28 @@ body {
 						</div>
 						<div id="navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav">
-								<li class="active"><a href="#" class="">Home</a></li>
 								<li class=" dropdown"><a href="#" class="dropdown-toggle "
 									data-toggle="dropdown" role="button" aria-haspopup="true"
-									aria-expanded="false">Departments <span class="caret"></span></a>
+									aria-expanded="false">학교안내 <span class="caret"></span></a>
 									<ul class="dropdown-menu">
 										<li class=" dropdown"><a href="#"
 											class="dropdown-toggle " data-toggle="dropdown" role="button"
-											aria-haspopup="true" aria-expanded="false">View
+											aria-haspopup="true" aria-expanded="false"> View
 												Departments</a></li>
 										<li><a href="#">Add New</a></li>
 									</ul></li>
-								<li><a href="#">Add New</a></li>
+								<li><a href="#">수시정보</a></li>
 								<li class=" dropdown"><a href="#" class="dropdown-toggle "
 									data-toggle="dropdown" role="button" aria-haspopup="true"
-									aria-expanded="false">Managers <span class="caret"></span></a>
+									aria-expanded="false">정보비교 <span class="caret"></span>
+								</a>
 									<ul class="dropdown-menu">
 										<li><a href="#">View Managers</a></li>
 										<li><a href="#">Add New</a></li>
 									</ul></li>
 								<li class=" dropdown"><a href="#"
 									class="dropdown-toggle active" data-toggle="dropdown"
-									role="button" aria-haspopup="true" aria-expanded="false">Staff
+									role="button" aria-haspopup="true" aria-expanded="false">알리미
 										<span class="caret"></span>
 								</a>
 									<ul class="dropdown-menu">
@@ -142,172 +199,41 @@ body {
 										<li><a href="#">Add New</a></li>
 										<li><a href="#">Bulk Upload</a></li>
 									</ul></li>
-								<li class=" down"><a href="#"
-									class="dropdown-toggle active" data-toggle="dropdown"
-									role="button" aria-haspopup="true" aria-expanded="false">HR
-										<span class="caret"></span>
-								</a>
-									<ul class="dropdown-menu">
-										<li><a href="#">Change Time Entry</a></li>
-										<li><a href="#">Report</a></li>
-									</ul></li>
-							</ul>
-							<ul class="nav navbar-nav pull-right">
-								<li class=" dropdown"><a href="#"
-									class="dropdown-toggle active" data-toggle="dropdown"
-									role="button" aria-haspopup="true" aria-expanded="false">Signed
-										in as <span class="caret"></span>
-								</a>
-									<ul class="dropdown-menu">
-										<li><a href="#">Change Password</a></li>
-										<li><a href="#">My Profile</a></li>
-									</ul></li>
-								<li class=""><a href="#">Logout</a></li>
+								<li class=" dropdown">
+								<input class="form-control" id="system-search" name="q" placeholder="학교명(예:부천정보산업고등학교)" required>
+								<button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+								<li><a href="#" onclick="goLogin()" id="login">로그인/회원가입</a></li>
 							</ul>
 						</div>
+					</div>
+					<div class="container-fluid bg-1 text-center">
+						<ul>
+							<li><img src="/resources/img/학생.jpg"
+								class="rounded-circle img-circle margin" style="display: inline"
+								alt="Bird" width="120" height="120"> <img
+								src="/resources/img/a.jpg"
+								class="rounded-circle img-circle margin" style="display: inline"
+								alt="Bird" width="120" height="120"> <img
+								src="/resources/img/sc.jpg"
+								class="rounded-circle img-circle margin" style="display: inline"
+								alt="Bird" width="120" height="120"> <img
+								src="/resources/img/음식.jpg"
+								class="rounded-circle img-circle margin" style="display: inline"
+								alt="Bird" width="120" height="120"> <img
+								src="/resources/img/지도.png"
+								class="rounded-circle img-circle margin" style="display: inline"
+								alt="Bird" width="120" height="120"></li>
+						</ul>
+						<h3 class="margin">학교 이름</h3>
+
+						<h3>학교정보</h3>
+						<div id="map" style="width: 1800px; height: 400px;"></div>
 					</div>
 				</nav>
 			</div>
 		</div>
 	</nav>
 
-	<!-- First Container -->
-	<div class="container-fluid bg-1 text-center">
-		<ul>
-			<li><img src="/resources/img/학생.jpg"
-				class="rounded-circle img-circle margin" style="display: inline"
-				alt="Bird" width="120" height="120"> <img
-				src="/resources/img/a.jpg" class="rounded-circle img-circle margin"
-				style="display: inline" alt="Bird" width="120" height="120"> <img
-				src="/resources/img/sc.jpg" class="rounded-circle img-circle margin"
-				style="display: inline" alt="Bird" width="120" height="120"> <img
-				src="/resources/img/음식.jpg" class="rounded-circle img-circle margin"
-				style="display: inline" alt="Bird" width="120" height="120"> <img
-				src="/resources/img/지도.png" class="rounded-circle img-circle margin"
-				style="display: inline" alt="Bird" width="120" height="120"></li>
-		</ul>
-		<h3 class="margin">학교 이름</h3>
-
-		<h3>학교정보</h3>
-		<div id="map" style="width: 100%; height: 400px;"></div>
-	</div>
-
-
-
-	<div class="container">
-		<div class="row"></div>
-		<div class='row'>
-			<div class='col-md-offset-2 col-md-8'>
-				<div class="carousel slide" data-ride="carousel" id="quote-carousel">
-					<!-- Bottom Carousel Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-						<li data-target="#quote-carousel" data-slide-to="1"></li>
-						<li data-target="#quote-carousel" data-slide-to="2"></li>
-					</ol>
-
-					<!-- Carousel Slides / Quotes -->
-					<div class="carousel-inner">
-
-						<!-- Quote 1 -->
-						<div class="item active">
-							<blockquote>
-								<div class="row">
-									<div class="col-sm-3 text-center">
-										<img class="img-circle"
-											src="http://www.reactiongifs.com/r/overbite.gif"
-											style="width: 100px; height: 100px;">
-										<!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
-									</div>
-									<div class="col-sm-9">
-										<p>서울대 합격자를 많이 낸 고교는서울예술고(67명), 서울과학고(57명)하나고,
-											용인외대부고(55명), 대원외고(53명)경기과학고(51명) 등 순</p>
-										<small></small>
-									</div>
-								</div>
-							</blockquote>
-						</div>
-						<!-- Quote 2 -->
-						<div class="item">
-							<blockquote>
-								<div class="row">
-									<div class="col-sm-3 text-center">
-										<img class="img-circle"
-											src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg"
-											style="width: 100px; height: 100px;">
-									</div>
-									<div class="col-sm-9">
-										<p>1. 부천정보산업고등학교 2. 운봉공업고등학교 3. 도봉산고등학교</p>
-										<small>똥통학교 순위</small>
-									</div>
-								</div>
-							</blockquote>
-						</div>
-						<!-- Quote 3 -->
-						<div class="item">
-							<blockquote>
-								<div class="row">
-									<div class="col-sm-3 text-center">
-										<img class="img-circle"
-											src="https://s3.amazonaws.com/uifaces/faces/twitter/keizgoesboom/128.jpg"
-											style="width: 100px; height: 100px;">
-									</div>
-									<div class="col-sm-9">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing
-											elit. Ut rutrum elit in arcu blandit, eget pretium nisl
-											accumsan. Sed ultricies commodo tortor, eu pretium mauris.</p>
-										<small>Someone famous</small>
-									</div>
-								</div>
-							</blockquote>
-						</div>
-					</div>
-
-					<!-- Carousel Buttons Next/Prev -->
-					<a data-slide="prev" href="#quote-carousel"
-						class="left carousel-control"><span
-						class="glyphicon glyphicon-chevron-left"></span></a> <a
-						data-slide="next" href="#quote-carousel"
-						class="right carousel-control"><i
-						class="glyphicon glyphicon-chevron-right"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Third Container (Grid) -->
-	<div class="container-fluid bg-3 text-center">
-		<h3 class="school-ranking">학교 검색 순위</h3>
-		<br>
-		<div class="row">
-			<div class="col-sm-4">
-				<p>학교 이름</p>
-				<img src="/resources/img/sc.jpg" class="img-circle"
-					style="display: inline" alt="Bird" width="350" height="350">
-			</div>
-			<div class="col-sm-4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<img src="/resources/img/sc.jpg"
-					class="img-responsive img-circle margin" style="display: inline"
-					alt="Bird" width="350" height="350">
-			</div>
-			<div class="col-sm-4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<img src="/resources/img/sc.jpg"
-					class="img-responsive img-circle margin" style="display: inline"
-					alt="Bird" width="350" height="350">
-			</div>
-		</div>
-	</div>
-
-	<!-- Footer -->
-	<footer class="container-fluid bg-4 text-center">
-		<p>
-			Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a>
-		</p>
-	</footer>
 	<script>
 		var ses = '${sessionScope.ses}';
 		var loginBtn = document.getElementById("login");

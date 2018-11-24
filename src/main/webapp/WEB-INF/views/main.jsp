@@ -23,40 +23,32 @@ body {
 	line-height: 1.8;
 	color: #f5f6f7;
 }
-
 p {
 	font-size: 16px;
 }
-
 .margin {
 	margin-bottom: 20px;
 }
-
 .bg-1 {
 	background-color: #1abc9c; /* Green */
 	color: #ffffff;
 }
-
 .bg-2 {
 	background-color: #474e5d; /* Dark Blue */
 	color: #ffffff;
 }
-
 .bg-3 {
 	background-color: #ffffff; /* White */
 	color: #555555;
 }
-
 .bg-4 {
 	background-color: #2f2f2f; /* Black Gray */
 	color: #fff;
 }
-
 .container-fluid {
 	padding-top: 70px;
 	padding-bottom: 70px;
 }
-
 .navbar {
 	padding-top: 15px;
 	padding-bottom: 8px;
@@ -66,88 +58,70 @@ p {
 	font-size: 12px;
 	letter-spacing: 5px;
 }
-
 .navbar-nav  li a:hover {
 	color: #1abc9c !important;
 }
-
 #school {
 	color: #808080;
 }
-
 #main-image {
 	float: left;
 	margin-right: 20px;
 	margin-left: -10%;
 }
-
 #mySubbar {
 	margin-left: 20%;
 }
-
 #a {
 	font-size: 15px;
 }
-
 #b {
 	margin-left: 20px;
 	font-size: 15px;
 }
-
 #c {
 	margin-left: 20px;
 	font-size: 15px;
 }
-
 #d {
 	margin-left: 20px;
 	font-size: 15px;
 }
-
 #imaginary_container {
-	margin-top: 20%; /* Don't copy this */
+	margin-top: 10%; /* Don't copy this */
 }
-
 .stylish-input-group .input-group-addon {
 	background: white !important;
 }
-
 .stylish-input-group .form-control {
 	border-right: 0;
 	box-shadow: 0 0 0;
 	border-color: #ccc;
 }
-
 .stylish-input-group button {
 	border: 0;
 	background: transparent;
 }
-
 .col-sm-6 {
 	width: 50%;
 }
-
 .col-sm-offset-3 {
 	margin: -50px 0px 0px -60px;
 }
-
-.navbar-left { .pull-left ();
-	
+.navbar-left { 
+    .pull-left ();
 }
 
-.navbar-right { .pull-right ();
-	margin-top: -40px;
-}
 
-}
+.navbar-right { 
+	.pull-right ();
+	 margin-top: -40px;
+	 }
 
-/* carousel */
 #quote-carousel {
 	padding: 0 10px 30px 10px;
 	margin-top: 30px;
 }
-
-/* Control buttons  */
 #quote-carousel .carousel-control {
 	background: none;
 	color: #222;
@@ -176,11 +150,9 @@ p {
 #quote-carousel .carousel-indicators li {
 	background: #c0c0c0;
 }
-
 #quote-carousel .carousel-indicators .active {
 	background: #333333;
 }
-
 #quote-carousel img {
 	width: 250px;
 	height: 100px
@@ -190,18 +162,15 @@ p {
 	border-left: none;
 	margin: 0;
 }
-
 .item blockquote img {
 	margin-bottom: 10px;
 }
-
 .item blockquote p:before {
 	content: "\f10d";
 	font-family: 'Fontawesome';
 	float: left;
 	margin-right: 10px;
 }
-
 .carousel-control:hover, .carousel-control:focus {
 	color: #fff;
 	text-decoration: none;
@@ -209,7 +178,6 @@ p {
 	outline: 0;
 	opacity: .9;
 }
-
 .carousel-control.right {
 	right: 0;
 	left: auto;
@@ -225,7 +193,6 @@ p {
 		endColorstr='#80000000', GradientType=1);
 	background-repeat: repeat-x;
 }
-
 .carousel-control {
 	position: absolute;
 	top: 0;
@@ -239,7 +206,6 @@ p {
 	filter: alpha(opacity = 50);
 	opacity: .5;
 }
-
 a:hover, a:focus {
 	color: #2a6496;
 	text-decoration: underline;
@@ -247,7 +213,6 @@ a:hover, a:focus {
 /**
   MEDIA QUERIES
 */
-
 /* Small devices (tablets, 768px and up) */
 @media ( min-width : 768px) {
 	#quote-carousel {
@@ -255,7 +220,6 @@ a:hover, a:focus {
 		padding: 0 40px 30px 40px;
 	}
 }
-
 /* Small devices (tablets, up to 768px) */
 @media ( max-width : 768px) {
 	/* Make the indicators larger for easier clicking with fingers/thumb on mobile */
@@ -274,11 +238,9 @@ a:hover, a:focus {
 		height: 20px;
 	}
 }
-
 /**
   MEDIA QUERIES
 */
-
 /* Small devices (tablets, 768px and up) */
 @media ( min-width : 768px) {
 	#quote-carousel {
@@ -286,7 +248,6 @@ a:hover, a:focus {
 		padding: 0 40px 30px 40px;
 	}
 }
-
 /* Small devices (tablets, up to 768px) */
 @media ( max-width : 768px) {
 	/* Make the indicators larger for easier clicking with fingers/thumb on mobile */
@@ -305,7 +266,6 @@ a:hover, a:focus {
 		height: 20px;
 	}
 }
-
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
@@ -313,26 +273,21 @@ body {
 	color: #333;
 	background-color: #fff;
 }
-
 html {
 	font-size: 10px;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
 .glyphicon-chevron-left:before {
 	
 }
-
 .fa-chevron-right:before {
 	content: "\f054";
 }
-
 :before, :after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
 #mySubbar {
 	margin-left: 300px;
 }
@@ -536,7 +491,6 @@ html {
 		function mainPage() {
 			location = "/";
 		}
-
 		function goLogin() {
 			if (!ses) {
 				location = "/uri/sc/login";
@@ -547,13 +501,19 @@ html {
 		function goschool() {
 			location = "/uri/sc/list";
 		}
-
 		$(document).ready(function() {
 			$('#quote-carousel').carousel({
 				pause : true,
 				interval : 4000,
 			});
 		});
+		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+		var options = { //지도를 생성할 때 필요한 기본 옵션
+			center: new daum.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+			level: 3 //지도의 레벨(확대, 축소 정도)
+		};
+		var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
+
 
 		var latitude;
 		var longitude;
