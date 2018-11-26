@@ -1,6 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <title>학교 정보 통합 알리미</title>
+<script>
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd='0'+dd
+} 
+if(mm<10) {
+    mm='0'+mm	
+}	
+//today = mm+'/'+dd+'/'+yyyy;
+</script>
 <style>
 body {
 	font: 20px Montserrat, sans-serif;
@@ -120,7 +134,6 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 </style>
 </head>
 <body>
-	${sessionScope.user}
 	<!-- Navbar -->
 	<nav class="navbar navbar-default">
 		<div class="container">
@@ -187,13 +200,15 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 	</div>
 
 	<!-- Footer -->
-	<footer class="container-fluid bg-4 text-center">
-		<button onclick="meals()">급식정보</button>
+	<footer class="container-fluid bg-4 text-center">	
 		<p>
 			Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a>
 		</p>
 	</footer>
 	<script>
+
+		
+	
 		var ses = '${sessionScope.ses}';
 		var loginBtn = document.getElementById("login");
 		if (!ses) {
@@ -216,6 +231,8 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 		}
 		
 		
+		
+		
 		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 		var options = { //지도를 생성할 때 필요한 기본 옵션
 			center: new daum.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
@@ -229,7 +246,8 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 		var mapContainer, map, mapTypeControl, ps, maker,infowindow;
 
 		navigator.geolocation.getCurrentPosition(function(pos) {
-			latitude = pos.coords.latitude;
+			
+			latitude = pos.coords.latitude;	
 			longitude = pos.coords.longitude;
 	
 			// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
@@ -309,15 +327,15 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 		});
 		
 		
-		
 		function meals(){
-			var conf = {
-					 url:'https://schoolmenukr.ml/api/elementary/B100001246',
+			
+			var conf = {		
+					 url:'https://schoolmenukr.ml/api/high/J100000585?hideAllergy=true',
 					 method:'GET',
-					// param : JSON.stringify({stid:loginid,stpwd:loginpwd}),
+					 //param : JSON.stringify({year:yyyy,month:mm,date:dd,hideAllergy:true}),
 					 success : function(res){
 						 res = JSON.parse(res);
-						 document.querySelector('#meals').innerHTML = res.menu[0].lunch;
+						 document.querySelector('#meals').innerHTML = res.menu[dd-1].lunch;
 					 }
 			 }
 			 au.send(conf);
