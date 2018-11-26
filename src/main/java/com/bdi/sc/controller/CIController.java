@@ -23,7 +23,7 @@ public class CIController {
 	CIService cs;
 	
 	@GetMapping(value="/cis")	
-	public @ResponseBody List<CIVO> selectCIList(@RequestBody CIVO ci) {
+	public @ResponseBody List<CIVO> selectCIList(CIVO ci) {
 		return cs.selectCIList(ci);
 	}
 	@GetMapping(value="/cis/{cnum}")
