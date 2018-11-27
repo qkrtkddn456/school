@@ -167,7 +167,7 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 		</div>
 	</nav>
 
-	<!-- First Container -->
+	<!-- First Container -->	
 	<div class="container-fluid bg-1 text-center">
 		<div id="scinfo">
 			<h2>학교 이름</h2>
@@ -184,7 +184,7 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
     		</div> 
 		</div>
 		
-	</div>
+	</div>	
 
 	<!-- Footer -->
 	<footer class="container-fluid bg-4 text-center">
