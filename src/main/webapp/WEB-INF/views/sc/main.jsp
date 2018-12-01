@@ -18,11 +18,11 @@ body {
 }
 #scinfo{
 	float:left;
-	width:20%;
+	width:30%;
 }
 #map{
 	float:right;
-	width:80%;	
+	width:70%;	
 	height:1000px;
 }
 .bg-4 {
@@ -98,25 +98,155 @@ body {
 	.pull-right ();
 	 margin-top: -40px;
 	 }
-p{
-	font-size:15px;
+	 
+	 
+	 .nav-side-menu {
+  overflow: auto;
+  font-family: verdana;
+  font-size: 12px;
+  font-weight: 200;
+  background-color: #2e353d;
+  position: fixed;
+  top: 0px;
+  width: 300px;
+  height: 100%;
+  color: #e1ffff;
 }
-/* /*박상우 카카오맵 css
-html, body {width:100%;height:100%;margin:0;padding:0;} 
-.map_wrap {position:relative;overflow:hidden;width:100%;height:350px;}
-.radius_border{border:1px solid #919191;border-radius:5px;}     
-.custom_typecontrol {position:absolute;top:10px;right:10px;overflow:hidden;width:130px;height:30px;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
-.custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
-.custom_typecontrol .btn {background:#fff;background:linear-gradient(#fff,  #e6e6e6);}       
-.custom_typecontrol .btn:hover {background:#f5f5f5;background:linear-gradient(#f5f5f5,#e3e3e3);}
-.custom_typecontrol .btn:active {background:#e6e6e6;background:linear-gradient(#e6e6e6, #fff);}    
-.custom_typecontrol .selected_btn {color:#fff;background:#425470;background:linear-gradient(#425470, #5b6d8a);}
-.custom_typecontrol .selected_btn:hover {color:#fff;}   
-.custom_zoomcontrol {position:absolute;top:50px;right:10px;width:36px;height:80px;overflow:hidden;z-index:1;background-color:#f5f5f5;} 
-.custom_zoomcontrol span {display:block;width:36px;height:40px;text-align:center;cursor:pointer;}     
-.custom_zoomcontrol span img {width:15px;height:15px;padding:12px 0;border:none;}             
-.custom_zoomcontrol span:first-child{border-bottom:1px solid #bfbfbf;}
-/*박상우 카카오맵css    */         
+.nav-side-menu .brand {
+  background-color: #23282e;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+}
+.nav-side-menu .toggle-btn {
+  display: none;
+}
+.nav-side-menu ul,
+.nav-side-menu li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 35px;
+  cursor: pointer;
+  /*    
+    .collapsed{
+       .arrow:before{
+                 font-family: FontAwesome;
+                 content: "\f053";
+                 display: inline-block;
+                 padding-left:10px;
+                 padding-right: 10px;
+                 vertical-align: middle;
+                 float:right;
+            }
+     }
+*/
+}
+.nav-side-menu ul :not(collapsed) .arrow:before,
+.nav-side-menu li :not(collapsed) .arrow:before {
+  font-family: FontAwesome;
+  content: "\f078";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+  float: right;
+}
+.nav-side-menu ul .active,
+.nav-side-menu li .active {
+  border-left: 3px solid #d19b3d;
+  background-color: #4f5b69;
+}
+.nav-side-menu ul .sub-menu li.active,
+.nav-side-menu li .sub-menu li.active {
+  color: #d19b3d;
+}
+.nav-side-menu ul .sub-menu li.active a,
+.nav-side-menu li .sub-menu li.active a {
+  color: #d19b3d;
+}
+.nav-side-menu ul .sub-menu li,
+.nav-side-menu li .sub-menu li {
+  background-color: #181c20;
+  border: none;
+  line-height: 28px;
+  border-bottom: 1px solid #23282e;
+  margin-left: 0px;
+}
+.nav-side-menu ul .sub-menu li:hover,
+.nav-side-menu li .sub-menu li:hover {
+  background-color: #020203;
+}
+.nav-side-menu ul .sub-menu li:before,
+.nav-side-menu li .sub-menu li:before {
+  font-family: FontAwesome;
+  content: "\f105";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.nav-side-menu li {
+  padding-left: 0px;
+  border-left: 3px solid #2e353d;
+  border-bottom: 1px solid #23282e;
+}
+.nav-side-menu li a {
+  text-decoration: none;
+  color: #e1ffff;
+}
+.nav-side-menu li a i {
+  padding-left: 10px;
+  width: 20px;
+  padding-right: 20px;
+}
+.nav-side-menu li:hover {
+  border-left: 3px solid #d19b3d;
+  background-color: #4f5b69;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+@media (max-width: 767px) {
+  .nav-side-menu {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .nav-side-menu .toggle-btn {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10 !important;
+    padding: 3px;
+    background-color: #ffffff;
+    color: #000;
+    width: 40px;
+    text-align: center;
+  }
+  .brand {
+    text-align: left !important;
+    font-size: 22px;
+    padding-left: 20px;
+    line-height: 50px !important;
+  }
+}
+@media (min-width: 767px) {
+  .nav-side-menu .menu-list .menu-content {
+    display: block;
+  }
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+	 
+	 
 </style>
 </head>
 <body>
@@ -172,23 +302,14 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 		<div id="scinfo">
 			<h2>학교 이름</h2>
 			<h3 id="scname"></h3>
-			<h2>학교 정보</h2>
-			<h2>급식 정보</h2>	
-			<h3 id="meals"></h3>
+			<h3>학교 정보</h3>
+			<h3>급식 정보</h3>	
 		</div>
-		<div class="map_wrap">
-			<div id="map" style="position:relative;overflow:hidden;"></div>
-			<div class="custom_typecontrol radius_border">
-		        	<span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
-		        	<span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
-    		</div> 
-		</div>
-		
+		<div id="map"></div>
 	</div>
 
 	<!-- Footer -->
 	<footer class="container-fluid bg-4 text-center">
-		<button onclick="meals()">급식정보</button>
 		<p>
 			Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a>
 		</p>
@@ -214,6 +335,13 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 		function goList() {
 			location = "/uri/sc/list";
 		}
+		/* 
+		$(document).ready(function() {
+			$('#quote-carousel').carousel({
+				pause : true,
+				interval : 4000,
+			});
+		}); */
 		
 		
 		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
@@ -243,29 +371,6 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 
 			// 지도를 생성합니다    		
 			var map = new daum.maps.Map(mapContainer, mapOption); 
-			
-			// 지도에 확대 축소 컨트롤을 생성한다
-			var zoomControl = new daum.maps.ZoomControl();
-
-			// 지도의 우측에 확대 축소 컨트롤을 추가한다
-			map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
-			
-			// 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수입니다
-			function setMapType(maptype) { 
-			    var roadmapControl = document.getElementById('btnRoadmap');
-			    var skyviewControl = document.getElementById('btnSkyview'); 
-			    if (maptype === 'roadmap') {
-			        map.setMapTypeId(daum.maps.MapTypeId.ROADMAP);    
-			        roadmapControl.className = 'selected_btn';
-			        skyviewControl.className = 'btn';
-			    } else {
-			        map.setMapTypeId(daum.maps.MapTypeId.HYBRID);    
-			        skyviewControl.className = 'selected_btn';
-			        roadmapControl.className = 'btn';
-			    }
-			}
-
-
 			
 			// 장소 검색 객체를 생성합니다
 			var ps = new daum.maps.services.Places(map); 
@@ -297,8 +402,6 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 				        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
 				        infowindow.setContent('<div style="padding:5px;font-size:12px;color:black;">' + place.place_name + '</div>');
 				        infowindow.open(map, marker);
-				       	document.querySelector('#scname').innerHTML = place.place_name;
-				       	meals();
 				    });
 				}
 			}
@@ -307,21 +410,6 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 			});
 			scSearch();
 		});
-		
-		
-		
-		function meals(){
-			var conf = {
-					 url:'https://schoolmenukr.ml/api/elementary/B100001246',
-					 method:'GET',
-					// param : JSON.stringify({stid:loginid,stpwd:loginpwd}),
-					 success : function(res){
-						 res = JSON.parse(res);
-						 document.querySelector('#meals').innerHTML = res.menu[0].lunch;
-					 }
-			 }
-			 au.send(conf);
-		}
 	</script>
 </body>
 </html>

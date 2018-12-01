@@ -20,24 +20,16 @@ body {
 	font: 20px Montserrat, sans-serif;
 	line-height: 1.8;
 	color: #f5f6f7;
+	font-weight: bold;
 }
 
 p {
 	font-size: 16px;
 }
 
-.margin {
-	margin-bottom: 45px;
-	margin-top: -3%;
-	margin: 10px;
-	color: #474e5d;
-}
-
 .bg-1 {
-	background-color: #FAFAFA; /* Green */
+	background-color: #ffffff; /* Green */
 	color: #ffffff;
-	background-image:
-		url("http://cafefiles.naver.net/20140815_50/ohyama2014_1408065561725jUott_PNG/30447508_big_p6.png");
 	background-size: cover;
 }
 
@@ -62,14 +54,12 @@ p {
 
 .navbar {
 	padding-top: 15px;
-	padding-bottom: 15px;
-	border: 1px solid;
-	border-color: #BDBDBD;
+	padding-bottom: 8px;
+	border: 20px;
 	border-radius: 0;
 	margin-bottom: 0;
 	font-size: 12px;
 	letter-spacing: 5px;
-	background-color: #FFFFFF;
 }
 
 .navbar-nav  li a:hover {
@@ -88,6 +78,7 @@ p {
 
 #mySubbar {
 	margin-left: 20%;
+	margin-left: 300px;
 }
 
 #a {
@@ -110,7 +101,7 @@ p {
 }
 
 #imaginary_container {
-	margin-top: 20%;
+	margin-top: 10%; /* Don't copy this */
 }
 
 .stylish-input-group .input-group-addon {
@@ -122,21 +113,17 @@ p {
 	box-shadow: 0 0 0;
 	border-color: #ccc;
 }
-
 .stylish-input-group button {
 	border: 0;
 	background: transparent;
-	margin-top: -10%;
 }
 
 .col-sm-6 {
 	width: 50%;
 }
-
 .col-sm-offset-3 {
-	margin: -50px 0px 0px 10px;
+	margin: -47px 0px 0px -30px;
 }
-
 .navbar-left { .pull-left ();
 	
 }
