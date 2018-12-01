@@ -1,6 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <title>학교 정보 통합 알리미</title>
+<script>
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd='0'+dd
+} 
+if(mm<10) {
+    mm='0'+mm	
+}	
+//today = mm+'/'+dd+'/'+yyyy;
+</script>
 <style>
 body {
 	font: 20px Montserrat, sans-serif;
@@ -250,7 +264,6 @@ body {
 </style>
 </head>
 <body>
-	${sessionScope.user}
 	<!-- Navbar -->
 	<nav class="navbar navbar-default">
 		<div class="container">
@@ -297,7 +310,7 @@ body {
 		</div>
 	</nav>
 
-	<!-- First Container -->
+	<!-- First Container -->	
 	<div class="container-fluid bg-1 text-center">
 		<div id="scinfo">
 			<h2>학교 이름</h2>
@@ -305,16 +318,35 @@ body {
 			<h3>학교 정보</h3>
 			<h3>급식 정보</h3>	
 		</div>
+<<<<<<< HEAD
 		<div id="map"></div>
 	</div>
+=======
+		<div class="map_wrap">
+			<div id="map" style="position:relative;overflow:hidden;"></div>
+			<div class="custom_typecontrol radius_border">
+		        	<span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
+		        	<span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
+    		</div> 
+		</div>
+		
+	</div>	
+>>>>>>> branch 'master' of https://github.com/qkrtkddn456/school.git
 
 	<!-- Footer -->
+<<<<<<< HEAD
 	<footer class="container-fluid bg-4 text-center">
+=======
+	<footer class="container-fluid bg-4 text-center">	
+>>>>>>> branch 'master' of https://github.com/qkrtkddn456/school.git
 		<p>
 			Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a>
 		</p>
 	</footer>
 	<script>
+
+		
+	
 		var ses = '${sessionScope.ses}';
 		var loginBtn = document.getElementById("login");
 		if (!ses) {
@@ -344,6 +376,8 @@ body {
 		}); */
 		
 		
+		
+		
 		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 		var options = { //지도를 생성할 때 필요한 기본 옵션
 			center: new daum.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
@@ -357,7 +391,8 @@ body {
 		var mapContainer, map, mapTypeControl, ps, maker,infowindow;
 
 		navigator.geolocation.getCurrentPosition(function(pos) {
-			latitude = pos.coords.latitude;
+			
+			latitude = pos.coords.latitude;	
 			longitude = pos.coords.longitude;
 	
 			// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
@@ -410,6 +445,24 @@ body {
 			});
 			scSearch();
 		});
+<<<<<<< HEAD
+=======
+		
+		
+		function meals(){
+			
+			var conf = {		
+					 url:'https://schoolmenukr.ml/api/high/J100000585?hideAllergy=true',
+					 method:'GET',
+					 //param : JSON.stringify({year:yyyy,month:mm,date:dd,hideAllergy:true}),
+					 success : function(res){
+						 res = JSON.parse(res);
+						 document.querySelector('#meals').innerHTML = res.menu[dd-1].lunch;
+					 }
+			 }
+			 au.send(conf);
+		}
+>>>>>>> branch 'master' of https://github.com/qkrtkddn456/school.git
 	</script>
 </body>
 </html>

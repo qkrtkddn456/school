@@ -175,99 +175,47 @@ p {
 	font-size: 14px;
 	padding-top: 20px;
 	color: black;
+	margin-left: 10px;
 }
 
 .Search_Word span {
-	color: #999;
+	color: ;
 	font-family: 'Nanum';
 }
 
-.Class_Btn {
-	float: right;
-	margin: 10px 0;
-}
-
 .Search_Word em {
-	color: #119C94;
+	color: #9370db ;
 }
 
-.SchoolList {
-	position: relative;
-	margin-top: 30px;
-	padding-bottom: 20px;
+.table {
+	border-radius: 12px;
 }
 
-.SchoolList .School_Name {
-	border-bottom: 1px solid #4DB5AE;
-	height: 40px;
-	padding: 6px 200px 0 200px;
+.table thead tr {
+	background-color: lavender;
+	border: 2px solid #ddd;
+}
+
+.table thead tr th {
+	border: 2px solid #ddd;
+}
+
+.table {
+	border: 1px solid #ddd;
+	padding: 10px;
 	text-align: center;
-	font-size: 24px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	line-height: 1.1;
-	color: #489893;
-}
-
-.SchoolList .School_Data {
-	padding-top: 12px;
-}
-
-.SchoolList .School_Data li {
-	position: relative;
-	float: left;
-	width: 50%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	margin-bottom: 7px;
-	padding: 2px 0 0 110px;
-	line-height: 1.6;
+	font-size: 14px;
+	margin: 40px 0 20px 30px;
+	cursor: pointer;
 	color: black;
-	list-style: none;
-	text-align: left;
 }
 
-.SchoolList .School_Data li span.InfoTitle {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: #4DB5AE;
-	color: #FFF;
-	margin-right: 5px;
-	text-align: center;
-	width: 100px;
-	padding: 2px 0;
+.table tr td {
+	border: 2px solid #ddd;
 }
-
-.SchoolList .School_Data li span.Tel {
-	border: 1px solid #4DB5AE;
-	padding: 2px 5px 3px 5px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	line-height: 1.0;
-	margin-right: 3px;
-	color: #4DB5AE;
-}
-
-.SchoolList .School_Data li span.URL {
-	font-family: 'Tahoma';
-	line-height: 0.9;
-}
-
-.SchoolList .School_Data li span.URL a {
-	color: #119C94;
-}
-
-body {
-	font-family: 'Barun', '돋움', Dotum, AppleGothic, sans-serif;
-	font-size: 12px;
-	line-height: 1.4;
-	color: #444;
-	letter-spacing: 0;
-	-webkit-text-size-adjust: none;
+.table>thead:first-child>tr:first-child>th {
+    border-top: 0;
+    text-align: center;
 }
 </style>
 </head>
@@ -327,59 +275,47 @@ body {
 		<div id="Contents">
 			<div class="InnerWrap">
 				<div class="Search_Word">
-					'<em>검색한거</em>' 검색결과 <span>(검색결과 몇건)</span>
+					'<em>검색한거</em>' 검색결과 <span>(총 ?건)</span>
 				</div>
-
 			</div>
-			<!-- //공시상단 -->
-			<div class="InnerWrap" id="SchoolListWrap">
-				<!-- 학교리스트 -->
+			<div class="container">
 
-
-				<article class="SchoolList" data-kind="04" data-hs-kind="03"
-					data-fond="2">
-					<h1 class="School_Name">
-						<a href="#">학교이름</a>
-					</h1>
-
-
-					<ul class="School_Data">
-						<li><span class="InfoTitle">학생수</span>?명 (남 ??명 / 여 ??명)</li>
-						<li><span class="InfoTitle">학교주소</span>주소주소</li>
-						<li><span class="InfoTitle">교원수</span>?명 (남 ??명 / 여 ??명)</li>
-						<li><span class="InfoTitle">대표전화/팩스</span><span class="Tel">전화</span>032-322-2168
-							<span class="Tel">팩스</span>032-322-1901</li>
-						<li><span class="InfoTitle">설립구분</span>공립</li>
-
-
-
-
-
-
-
-						<li><span class="InfoTitle">설립유형</span>단설</li>
-						<li><span class="InfoTitle">홈페이지</span><span class="URL"><a
-								href="#" target="_blank">링크</a></span></li>
-					</ul>
-
-				</article>
-
-
-				<!-- //학교리스트 -->
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>학교이름</th>
+							<th>학생수</th>
+							<th>교원수</th>
+							<th>학교주소</th>
+							<th>대표전화</th>
+							<th>홈페이지</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>부천정보산업고등학교</td>
+							<td>남()/여()</td>
+							<td>남()/여()</td>
+							<td>부천</td>
+							<td>233-12348</td>
+							<td>링크</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
-			<div class="InnerWrap"></div>
 		</div>
-		<script>
-			function mainPage() {
-				location = "/";
-			}
-			function goLogin() {
-				location = "/uri/sc/login";
-			}
-			function goSignin() {
-				location = "/uri/sc/login";
-			}
-		</script>
 	</div>
+	</div>
+	<script>
+		function mainPage() {
+			location = "/";
+		}
+		function goLogin() {
+			location = "/uri/sc/login";
+		}
+		function goSignin() {
+			location = "/uri/sc/login";
+		}
+	</script>
 </body>
 </html>
