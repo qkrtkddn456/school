@@ -7,17 +7,21 @@
 <title>학교 정보 통합 알리미</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=40DD129zgMn8zIBTCRvP"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat"
+	rel="stylesheet">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript"
+	src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=40DD129zgMn8zIBTCRvP"></script>
 <style>
 body {
 	font: 20px Montserrat, sans-serif;
 	line-height: 1.8;
 	color: #f5f6f7;
-	
 }
 
 p {
@@ -61,6 +65,7 @@ p {
 	margin-bottom: 0;
 	font-size: 12px;
 	letter-spacing: 5px;
+	background-color: none;
 }
 
 .navbar-nav  li a:hover {
@@ -74,30 +79,26 @@ p {
 #main-image {
 	float: left;
 	margin-right: 20px;
-	margin-left: -10%;
-}
-
-#mySubbar {
-	margin-left: 20%;
+	margin-left: -90px;
 }
 
 #a {
 	font-size: 15px;
-	margin-left:-5%;
+	margin-left: -100px;
 }
 
 #b {
-	margin-left: 20px;
+	margin-left: 75px;
 	font-size: 15px;
 }
 
 #c {
-	margin-left: 20px;
+	margin-left: 70px;
 	font-size: 15px;
 }
 
 #d {
-	margin-left: 20px;
+	margin-left: 70px;
 	font-size: 15px;
 }
 
@@ -125,19 +126,19 @@ p {
 }
 
 .col-sm-offset-3 {
-	margin: -50px 0px 0px -60px;
+	margin: -13px 0px -40px -575px;
+	width: 500px;
 }
 
-.navbar-left { 
-    .pull-left ();
+.navbar-left {
 	
 }
 
-.navbar-right { 
-	.pull-right ();
-	 margin-top: -40px;
-}
-
+.navbar-right {
+	margin-top: -3px;
+	margin-right: 400px;
+	margin-bottom: -10px;
+	margin-left: -200px;
 }
 
 /* carousel */
@@ -310,7 +311,6 @@ body {
 	font-size: 14px;
 	line-height: 1.42857143;
 	color: #333;
-	background-color: #fff;
 }
 
 html {
@@ -333,23 +333,34 @@ html {
 }
 
 #mySubbar {
-	margin-left: 300px;
+	margin-left: 710px;
+	margin-top: -15px;
 }
-.rounded-circle{
+
+.rounded-circle {
 	margin-right: 55px;
 }
-ul{
-   list-style:none;
-   }
-   * {
-    margin: 0; 
+
+ul {
+	list-style: none;
+}
+
+* {
+	margin: 0;
 	padding: 0;
 }
+
 body {
-	background: #fff; 
 	font-family: arial, verdana, tahoma;
 }
 
+body {
+	background-color:"white";
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 /*Time to apply widths for accordian to work
 Width of image = 640px
 total images = 5
@@ -358,16 +369,15 @@ width of un-hovered image = 40px - you can set this to anything
 so total container width = 640 + 40*4 = 800px;
 default width = 800/5 = 160px;
 */
-
 .accordian {
-	width: 805px; height: 320px;
+	width: 870px;
+	height: 170px;
 	overflow: hidden;
-	
-	/*Time for some styling*/
-	margin: 100px auto;
 	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
 	-webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
 	-moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	margin: 17px 0px 0px 0px;
+	border-radius: 6px;
 }
 
 /*A small hack to prevent flickering on some browsers*/
@@ -380,15 +390,12 @@ default width = 800/5 = 160px;
 .accordian li {
 	position: relative;
 	display: block;
-	width: 160px;
+	width: 175px;
 	float: left;
-	
 	border-left: 1px solid #888;
-	
 	box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-	
 	/*Transitions to give animation effect*/
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -398,11 +405,14 @@ default width = 800/5 = 160px;
 }
 
 /*Reduce with of un-hovered elements*/
-.accordian ul:hover li {width: 40px;}
+.accordian ul:hover li {
+	width: 143px;
+}
 /*Lets apply hover effects now*/
 /*The LI hover style should override the UL hover style*/
-.accordian ul li:hover {width: 640px;}
-
+.accordian ul li:hover {
+	width: 305px;
+}
 
 .accordian li img {
 	display: block;
@@ -412,10 +422,11 @@ default width = 800/5 = 160px;
 .image_title {
 	background: rgba(0, 0, 0, 0.5);
 	position: absolute;
-	left: 0; bottom: 0;	
-width: 640px;	
-
+	left: 0;
+	bottom: 0;
+	width: 305px;
 }
+
 .image_title a {
 	display: block;
 	color: #fff;
@@ -423,24 +434,164 @@ width: 640px;
 	padding: 20px;
 	font-size: 16px;
 }
+
+#border {
+	height: 250px;
+	width: 900px;
+	margin-left: 50px;
+	margin-top: 100px;
+}
+
+.ChartTitle {
+	font-size: 19px;
+	line-height: 1.1;
+	height: 0px;
+	padding: 0 50px;
+}
+
+.Main_News {
+	float: left;
+	width: 250px;
+	height: 250px;
+	background: floralwhite no-repeat 0 130px;
+	margin: -245px 0 0 670px;
+	border-radius: 15px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0px 25px 0 25px;
+}
+
+.NewsTitle {
+	font-size: 18px;
+	line-height: 1.0;
+}
+
+.News_Date {
+	font-family: 'Tahoma';
+	font-size: 12px;
+	color: darkgray;
+	padding-top: 18px;
+	line-height: 1.0;
+}
+
+.News_Subject {
+	font-size: 14px;
+	line-height: 1.2;
+	padding: 5px 0 3px 0;
+}
+
+.News_Cont {
+	font-family: 'Nanum';
+	line-height: 1.2;
+}
+
+.News_More {
+	padding-top: 11px !important;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+.News_Cont a {
+	color: #777;
+	font-size: 11px;
+}
+
+.News_More a {
+	color: coral;
+}
+
+.InnerWrap {
+	position: relative;
+	width: 980px;
+	margin: 0 auto;
+	margin-top: -90px;
+}
+
+#schoolmap {
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	width: 250px;
+	height: 128px;
+	margin: 20px 0 0 670px;
+	border-radius: 7px;
+	background-image:
+		url("https://st2.depositphotos.com/8429558/11178/v/950/depositphotos_111783652-stock-illustration-abstract-city-map.jpg");
+}
+
+#maptext {
+	margin: 55px 0px 0 52px;
+	font-size: 18px;
+	line-height: 1.0;
+	font-family: -webkit-body;
+}
+
+#bottom {
+	margin-top: 25px;
+	border: 0;
+	border-top: 1px solid darkgray;
+}
+
+#top {
+	border-top: 1px solid darkgray;
+	`
+}
+
+#youtube {
+	width: 424px;
+	height: 238px;
+	margin: 205px 0 0 50px;
+}
+
+#youtube2 {
+	width: 424px;
+	height: 238px;
+	margin: 205px 0 0 20px;
+}
+
+#pp {
+	font-size: 12px;
+	margin: 0;
+}
+
+.address {
+	margin-top: 100px;
+	margin-bottom: 20px;
+}
+
+.container {
+	width: 100%;
+	padding: 0;
+}
+
+.container>.navbar-header {
+	margin: 5px 150px 0px 880px;
+}
+
+.vl {
+	border-left: 1px solid darkgray;
+	height: 25px;
+	margin: -35px 0 0 -35px;
+}
+
+#lunch {
+	border-radius: 70px;
+}
 </style>
 </head>
 <body>
-	${sessionScope.user}
 	<!-- Navbar -->
-	<nav class="navbar navbar-default">
+	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
 				<a href="/uri/sc/main"><img src="/resources/img/school.png"
 					id="main-image" style="display: line" alt="Main" width="60"
-					height="60"></a>
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합
-					알리미</a>
+					height="60"></a> <a class="navbar-brand" href="#"
+					onclick="mainPage()">학교 정보 통합 알리미</a>
 			</div>
 			<div class="container">
 				<div class="row">
@@ -464,67 +615,142 @@ width: 640px;
 					<li><a href="#" onclick="goLogin()" id="login">로그인/회원가입</a></li>
 				</ul>
 			</div>
+			<hr id="top" width="100%">
 			<div class="collapse navbar-collapse" id="mySubbar">
+				<div id="menu">
 				<ul class="nav navbar-nav navbar-left">
 					<li id="a"><a href="#" onclick="goschool()">학교찾기</a></li>
-					<li id="b"><a href="#">학교찾기</a></li>
-					<li id="c"><a href="#">학교찾기</a></li>
-					<li id="d"><a href="#">학교찾기</a></li>
+					<li id="b"><a href="#">학교찾기</a>
+						<div class="vl"></div></li>
+					<li id="c"><a href="#">학교찾기</a>
+						<div class="vl"></div></li>
+					<li id="d"><a href="#">학교찾기</a>
+						<div class="vl"></div></li>
 				</ul>
+				</div>
 			</div>
 		</div>
 	</nav>
 
 	<!-- First Container -->
-	<div class="accordian">
-    <ul>
-		<li>
-			<div class="image_title">
-				<a href="http://promotion.daum-kg.net/2018goenews/#event01">2018 경기교육 정책공감 공익캠페인</a>
-			</div> 
-			<a href="http://promotion.daum-kg.net/2018goenews/#event01">
-				<img src="http://dthumb.phinf.naver.net/?src=%22http%3A%2F%2Fpromotion.daum-kg.net%2F2018goenews%2Fimages%2Fsns.jpg%22&type=ff500_300" width="640px" height="320px">
-				</a>
-		</li>
-		<li>
-			<div class="image_title">
-				<a href="http://www.sen.go.kr/web/services/bbs/bbsView.action?bbsBean.bbsCd=130&bbsBean.bbsSeq=833">2018 편안한 교복 디자인 공모전 안내</a>
+	<div id="Main_Service">
+		<div class="InnerWrap">
+			<div id="border">
+				<img id="lunch"
+					src="http://www.sannae.es.kr/tp/mobile_new/images/clip_schoolmeal_pic.gif"
+					width="600px" height="400px">
+				<div class="accordian">
+					<ul>
+						<li>
+							<div class="image_title">
+								<a href="http://promotion.daum-kg.net/2018goenews/#event01">경기교육
+									정책공감 공익캠페인</a>
+							</div> <a href="http://promotion.daum-kg.net/2018goenews/#event01">
+								<img
+								src="http://dthumb.phinf.naver.net/?src=%22http%3A%2F%2Fpromotion.daum-kg.net%2F2018goenews%2Fimages%2Fsns.jpg%22&type=ff500_300"
+								width="305px" height="170px">
+						</a>
+						</li>
+						<li>
+							<div class="image_title">
+								<a
+									href="http://www.sen.go.kr/web/services/bbs/bbsView.action?bbsBean.bbsCd=130&bbsBean.bbsSeq=833">편안한
+									교복 디자인 공모전 안내</a>
+							</div> <a
+							href="http://www.sen.go.kr/web/services/bbs/bbsView.action?bbsBean.bbsCd=130&bbsBean.bbsSeq=833">
+								<img
+								src="https://postfiles.pstatic.net/MjAxODExMjFfNSAg/MDAxNTQyNzg1MDMxMDI0.uhmR5hGjcuCidlWVBrQcTmWy70bZyCrsS-U1hNGjEHcg.w1cBoBQPZaiQZ0dD3rhdsiHF-2lwX-zpyPhnFl4xPBYg.JPEG.seouledu2012/%ED%8E%B8%EC%95%88%ED%95%9C_%EA%B5%90%EB%B3%B5_%EB%94%94%EC%9E%90%EC%9D%B8_%EA%B3%B5%EB%AA%A8%EC%A0%84_%ED%8F%AC%EC%8A%A4%ED%84%B0_%EB%B3%80%EA%B2%BD.jpg?type=w966"
+								width="305px" height="170px" />
+						</a>
+						</li>
+						<li>
+							<div class="image_title">
+								<a href="https://eduone.moe.go.kr/">내게 꼭 맞는 혜택, 교육지원 한눈에</a>
+							</div> <a href="https://eduone.moe.go.kr/"> <img
+								src="http://www.moe.go.kr/upload/popupImg/moe/PopupImg_201803160327369270.png"
+								width="305px" height="170px" />
+						</a>
+						</li>
+						<li>
+							<div class="image_title">
+								<a href="http://seouleducation.tistory.com/3253">학교 성폭력
+									신고,상담 서비스</a>
+							</div> <a href="http://seouleducation.tistory.com/3253"> <img
+								src="https://t1.daumcdn.net/cfile/tistory/996562365BEE388E06"
+								width="305px" height="170px" />
+						</a>
+						</li>
+						<li>
+							<div class="image_title">
+								<a href="https://www.lllcard.kr">평생교육바우처</a>
+							</div> <a href="https://www.lllcard.kr"> <img
+								src="https://mblogthumb-phinf.pstatic.net/MjAxODA1MjFfNjgg/MDAxNTI2ODgwMzI1NjEz.zuKK7_582_rs1KxTAQCmY3MRrsm00eant8U4_ptlhmog.ff007maB-Av6SL5iuwYs98Jt9y2k2J7b99vzAvrBY-Mg.JPEG.nile_kr/%ED%91%9C%EC%A7%80.jpg?type=w800"
+								width="305px" height="170px" />
+						</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<a href="http://www.sen.go.kr/web/services/bbs/bbsView.action?bbsBean.bbsCd=130&bbsBean.bbsSeq=833">
-				<img src="https://i1.daumcdn.net/thumb/T250x250/?fname=https://t1.daumcdn.net/cfile/tistory/995AB3385BF52F4D35" width="640px" height="320px"/>
-			</a>
-		</li>
-		<li>
-			<div class="image_title">
-				<a href="https://eduone.moe.go.kr/">내게 꼭 맞는 혜택, 교육지원 한눈에</a>
-			</div>
-			<a href="https://eduone.moe.go.kr/">
-				<img src="http://www.moe.go.kr/upload/popupImg/moe/PopupImg_201803160327369270.png" width="640px" height="320px"/>
-			</a>
-		</li>
-		<li>
-			<div class="image_title">
-				<a href="http://seouleducation.tistory.com/3253">학교 성폭력 신고,상담 서비스</a>
-			</div>
-			<a href="http://seouleducation.tistory.com/3253">
-				<img src="https://t1.daumcdn.net/cfile/tistory/996562365BEE388E06" width="640px" height="320px"/>
-			</a>
-		</li>
-		<li>
-			<div class="image_title">
-				<a href="https://www.lllcard.kr">평생교육바우처</a>
-			</div>
-			<a href="https://www.lllcard.kr">
-				<img src="http://www.moe.go.kr/upload/popupImg/moe/PopupImg_201810310513006420.jpg" width="640px" height="320px"/>
-			</a>
-		</li>
-	</ul>
-</div>
+
+			<article class="Main_News">
+				<h2 class="NewsTitle">최근교육정책</h2>
+
+				<p class="News_Date">2018-11-16</p>
+				<!-- 제목은 최대 2줄, 내용은 최대 3줄로 제한 -->
+				<p class="News_Subject">
+					<a
+						href="http://www.moe.go.kr/boardCnts/view.do?boardID=316&boardSeq=75820&lev=0&searchType=null&statusYN=W&page=1&s=moe&m=0302&opType=N"
+						style="cursor: pointer;">외국 소재 초중고 학력인정학교 목록 안내</a>
+				</p>
+				<p class="News_Cont">
+					<a
+						href="http://www.moe.go.kr/boardCnts/view.do?boardID=316&boardSeq=75820&lev=0&searchType=null&statusYN=W&page=1&s=moe&m=0302&opType=N"
+						style="cursor: pointer;">귀국 학생 등의 학적서류 간소화 방안을 위한 "외국 소재 초중고
+						학력인정학교 목록"을...</a>
+				</p>
+
+				<p class="News_More">
+					<a
+						href="http://www.moe.go.kr/boardCnts/list.do?boardID=316&m=0302&s=moe#contents">교육정책
+						더보기</a>
+				</p>
+			</article>
 
 
-	
-
-
+			<div id="schoolmap">
+				<p id="maptext">내 주위 학교 찾기</p>
+			</div>
+			<iframe id="youtube" src="https://www.youtube.com/embed/rIbsxN8bpfQ"
+				frameborder="0"
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+			<iframe id="youtube2" src="https://www.youtube.com/embed/C1bfje3gHpk"
+				frameborder="0"
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+		</div>
+	</div>
+	<hr id="bottom">
+	<div class="InnerWrap">
+		<div class="address">
+			<p id="pp">
+				총괄관리기관 : 한국교육학술정보원<span class="Line">|</span>우편번호 41061 대구광역시 동구 동내로
+				64 (동내동 351)
+			</p>
+			<p id="pp">
+				전화 053)714-0114<span class="Line">|</span>팩스 053)714-0198<span
+					class="Line">|</span>이메일 schoolinfo@keris.or.kr(공시오류신고 및 문의)<span
+					class="Line">|</span>고객상담센터(정보공시)1544-0079(내선 2)
+			</p>
+			<p id="pp" style="font-weight: bold;">
+				[<a href="/ng/pnngpi_a01_l0.do">공공데이터 이용정책</a>]
+			</p>
+			<p id="pp" class="Copyright">
+				Copyright ⓒ <strong>MINISTRY OF EDUCATION</strong>. All Rights
+				Reserved
+			</p>
+		</div>
+	</div>
 	<script>
 		var ses = '${sessionScope.ses}';
 		var loginBtn = document.getElementById("login");
@@ -557,8 +783,9 @@ width: 640px;
 
 		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 		var options = { //지도를 생성할 때 필요한 기본 옵션
-			center: new daum.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-			level: 3 //지도의 레벨(확대, 축소 정도)
+			center : new daum.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+			level : 3
+		//지도의 레벨(확대, 축소 정도)
 		};
 
 		var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴

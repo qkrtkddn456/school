@@ -299,7 +299,7 @@ p{
 		function meals(){
 			var conf = {		
 					 url:'https://schoolmenukr.ml/api/high/J100000585?hideAllergy=true',
-					 method:'GET',
+					 method:'GET',	
 					 //param : JSON.stringify({year:yyyy,month:mm,date:dd,hideAllergy:true}),
 					 success : function(res){
 						 res = JSON.parse(res);
