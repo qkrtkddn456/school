@@ -62,14 +62,12 @@ p {
 
 .navbar {
 	padding-top: 15px;
-	padding-bottom: 15px;
-	border: 1px solid;
-	border-color: #BDBDBD;
+	padding-bottom: 8px;
+	border: 20px;
 	border-radius: 0;
 	margin-bottom: 0;
 	font-size: 12px;
 	letter-spacing: 5px;
-	background-color: #FFFFFF;
 }
 
 .navbar-nav  li a:hover {
@@ -88,6 +86,7 @@ p {
 
 #mySubbar {
 	margin-left: 20%;
+	margin-left: 300px;
 }
 
 #a {
@@ -134,7 +133,7 @@ p {
 }
 
 .col-sm-offset-3 {
-	margin: -50px 0px 0px 10px;
+	margin: -100px 0px 0px -30px;
 }
 
 .navbar-left { .pull-left ();
@@ -192,12 +191,12 @@ p {
 }
 
 .Search_Word span {
-	color: ;
+	color:;
 	font-family: 'Nanum';
 }
 
 .Search_Word em {
-	color: #9370db ;
+	color: #9370db;
 }
 
 .table {
@@ -226,9 +225,10 @@ p {
 .table tr td {
 	border: 2px solid #ddd;
 }
+
 .table>thead:first-child>tr:first-child>th {
-    border-top: 0;
-    text-align: center;
+	border-top: 0;
+	text-align: center;
 }
 </style>
 </head>
