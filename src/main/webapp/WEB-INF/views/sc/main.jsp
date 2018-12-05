@@ -114,22 +114,44 @@ body {
 	 }
 p{
 	font-size:15px;
-}
-/* /*박상우 카카오맵 css
-html, body {width:100%;height:100%;margin:0;padding:0;} 
-.map_wrap {position:relative;overflow:hidden;width:100%;height:350px;}
-.radius_border{border:1px solid #919191;border-radius:5px;}     
-.custom_typecontrol {position:absolute;top:10px;right:10px;overflow:hidden;width:130px;height:30px;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
-.custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
-.custom_typecontrol .btn {background:#fff;background:linear-gradient(#fff,  #e6e6e6);}       
-.custom_typecontrol .btn:hover {background:#f5f5f5;background:linear-gradient(#f5f5f5,#e3e3e3);}
-.custom_typecontrol .btn:active {background:#e6e6e6;background:linear-gradient(#e6e6e6, #fff);}    
-.custom_typecontrol .selected_btn {color:#fff;background:#425470;background:linear-gradient(#425470, #5b6d8a);}
-.custom_typecontrol .selected_btn:hover {color:#fff;}   
-.custom_zoomcontrol {position:absolute;top:50px;right:10px;width:36px;height:80px;overflow:hidden;z-index:1;background-color:#f5f5f5;} 
-.custom_zoomcontrol span {display:block;width:36px;height:40px;text-align:center;cursor:pointer;}     
-.custom_zoomcontrol span img {width:15px;height:15px;padding:12px 0;border:none;}             
-.custom_zoomcontrol span:first-child{border-bottom:1px solid #bfbfbf;}
+}	
+/*박상우 카카오맵 css*/
+.map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;color:black;}
+.map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
+.map_wrap {position:relative;width:100%;height:500px;}
+#menu_wrap {position:absolute;top:0;left:400px;bottom:0;width:250px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.7);z-index: 1;font-size:12px;border-radius: 10px;}
+.bg_white {background:#fff;}
+#menu_wrap hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
+#menu_wrap .option{text-align: center;}
+#menu_wrap .option p {margin:10px 0;}  
+#menu_wrap .option button {margin-left:5px;}
+#placesList li {list-style: none;}
+#placesList .item {position:relative;border-bottom:1px solid #888;overflow: hidden;cursor: pointer;min-height: 65px;}
+#placesList .item span {display: block;margin-top:4px;}
+#placesList .item h5, #placesList .item .info {text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+#placesList .item .info{padding:10px 0 10px 55px;}
+#placesList .info .gray {color:#8a8a8a;}
+#placesList .info .jibun {padding-left:26px;background:url(http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png) no-repeat;}
+#placesList .info .tel {color:#009900;}
+#placesList .item .markerbg {float:left;position:absolute;width:36px; height:37px;margin:10px 0 0 10px;background:url(http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png) no-repeat;}
+#placesList .item .marker_1 {background-position: 0 -10px;}
+#placesList .item .marker_2 {background-position: 0 -56px;}
+#placesList .item .marker_3 {background-position: 0 -102px}
+#placesList .item .marker_4 {background-position: 0 -148px;}
+#placesList .item .marker_5 {background-position: 0 -194px;}
+#placesList .item .marker_6 {background-position: 0 -240px;}
+#placesList .item .marker_7 {background-position: 0 -286px;}
+#placesList .item .marker_8 {background-position: 0 -332px;}
+#placesList .item .marker_9 {background-position: 0 -378px;}
+#placesList .item .marker_10 {background-position: 0 -423px;}
+#placesList .item .marker_11 {background-position: 0 -470px;}
+#placesList .item .marker_12 {background-position: 0 -516px;}
+#placesList .item .marker_13 {background-position: 0 -562px;}
+#placesList .item .marker_14 {background-position: 0 -608px;}
+#placesList .item .marker_15 {background-position: 0 -654px;}
+#pagination {margin:10px auto;text-align: center;}
+#pagination a {display:inline-block;margin-right:10px;}
+#pagination .on {font-weight: bold; cursor: default;color:#777;}
 /*박상우 카카오맵css    */         
 </style>
 </head>
@@ -179,8 +201,7 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 			</div>
 		</div>
 	</nav>
-
-	<!-- First Container -->
+	<!-- First Container -->	
 	<div class="container-fluid bg-1 text-center">
 		<div id="scinfo">
 			<h2>학교 이름</h2>
@@ -189,16 +210,8 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 			<h2>급식 정보</h2>	
 			<h3 id="meals"></h3>
 		</div>
-		<div class="map_wrap">
-			<div id="map" style="position:relative;overflow:hidden;"></div>
-			<div class="custom_typecontrol radius_border">
-		        	<span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
-		        	<span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
-    		</div> 
-		</div>
-		
+		<div id="map" style="position:relative;overflow:hidden;"></div>
 	</div>
-
 	<!-- Footer -->
 	<footer class="container-fluid bg-4 text-center">	
 		<p>
@@ -206,9 +219,6 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 		</p>
 	</footer>
 	<script>
-
-		
-	
 		var ses = '${sessionScope.ses}';
 		var loginBtn = document.getElementById("login");
 		if (!ses) {
@@ -229,70 +239,33 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 		function goList() {
 			location = "/uri/sc/list";
 		}
-		
-		
-		
-		
-		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-		var options = { //지도를 생성할 때 필요한 기본 옵션
-			center: new daum.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-			level: 3 //지도의 레벨(확대, 축소 정도)
-		};
-		var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
-
-
+		var searchinput;
 		var latitude;
 		var longitude;
 		var mapContainer, map, mapTypeControl, ps, maker,infowindow;
-
+		
 		navigator.geolocation.getCurrentPosition(function(pos) {
-			
 			latitude = pos.coords.latitude;	
 			longitude = pos.coords.longitude;
-	
 			// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
 			var infowindow = new daum.maps.InfoWindow({zIndex:1});
-
 			var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-			    mapOption = {
-			        center: new daum.maps.LatLng(latitude, longitude), // 지도의 중심좌표
-			        level: 4		 // 지도의 확대 레벨
-			    };  	
-
+		    mapOption = {
+		        center: new daum.maps.LatLng(latitude, longitude), // 지도의 중심좌표
+		        level: 4		 // 지도의 확대 레벨
+		    };  		
 			// 지도를 생성합니다    		
 			var map = new daum.maps.Map(mapContainer, mapOption); 
-			
 			// 지도에 확대 축소 컨트롤을 생성한다
 			var zoomControl = new daum.maps.ZoomControl();
-
 			// 지도의 우측에 확대 축소 컨트롤을 추가한다
 			map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
-			
-			// 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수입니다
-			function setMapType(maptype) { 
-			    var roadmapControl = document.getElementById('btnRoadmap');
-			    var skyviewControl = document.getElementById('btnSkyview'); 
-			    if (maptype === 'roadmap') {
-			        map.setMapTypeId(daum.maps.MapTypeId.ROADMAP);    
-			        roadmapControl.className = 'selected_btn';
-			        skyviewControl.className = 'btn';
-			    } else {
-			        map.setMapTypeId(daum.maps.MapTypeId.HYBRID);    
-			        skyviewControl.className = 'selected_btn';
-			        roadmapControl.className = 'btn';
-			    }
-			}
-
-
-			
 			// 장소 검색 객체를 생성합니다
 			var ps = new daum.maps.services.Places(map); 
-
 			function scSearch(){
 				// 카테고리로 은행을 검색합니다
 				ps.categorySearch('SC4', placesSearchCB, {useMapBounds:true}); 
 				//ps.keywordSearch('고등학교', placesSearchCB); 
-
 				// 키워드 검색 완료 시 호출되는 콜백함수 입니다
 				function placesSearchCB (data, status, pagination) {
 				    if (status === daum.maps.services.Status.OK) {
@@ -301,7 +274,6 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 				        }       
 				    }
 				}
-
 				// 지도에 마커를 표시하는 함수입니다
 				function displayMarker(place) {
 				    // 마커를 생성하고 지도에 표시합니다
@@ -309,7 +281,6 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 				        map: map,
 				        position: new daum.maps.LatLng(place.y, place.x) 
 				    });
-
 				    // 마커에 클릭이벤트를 등록합니다
 				    daum.maps.event.addListener(marker, 'click', function() {
 				        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
@@ -325,13 +296,10 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 			});
 			scSearch();
 		});
-		
-		
 		function meals(){
-			
 			var conf = {		
 					 url:'https://schoolmenukr.ml/api/high/J100000585?hideAllergy=true',
-					 method:'GET',
+					 method:'GET',	
 					 //param : JSON.stringify({year:yyyy,month:mm,date:dd,hideAllergy:true}),
 					 success : function(res){
 						 res = JSON.parse(res);
@@ -340,6 +308,8 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 			 }
 			 au.send(conf);
 		}
+		
+		
 	</script>
 </body>
 </html>

@@ -20,24 +20,16 @@ body {
 	font: 20px Montserrat, sans-serif;
 	line-height: 1.8;
 	color: #f5f6f7;
+	font-weight: bold;
 }
 
 p {
 	font-size: 16px;
 }
 
-.margin {
-	margin-bottom: 45px;
-	margin-top: -3%;
-	margin: 10px;
-	color: #474e5d;
-}
-
 .bg-1 {
-	background-color: #FAFAFA; /* Green */
+	background-color: #ffffff; /* Green */
 	color: #ffffff;
-	background-image:
-		url("http://cafefiles.naver.net/20140815_50/ohyama2014_1408065561725jUott_PNG/30447508_big_p6.png");
 	background-size: cover;
 }
 
@@ -109,7 +101,7 @@ p {
 }
 
 #imaginary_container {
-	margin-top: 20%;
+	margin-top: 10%; /* Don't copy this */
 }
 
 .stylish-input-group .input-group-addon {
@@ -121,21 +113,17 @@ p {
 	box-shadow: 0 0 0;
 	border-color: #ccc;
 }
-
 .stylish-input-group button {
 	border: 0;
 	background: transparent;
-	margin-top: -10%;
 }
 
 .col-sm-6 {
 	width: 50%;
 }
-
 .col-sm-offset-3 {
-	margin: -100px 0px 0px -30px;
+	margin: -47px 0px 0px -30px;
 }
-
 .navbar-left { .pull-left ();
 	
 }
@@ -191,12 +179,12 @@ p {
 }
 
 .Search_Word span {
-	color:;
+	color: ;
 	font-family: 'Nanum';
 }
 
 .Search_Word em {
-	color: #9370db;
+	color: #9370db ;
 }
 
 .table {
@@ -225,10 +213,9 @@ p {
 .table tr td {
 	border: 2px solid #ddd;
 }
-
 .table>thead:first-child>tr:first-child>th {
-	border-top: 0;
-	text-align: center;
+    border-top: 0;
+    text-align: center;
 }
 </style>
 </head>
