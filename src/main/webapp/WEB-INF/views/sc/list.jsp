@@ -184,7 +184,7 @@ p {
 }
 
 .Search_Word em {
-	color: #9370db ;
+	color: #4AA9C8 ;
 }
 
 .table {
@@ -192,7 +192,8 @@ p {
 }
 
 .table thead tr {
-	background-color: lavender;
+color:#FFFFFF;
+	background-color: #4AA9C8;
 	border: 2px solid #ddd;
 }
 
@@ -201,6 +202,7 @@ p {
 }
 
 .table {
+	width: 400px;
 	border: 1px solid #ddd;
 	padding: 10px;
 	text-align: center;
@@ -216,6 +218,9 @@ p {
 .table>thead:first-child>tr:first-child>th {
     border-top: 0;
     text-align: center;
+}
+.Contents{
+	margin-left: 35%;
 }
 </style>
 </head>
@@ -275,36 +280,24 @@ p {
 		<div id="Contents">
 			<div class="InnerWrap">
 				<div class="Search_Word">
-					'<em>검색한거</em>' 검색결과 <span>(총 ?건)</span>
+					'<em> 검색한 학교 </em>' 검색결과 <span>(총 ?건)</span>
 				</div>
 			</div>
-			<div class="container">
-
+			<div class="Contents">
 				<table class="table table-bordered">
 					<thead>
 						<tr>
 							<th>학교이름</th>
-							<th>학생수</th>
-							<th>교원수</th>
-							<th>학교주소</th>
-							<th>대표전화</th>
-							<th>홈페이지</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>부천정보산업고등학교</td>
-							<td>남()/여()</td>
-							<td>남()/여()</td>
-							<td>부천</td>
-							<td>233-12348</td>
-							<td>링크</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 		</div>
-	</div>
 	</div>
 	<script>
 		function mainPage() {
