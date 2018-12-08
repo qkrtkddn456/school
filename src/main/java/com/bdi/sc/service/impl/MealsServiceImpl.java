@@ -25,6 +25,7 @@ public class MealsServiceImpl implements MealsService {
 	@Autowired
 	MealsDAO mdao;
 	
+	//급식코드 크롤링
 	@Override
 	public List<Meals> getMealsList() throws IOException {
 		List<Meals> meals = new ArrayList<Meals>();
@@ -44,10 +45,10 @@ public class MealsServiceImpl implements MealsService {
 				meals.add(meal);
 				log.info("page=>{}",i);
 			}
-//			if(i%100==0) {
-//				mdao.saveMeals(meals);
-//				meals.clear();
-//			}
+			if(i%100==0) {
+				mdao.saveMeals(meals);
+				meals.clear();
+			}
 		}
 		return meals;
 	}
@@ -57,11 +58,12 @@ public class MealsServiceImpl implements MealsService {
 
 		return mdao.saveMeals(getMealsList());
 	}
-
+	
+	//경기도 고양시 일산서구 가좌1로 43 (가좌동,가좌고등학교)
 	@Override
-	public Meals getMeals(Meals meal) throws IOException {
-
-		return null;
+	public Meals selectMeals(Meals meal)  {
+		String add = meal.getMealaddress();
+		return mdao.selectMeal(meal);
 	}
 
 }

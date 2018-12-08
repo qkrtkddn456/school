@@ -11,7 +11,7 @@
   </select>
   <select id="selectMeals" resultType="meals">
   	select * from meals
-  	where mnum = #{mnum} 
+	where mealschool = #{mealschool} and mealaddress like concat('%',#{mealaddress},'%')
   </select>
   <insert id="saveMeals" parameterType="meals">
   	insert into meals(mealschool,mealcode,mealaddress) values(#{mealschool},#{mealcode},#{mealaddress})

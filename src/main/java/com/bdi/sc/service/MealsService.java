@@ -9,5 +9,5 @@ public interface MealsService {
 
 	public List<Meals> getMealsList()throws IOException;
 	public int saveMealsList() throws IOException;
-	public Meals getMeals(Meals meal) throws IOException;
+	public Meals selectMeals(Meals meal) ;
 }

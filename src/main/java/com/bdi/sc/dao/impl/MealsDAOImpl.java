@@ -58,7 +58,7 @@ public class MealsDAOImpl implements MealsDAO {
 	@Override
 	public Meals selectMeal(Meals meal) {
 		// TODO Auto-generated method stub
-		return null;
+		return ss.selectOne("com.bdi.sc.MEALS.selectMeals",meal);
 	}
 
 }
