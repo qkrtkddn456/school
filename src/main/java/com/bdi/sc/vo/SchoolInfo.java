@@ -1,10 +1,13 @@
 package com.bdi.sc.vo;
 
+import org.apache.ibatis.type.Alias;
+
 import lombok.Data;
 
+@Alias("school")
 @Data
 public class SchoolInfo {
-	 private int sinum;
+	 private Integer sinum;
 	 private String city_education;
 	 private String regional_education;
 	 private String regional;
