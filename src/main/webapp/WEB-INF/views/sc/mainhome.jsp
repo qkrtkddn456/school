@@ -1,22 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<!-- Theme Made By www.w3schools.com - No Copyright -->
 <title>학교 정보 통합 알리미</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat"
-	rel="stylesheet">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript"
-	src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=40DD129zgMn8zIBTCRvP"></script>
 <style>
 body {
 	font: 20px Montserrat, sans-serif;
@@ -588,10 +572,14 @@ a {
 	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/uri/sc/main"><img src="/resources/img/school.png"
+				<a href="#" onclick="mainPage()"><img src="/resources/img/school.png"
 					id="main-image" style="display: line" alt="Main" width="60"
-					height="60"></a> <a class="navbar-brand" href="#"
-					onclick="mainPage()">학교 정보 통합 알리미</a>
+					height="60"></a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+				</button>
+				<a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합
+					알리미</a>
 			</div>
 			<div class="container">
 				<div class="row">
@@ -619,12 +607,12 @@ a {
 			<div class="collapse navbar-collapse" id="mySubbar">
 				<div id="menu">
 				<ul class="nav navbar-nav navbar-left">
-					<li id="a"><a href="#" onclick="goschool()">학교찾기</a></li>
-					<li id="b"><a href="#">학교찾기</a>
+					<li id="a"><a href="#" onclick="goNotice()">공지사항</a></li>
+					<li id="b"><a href="#" onclick="goMap()">근처학교 지도</a>
 						<div class="vl"></div></li>
-					<li id="c"><a href="#">학교찾기</a>
+					<li id="c"><a href="#" onclick="goSchool()">학교리스트</a>
 						<div class="vl"></div></li>
-					<li id="d"><a href="#">학교찾기</a>
+					<li id="d"><a href="#">내 정보관리</a>
 						<div class="vl"></div></li>
 				</ul>
 				</div>
@@ -717,7 +705,7 @@ a {
 			</article>
 
 
-			<div id="schoolmap">
+			<div id="schoolmap"  onclick="goMap()">
 				<p id="maptext">내 주위 학교 찾기</p>
 			</div>
 			<iframe id="youtube" src="https://www.youtube.com/embed/rIbsxN8bpfQ"
@@ -755,12 +743,12 @@ a {
 		var ses = '${sessionScope.ses}';
 		var loginBtn = document.getElementById("login");
 		if (!ses) {
-			loginBtn.innerHTML = "로그인";
+			loginBtn.innerHTML = "로그인/회원가입";
 		} else {
 			loginBtn.innerHTML = "로그아웃";
 		}
 		function mainPage() {
-			location = "/uri/sc/main";
+			location = "/uri/sc/mainhome";
 		}
 
 		function goLogin() {
@@ -770,8 +758,14 @@ a {
 				location = "/logout";
 			}
 		}
-		function goschool() {
+		function goSchool() {
 			location = "/uri/sc/list";
+		}
+		function goNotice(){
+			location="/uri/sc/noticelist";
+		}
+		function goMap(){	
+			location="/uri/sc/main";
 		}
 
 		$(document).ready(function() {
