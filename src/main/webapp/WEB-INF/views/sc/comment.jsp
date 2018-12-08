@@ -373,17 +373,17 @@ p {
 	width: 1002px;
 	height: 1002px;
 	margin-bottom: 5%;
-	border: 1px solid black;
+	border: 1px solid skyblue;
 }
 
 .Home {
 	width: 100%;
 	height: 60px;
-	color: #4AA9C8;
 	font-size: 25px;
-	color: #4AA9C8;
+	color: skyblue;
 	background: white;
-	padding: 0;
+	padding-left: 50px;
+	padding-top:15px;
 	margin: 0;
 }
 
@@ -419,14 +419,14 @@ p {
 	border-radius: 5px;
 	border: 1px solid pink;
 	width: 240px;
-	margin-left:10px;
+	margin-left:30px;
 	color:white;
 }
 
 .hall_text {
 	text-align: left;
-	margin-left: 30px;
-	width: 220px;
+	margin-left: 10px;
+	width: 200px;
 }
 </style>
 </head>
