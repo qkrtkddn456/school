@@ -199,9 +199,10 @@ html {
 	height: 25px;
 	margin: -35px 0 0 -35px;
 }
+
 a {
-    color: #666;
-    text-decoration: none;
+	color: #666;
+	text-decoration: none;
 }
 
 .ContentTitle {
@@ -224,16 +225,20 @@ a {
 }
 
 .col-md-3 {
-    margin: 20px 0 0 1070px;
-    width: 400px;
+	margin: 20px 0 0 1070px;
+	width: 400px;
 }
 
 .col-md-9 {
-    margin: 20px 0 0 540px;
+	margin: 20px 0 0 540px;
 }
 
 .table {
-    width: 900px;
+	width: 900px;
+}
+* {
+    margin: 0;
+    padding: 0;
 }
 </style>
 </head>
@@ -242,10 +247,13 @@ a {
 	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/uri/sc/main"><img src="/resources/img/school.png"
-					id="main-image" style="display: line" alt="Main" width="60"
-					height="60"></a> <a class="navbar-brand" href="#"
-					onclick="mainPage()">학교 정보 통합 알리미</a>
+				<a href="#" onclick="mainPage()"><img
+					src="/resources/img/school.png" id="main-image"
+					style="display: line" alt="Main" width="60" height="60"></a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar"></button>
+				<a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합
+					알리미</a>
 			</div>
 			<div class="container">
 				<div class="row">
@@ -273,12 +281,12 @@ a {
 			<div class="collapse navbar-collapse" id="mySubbar">
 				<div id="menu">
 					<ul class="nav navbar-nav navbar-left">
-						<li id="a"><a href="#" onclick="goschool()">학교찾기</a></li>
-						<li id="b"><a href="#">학교찾기</a>
+						<li id="a"><a href="#" onclick="goNotice()">공지사항</a></li>
+						<li id="b"><a href="#" onclick="goMap()">근처학교 지도</a>
 							<div class="vl"></div></li>
-						<li id="c"><a href="#">학교찾기</a>
+						<li id="c"><a href="#" onclick="goSchool()">학교리스트</a>
 							<div class="vl"></div></li>
-						<li id="d"><a href="#">학교찾기</a>
+						<li id="d"><a href="#">내 정보관리</a>
 							<div class="vl"></div></li>
 					</ul>
 				</div>
@@ -289,94 +297,132 @@ a {
 		<h1 class="Title2">공지사항</h1>
 	</div>
 	<div class="container">
-	<div class="row">
-        <div class="col-md-3">
-            <form action="#" method="get">
-                <div class="input-group">
-                    <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
-                    <input class="form-control" id="system-search" name="q" placeholder="Search for" required>
-                    <span class="input-group-btn">
-                        <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
-                    </span>
-                </div>
-            </form>
-        </div>
-		<div class="col-md-9">
-    	 <table class="table table-list-search">
-                    <thead>
-                        <tr>
-                            <th>번호</th>
-                            <th>제목</th>
-                            <th>작성일</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>2018년 홈페이지 만족도 조사 실시</td>
-                            <td>2018-12-05</td>
-                        </tr>
-                    </tbody>
-                </table>   
+		<div class="row">
+			<div class="col-md-3">
+				<form action="#" method="get">
+					<div class="input-group">
+						<!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
+						<input class="form-control" id="system-search" name="q"
+							placeholder="" required> <span class="input-group-btn">
+							<button type="submit" class="btn btn-default">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</span>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-9">
+				<table class="table table-list-search">
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>제목</th>
+							<th>작성일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr onclick="location.href='/uri/sc/notice'"
+							style="cursor: pointer;">
+							<td>1</td>
+							<td>2018년 홈페이지 만족도 조사 실시</td>
+							<td>2018-12-05</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
-</div>
 	<script>
+		var ses = '${sessionScope.ses}';
+		var loginBtn = document.getElementById("login");
+		if (!ses) {
+			loginBtn.innerHTML = "로그인/회원가입";
+		} else {
+			loginBtn.innerHTML = "로그아웃";
+		}
 		function mainPage() {
-			location = "/";
+			location = "/uri/sc/mainhome";
 		}
 		function goLogin() {
-			location = "/uri/sc/login";
+			if (!ses) {
+				location = "/uri/sc/login";
+			} else {
+				location = "/logout";
+			}
 		}
-		function goSignin() {
-			location = "/uri/sc/login";
+		function goSchool() {
+			location = "/uri/sc/list";
 		}
-		$(document).ready(function() {
-		    var activeSystemClass = $('.list-group-item.active');
+		function goNotice(){
+			location="/uri/sc/noticelist";
+		}
+		function goMap(){	
+			location="/uri/sc/main";
+		}
+		$(document)
+				.ready(
+						function() {
+							var activeSystemClass = $('.list-group-item.active');
 
-		    //something is entered in search form
-		    $('#system-search').keyup( function() {
-		       var that = this;
-		        // affect all table rows on in systems table
-		        var tableBody = $('.table-list-search tbody');
-		        var tableRowsClass = $('.table-list-search tbody tr');
-		        $('.search-sf').remove();
-		        tableRowsClass.each( function(i, val) {
-		        
-		            //Lower text for case insensitive
-		            var rowText = $(val).text().toLowerCase();
-		            var inputText = $(that).val().toLowerCase();
-		            if(inputText != '')
-		            {
-		                $('.search-query-sf').remove();
-		                tableBody.prepend('<tr class="search-query-sf"><td colspan="6"><strong>Searching for: "'
-		                    + $(that).val()
-		                    + '"</strong></td></tr>');
-		            }
-		            else
-		            {
-		                $('.search-query-sf').remove();
-		            }
+							//something is entered in search form
+							$('#system-search')
+									.keyup(
+											function() {
+												var that = this;
+												// affect all table rows on in systems table
+												var tableBody = $('.table-list-search tbody');
+												var tableRowsClass = $('.table-list-search tbody tr');
+												$('.search-sf').remove();
+												tableRowsClass
+														.each(function(i, val) {
 
-		            if( rowText.indexOf( inputText ) == -1 )
-		            {
-		                //hide rows
-		                tableRowsClass.eq(i).hide();
-		                
-		            }
-		            else
-		            {
-		                $('.search-sf').remove();
-		                tableRowsClass.eq(i).show();
-		            }
-		        });
-		        //all tr elements are hidden
-		        if(tableRowsClass.children(':visible').length == 0)
-		        {
-		            tableBody.append('<tr class="search-sf"><td class="text-muted" colspan="6">No entries found.</td></tr>');
-		        }
-		    });
-		});
+															//Lower text for case insensitive
+															var rowText = $(val)
+																	.text()
+																	.toLowerCase();
+															var inputText = $(
+																	that)
+																	.val()
+																	.toLowerCase();
+															if (inputText != '') {
+																$(
+																		'.search-query-sf')
+																		.remove();
+																tableBody
+																		.prepend('<tr class="search-query-sf"><td colspan="6"><strong>Searching for: "'
+																				+ $(
+																						that)
+																						.val()
+																				+ '"</strong></td></tr>');
+															} else {
+																$(
+																		'.search-query-sf')
+																		.remove();
+															}
+
+															if (rowText
+																	.indexOf(inputText) == -1) {
+																//hide rows
+																tableRowsClass
+																		.eq(i)
+																		.hide();
+
+															} else {
+																$('.search-sf')
+																		.remove();
+																tableRowsClass
+																		.eq(i)
+																		.show();
+															}
+														});
+												//all tr elements are hidden
+												if (tableRowsClass
+														.children(':visible').length == 0) {
+													tableBody
+															.append('<tr class="search-sf"><td class="text-muted" colspan="6">No entries found.</td></tr>');
+												}
+											});
+						});
 	</script>
 </body>
 </html>

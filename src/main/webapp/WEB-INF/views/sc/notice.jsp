@@ -276,7 +276,8 @@ a {
 	border: 1px solid #CCC;
 	padding: 7px 20px;
 	background: #F5F5F5;
-	width: 72px; height : 36px;
+	width: 72px;
+	height: 36px;
 	margin-left: 1365px;
 	margin-top: 50px;
 	height: 36px;
@@ -293,10 +294,10 @@ a {
 	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/uri/sc/main"><img src="/resources/img/school.png"
-					id="main-image" style="display: line" alt="Main" width="60"
-					height="60"></a> <a class="navbar-brand" href="#"
-					onclick="mainPage()">학교 정보 통합 알리미</a>
+				<a href="#" onclick="mainPage()"><img
+					src="/resources/img/school.png" id="main-image"
+					style="cursor: pointer;" alt="Main" width="60" height="60"></a> <a
+					class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합 알리미</a>
 			</div>
 			<div class="container">
 				<div class="row">
@@ -351,17 +352,20 @@ a {
 		</p>
 	</div>
 	<p class="PageBtn" onclick="" style="cursor: pointer;">
-		<a class="Btn">목록</a>
+		<a class="Btn" onclick="gonoticelist()">목록</a>
 	</p>
 	<script>
 		function mainPage() {
-			location = "/";
+			location = "/uri/sc/te";
 		}
 		function goLogin() {
 			location = "/uri/sc/login";
 		}
 		function goSignin() {
 			location = "/uri/sc/login";
+		}
+		function gonoticelist() {
+			location = "/uri/sc/noticelist";
 		}
 	</script>
 </body>

@@ -21,31 +21,50 @@ body {
 	line-height: 1.8;
 	color: #f5f6f7;
 }
-.margin {
-	margin-bottom: 20px;
-}
+
 .bg-1 {
-	widht:100%;
-	height:1000px;
 	background-color: #1abc9c; /* Green */
-	color: #ffffff
+	color: #ffffff;
 }
+.bg-2 {
+	background-color: #474e5d; /* Dark Blue */
+	color: #ffffff;
+}
+
+.bg-3 {
+	background-color: #ffffff; /* White */
+	color: #555555;
+}
+
+.bg-4 {
+	background-color: #2f2f2f; /* Black Gray */
+	color: #fff;
+}
+
 #scinfo{
 	float:left;
 	width:20%;
 }
+
 #map{
 	float:right;
 	width:80%;	
 	height:1000px;
 }
-.bg-4 {
-	background-color: #2f2f2f; /* Black Gray */
-	color: #fff;
-}
 .container-fluid {
+	padding-top: 70px;
 	padding-bottom: 70px;
 }
+.container>.navbar-header {
+	margin: 5px 150px 0px 880px;
+}
+
+
+.container {
+	width: 100%;
+	padding: 0;
+}
+
 .navbar {
 	padding-top: 15px;
 	padding-bottom: 8px;
@@ -54,6 +73,7 @@ body {
 	margin-bottom: 0;
 	font-size: 12px;
 	letter-spacing: 5px;
+	background-color: none;
 }
 .navbar-nav  li a:hover {
 	color: #1abc9c !important;
@@ -61,29 +81,40 @@ body {
 #main-image {
 	float: left;
 	margin-right: 20px;
-	margin-left: -10%;
+	margin-left: -90px;
 }
 #mySubbar {
-	margin-left: 20%;
-	margin-left: 300px;
+    margin-left: 710px;
+    margin-top: -15px;
 }
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+
 #a {
-	font-size: 15px;
+    font-size: 15px;
+    margin-left: -100px;
 }
+
 #b {
-	margin-left: 20px;
-	font-size: 15px;
+    margin-left: 75px;
+    font-size: 15px;
 }
+
 #c {
-	margin-left: 20px;
-	font-size: 15px;
+    margin-left: 70px;
+    font-size: 15px;
 }
+
 #d {
-	margin-left: 20px;
-	font-size: 15px;
+    margin-left: 70px;
+    font-size: 15px;
 }
 #imaginary_container {
-	margin-top: 10%; /* Don't copy this */
+	margin-top: 20%; /* Don't copy this */
 }
 .stylish-input-group .input-group-addon {
 	background: white !important;
@@ -101,20 +132,43 @@ body {
 	width: 50%;
 }
 .col-sm-offset-3 {
-	margin: -47px 0px 0px -30px;
+	margin: -13px 0px -40px -575px;
+	width: 500px;
 }
 .navbar-left { 
-    .pull-left ();
 }
 
 
-.navbar-right { 
-	.pull-right ();
-	 margin-top: -40px;
-	 }
+.navbar-right {
+	margin-top: -3px;
+	margin-right: 400px;
+	margin-bottom: -10px;
+	margin-left: -200px;
+}
+
 p{
-	font-size:15px;
+	font-size:16px;
 }	
+
+#top {
+	border-top: 1px solid darkgray;
+	
+}
+#bottom {
+	margin-top: 25px;
+	border: 0;
+	border-top: 1px solid darkgray;
+}
+
+.vl {
+    border-left: 1px solid darkgray;
+    height: 25px;
+    margin: -35px 0 0 -35px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
 /*박상우 카카오맵 css*/
 .map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;color:black;}
 .map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
@@ -157,7 +211,7 @@ p{
 </head>
 <body>
 	<!-- Navbar -->
-	<nav class="navbar navbar-default">
+	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
 				<a href="#" onclick="mainPage()"><img src="/resources/img/school.png"
@@ -169,35 +223,41 @@ p{
 				<a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합
 					알리미</a>
 			</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 col-sm-offset-3">
-					<div id="imaginary_container">
-						<div class="input-group stylish-input-group">
-							<input type="text" class="form-control"
-								placeholder="학교명 예) 부천정보산업고등학교"> <span
-								class="input-group-addon">
-								<button type="button" onclick="goList()">
-									<span class="glyphicon glyphicon-search"></span>
-								</button>
-							</span>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<div id="imaginary_container">
+							<div class="input-group stylish-input-group">
+								<input type="text" class="form-control"
+									placeholder="학교명 예) 부천정보산업고등학교"> <span
+									class="input-group-addon">
+									<button type="submit">
+										<span class="glyphicon glyphicon-search"></span>
+									</button>
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#" onclick="goLogin()" id="login">로그인/회원가입</a></li>
 				</ul>
 			</div>
+			<hr id="top" width="100%">
 			<div class="collapse navbar-collapse" id="mySubbar">
+				<div id="menu">
 				<ul class="nav navbar-nav navbar-left">
-					<li id="a"><a href="#" onclick="goList()">학교찾기</a></li>
-					<li id="b"><a href="#">학교찾기</a></li>
-					<li id="c"><a href="#">학교찾기</a></li>
-					<li id="d"><a href="#">학교찾기</a></li>
+					<li id="a"><a href="#" onclick="goNotice()">공지사항</a></li>
+					<li id="b"><a href="#" onclick="goMap()">근처학교 지도</a>
+						<div class="vl"></div></li>
+					<li id="c"><a href="#" onclick="goSchool()">학교리스트</a>
+						<div class="vl"></div></li>
+					<li id="d"><a href="#">내 정보관리</a>
+						<div class="vl"></div></li>
 				</ul>
+				</div>
 			</div>
 		</div>
 	</nav>
@@ -222,12 +282,12 @@ p{
 		var ses = '${sessionScope.ses}';
 		var loginBtn = document.getElementById("login");
 		if (!ses) {
-			loginBtn.innerHTML = "로그인";
+			loginBtn.innerHTML = "로그인/회원가입";
 		} else {
 			loginBtn.innerHTML = "로그아웃";
 		}
 		function mainPage() {
-			location = "/uri/sc/main";
+			location = "/uri/sc/mainhome";
 		}
 		function goLogin() {
 			if (!ses) {
@@ -236,8 +296,14 @@ p{
 				location = "/logout";
 			}
 		}
-		function goList() {
+		function goSchool() {
 			location = "/uri/sc/list";
+		}
+		function goNotice(){
+			location="/uri/sc/noticelist";
+		}
+		function goMap(){	
+			location="/uri/sc/main";
 		}
 		var searchinput;
 		var latitude;

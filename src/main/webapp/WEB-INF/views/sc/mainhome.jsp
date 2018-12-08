@@ -105,6 +105,7 @@ p {
 	background: transparent;
 }
 
+
 .col-sm-6 {
 	width: 50%;
 }
