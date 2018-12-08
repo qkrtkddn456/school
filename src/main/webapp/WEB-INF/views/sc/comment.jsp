@@ -16,6 +16,11 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	font: 20px Montserrat, sans-serif;
 	line-height: 1.8;
@@ -292,85 +297,137 @@ p {
 	float: left;
 	width: 80%;
 }
-#Container{
+
+#Container {
 	border: 1px solid #CCC;
 }
+
 #Container .ContentTitle h1 {
-     width: 980px; 
-    margin: 0 auto; 
-     line-height: 1.0; 
-     font-size: 30px; 
-     padding: 27px 0 23px 0; 
+	width: 980px;
+	margin: 0 auto;
+	line-height: 1.0;
+	font-size: 30px;
+	padding: 27px 0 23px 0;
 }
-.Title2{
+
+.Title2 {
 	font-size: 32px;
-    border: 1px solid;
-    border-color: #696969;
-    padding-left: 20%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-top: 5px;
-    border-bottom: 5px;
+	border: 1px solid;
+	border-color: #696969;
+	padding-left: 20%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 5px;
+	border-bottom: 5px;
 }
 
 #Contents {
-   border: 1px solid;
-   border-color: #e7e7e7;
-   padding-top: 3%;
-   
-    
+	border: 1px solid;
+	border-color: #e7e7e7;
+	padding-top: 3%;
 }
 
 .School_Division .mapD_Area._10 {
-    border: 1px solid #6A7FBA;
-    margin-left: 22%;
-}
-.School_Division .mapD_Class._04 {
-    background: #537BC2;
-    border: 1px solid #537BC2;
-}
-.School_Division .mapD_Area {
-    padding: 9px 9px 7px 9px;
-    color: #333;
-}
-.School_Division .mapD_Class {
-    padding: 9px 13px 7px 13px;
-    color: #FFF;
-}
-.School_Division span {
-    display: inline-block; 
-    line-height: 1.0; 
-     font-size: 14px; 
-     -webkit-box-sizing: border-box; 
-    -moz-box-sizing: border-box;
-     box-sizing: border-box; 
-     margin-right: 5px; 
-}
-.SchoolHome .NameArea {
-    position: relative;
-    padding: 5px 0 0 98px;
-    font-size: 24px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    line-height: 1.1;
-    color:  #4AA9C8;
-}
-.HomeContent{
-	margin-left:22%;
-	border:1px solid ;
-	border-color: #4AA9C8;
-	width: 50%;
-	height: 1000px;
-	margin-bottom: 5%;
-}
-.Home{
-	color:  #4AA9C8;
-	font-size: 25px;
-	padding-left: 40px;
-	padding-top: 40px;
+	border: 1px solid #6A7FBA;
+	margin-left: 22%;
 }
 
+.School_Division .mapD_Class._04 {
+	background: #537BC2;
+	border: 1px solid #537BC2;
+}
+
+.School_Division .mapD_Area {
+	padding: 9px 9px 7px 9px;
+	color: #333;
+}
+
+.School_Division .mapD_Class {
+	padding: 9px 13px 7px 13px;
+	color: #FFF;
+}
+
+.School_Division span {
+	display: inline-block;
+	line-height: 1.0;
+	font-size: 14px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-right: 5px;
+}
+
+.SchoolHome .NameArea {
+	position: relative;
+	padding: 5px 0 0 98px;
+	font-size: 24px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	line-height: 1.1;
+	color: #4AA9C8;
+}
+
+.HomeContent {
+	margin-left: 22%;
+	width: 1002px;
+	height: 1002px;
+	margin-bottom: 5%;
+	border: 1px solid black;
+}
+
+.Home {
+	width: 100%;
+	height: 60px;
+	color: #4AA9C8;
+	font-size: 25px;
+	color: #4AA9C8;
+	background: white;
+	padding: 0;
+	margin: 0;
+}
+
+.Information, .secondInformation {
+	height: 940px;
+	width: 500px;
+	float: left;
+}
+
+.Information {
+	
+}
+
+.secondInformation {
+	
+}
+
+.hall {
+	width: 500px;
+	height: 50px;
+	margin-top: 4px;
+}
+
+.hall>* {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.hall_title {
+	background: skyblue;
+	border-radius: 5px;
+	border: 1px solid pink;
+	width: 240px;
+	margin-left:10px;
+	color:white;
+}
+
+.hall_text {
+	text-align: left;
+	margin-left: 30px;
+	width: 220px;
+}
 </style>
 </head>
 <body>
@@ -420,74 +477,161 @@ p {
 		</div>
 	</nav>
 	<section id="Container">
-	<div class="ConentTitle">
-	<h1 class="Title2">학교정보</h1>
-	</div>
-	<form id="hgForm" name="hgForm" method="post">
-	<input type="hidden" name="HG_CD" value="J100000585"/>
-	<input type="hidden" name="GS_BURYU_CD" value=""/>
-	</form>
-	<form id="schoolInfo" name="schoolInfo" method="post">
-	<input type="hidden" name="HG_CD" value="J100000585"/>
-	<input type="hidden" name="GS_BURYU_CD" value=""/>
-	<input type="hidden" name="PRE_JG_YEAR" value=""/>
-	</form>
-	<div id="Contents">
-		<div class="InnerWrap">
-			<article class="SchoolHome">
-				<h1 class="NameArea" style="padding:0;">
-					<span class="School_Division" style="position:relative;">
-					<span class="mapD_Area _10">경기</span>
-					<span class="mapD_Class _04">고</span>
-					</span>
-					<span style="position:relative; top:3px">부천정보산업고등학교</span>
-				</h1>
-				<div class="HomeContent">
-				<h1 class="Home">학교정보</h1>
-				</div>
-			</article>
+		<div class="ConentTitle">
+			<h1 class="Title2">학교정보</h1>
 		</div>
-	</div>
-	</section>
-		<div class="main-section">
-			<div class="content">
-				<div class="top-section">
-					<div class="sub-comment"></div>
+		<form id="hgForm" name="hgForm" method="post">
+			<input type="hidden" name="HG_CD" value="J100000585" /> <input
+				type="hidden" name="GS_BURYU_CD" value="" />
+		</form>
+		<form id="schoolInfo" name="schoolInfo" method="post">
+			<input type="hidden" name="HG_CD" value="J100000585" /> <input
+				type="hidden" name="GS_BURYU_CD" value="" /> <input type="hidden"
+				name="PRE_JG_YEAR" value="" />
+		</form>
+		<div id="Contents">
+			<div class="InnerWrap">
+				<article class="SchoolHome">
+					<h1 class="NameArea" style="padding: 0;">
+						<span class="School_Division" style="position: relative;">
+							<span class="mapD_Area _10">경기</span> <span
+							class="mapD_Class _04">고</span>
+						</span> <span style="position: relative; top: 3px">부천정보산업고등학교</span>
+					</h1>
+					<div class="HomeContent">
+						<h1 class="Home">학교정보</h1>
+						<div class="Information">
+							<div class="hall">
+								<span class="hall_title">시도교육청</span><span class="hall_text">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">지역교육청</span><span class="hall_text">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">지역</span><span class="hall_text">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">정보공시학교코드</span><span class="hall_text">ss</span>
+							</div>
 
-					<div class="comment-box box">
-						<div class="count-btn">
-							<button class="btn">+1</button>
+							<div class="hall">
+								<span class="hall_title">학교명</span><span class="hall_text">ss</span>
+							</div>
+
+							<div class="hall">
+								<span class="hall_title">학교급코드</span><span class="hall_text">ss</span>
+							</div>
+
+							<div class="hall">
+								<span class="hall_title">설립구분</span><span class="hall_text">ss</span>
+							</div>
+
+							<div class="hall">
+								<span class="hall_title">학교특성</span><span class="hall_text">ss</span>
+							</div>
+
+							<div class="hall">
+								<span class="hall_title">분교여부</span><span class="hall_text">ss</span>
+							</div>
+
+							<div class="hall">
+								<span class="hall_title">설립유형</span><span class="hall_text">ss</span>
+							</div>
+
+							<div class="hall">
+								<span class="hall_title">주야구분</span><span class="hall_text">ss</span>
+							</div>
+
+							<div class="hall">
+								<span class="hall_title">개교기념일</span><span class="hall_text">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">설립일</span><span class="hall_text">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">주소내역</span><span class="hall_text">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">상세 주소내역</span><span class="hall_text">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">우편번호</span><span class="hall_text">ss</span>
+							</div>
+
 						</div>
-						<div class="enter-btn">
-							<button class="btn">
-								<i class="fas fa-sign-out-alt"></i>
-							</button>
-						</div>
-						<div style="clear: both;"></div>
-						<div class="comment-btn">
-							<input type="textarea" class="text"
-								placeholder="Add a comment...">
+						<div class="secondInformation">
+							<div class="hall">
+								<span class="hall_title">학교도로명 우편번호</span><span
+									class="hall_text">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">학교도로명 주소</span><span class="hall_text">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">학교도로명 상세주소</span><span
+									class="hall_text">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">위도</span><span class="hall_text">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">경도</span><span class="hall_text">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">전화번호</span><span class="hall_text">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">팩스번호</span><span class="hall_text">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">홈페이지 주소</span><span class="hall_text">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">남녀공학 구분</span><span class="hall_text">ss</span>
+							</div>
+
 						</div>
 					</div>
-				</div>
-				<div class="add-comment">
-					<div class="box">
-						<div class="add-comment-img">
-							<img
-								src="https://t1.daumcdn.net/cfile/tistory/99EA8C3359DC92641A">
-						</div>
-						<div class="add-comment-text">
-							<textarea rows="5" class="example-textarea"></textarea>
-						</div>
-						<div style="clear: both;"></div>
+				</article>
+			</div>
+		</div>
+	</section>
+	<div class="main-section">
+		<div class="content">
+			<div class="top-section">
+				<div class="sub-comment"></div>
+				<div class="comment-box box">
+					<div class="count-btn">
+						<button class="btn">+1</button>
 					</div>
-					<div class="add-comment-text-btn">
-						<button class="post-comment-btn">Post Comment</button>
-						<button class="cancel-btn">Cancel</button>
+					<div class="enter-btn">
+						<button class="btn">
+							<i class="fas fa-sign-out-alt"></i>
+						</button>
+					</div>
+					<div style="clear: both;"></div>
+					<div class="comment-btn">
+						<input type="textarea" class="text" placeholder="Add a comment...">
 					</div>
 				</div>
 			</div>
+			<div class="add-comment">
+				<div class="box">
+					<div class="add-comment-img">
+						<img src="https://t1.daumcdn.net/cfile/tistory/99EA8C3359DC92641A">
+					</div>
+					<div class="add-comment-text">
+						<textarea rows="5" class="example-textarea"></textarea>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="add-comment-text-btn">
+					<button class="post-comment-btn">Post Comment</button>
+					<button class="cancel-btn">Cancel</button>
+				</div>
+			</div>
 		</div>
+	</div>
 	<script>
 		var ses = '${sessionScope.ses}';
 		var loginBtn = document.getElementById("login");
