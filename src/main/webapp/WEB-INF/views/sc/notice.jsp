@@ -199,9 +199,10 @@ html {
 	height: 25px;
 	margin: -35px 0 0 -35px;
 }
+
 a {
-    color: #666;
-    text-decoration: none;
+	color: #666;
+	text-decoration: none;
 }
 
 .ContentTitle {
@@ -224,16 +225,66 @@ a {
 }
 
 .col-md-3 {
-    margin: 20px 0 0 1070px;
-    width: 400px;
+	margin: 20px 0 0 1070px;
+	width: 400px;
 }
 
 .col-md-9 {
-    margin: 20px 0 0 540px;
+	margin: 20px 0 0 540px;
 }
 
 .table {
-    width: 900px;
+	width: 900px;
+}
+
+#headline {
+	margin-top: 30px;
+	border-top: 1px solid #585858;
+	width: 50%;
+	align-items: center;
+	border-bottom: 1px solid #CCC;
+	margin-left: 480px;
+	padding: 20px 0 20px 10px;
+}
+
+.Subject {
+	font-family: 'Nanum';
+	font-size: 20px;
+}
+
+.InfoTxt {
+	font-family: 'Nanum';
+	color: #999;
+	padding-top: 7px;
+	font-size: 13px;
+}
+
+#notice {
+	border-bottom: 1px solid #CCC;
+	width: 50%;
+	margin: 30px 0px 0px 480px;
+	padding-bottom: 30px;
+}
+
+#view {
+	font-family: 'Nanum';
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+.PageBtn {
+	border: 1px solid #CCC;
+	padding: 7px 20px;
+	background: #F5F5F5;
+	width: 72px; height : 36px;
+	margin-left: 1365px;
+	margin-top: 50px;
+	height: 36px;
+}
+
+.Btn {
+	font-family: 'Nanum';
+	font-size: 15px;
 }
 </style>
 </head>
@@ -288,7 +339,20 @@ a {
 	<div class="ContentTitle">
 		<h1 class="Title2">공지사항</h1>
 	</div>
-	
+	<div id="headline">
+		<span class="Subject">제목</span>
+		<p class="InfoTxt">
+			<span class="Bitem">작성일 : 2018-12-06</span>
+		</p>
+	</div>
+	<div id="notice">
+		<p id="view">
+			내용<br> dkdlkfjldkj<br>
+		</p>
+	</div>
+	<p class="PageBtn" onclick="" style="cursor: pointer;">
+		<a class="Btn">목록</a>
+	</p>
 	<script>
 		function mainPage() {
 			location = "/";

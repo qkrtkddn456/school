@@ -285,7 +285,7 @@ p{
 				    daum.maps.event.addListener(marker, 'click', function() {
 				        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
 				        infowindow.setContent('<div style="padding:5px;font-size:12px;color:black;">' + place.place_name + '</div>');
-				        infowindow.open(map, marker);
+				        infowindow.open(map, marker);	
 				       	document.querySelector('#scname').innerHTML = place.place_name;
 				       	meals();
 				    });
@@ -299,11 +299,15 @@ p{
 		function meals(){
 			var conf = {		
 					 url:'https://schoolmenukr.ml/api/high/J100000585?hideAllergy=true',
-					 method:'GET',	
-					 //param : JSON.stringify({year:yyyy,month:mm,date:dd,hideAllergy:true}),
+					 method:'GET',
 					 success : function(res){
 						 res = JSON.parse(res);
-						 document.querySelector('#meals').innerHTML = res.menu[dd-1].lunch;
+						 if(res.menu[dd-1].lunch ==''){
+							 document.querySelector('#meals').innerHTML = '오늘은 급식이 없는 날 입니다';
+						 }else{
+							 document.querySelector('#meals').innerHTML = res.menu[dd-1].lunch;
+						 }
+						 
 					 }
 			 }
 			 au.send(conf);
