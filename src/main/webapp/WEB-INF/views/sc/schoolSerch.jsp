@@ -2,6 +2,9 @@
 	pageEncoding="UTF-8"%>
 <title>학교 정보 통합 알리미</title>
 <style>
+.mainContainer{
+margin-top: 10px;
+}
 #popupHeader {
 	font-size: 25px;
 	width: 100%;
@@ -55,7 +58,8 @@
 }
 
 #addressText {
-	margin-top: 15px; border : 3px solid #D8D8D8;
+	margin-top: 15px;
+	border: 3px solid #D8D8D8;
 	padding: 10px 10px 10px 10px;
 	border: 3px solid #D8D8D8;
 }
@@ -64,9 +68,17 @@
 	margin-left: 50px;
 	width: 450px;
 }
-#serchResult{
-font-size: 15px;
-padding-left: 40px;
+
+#serchResult {
+	font-size: 15px;
+	padding-left: 40px;
+}
+
+#serchResultBorder {
+	border: 1px solid;
+}
+.resultList{
+margin-top:30px;
 }
 </style>
 </head>
@@ -97,10 +109,29 @@ padding-left: 40px;
 					</div>
 				</div>
 				<div id="addressList">
-				<h1 id="serchResult">검색결과입니다</h1>
+					<h1 id="serchResult">검색결과입니다</h1>
+					<div id="serchResultBorder"></div>
+				</div>
+					<div class="resultList">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>도로명</th>
+									<th>지번</th>
+									<th>우편번호</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>경기도 부천시 역곡로1번길 6(역곡동)</td>
+									<td>경기도 부천시 역곡동 80-7 신암빌딩</td>
+									<td>14673</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 </body>
 </html>
