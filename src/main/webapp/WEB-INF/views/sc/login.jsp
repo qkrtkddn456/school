@@ -138,15 +138,29 @@ body {
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #b0c4de;
-    border-color: #b0c4de;
+	color: #fff;
+	background-color: #b0c4de;
+	border-color: #b0c4de;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-    color: #fff;
-    background-color: #66cdaa ;
-    border-color: #66cdaa;
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active,
+	.btn-primary.active, .open>.dropdown-toggle.btn-primary {
+	color: #fff;
+	background-color: #66cdaa;
+	border-color: #66cdaa;
+}
+
+#school {
+	width: 90%;
+	height: 30%;
+}
+
+#serch {
+	margin-left: 90%;
+	margin-top: -10%;
+	width: 65px;
+	height: 30px;
+	text-align: left;
 }
 </style>
 </head>
@@ -188,8 +202,8 @@ body {
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
 												<input type="button" name="login-submit" id="login-submit"
-													tabindex="4" class="form-control btn btn-login"
-													value="로그인" onclick="login()">
+													tabindex="4" class="form-control btn btn-login" value="로그인"
+													onclick="login()">
 											</div>
 
 										</div>
@@ -230,28 +244,31 @@ body {
 									</div>
 									<div class="form-group">
 										<input type="text" name="school" id="school" tabindex="1"
-											class="form-control" placeholder="학교" value="">
+											class="form-control" placeholder="학교" value=""> <a
+											class="btn btn-primary btn-sm active" data-toggle="happy"
+											id="serch" onclick="schoolSerch()">학교검색</a> </span>
 									</div>
 
 
 									<div class="form-group">
-											<div class="input-group">
-												<div id="radioBtn" class="btn-group">
-													<a class="btn btn-primary btn-sm active"
-														data-toggle="happy" data-title="Y" id="gender" onclick="male()">남</a> <a
-														class="btn btn-primary btn-sm notActive"
-														data-toggle="happy" data-title="N" id="gender" onclick="female()">여</a>
-												</div>
-												<input type="hidden" name="happy" id="happy">
-											
+										<div class="input-group">
+											<div id="radioBtn" class="btn-group">
+												<a class="btn btn-primary btn-sm active" data-toggle="happy"
+													data-title="Y" id="gender" onclick="male()">남</a> <a
+													class="btn btn-primary btn-sm notActive"
+													data-toggle="happy" data-title="N" id="gender"
+													onclick="female()">여</a>
+											</div>
+											<input type="hidden" name="happy" id="happy">
+
 										</div>
 									</div>
 
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="button" onclick="signup()" name="register-submit"
-													id="register-submit" tabindex="4"
+												<input type="button" onclick="signup()"
+													name="register-submit" id="register-submit" tabindex="4"
 													class="form-control btn btn-register" value="회원가입">
 											</div>
 										</div>
@@ -266,6 +283,11 @@ body {
 		<script>
 			function mainPage() {
 				location = "/uri/sc/mainhome";
+			}
+			function schoolSerch() {
+				var url = "/uri/sc/schoolSerch";
+				var Option = "width=800,height=700";
+				window.open(url, "학교검색", Option);
 			}
 			$(function() {
 
@@ -285,26 +307,33 @@ body {
 				});
 
 			});
-			
-			$('#radioBtn a').on('click', function(){
-			    var sel = $(this).data('title');
-			    var tog = $(this).data('toggle');
-			    $('#'+tog).prop('value', sel);
-			    
-			    $('a[data-toggle="'+tog+'"]').not('[data-title="'+sel+'"]').removeClass('active').addClass('notActive');
-			    $('a[data-toggle="'+tog+'"][data-title="'+sel+'"]').removeClass('notActive').addClass('active');
-			})
-			
+
+			$('#radioBtn a').on(
+					'click',
+					function() {
+						var sel = $(this).data('title');
+						var tog = $(this).data('toggle');
+						$('#' + tog).prop('value', sel);
+
+						$('a[data-toggle="' + tog + '"]').not(
+								'[data-title="' + sel + '"]').removeClass(
+								'active').addClass('notActive');
+						$(
+								'a[data-toggle="' + tog + '"][data-title="'
+										+ sel + '"]').removeClass('notActive')
+								.addClass('active');
+					})
+
 			var gender = 0;
-			
+
 			function male() {
 				gender = 0;
 			}
-			
+
 			function female() {
 				gender = 1;
 			}
-			
+
 			function signup() {
 				var id = document.getElementById("id").value;
 				var pwd = document.getElementById("password").value;
@@ -313,45 +342,54 @@ body {
 				var age = document.getElementById("age").value;
 				var school = document.getElementById("school").value;
 				var conf = {
-						url:'/sts',
-						method:'POST',
-						param:JSON.stringify({stname:name,stage:age,stschool:school,stgen:gender,stid:id,
-						stpwd:pwd}),
-						success : function(res){
-							res = JSON.parse(res);
-								location.href="/uri/sc/mainhome";
-							if(res == 2){
-								alert("아이디가 중복되었습니다");
-							}else if(res == 1){
-								alert("회원가입이 완료되었습니다");
-								location.href="/";
-							}else{
-								alert("회원가입에 실패하였습니다");
-							}	
-
+					url : '/sts',
+					method : 'POST',
+					param : JSON.stringify({
+						stname : name,
+						stage : age,
+						stschool : school,
+						stgen : gender,
+						stid : id,
+						stpwd : pwd
+					}),
+					success : function(res) {
+						res = JSON.parse(res);
+						location.href = "/uri/sc/mainhome";
+						if (res == 2) {
+							alert("아이디가 중복되었습니다");
+						} else if (res == 1) {
+							alert("회원가입이 완료되었습니다");
+							location.href = "/";
+						} else {
+							alert("회원가입에 실패하였습니다");
 						}
+
+					}
 				}
 
 				au.send(conf);
-				
-			}			
-			
-			function login(){
+
+			}
+
+			function login() {
 				var loginid = document.getElementById('loginid').value;
 				var loginpwd = document.getElementById('loginpwd').value;
 				var conf = {
-						 url:'/login',
-						 method:'POST',
-						 param : JSON.stringify({stid:loginid,stpwd:loginpwd}),
-						 success : function(res){
-							 res = JSON.parse(res);
-							 alert(res.msg);
-							 if(res.login==1){
-							 	location="/uri/sc/mainhome";
-							 }
-						 }
-				 }
-				 au.send(conf);
+					url : '/login',
+					method : 'POST',
+					param : JSON.stringify({
+						stid : loginid,
+						stpwd : loginpwd
+					}),
+					success : function(res) {
+						res = JSON.parse(res);
+						alert(res.msg);
+						if (res.login == 1) {
+							location = "/uri/sc/mainhome";
+						}
+					}
+				}
+				au.send(conf);
 			}
 		</script>
 	</div>
