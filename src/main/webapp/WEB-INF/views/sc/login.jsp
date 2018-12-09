@@ -16,6 +16,7 @@
 	margin-top: -15px
 }
 
+
 label {
 	display: inline-block;
 	max-width: 100%;
