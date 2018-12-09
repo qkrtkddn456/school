@@ -1,10 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="rootPath" value="${pageContext.request.contextPath}"/>
-<c:set var="resPath" value="${rootPath}/resources"/>
-<c:set var="bPath" value="${resPath}/bootstrap-3.3.2-dist"/>
-<!--  <script src="${resPath}/js/AjaxUtil.js"></script>
-<script>
-var au = new AjaxUtil();
-</script> -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<c:set var="rootPath" value="${pageContext.request.contextPath}"/>
+	<c:set var="resPath" value="${rootPath}/resources"/>
+	<c:set var="bPath" value="${resPath}/bootstrap-3.3.2-dist"/>
+	<!-- Theme Made By www.w3schools.com - No Copyright -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ccd2d702579bace0a42e9c8e643187d&libraries=services"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script src="${resPath}/js/AjaxUtil.js"></script>
+	<script> var au = new AjaxUtil(); </script>

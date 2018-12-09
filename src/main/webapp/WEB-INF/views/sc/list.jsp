@@ -26,7 +26,6 @@ p {
 	font-size: 16px;
 }
 
-
 .bg-2 {
 	background-color: #474e5d; /* Dark Blue */
 	color: #ffffff;
@@ -82,35 +81,33 @@ p {
 }
 
 #mySubbar {
-    margin-left: 710px;
-    margin-top: -15px;
+	margin-left: 710px;
+	margin-top: -15px;
 }
 
-
-
 a {
-    color: #666;
-    text-decoration: none;
+	color: #666;
+	text-decoration: none;
 }
 
 #a {
-    font-size: 15px;
-    margin-left: -100px;
+	font-size: 15px;
+	margin-left: -100px;
 }
 
 #b {
-    margin-left: 75px;
-    font-size: 15px;
+	margin-left: 75px;
+	font-size: 15px;
 }
 
 #c {
-    margin-left: 70px;
-    font-size: 15px;
+	margin-left: 70px;
+	font-size: 15px;
 }
 
 #d {
-    margin-left: 70px;
-    font-size: 15px;
+	margin-left: 70px;
+	font-size: 15px;
 }
 
 #imaginary_container {
@@ -141,7 +138,7 @@ a {
 	width: 500px;
 }
 
-.navbar-left { 
+.navbar-left {
 	
 }
 
@@ -151,8 +148,6 @@ a {
 	margin-bottom: -10px;
 	margin-left: -200px;
 }
-
-
 
 .ContentTitle {
 	border-bottom: 1px solid #CCC;
@@ -233,8 +228,8 @@ a {
 
 #top {
 	border-top: 1px solid darkgray;
-	
 }
+
 #bottom {
 	margin-top: 25px;
 	border: 0;
@@ -242,15 +237,15 @@ a {
 }
 
 .vl {
-    border-left: 1px solid darkgray;
-    height: 25px;
-    margin: -35px 0 0 -35px;
-}
-* {
-    margin: 0;
-    padding: 0;
+	border-left: 1px solid darkgray;
+	height: 25px;
+	margin: -35px 0 0 -35px;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+}
 </style>
 </head>
 <body>
@@ -259,12 +254,11 @@ a {
 	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="#" onclick="mainPage()"><img src="/resources/img/school.png"
-					id="main-image" style="display: line" alt="Main" width="60"
-					height="60"></a>
+				<a href="#" onclick="mainPage()"><img
+					src="/resources/img/school.png" id="main-image"
+					style="display: line" alt="Main" width="60" height="60"></a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-				</button>
+					data-target="#myNavbar"></button>
 				<a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합
 					알리미</a>
 			</div>
@@ -293,15 +287,15 @@ a {
 			<hr id="top" width="100%">
 			<div class="collapse navbar-collapse" id="mySubbar">
 				<div id="menu">
-				<ul class="nav navbar-nav navbar-left">
-					<li id="a"><a href="#" onclick="goNotice()">공지사항</a></li>
-					<li id="b"><a href="#" onclick="goMap()">근처학교 지도</a>
-						<div class="vl"></div></li>
-					<li id="c"><a href="#" onclick="goSchool()">학교리스트</a>
-						<div class="vl"></div></li>
-					<li id="d"><a href="#">내 정보관리</a>
-						<div class="vl"></div></li>
-				</ul>
+					<ul class="nav navbar-nav navbar-left">
+						<li id="a"><a href="#" onclick="goNotice()">공지사항</a></li>
+						<li id="b"><a href="#" onclick="goMap()">근처학교 지도</a>
+							<div class="vl"></div></li>
+						<li id="c"><a href="#" onclick="goSchool()">학교리스트</a>
+							<div class="vl"></div></li>
+						<li id="d"><a href="#" onclick="goUser()">내 정보관리</a>
+							<div class="vl"></div></li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -343,7 +337,9 @@ a {
 		function mainPage() {
 			location = "/uri/sc/mainhome";
 		}
-		
+		function goUser() {
+			location="/uri/sc/user"
+		}
 		function goLogin() {
 			if (!ses) {
 				location = "/uri/sc/login";
