@@ -20,8 +20,8 @@ margin-top: 10px;
 
 #imaginary_container {
 	width: 50px;
-	margin-left: 78%;
-	margin-top: -4%;
+	margin-left: 320px;
+	margin-top: -8%;
 }
 
 .stylish-input-group .input-group-addon {
@@ -92,7 +92,7 @@ margin-top:30px;
 				<div id="addressText">
 					찾으시려는 도로명주소+건물번호/건물명 혹은 지번주소+번지수/건물명을 입력해주세요.<br>예) 도로명 : 불정로
 					432번길 / 지번 : 정자동 178-1, 대치동 현대아파트 * <br>단, 도로명 혹은 동(읍/면/리)만
-					검색하시는 경우 정확한 검색결과가 나오지 않을 수 있습니다.<br> <input type="textarea"
+					검색하시는 경우 정확한 검색결과가 나오지 않을 수 있습니다.<br> <input type="text"
 						id="address" placeholder="예)정자동 178-1, 대치동 현대아파트">
 					<div class="row">
 						<div class="col-sm-6 col-sm-offset-3">

@@ -41,12 +41,6 @@ p {
 	background-color: #2f2f2f; /* Black Gray */
 	color: #fff;
 }
-
-.container-fluid {
-	padding-top: 70px;
-	padding-bottom: 70px;
-}
-
 .container {
 	width: 100%;
 	padding: 0;
@@ -206,12 +200,11 @@ a {
 }
 
 .table {
-	width: 400px;
 	border: 1px solid #ddd;
 	padding: 10px;
 	text-align: center;
 	font-size: 14px;
-	margin: 40px 0 20px 30px;
+	margin: 40px 0 0 -300px;
 	cursor: pointer;
 	color: black;
 }
@@ -318,12 +311,24 @@ a {
 				<table class="table table-bordered">
 					<thead>
 						<tr>
+							<th>학교번호</th>
 							<th>학교이름</th>
+							<th>주소</th>
+							<th>전화번호</th>
+							<th>팩스번호</th>
+							<th>남녀공학</th>
+							<th>홈페이지</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td onclick="schoolImport()" class="schoolName">부천정보산업고등학교</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="sinum">2222222</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="school_name">부천정보산업고등학교</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="roadname_address">서울특별시 강남구 일원동 </td>
+							<td onclick="schoolImport()" class="schoolName" data-key="phone_number">02-596-8555</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="fax_number">02-596-8566</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="coeducation_division">남녀공학</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="homepage">http://www.sindong.es.kr/</td>
 						</tr>
 					</tbody>
 				</table>

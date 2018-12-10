@@ -1,26 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<!-- Theme Made By www.w3schools.com - No Copyright -->
 <title>학교 정보 통합 알리미</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat"
-	rel="stylesheet">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
-* {
-	margin: 0;
-	padding: 0;
-}
-
 body {
 	font: 20px Montserrat, sans-serif;
 	line-height: 1.8;
@@ -28,13 +9,16 @@ body {
 }
 
 p {
-	font-size: 16px;
+	font-size: 15px;
+}
+
+.margin {
+	margin-bottom: 20px;
 }
 
 .bg-1 {
-	background-color: #ffffff; /* Green */
+	background-color: #1abc9c; /* Green */
 	color: #ffffff;
-	background-size: cover;
 }
 
 .bg-2 {
@@ -53,6 +37,7 @@ p {
 }
 
 .container-fluid {
+	padding-top: 70px;
 	padding-bottom: 70px;
 }
 
@@ -64,7 +49,7 @@ p {
 	margin-bottom: 0;
 	font-size: 12px;
 	letter-spacing: 5px;
-	margin-left: -13px;
+	background-color: none;
 }
 
 .navbar-nav  li a:hover {
@@ -78,35 +63,31 @@ p {
 #main-image {
 	float: left;
 	margin-right: 20px;
-	margin-left: -10%;
-}
-
-#mySubbar {
-	margin-left: 20%;
-	margin-left: 300px;
+	margin-left: -90px;
 }
 
 #a {
 	font-size: 15px;
+	margin-left: -100px;
 }
 
 #b {
-	margin-left: 20px;
+	margin-left: 75px;
 	font-size: 15px;
 }
 
 #c {
-	margin-left: 20px;
+	margin-left: 70px;
 	font-size: 15px;
 }
 
 #d {
-	margin-left: 20px;
+	margin-left: 70px;
 	font-size: 15px;
 }
 
 #imaginary_container {
-	margin-top: 10%; /* Don't copy this */
+	margin-top: 20%; /* Don't copy this */
 }
 
 .stylish-input-group .input-group-addon {
@@ -129,15 +110,298 @@ p {
 }
 
 .col-sm-offset-3 {
-	margin: -47px 0px 0px -30px;
+	margin: -13px 0px 75px -575px;
+	width: 500px;
+	height: 10px;
 }
 
-.navbar-left { .pull-left ();
+.navbar-left {
 	
 }
 
-.navbar-right { .pull-right ();
-	margin-top: -40px;
+.navbar-right {
+	margin-top: -3px;
+	margin-right: 400px;
+	margin-bottom: -10px;
+	margin-left: -200px;
+}
+
+/* carousel */
+#quote-carousel {
+	padding: 0 10px 30px 10px;
+	margin-top: 30px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control {
+	background: none;
+	color: #222;
+	font-size: 2.3em;
+	text-shadow: none;
+	margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left {
+	left: -12px;
+	margin-top: -45px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right {
+	right: -12px;
+	margin-top: -45px;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators {
+	right: 50%;
+	top: auto;
+	bottom: 0px;
+	margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li {
+	background: #c0c0c0;
+}
+
+#quote-carousel .carousel-indicators .active {
+	background: #333333;
+}
+
+#quote-carousel img {
+	width: 250px;
+	height: 100px
+}
+/* End carousel */
+.item blockquote {
+	border-left: none;
+	margin: 0;
+}
+
+.item blockquote img {
+	margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+	content: "\f10d";
+	font-family: 'Fontawesome';
+	float: left;
+	margin-right: 10px;
+}
+
+.carousel-control:hover, .carousel-control:focus {
+	color: #fff;
+	text-decoration: none;
+	filter: alpha(opacity = 90);
+	outline: 0;
+	opacity: .9;
+}
+
+.carousel-control.right {
+	right: 0;
+	left: auto;
+	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0,
+		rgba(0, 0, 0, .5) 100%);
+	background-image: -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0,
+		rgba(0, 0, 0, .5) 100%);
+	background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)),
+		to(rgba(0, 0, 0, .5)));
+	background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0,
+		rgba(0, 0, 0, .5) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',
+		endColorstr='#80000000', GradientType=1);
+	background-repeat: repeat-x;
+}
+
+.carousel-control {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 15%;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+	filter: alpha(opacity = 50);
+	opacity: .5;
+}
+
+a:hover, a:focus {
+	color: #2a6496;
+	text-decoration: underline;
+}
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media ( min-width : 768px) {
+	#quote-carousel {
+		margin-bottom: 0;
+		padding: 0 40px 30px 40px;
+	}
+}
+
+/* Small devices (tablets, up to 768px) */
+@media ( max-width : 768px) {
+	/* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+	#quote-carousel .carousel-indicators {
+		bottom: -20px !important;
+	}
+	#quote-carousel .carousel-indicators li {
+		display: inline-block;
+		margin: 0px 5px;
+		width: 15px;
+		height: 15px;
+	}
+	#quote-carousel .carousel-indicators li.active {
+		margin: 0px 5px;
+		width: 20px;
+		height: 20px;
+	}
+}
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media ( min-width : 768px) {
+	#quote-carousel {
+		margin-bottom: 0;
+		padding: 0 40px 30px 40px;
+	}
+}
+
+/* Small devices (tablets, up to 768px) */
+@media ( max-width : 768px) {
+	/* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+	#quote-carousel .carousel-indicators {
+		bottom: -20px !important;
+	}
+	#quote-carousel .carousel-indicators li {
+		display: inline-block;
+		margin: 0px 5px;
+		width: 15px;
+		height: 15px;
+	}
+	#quote-carousel .carousel-indicators li.active {
+		margin: 0px 5px;
+		width: 20px;
+		height: 20px;
+	}
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+}
+
+html {
+	font-size: 10px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.glyphicon-chevron-left:before {
+	
+}
+
+.fa-chevron-right:before {
+	content: "\f054";
+}
+
+:before, :after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#mySubbar {
+	margin-left: 710px;
+	margin-top: -15px;
+}
+
+.rounded-circle {
+	margin-right: 55px;
+}
+
+ul {
+	list-style: none;
+}
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#border {
+	height: 250px;
+	width: 900px;
+	margin-left: 50px;
+	margin-top: 100px;
+}
+#maptext {
+	margin: 55px 0px 0 52px;
+	font-size: 18px;
+	line-height: 1.0;
+	font-family: -webkit-body;
+}
+
+#bottom {
+	margin-top: 25px;
+	border: 0;
+	border-top: 1px solid darkgray;
+}
+
+#top {
+	border-top: 1px solid darkgray;
+	`
+}
+
+#youtube {
+	width: 424px;
+	height: 238px;
+	margin: 205px 0 0 50px;
+}
+
+#youtube2 {
+	width: 424px;
+	height: 238px;
+	margin: 205px 0 0 20px;
+}
+
+#pp {
+	font-size: 12px;
+	margin: 0;
+}
+
+.address {
+	margin-top: 100px;
+	margin-bottom: 20px;
+}
+
+.container {
+	width: 100%;
+	padding: 0;
+}
+
+.container>.navbar-header {
+	margin: 5px 150px 0px 880px;
+}
+
+.vl {
+	border-left: 1px solid darkgray;
+	height: 25px;
+	margin: -35px 0 0 -35px;
+}
+
+#lunch {
+	border-radius: 70px;
 }
 
 .border-primary {
@@ -419,6 +683,8 @@ p {
 	border-radius: 5px;
 	border: 1px solid pink;
 	width: 240px;
+	height:35px;
+	padding-top:7px;
 	margin-left:30px;
 	color:white;
 }
@@ -427,6 +693,9 @@ p {
 	text-align: left;
 	margin-left: 10px;
 	width: 200px;
+}
+.zip_code{
+padding-left: 10px;
 }
 </style>
 <script>
@@ -452,7 +721,7 @@ window.addEventListener('load', function(){
 </head>
 <body>
 	<!-- Navbar -->
-	<nav class="navbar navbar-default">
+	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
 				<a href="#" onclick="mainPage()"><img
@@ -471,7 +740,7 @@ window.addEventListener('load', function(){
 								<input type="text" class="form-control"
 									placeholder="학교명 예) 부천정보산업고등학교"> <span
 									class="input-group-addon">
-									<button type="button" onclick="goList()">
+									<button type="submit">
 										<span class="glyphicon glyphicon-search"></span>
 									</button>
 								</span>
@@ -485,13 +754,19 @@ window.addEventListener('load', function(){
 					<li><a href="#" onclick="goLogin()" id="login">로그인/회원가입</a></li>
 				</ul>
 			</div>
+			<hr id="top" width="100%">
 			<div class="collapse navbar-collapse" id="mySubbar">
-				<ul class="nav navbar-nav navbar-left">
-					<li id="a"><a href="#" onclick="goList()">학교찾기</a></li>
-					<li id="b"><a href="#">학교찾기</a></li>
-					<li id="c"><a href="#">학교찾기</a></li>
-					<li id="d"><a href="#">학교찾기</a></li>
-				</ul>
+				<div id="menu">
+					<ul class="nav navbar-nav navbar-left">
+						<li id="a"><a href="#" onclick="goNotice()">공지사항</a></li>
+						<li id="b"><a href="#" onclick="goMap()">근처학교 지도</a>
+							<div class="vl"></div></li>
+						<li id="c"><a href="#" onclick="goSchool()">학교리스트</a>
+							<div class="vl"></div></li>
+						<li id="d"><a href="#" onclick="goUser()">내 정보관리</a>
+							<div class="vl"></div></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</nav>
