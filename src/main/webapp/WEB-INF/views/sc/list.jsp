@@ -18,6 +18,7 @@
 <style>
 body {
 	font: 20px Montserrat, sans-serif;
+	font-family: arial, verdana, tahoma;
 	line-height: 1.8;
 	color: #f5f6f7;
 }
@@ -134,7 +135,7 @@ a {
 }
 
 .col-sm-offset-3 {
-	margin: -13px 0px -40px -575px;
+	margin: -13px 0px 75px -575px;
 	width: 500px;
 	height:10px;
 }
@@ -269,9 +270,10 @@ a {
 						<div id="imaginary_container">
 							<div class="input-group stylish-input-group">
 								<input type="text" class="form-control"
-									placeholder="학교명 예) 부천정보산업고등학교"> <span
+									placeholder="학교명 예) 부천정보산업고등학교"
+									onkeypress="if( event.keyCode==13 ){goSchool();}"> <span
 									class="input-group-addon">
-									<button type="submit">
+									<button type="submit" onclick="goSchool()">
 										<span class="glyphicon glyphicon-search"></span>
 									</button>
 								</span>
