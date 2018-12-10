@@ -22,7 +22,7 @@ public class SchoolController {
 		return sis.selectSchoolList(school_name);
 	}
 	@GetMapping("/school/{sinum}")
-	public @ResponseBody SchoolInfo selectSchool(@PathVariable Integer sinum) {
+	public @ResponseBody List<String> selectSchool(@PathVariable Integer sinum) {
 		return sis.selectSchool(sinum);
 	}
 }

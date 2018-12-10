@@ -19,9 +19,10 @@ public class SchoolInfoServiceImpl implements SchoolInfoService {
 		return sdao.selectSchoolList(school_name);
 	}
 	@Override
-	public SchoolInfo selectSchool(Integer sinum) {
+	public List<String> selectSchool(Integer sinum) {
+		//sdao.selectSchool(sinum);
 		// TODO Auto-generated method stub
-		return sdao.selectSchool(sinum);
+		return null;
 	}
 
 
