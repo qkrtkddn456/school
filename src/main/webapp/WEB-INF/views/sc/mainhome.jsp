@@ -771,11 +771,6 @@ a {
 			location = "/uri/sc/user"
 		}
 
-		function enterkey() {
-			if (window.event.keyCode == 13) {
-				goSchool();
-			}
-		}
 		$(document).ready(function() {
 			$('#quote-carousel').carousel({
 				pause : true,
