@@ -1,26 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<!-- Theme Made By www.w3schools.com - No Copyright -->
 <title>학교 정보 통합 알리미</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat"
-	rel="stylesheet">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
-* {
-	margin: 0;
-	padding: 0;
-}
-
 body {
 	font: 20px Montserrat, sans-serif;
 	line-height: 1.8;
@@ -31,10 +12,13 @@ p {
 	font-size: 16px;
 }
 
+.margin {
+	margin-bottom: 20px;
+}
+
 .bg-1 {
-	background-color: #ffffff; /* Green */
+	background-color: #1abc9c; /* Green */
 	color: #ffffff;
-	background-size: cover;
 }
 
 .bg-2 {
@@ -53,6 +37,7 @@ p {
 }
 
 .container-fluid {
+	padding-top: 70px;
 	padding-bottom: 70px;
 }
 
@@ -64,7 +49,7 @@ p {
 	margin-bottom: 0;
 	font-size: 12px;
 	letter-spacing: 5px;
-	margin-left: -13px;
+	background-color: none;
 }
 
 .navbar-nav  li a:hover {
@@ -78,35 +63,31 @@ p {
 #main-image {
 	float: left;
 	margin-right: 20px;
-	margin-left: -10%;
-}
-
-#mySubbar {
-	margin-left: 20%;
-	margin-left: 300px;
+	margin-left: -90px;
 }
 
 #a {
 	font-size: 15px;
+	margin-left: -100px;
 }
 
 #b {
-	margin-left: 20px;
+	margin-left: 75px;
 	font-size: 15px;
 }
 
 #c {
-	margin-left: 20px;
+	margin-left: 70px;
 	font-size: 15px;
 }
 
 #d {
-	margin-left: 20px;
+	margin-left: 70px;
 	font-size: 15px;
 }
 
 #imaginary_container {
-	margin-top: 10%; /* Don't copy this */
+	margin-top: 20%; /* Don't copy this */
 }
 
 .stylish-input-group .input-group-addon {
@@ -129,15 +110,45 @@ p {
 }
 
 .col-sm-offset-3 {
-	margin: -47px 0px 0px -30px;
+	margin: -13px 0px -40px -575px;
+	width: 500px;
+	height:10px;
 }
 
-.navbar-left { .pull-left ();
+.navbar-left {
 	
 }
 
-.navbar-right { .pull-right ();
-	margin-top: -40px;
+.navbar-right {
+	margin-top: -3px;
+	margin-right: 400px;
+	margin-bottom: -10px;
+	margin-left: -200px;
+}
+
+
+
+.container {
+	width: 100%;
+	padding: 0;
+}
+
+.container>.navbar-header {
+	margin: 5px 150px 0px 880px;
+}
+
+.vl {
+	border-left: 1px solid darkgray;
+	height: 25px;
+	margin: -35px 0 0 -35px;
+}
+
+#lunch {
+	border-radius: 70px;
+}
+#mySubbar {
+	margin-left: 710px;
+	margin-top: -15px;
 }
 
 .border-primary {
@@ -452,7 +463,7 @@ window.addEventListener('load', function(){
 </head>
 <body>
 	<!-- Navbar -->
-	<nav class="navbar navbar-default">
+	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
 				<a href="#" onclick="mainPage()"><img
@@ -471,7 +482,7 @@ window.addEventListener('load', function(){
 								<input type="text" class="form-control"
 									placeholder="학교명 예) 부천정보산업고등학교"> <span
 									class="input-group-addon">
-									<button type="button" onclick="goList()">
+									<button type="submit">
 										<span class="glyphicon glyphicon-search"></span>
 									</button>
 								</span>
@@ -485,13 +496,19 @@ window.addEventListener('load', function(){
 					<li><a href="#" onclick="goLogin()" id="login">로그인/회원가입</a></li>
 				</ul>
 			</div>
+			<hr id="top" width="100%">
 			<div class="collapse navbar-collapse" id="mySubbar">
-				<ul class="nav navbar-nav navbar-left">
-					<li id="a"><a href="#" onclick="goList()">학교찾기</a></li>
-					<li id="b"><a href="#">학교찾기</a></li>
-					<li id="c"><a href="#">학교찾기</a></li>
-					<li id="d"><a href="#">학교찾기</a></li>
-				</ul>
+				<div id="menu">
+					<ul class="nav navbar-nav navbar-left">
+						<li id="a"><a href="#" onclick="goNotice()">공지사항</a></li>
+						<li id="b"><a href="#" onclick="goMap()">근처학교 지도</a>
+							<div class="vl"></div></li>
+						<li id="c"><a href="#" onclick="goSchool()">학교리스트</a>
+							<div class="vl"></div></li>
+						<li id="d"><a href="#" onclick="goUser()">내 정보관리</a>
+							<div class="vl"></div></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</nav>
