@@ -105,6 +105,7 @@ p {
 	background: transparent;
 }
 
+
 .col-sm-6 {
 	width: 50%;
 }
@@ -612,7 +613,7 @@ a {
 						<div class="vl"></div></li>
 					<li id="c"><a href="#" onclick="goSchool()">학교리스트</a>
 						<div class="vl"></div></li>
-					<li id="d"><a href="#">내 정보관리</a>
+					<li id="d"><a href="#" onclick="goUser()">내 정보관리</a>
 						<div class="vl"></div></li>
 				</ul>
 				</div>
@@ -767,7 +768,9 @@ a {
 		function goMap(){	
 			location="/uri/sc/main";
 		}
-
+		function goUser() {
+			location="/uri/sc/user"
+		}
 		$(document).ready(function() {
 			$('#quote-carousel').carousel({
 				pause : true,

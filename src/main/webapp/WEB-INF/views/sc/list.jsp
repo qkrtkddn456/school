@@ -20,17 +20,10 @@ body {
 	font: 20px Montserrat, sans-serif;
 	line-height: 1.8;
 	color: #f5f6f7;
-	font-weight: bold;
 }
 
 p {
 	font-size: 16px;
-}
-
-.bg-1 {
-	background-color: #ffffff; /* Green */
-	color: #ffffff;
-	background-size: cover;
 }
 
 .bg-2 {
@@ -49,7 +42,17 @@ p {
 }
 
 .container-fluid {
+	padding-top: 70px;
 	padding-bottom: 70px;
+}
+
+.container {
+	width: 100%;
+	padding: 0;
+}
+
+.container>.navbar-header {
+	margin: 5px 150px 0px 880px;
 }
 
 .navbar {
@@ -60,6 +63,7 @@ p {
 	margin-bottom: 0;
 	font-size: 12px;
 	letter-spacing: 5px;
+	background-color: none;
 }
 
 .navbar-nav  li a:hover {
@@ -73,35 +77,41 @@ p {
 #main-image {
 	float: left;
 	margin-right: 20px;
-	margin-left: -10%;
+	margin-left: -90px;
 }
 
 #mySubbar {
-	margin-left: 20%;
-	margin-left: 300px;
+	margin-left: 710px;
+	margin-top: -15px;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
 }
 
 #a {
 	font-size: 15px;
+	margin-left: -100px;
 }
 
 #b {
-	margin-left: 20px;
+	margin-left: 75px;
 	font-size: 15px;
 }
 
 #c {
-	margin-left: 20px;
+	margin-left: 70px;
 	font-size: 15px;
 }
 
 #d {
-	margin-left: 20px;
+	margin-left: 70px;
 	font-size: 15px;
 }
 
 #imaginary_container {
-	margin-top: 10%; /* Don't copy this */
+	margin-top: 20%; /* Don't copy this */
 }
 
 .stylish-input-group .input-group-addon {
@@ -113,6 +123,7 @@ p {
 	box-shadow: 0 0 0;
 	border-color: #ccc;
 }
+
 .stylish-input-group button {
 	border: 0;
 	background: transparent;
@@ -121,31 +132,21 @@ p {
 .col-sm-6 {
 	width: 50%;
 }
+
 .col-sm-offset-3 {
-	margin: -47px 0px 0px -30px;
+	margin: -13px 0px -40px -575px;
+	width: 500px;
 }
-.navbar-left { .pull-left ();
+
+.navbar-left {
 	
 }
 
-.navbar-right { .pull-right ();
-	margin-top: -40px;
-}
-
-.border-primary {
-	color: #BDBDBD;
-	opacity: 0.5;
-}
-
-.border-primary {
-	display: inline-block;
-	width: 100rem;
-	height: 100rem;
-	margin: .25rem;
-	background-color: #f5f5f5;
-	border: 1px solid;
-	border-color: #A4A4A4;
-	color: #1C1C1C;
+.navbar-right {
+	margin-top: -3px;
+	margin-right: 400px;
+	margin-bottom: -10px;
+	margin-left: -200px;
 }
 
 .ContentTitle {
@@ -179,12 +180,12 @@ p {
 }
 
 .Search_Word span {
-	color: ;
+	color:;
 	font-family: 'Nanum';
 }
 
 .Search_Word em {
-	color: #4AA9C8 ;
+	color: #4AA9C8;
 }
 
 .table {
@@ -192,7 +193,7 @@ p {
 }
 
 .table thead tr {
-color:#FFFFFF;
+	color: #FFFFFF;
 	background-color: #4AA9C8;
 	border: 2px solid #ddd;
 }
@@ -215,28 +216,49 @@ color:#FFFFFF;
 .table tr td {
 	border: 2px solid #ddd;
 }
+
 .table>thead:first-child>tr:first-child>th {
-    border-top: 0;
-    text-align: center;
+	border-top: 0;
+	text-align: center;
 }
-.Contents{
+
+.Contents {
 	margin-left: 35%;
+}
+
+#top {
+	border-top: 1px solid darkgray;
+}
+
+#bottom {
+	margin-top: 25px;
+	border: 0;
+	border-top: 1px solid darkgray;
+}
+
+.vl {
+	border-left: 1px solid darkgray;
+	height: 25px;
+	margin: -35px 0 0 -35px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
 }
 </style>
 </head>
 <body>
 
 	<!-- Navbar -->
-	<nav class="navbar navbar-default">
+	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/"><img src="${resPath}/img/school.png" id="main-image"
+				<a href="#" onclick="mainPage()"><img
+					src="/resources/img/school.png" id="main-image"
 					style="display: line" alt="Main" width="60" height="60"></a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
+					data-target="#myNavbar"></button>
 				<a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합
 					알리미</a>
 			</div>
@@ -259,17 +281,22 @@ color:#FFFFFF;
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#" onclick="goLogin()">로그인</a></li>
-					<li><a href="#" onclick="goSignin()">회원가입</a></li>
+					<li><a href="#" onclick="goLogin()" id="login">로그인/회원가입</a></li>
 				</ul>
 			</div>
+			<hr id="top" width="100%">
 			<div class="collapse navbar-collapse" id="mySubbar">
-				<ul class="nav navbar-nav navbar-left">
-					<li id="a"><a href="#">학교찾기</a></li>
-					<li id="b"><a href="#">학교찾기</a></li>
-					<li id="c"><a href="#">학교찾기</a></li>
-					<li id="d"><a href="#">학교찾기</a></li>
-				</ul>
+				<div id="menu">
+					<ul class="nav navbar-nav navbar-left">
+						<li id="a"><a href="#" onclick="goNotice()">공지사항</a></li>
+						<li id="b"><a href="#" onclick="goMap()">근처학교 지도</a>
+							<div class="vl"></div></li>
+						<li id="c"><a href="#" onclick="goSchool()">학교리스트</a>
+							<div class="vl"></div></li>
+						<li id="d"><a href="#" onclick="goUser()">내 정보관리</a>
+							<div class="vl"></div></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</nav>
@@ -300,14 +327,35 @@ color:#FFFFFF;
 		</div>
 	</div>
 	<script>
+		var ses = '${sessionScope.ses}';
+		var loginBtn = document.getElementById("login");
+		if (!ses) {
+			loginBtn.innerHTML = "로그인/회원가입";
+		} else {
+			loginBtn.innerHTML = "로그아웃";
+		}
 		function mainPage() {
-			location = "/";
+			location = "/uri/sc/mainhome";
+		}
+		function goUser() {
+			location="/uri/sc/user"
 		}
 		function goLogin() {
-			location = "/uri/sc/login";
+			if (!ses) {
+				location = "/uri/sc/login";
+			} else {
+				location = "/logout";
+			}
 		}
-		function goSignin() {
-			location = "/uri/sc/login";
+		
+		function goSchool() {
+			location = "/uri/sc/list";
+		}
+		function goNotice(){
+			location="/uri/sc/noticelist";
+		}
+		function goMap(){	
+			location="/uri/sc/main";
 		}
 	</script>
 </body>
