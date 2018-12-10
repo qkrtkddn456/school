@@ -65,6 +65,7 @@ body {
 .container {
 	width: 100%;
 	padding: 0;
+	margin-left: 2px;
 }
 
 .navbar {
@@ -89,7 +90,7 @@ body {
 }
 
 #mySubbar {
-	margin-left: 710px;
+	margin-left: 663px;
 	margin-top: -15px;
 }
 

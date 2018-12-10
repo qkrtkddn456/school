@@ -66,6 +66,10 @@ p {
 	margin-left: -90px;
 }
 
+#Main_Service {
+    margin-left: 23px;
+}
+
 #a {
 	font-size: 15px;
 	margin-left: -100px;
@@ -318,7 +322,7 @@ html {
 }
 
 #mySubbar {
-	margin-left: 710px;
+	margin-left: 663px;
 	margin-top: -15px;
 }
 
@@ -551,6 +555,7 @@ a {
 .container {
 	width: 100%;
 	padding: 0;
+	margin-left: 2px;
 }
 
 .container>.navbar-header {

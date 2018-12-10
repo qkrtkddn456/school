@@ -22,7 +22,7 @@
 	box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
 	width: 555px;
 	height: 548px;
-	margin: 30px 0 0 215px;
+	margin: 30px 0 0 180px;
 }
 
 .panel-login>.panel-heading {
@@ -192,6 +192,7 @@ body {
 .container {
 	width: 100%;
 	padding: 0;
+	margin-left: 2px;
 }
 
 .navbar {
@@ -216,7 +217,7 @@ body {
 }
 
 #mySubbar {
-	margin-left: 710px;
+	margin-left: 663px;
 	margin-top: -15px;
 }
 

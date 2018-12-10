@@ -50,6 +50,7 @@ p {
 .container {
 	width: 100%;
 	padding: 0;
+	margin-left: 2px;
 }
 
 .container>.navbar-header {
@@ -82,7 +83,7 @@ p {
 }
 
 #mySubbar {
-	margin-left: 710px;
+	margin-left: 663px;
 	margin-top: -15px;
 }
 
