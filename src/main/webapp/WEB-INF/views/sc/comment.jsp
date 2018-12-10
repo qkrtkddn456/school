@@ -431,17 +431,17 @@ p {
 </style>
 <script>
 window.addEventListener('load', function(){
-    //var schoolName = document.querySelector('#schoolName').innerHTML;
+    var schoolName = document.querySelector('#schoolName').innerHTML;
 	var conf = {		
 			 url:'/schools/'+schoolName,
 			 method:'GET',
 			 success : function(res){
 				 res = JSON.parse(res);	
-				 var temp = document.querySelectorAll('.hall_text');
-				 for(var i=0; i<temp.length; i++){
-					 temp[i].innerHTML = res[0].school_name;
-				 }
-				
+				 var views = document.querySelectorAll('[data-key]');
+				 for(var view of views){
+					 var key = view.getAttribute('data-key');
+					 view.innerHTML = res[0][key]
+				 }				
 			 }
 	}
 	au.send(conf); 		 
@@ -521,92 +521,94 @@ window.addEventListener('load', function(){
 						<h1 class="Home">학교정보</h1>
 						<div class="Information">
 							<div class="hall">
-								<span class="hall_title">시도교육청</span><span class="hall_text">ss</span>
+								<span class="hall_title">시도교육청</span><span class="hall_text" data-key="city_education">ss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">지역교육청</span><span class="hall_text">ssss</span>
+								<span class="hall_title">지역교육청</span><span class="hall_text" data-key="regional_education">ssss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">지역</span><span class="hall_text">ss</span>
+								<span class="hall_title">지역</span><span class="hall_text" data-key="regional">ss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">정보공시학교코드</span><span class="hall_text">ss</span>
+								<span class="hall_title">정보공시학교코드</span><span class="hall_text" data-key="disclosure_code">ss</span>
 							</div>
 
 							<div class="hall">
-								<span class="hall_title">학교명</span><span class="hall_text" id="sc"></span>
+								<span class="hall_title">학교명</span><span class="hall_text" data-key="school_name"></span>
 							</div>	
 
 							<div class="hall">
-								<span class="hall_title">학교급코드</span><span class="hall_text">ss</span>
+								<span class="hall_title">학교급코드</span><span class="hall_text" data-key="school_code">ss</span>
 							</div>
 
 							<div class="hall">
-								<span class="hall_title">설립구분</span><span class="hall_text">ss</span>
+								<span class="hall_title">설립구분</span><span class="hall_text" data-key="establishment">ss</span>
 							</div>
 
 							<div class="hall">
-								<span class="hall_title">학교특성</span><span class="hall_text">ss</span>
+								<span class="hall_title">학교특성</span><span class="hall_text" data-key="school_characteristics">ss</span>
 							</div>
 
 							<div class="hall">
-								<span class="hall_title">분교여부</span><span class="hall_text">ss</span>
+								<span class="hall_title">분교여부</span><span class="hall_text" data-key="branch_division">ss</span>
 							</div>
 
 							<div class="hall">
-								<span class="hall_title">설립유형</span><span class="hall_text">ss</span>
+								<span class="hall_title">설립유형</span><span class="hall_text" data-key="establishment_type">ss</span>
 							</div>
 
 							<div class="hall">
-								<span class="hall_title">주야구분</span><span class="hall_text">ss</span>
+								<span class="hall_title">주야구분</span><span class="hall_text" data-key="weekly">ss</span>
 							</div>
 
 							<div class="hall">
-								<span class="hall_title">개교기념일</span><span class="hall_text">ss</span>
+								<span class="hall_title">개교기념일</span><span class="hall_text" data-key="school_anniversary">ss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">설립일</span><span class="hall_text">ss</span>
+								<span class="hall_title">설립일</span><span class="hall_text" data-key="establishment_date">ss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">주소내역</span><span class="hall_text">ss</span>
+								<span class="hall_title">법정동코드</span><span class="hall_text" data-key="court_code">ss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">상세 주소내역</span><span class="hall_text">ss</span>
+								<span class="hall_title">주소내역</span><span class="hall_text" data-key="address">ss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">우편번호</span><span class="hall_text">ss</span>
+								<span class="hall_title">상세 주소내역</span><span class="hall_text" data-key="detailed_address">ss</span>
 							</div>
+							
 
 						</div>
 						<div class="secondInformation">
 							<div class="hall">
-								<span class="hall_title">학교도로명 우편번호</span><span
-									class="hall_text">ss</span>
+								<span class="hall_title">우편번호</span><span class="zip_code">ss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">학교도로명 주소</span><span class="hall_text">ss</span>
+								<span class="hall_title">학교도로명 우편번호</span><span class="hall_text" data-key="roadname_code">ss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">학교도로명 상세주소</span><span
-									class="hall_text">ss</span>
+								<span class="hall_title">학교도로명 주소</span><span class="hall_text" data-key="roadname_address">ss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">위도</span><span class="hall_text">ss</span>
+								<span class="hall_title">학교도로명 상세주소</span><span class="hall_text" data-key="roadname_detailed_address">ss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">경도</span><span class="hall_text">ss</span>
+								<span class="hall_title">위도</span><span class="hall_text" data-key="latitude">ss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">전화번호</span><span class="hall_text">ss</span>
+								<span class="hall_title">경도</span><span class="hall_text" data-key="longitude">ss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">팩스번호</span><span class="hall_text">ss</span>
+								<span class="hall_title">전화번호</span><span class="hall_text" data-key="phone_number">ss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">홈페이지 주소</span><span class="hall_text">ss</span>
+								<span class="hall_title">팩스번호</span><span class="hall_text" data-key="fax_number">ss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">남녀공학 구분</span><span class="hall_text">ss</span>
+								<span class="hall_title">홈페이지 주소</span><span class="hall_text" data-key="homepage">ss</span>
+							</div>
+							<div class="hall">
+								<span class="hall_title">남녀공학 구분</span><span class="hall_text" data-key="coeducation_division">ss</span>
 							</div>
 
 						</div>
