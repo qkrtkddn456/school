@@ -105,7 +105,6 @@ p {
 	background: transparent;
 }
 
-
 .col-sm-6 {
 	width: 50%;
 }
@@ -113,6 +112,7 @@ p {
 .col-sm-offset-3 {
 	margin: -13px 0px -40px -575px;
 	width: 500px;
+	height:10px;
 }
 
 .navbar-left {
@@ -340,7 +340,7 @@ body {
 }
 
 body {
-	background-color:"white";
+	background-color: "white";
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -573,12 +573,11 @@ a {
 	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="#" onclick="mainPage()"><img src="/resources/img/school.png"
-					id="main-image" style="display: line" alt="Main" width="60"
-					height="60"></a>
+				<a href="#" onclick="mainPage()"><img
+					src="/resources/img/school.png" id="main-image"
+					style="display: line" alt="Main" width="60" height="60"></a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-				</button>
+					data-target="#myNavbar"></button>
 				<a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합
 					알리미</a>
 			</div>
@@ -607,15 +606,15 @@ a {
 			<hr id="top" width="100%">
 			<div class="collapse navbar-collapse" id="mySubbar">
 				<div id="menu">
-				<ul class="nav navbar-nav navbar-left">
-					<li id="a"><a href="#" onclick="goNotice()">공지사항</a></li>
-					<li id="b"><a href="#" onclick="goMap()">근처학교 지도</a>
-						<div class="vl"></div></li>
-					<li id="c"><a href="#" onclick="goSchool()">학교리스트</a>
-						<div class="vl"></div></li>
-					<li id="d"><a href="#" onclick="goUser()">내 정보관리</a>
-						<div class="vl"></div></li>
-				</ul>
+					<ul class="nav navbar-nav navbar-left">
+						<li id="a"><a href="#" onclick="goNotice()">공지사항</a></li>
+						<li id="b"><a href="#" onclick="goMap()">근처학교 지도</a>
+							<div class="vl"></div></li>
+						<li id="c"><a href="#" onclick="goSchool()">학교리스트</a>
+							<div class="vl"></div></li>
+						<li id="d"><a href="#" onclick="goUser()">내 정보관리</a>
+							<div class="vl"></div></li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -632,23 +631,22 @@ a {
 					<ul>
 						<li>
 							<div class="image_title">
-								<a href="http://promotion.daum-kg.net/2018goenews/#event01">경기교육
-									정책공감 공익캠페인</a>
-							</div> <a href="http://promotion.daum-kg.net/2018goenews/#event01">
-								<img
-								src="http://dthumb.phinf.naver.net/?src=%22http%3A%2F%2Fpromotion.daum-kg.net%2F2018goenews%2Fimages%2Fsns.jpg%22&type=ff500_300"
+								<a href="http://wzine.kr/dreamschool2019/index_test.html">2019
+									학생들 만들어가는 꿈의 학교</a>
+							</div> <a href="http://wzine.kr/dreamschool2019/index_test.html"> <img
+								src="http://wzine.kr/dreamschool2019/images/2019_main_img01.jpg"
 								width="305px" height="170px">
 						</a>
 						</li>
 						<li>
 							<div class="image_title">
 								<a
-									href="http://www.sen.go.kr/web/services/bbs/bbsView.action?bbsBean.bbsCd=130&bbsBean.bbsSeq=833">편안한
-									교복 디자인 공모전 안내</a>
+									href="http://sen.go.kr/web/services/bbs/bbsView.action?bbsBean.bbsCd=130&bbsBean.bbsSeq=837">덴마크
+									애프터스콜레 학생 교육 교류</a>
 							</div> <a
-							href="http://www.sen.go.kr/web/services/bbs/bbsView.action?bbsBean.bbsCd=130&bbsBean.bbsSeq=833">
+							href="http://sen.go.kr/web/services/bbs/bbsView.action?bbsBean.bbsCd=130&bbsBean.bbsSeq=837">
 								<img
-								src="https://postfiles.pstatic.net/MjAxODExMjFfNSAg/MDAxNTQyNzg1MDMxMDI0.uhmR5hGjcuCidlWVBrQcTmWy70bZyCrsS-U1hNGjEHcg.w1cBoBQPZaiQZ0dD3rhdsiHF-2lwX-zpyPhnFl4xPBYg.JPEG.seouledu2012/%ED%8E%B8%EC%95%88%ED%95%9C_%EA%B5%90%EB%B3%B5_%EB%94%94%EC%9E%90%EC%9D%B8_%EA%B3%B5%EB%AA%A8%EC%A0%84_%ED%8F%AC%EC%8A%A4%ED%84%B0_%EB%B3%80%EA%B2%BD.jpg?type=w966"
+								src="https://postfiles.pstatic.net/MjAxODEyMDRfMjU0/MDAxNTQzODk4ODU5MTY3.MLWzqE2J7UXMzCSXVszoCCM2_1-YUat2T97aW2Ydelog.8H-zFa2EH2xp_y0MkLOWfzE-iFyUGU5vz6uX1gYl_tkg.PNG.seouledu2012/%EB%8D%B4%EB%A7%88%ED%81%AC_%EC%95%A0%ED%94%84%ED%84%B0%EC%8A%A4%EC%BD%9C%EB%A0%88-03.png?type=w966"
 								width="305px" height="170px" />
 						</a>
 						</li>
@@ -706,7 +704,7 @@ a {
 			</article>
 
 
-			<div id="schoolmap"  onclick="goMap()">
+			<div id="schoolmap" onclick="goMap()">
 				<p id="maptext">내 주위 학교 찾기</p>
 			</div>
 			<iframe id="youtube" src="https://www.youtube.com/embed/rIbsxN8bpfQ"
@@ -762,14 +760,14 @@ a {
 		function goSchool() {
 			location = "/uri/sc/list";
 		}
-		function goNotice(){
-			location="/uri/sc/noticelist";
+		function goNotice() {
+			location = "/uri/sc/noticelist";
 		}
-		function goMap(){	
-			location="/uri/sc/main";
+		function goMap() {
+			location = "/uri/sc/main";
 		}
 		function goUser() {
-			location="/uri/sc/user"
+			location = "/uri/sc/user"
 		}
 		$(document).ready(function() {
 			$('#quote-carousel').carousel({

@@ -20,8 +20,8 @@ margin-top: 10px;
 
 #imaginary_container {
 	width: 50px;
-	margin-top: -30px;
-	margin-left: 320px;
+	margin-left: 78%;
+	margin-top: -4%;
 }
 
 .stylish-input-group .input-group-addon {
