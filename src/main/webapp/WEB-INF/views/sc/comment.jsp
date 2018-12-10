@@ -429,9 +429,28 @@ p {
 	width: 200px;
 }
 </style>
+<script>
+window.addEventListener('load', function(){
+    //var schoolName = document.querySelector('#schoolName').innerHTML;
+	var conf = {		
+			 url:'/schools/'+schoolName,
+			 method:'GET',
+			 success : function(res){
+				 res = JSON.parse(res);	
+				 var temp = document.querySelectorAll('.hall_text');
+				 for(var i=0; i<temp.length; i++){
+					 temp[i].innerHTML = res[0].school_name;
+				 }
+				
+			 }
+	}
+	au.send(conf); 		 
+
+})
+
+</script>
 </head>
 <body>
-	${sessionScope.user}
 	<!-- Navbar -->
 	<nav class="navbar navbar-default">
 		<div class="container">
@@ -496,7 +515,7 @@ p {
 						<span class="School_Division" style="position: relative;">
 							<span class="mapD_Area _10">경기</span> <span
 							class="mapD_Class _04">고</span>
-						</span> <span style="position: relative; top: 3px">부천정보산업고등학교</span>
+						</span> <span style="position: relative; top: 3px" id="schoolName">부천정보산업고등학교</span>
 					</h1>
 					<div class="HomeContent">
 						<h1 class="Home">학교정보</h1>
@@ -505,7 +524,7 @@ p {
 								<span class="hall_title">시도교육청</span><span class="hall_text">ss</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">지역교육청</span><span class="hall_text">ss</span>
+								<span class="hall_title">지역교육청</span><span class="hall_text">ssss</span>
 							</div>
 							<div class="hall">
 								<span class="hall_title">지역</span><span class="hall_text">ss</span>
@@ -515,8 +534,8 @@ p {
 							</div>
 
 							<div class="hall">
-								<span class="hall_title">학교명</span><span class="hall_text">ss</span>
-							</div>
+								<span class="hall_title">학교명</span><span class="hall_text" id="sc"></span>
+							</div>	
 
 							<div class="hall">
 								<span class="hall_title">학교급코드</span><span class="hall_text">ss</span>
@@ -686,6 +705,8 @@ p {
 		$(".cancel-btn").click(function() {
 			$(".add-comment").hide();
 		});
+		
+		
 	</script>
 </body>
 </html>

@@ -320,7 +320,7 @@ a {
 					</thead>
 					<tbody>
 						<tr>
-							<td>부천정보산업고등학교</td>
+							<td onclick="schoolImport()" class="schoolName">부천정보산업고등학교</td>
 						</tr>
 					</tbody>
 				</table>
@@ -357,6 +357,18 @@ a {
 		}
 		function goMap(){	
 			location="/uri/sc/main";
+		}
+		function schoolImport(){
+			var tep = document.querySelector( '.schoolName' ).innerHTML;
+			 var conf = {		
+					 url:'/schools/'+tep,
+					 method:'GET',
+					 success : function(res){
+						 res = JSON.parse(res);
+						 location = '/uri/sc/comment';	
+					 }
+			 }
+			 au.send(conf); 		 
 		}
 	</script>
 </body>

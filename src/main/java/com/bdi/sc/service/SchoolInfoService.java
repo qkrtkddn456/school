@@ -8,5 +8,5 @@ public interface SchoolInfoService {
 
 	public List<SchoolInfo> selectSchoolList(String school_name);
 
-	public SchoolInfo selectSchool(Integer sinum);
+	public List<String> selectSchool(Integer sinum);
 }
