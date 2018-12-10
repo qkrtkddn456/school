@@ -113,6 +113,7 @@ p {
 .col-sm-offset-3 {
 	margin: -13px 0px -40px -575px;
 	width: 500px;
+	height:10px;
 }
 
 .navbar-left {
