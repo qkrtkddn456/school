@@ -243,6 +243,7 @@ p{
 		var latitude;
 		var longitude;
 		var mapContainer, map, mapTypeControl, ps, maker,infowindow;
+		var mealschool, mealaddress, mcode;
 		
 		navigator.geolocation.getCurrentPosition(function(pos) {
 			latitude = pos.coords.latitude;	
@@ -287,18 +288,34 @@ p{
 				        infowindow.setContent('<div style="padding:5px;font-size:12px;color:black;">' + place.place_name + '</div>');
 				        infowindow.open(map, marker);	
 				       	document.querySelector('#scname').innerHTML = place.place_name;
+				       	mealschool = place.place_name;
+				       	mealaddress = place.road_address_name;
+				       	mealcode();
 				       	meals();
 				    });
-				}
+				}	
 			}
 			daum.maps.event.addListener(map, 'zoom_changed', function() {        
 				scSearch();
 			});
 			scSearch();
 		});
-		function meals(){
-			var conf = {		
-					 url:'https://schoolmenukr.ml/api/high/J100000585?hideAllergy=true',
+		function mealcode(){
+			var conf ={
+					url:"/meals",
+					method:'POST',
+					param:JSON.stringify({mealschool:mealschool,mealaddress:mealaddress}),
+					success : function(res){
+						res = JSON.parse(res);
+						mcode = res.mealcode;
+						alert(mcode);
+					}
+			}
+			au.send(conf);
+		}	
+		 function meals(){
+			 var conf = {		
+					 url:'https://schoolmenukr.ml/api/high/'+mcode+'?hideAllergy=true',
 					 method:'GET',
 					 success : function(res){
 						 res = JSON.parse(res);
@@ -310,8 +327,8 @@ p{
 						 
 					 }
 			 }
-			 au.send(conf);
-		}
+			 au.send(conf); 
+		} 
 		
 		
 	</script>

@@ -3,17 +3,18 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bdi.sc.MEALS">
-  <select id="selectMealsList" resultType="meals" parameterType="meals">
-    select * from meals
-     <!-- <if test="meals!=null">
-    	where school_name like concat(#{value},'%')
-    </if> -->
-  </select>
-  <select id="selectMeals" resultType="meals">
-  	select * from meals
-	where mealschool = #{mealschool} and mealaddress like concat('%',#{mealaddress},'%')
-  </select>
-  <insert id="saveMeals" parameterType="meals">
-  	insert into meals(mealschool,mealcode,mealaddress) values(#{mealschool},#{mealcode},#{mealaddress})
-  </insert>
+	<select id="selectMealsList" resultType="meals"
+		parameterType="meals">
+		select * from meals
+		<!-- <if test="meals!=null"> where school_name like concat(#{value},'%') 
+			</if> -->
+	</select>
+	<select id="selectMeals" resultType="meals">
+		select * from meals
+		where mealschool= #{mealschool} and mealsido=#{mealaddress}
+	</select>
+	<insert id="saveMeals" parameterType="meals">
+		insert into meals(mealschool,mealcode,mealaddress)
+		values(#{mealschool},#{mealcode},#{mealaddress})
+	</insert>
 </mapper>

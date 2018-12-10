@@ -6,10 +6,12 @@
   <select id="selectSTList" resultType="st">
     select * from st_info
   </select>
+  
    <select id="selectST" resultType="st">
     select * from st_info
     where stnum=#{stnum}
   </select>
+  
   <insert id="insertST" parameterType="st">
 	insert into st_info(stname,stage,stschool,stgen,stid,stpwd)
 	values(#{stname},#{stage},#{stschool},#{stgen},#{stid},#{stpwd})
@@ -24,8 +26,12 @@
   	where stnum = #{stnum}
   </delete>
   
-  <select id="login" parameterType="st" resultType="int">
+  <select id="login" parameterType="st" resultType="st">
   	select * from st_info
   	where stid=#{stid} and stpwd=#{stpwd}
+  </select>
+  <select id="idcheck" resultType="int">
+   	select count(stid) from st_info
+  	where stid=#{stid}
   </select>
 </mapper>
