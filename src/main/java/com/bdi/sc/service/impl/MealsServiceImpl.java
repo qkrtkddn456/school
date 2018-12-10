@@ -28,13 +28,13 @@ public class MealsServiceImpl implements MealsService {
 	//급식코드 크롤링
 	@Override
 	public List<Meals> getMealsList() throws IOException {
-		List<Meals> meals = new ArrayList<Meals>();
+		List<Meals> meals = new ArrayList<>();
 		for (int i = 2201; i <= 2208; i++) {
 			Document doc = Jsoup.connect(url)//.data("criteria", "pageIndex="+ i+"&bsnmNm=%EC%A4%91%ED%95%99%EA%B5%90" )
 					.data("criteria", "pageIndex="+ i )
 					.post();
 			Elements trEles = doc.select("div.ellipsis>table>tbody>tr");
-			for (Element tr : trEles) {
+			for(Element tr : trEles) {
 				if(tr.child(1).text().indexOf("유치원")!=-1) continue;
 				if(tr.child(1).text().indexOf("North")!=-1) continue;
 				Meals meal = new Meals();
@@ -59,10 +59,13 @@ public class MealsServiceImpl implements MealsService {
 		return mdao.saveMeals(getMealsList());
 	}
 	
-	//경기도 고양시 일산서구 가좌1로 43 (가좌동,가좌고등학교)
+	//"경기 고양시 일산서구 고봉로 177"
 	@Override
 	public Meals selectMeals(Meals meal)  {
 		String add = meal.getMealaddress();
+		String[] strArr = add.split(" ");
+		meal.setMealaddress(strArr[0]+" "+strArr[1]);
+		log.info("add=>{}",meal.getMealaddress());
 		return mdao.selectMeal(meal);
 	}
 

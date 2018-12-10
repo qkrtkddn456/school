@@ -33,4 +33,4 @@ public class MealsController {
 	public @ResponseBody Meals selectMeals(@RequestBody Meals meal)  {
 		return ms.selectMeals(meal);
 	}
-}
+}	
