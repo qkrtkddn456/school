@@ -110,9 +110,9 @@ p {
 }
 
 .col-sm-offset-3 {
-	margin: -13px 0px -40px -575px;
+	margin: -13px 0px 75px -575px;
 	width: 500px;
-	height:10px;
+	height: 10px;
 }
 
 .navbar-left {
@@ -587,9 +587,10 @@ a {
 						<div id="imaginary_container">
 							<div class="input-group stylish-input-group">
 								<input type="text" class="form-control"
-									placeholder="학교명 예) 부천정보산업고등학교"> <span
+									placeholder="학교명 예) 부천정보산업고등학교"
+									onkeypress="if( event.keyCode==13 ){goSchool();}"> <span
 									class="input-group-addon">
-									<button type="submit">
+									<button type="submit" onclick="goSchool()">
 										<span class="glyphicon glyphicon-search"></span>
 									</button>
 								</span>
@@ -768,6 +769,12 @@ a {
 		}
 		function goUser() {
 			location = "/uri/sc/user"
+		}
+
+		function enterkey() {
+			if (window.event.keyCode == 13) {
+				goSchool();
+			}
 		}
 		$(document).ready(function() {
 			$('#quote-carousel').carousel({
