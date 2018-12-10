@@ -588,7 +588,7 @@ a {
 							<div class="input-group stylish-input-group">
 								<input type="text" class="form-control"
 									placeholder="학교명 예) 부천정보산업고등학교"
-									onkeypress="if( event.keyCode==13 ){goSchool();}"> <span
+									onkeypress="if( event.keyCode==13 ){goSchool();}" id="search"> <span
 									class="input-group-addon">
 									<button type="submit" onclick="goSchool()">
 										<span class="glyphicon glyphicon-search"></span>
@@ -759,7 +759,8 @@ a {
 			}
 		}
 		function goSchool() {
-			location = "/uri/sc/list";
+			var param = document.querySelector('#search').value;
+			location = "/schools/"+param;
 		}
 		function goNotice() {
 			location = "/uri/sc/noticelist";
