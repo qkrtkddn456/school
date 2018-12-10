@@ -1,5 +1,6 @@
 package com.bdi.sc.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,9 @@ import com.bdi.sc.dao.SchoolInfoDAO;
 import com.bdi.sc.service.SchoolInfoService;
 import com.bdi.sc.vo.SchoolInfo;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 public class SchoolInfoServiceImpl implements SchoolInfoService {
 
@@ -20,9 +24,9 @@ public class SchoolInfoServiceImpl implements SchoolInfoService {
 	}
 	@Override
 	public List<String> selectSchool(Integer sinum) {
-		//sdao.selectSchool(sinum);
-		// TODO Auto-generated method stub
-		return null;
+		SchoolInfo sc = sdao.selectSchool(sinum);
+		List<String> list = new ArrayList<String>(sc.hashCode());
+		return list;
 	}
 
 
