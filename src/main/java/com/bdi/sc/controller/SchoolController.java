@@ -27,7 +27,14 @@ public class SchoolController {
 	
 	
 	@GetMapping("/school/{sinum}")
-	public @ResponseBody List<String> selectSchool(@PathVariable Integer sinum) {
-		return sis.selectSchool(sinum);
+	public String selectSchool(@PathVariable Integer sinum, Model model) {
+		model.addAttribute("school",sis.selectSchool(sinum));
+		return "sc/comment";
 	}
+	
+// ajax 방식
+//	@GetMapping("/school/{sinum}")
+//	public @ResponseBody SchoolInfo selectSchool(@PathVariable Integer sinum) {
+//		return sis.selectSchool(sinum);
+//	}
 }

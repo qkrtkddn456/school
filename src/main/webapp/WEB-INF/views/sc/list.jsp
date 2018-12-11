@@ -272,13 +272,13 @@ a {
 					</thead>
 					<tbody>
 						<tr>
-							<td onclick="schoolImport()" class="schoolName" data-key="sinum">${item.sinum}</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="school_name">${item.school_name}</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="roadname_address">${item.roadname_address}</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="phone_number">${item.phone_number}</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="fax_number">${item.fax_number}</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="coeducation_division">${item.coeducation_division}</td>
-							<td class="schoolName" data-key="homepage">${item.homepage}</td>
+							<td  class="schoolName" data-key="sinum" >${item.sinum}</td>
+							<td  class="schoolName" data-key="school_name" onclick="schoolSelect(${item.sinum})">${item.school_name}</td>
+							<td  class="schoolName" data-key="roadname_address">${item.roadname_address}</td>
+							<td  class="schoolName" data-key="phone_number">${item.phone_number}</td>
+							<td  class="schoolName" data-key="fax_number">${item.fax_number}</td>
+							<td  class="schoolName" data-key="coeducation_division">${item.coeducation_division}</td>
+							<td  class="schoolName" data-key="homepage">${item.homepage}</td>
 						</tr>
 					</tbody>
 				</table>
@@ -288,7 +288,11 @@ a {
 	</div>
 </div>
 	<script>
-		
+		function schoolSelect(sinum){
+			var param = sinum;
+			location = "/school/"+param;
+		}
+		/* 
 		function schoolImport(){
 			var tep = document.querySelector( '.schoolName' ).innerHTML;
 			 var conf = {		
@@ -300,7 +304,8 @@ a {
 					 }
 			 }
 			 au.send(conf); 		 
-		}
+		} */
+		
 	</script>
 </body>
 </html>
