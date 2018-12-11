@@ -245,18 +245,18 @@ a {
 </style>
 </head>
 <body>
-	<!-- Navbar -->
-	
-	<div class="container-fluid bg-1 text-center">
+<div class="container-fluid bg-1 text-center">
 		<div class="ContentTitle">
 			<h1 class="Title2">학교검색</h1>
 		</div>
 		<div id="Contents">
 			<div class="InnerWrap">
 				<div class="Search_Word">
-					'<em> 검색한 학교 </em>' 검색결과 <span>(총 ?건)</span>
+					'<em>${school_name}</em> ' 검색결과 <span>(총 ${fn:length(scList)}건)</span>
 				</div>
-			</div>
+			</div>	
+			
+		<c:forEach var="item" items="${scList}" varStatus="status">
 			<div class="Contents">
 				<table class="table table-bordered">
 					<thead>
@@ -272,19 +272,21 @@ a {
 					</thead>
 					<tbody>
 						<tr>
-							<td onclick="schoolImport()" class="schoolName" data-key="sinum">${scList[0].sinum}</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="school_name">${scList[0].school_name}</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="roadname_address">${scList[0].roadname_address}</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="phone_number">${scList[0].phone_number}</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="fax_number">${scList[0].fax_number}</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="coeducation_division">${scList[0].coeducation_division}</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="homepage">${scList[0].homepage}</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="sinum">${item.sinum}</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="school_name">${item.school_name}</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="roadname_address">${item.roadname_address}</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="phone_number">${item.phone_number}</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="fax_number">${item.fax_number}</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="coeducation_division">${item.coeducation_division}</td>
+							<td class="schoolName" data-key="homepage">${item.homepage}</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
-		</div>
+		</c:forEach>	
+		
 	</div>
+</div>
 	<script>
 		
 		function schoolImport(){
