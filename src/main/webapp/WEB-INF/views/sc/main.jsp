@@ -36,12 +36,6 @@ body {
 	background-color: #ffffff; /* White */
 	color: #555555;
 }
-
-.bg-4 {
-	background-color: #2f2f2f; /* Black Gray */
-	color: #fff;
-}
-
 #scinfo {
 	float: left;
 	width: 20%;
@@ -374,9 +368,6 @@ p {
 </style>
 </head>
 <body>
-	<!-- Navbar -->
-	
-	<!-- First Container -->
 	<div class="container-fluid bg-1 text-center">
 		<div id="scinfo">
 			<h2>학교 이름</h2>
@@ -387,17 +378,13 @@ p {
 		</div>
 		<div id="map" style="position: relative; overflow: hidden;"></div>
 	</div>
-	<!-- Footer -->
-	<footer class="container-fluid bg-4 text-center">
-		<p>
-			Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a>
-		</p>
-	</footer>
 	<script>
+		
 		var searchinput;
 		var latitude;
 		var longitude;
 		var mapContainer, map, mapTypeControl, ps, maker, infowindow;
+		var placeName, placeAddr,mcode;
 
 		navigator.geolocation
 				.getCurrentPosition(function(pos) {
@@ -450,8 +437,7 @@ p {
 									.addListener(
 											marker,
 											'click',
-											function() {
-												// 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
+											function() {// 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
 												infowindow
 														.setContent('<div style="padding:5px;font-size:12px;color:black;">'
 																+ place.place_name
@@ -459,7 +445,9 @@ p {
 												infowindow.open(map, marker);
 												document
 														.querySelector('#scname').innerHTML = place.place_name;
-												meals();
+												placeAddr = place.road_address_name;
+												placeName = place.place_name;
+												mealcode(place.road_address_name,place.place_name);
 											});
 						}
 					}
@@ -469,9 +457,23 @@ p {
 							});
 					scSearch();
 				});
-		function meals() {
+		function mealcode(placeAddr,placeName){
+			placeName = placeName.replace(' ' ,'');
+			var conf ={
+					url:"/meals",
+					method:'POST',
+					param:JSON.stringify({mealschool:placeName,mealaddress:placeAddr}),
+					success : function(res){
+						res = JSON.parse(res);
+						mcode = res.mealcode;
+						meals(mcode);
+					}
+			}
+			au.send(conf);
+		}	
+		function meals(mcode) {
 			var conf = {
-				url : 'https://schoolmenukr.ml/api/high/J100000585?hideAllergy=true',
+				url : 'https://schoolmenukr.ml/api/high/'+mcode+'?hideAllergy=true',
 				method : 'GET',
 				success : function(res) {
 					res = JSON.parse(res);
@@ -485,6 +487,15 @@ p {
 			}
 			au.send(conf);
 		}
+		
+		/* function getData(callbackFunc) {
+			$.get('http://localhost', function (response) {
+				callbackFunc(response); // 서버에서 받은 데이터 response를 callbackFunc() 함수에 넘겨줌
+			});
+		}
+		getData(function (tableData) {
+			console.log(tableData); // $.get()의 response 값이 tableData에 전달됨
+		}); */
 	</script>
 </body>
 </html>

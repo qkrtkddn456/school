@@ -174,7 +174,6 @@ body {
 	font: 20px Montserrat, sans-serif;
 	font-family: arial, verdana, tahoma;
 	line-height: 1.8;
-	color: #f5f6f7;
 }
 
 .bg-1 {

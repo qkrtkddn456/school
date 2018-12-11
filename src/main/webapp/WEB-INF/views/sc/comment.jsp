@@ -699,7 +699,7 @@ padding-left: 10px;
 }
 </style>
 <script>
-window.addEventListener('load', function(){
+/* window.addEventListener('load', function(){
     var schoolName = document.querySelector('#schoolName').innerHTML;
 	var conf = {		
 			 url:'/schools/'+schoolName,
@@ -716,7 +716,7 @@ window.addEventListener('load', function(){
 	au.send(conf); 		 
 
 })
-
+ */
 </script>
 </head>
 <body>
@@ -740,100 +740,99 @@ window.addEventListener('load', function(){
 						<span class="School_Division" style="position: relative;">
 							<span class="mapD_Area _10">경기</span> <span
 							class="mapD_Class _04">고</span>
-						</span> <span style="position: relative; top: 3px" id="schoolName">부천정보산업고등학교</span>
+						</span> <span style="position: relative; top: 3px" id="schoolName">${school.school_name}</span>
 					</h1>
 					<div class="HomeContent">
 						<h1 class="Home">학교정보</h1>
 						<div class="Information">
 							<div class="hall">
-								<span class="hall_title">시도교육청</span><span class="hall_text" data-key="city_education">ss</span>
+								<span class="hall_title">시도교육청</span><span class="hall_text" data-key="city_education">${school.city_education}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">지역교육청</span><span class="hall_text" data-key="regional_education">ssss</span>
+								<span class="hall_title">지역교육청</span><span class="hall_text" data-key="regional_education">${school.regional_education}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">지역</span><span class="hall_text" data-key="regional">ss</span>
+								<span class="hall_title">지역</span><span class="hall_text" data-key="regional">${school.regional}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">정보공시학교코드</span><span class="hall_text" data-key="disclosure_code">ss</span>
+								<span class="hall_title">정보공시학교코드</span><span class="hall_text" data-key="disclosure_code">${school.disclosure_code}</span>
 							</div>
-
 							<div class="hall">
-								<span class="hall_title">학교명</span><span class="hall_text" data-key="school_name"></span>
+								<span class="hall_title">학교명</span><span class="hall_text" data-key="school_name">${school.school_name}</span>
 							</div>	
 
 							<div class="hall">
-								<span class="hall_title">학교급코드</span><span class="hall_text" data-key="school_code">ss</span>
+								<span class="hall_title">학교급코드</span><span class="hall_text" data-key="school_code">${school.school_code}</span>
 							</div>
 
 							<div class="hall">
-								<span class="hall_title">설립구분</span><span class="hall_text" data-key="establishment">ss</span>
+								<span class="hall_title">설립구분</span><span class="hall_text" data-key="establishment">${school.establishment}</span>
 							</div>
 
 							<div class="hall">
-								<span class="hall_title">학교특성</span><span class="hall_text" data-key="school_characteristics">ss</span>
+								<span class="hall_title">학교특성</span><span class="hall_text" data-key="school_characteristics">${school.school_characteristics}</span>
 							</div>
 
 							<div class="hall">
-								<span class="hall_title">분교여부</span><span class="hall_text" data-key="branch_division">ss</span>
+								<span class="hall_title">분교여부</span><span class="hall_text" data-key="branch_division">${school.branch_division}</span>
 							</div>
 
 							<div class="hall">
-								<span class="hall_title">설립유형</span><span class="hall_text" data-key="establishment_type">ss</span>
+								<span class="hall_title">설립유형</span><span class="hall_text" data-key="establishment_type">${school.establishment_type}</span>
 							</div>
 
 							<div class="hall">
-								<span class="hall_title">주야구분</span><span class="hall_text" data-key="weekly">ss</span>
+								<span class="hall_title">주야구분</span><span class="hall_text" data-key="weekly">${school.weekly}</span>
 							</div>
 
 							<div class="hall">
-								<span class="hall_title">개교기념일</span><span class="hall_text" data-key="school_anniversary">ss</span>
+								<span class="hall_title">개교기념일</span><span class="hall_text" data-key="school_anniversary">${school.school_anniversary}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">설립일</span><span class="hall_text" data-key="establishment_date">ss</span>
+								<span class="hall_title">설립일</span><span class="hall_text" data-key="establishment_date">${school.establishment_date}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">법정동코드</span><span class="hall_text" data-key="court_code">ss</span>
+								<span class="hall_title">법정동코드</span><span class="hall_text" data-key="court_code">${school.court_code}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">주소내역</span><span class="hall_text" data-key="address">ss</span>
+								<span class="hall_title">주소내역</span><span class="hall_text" data-key="address">${school.address}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">상세 주소내역</span><span class="hall_text" data-key="detailed_address">ss</span>
+								<span class="hall_title">상세 주소내역</span><span class="hall_text" data-key="detailed_address">${school.detailed_address}</span>
 							</div>
 							
 
 						</div>
 						<div class="secondInformation">
 							<div class="hall">
-								<span class="hall_title">우편번호</span><span class="zip_code">ss</span>
+								<span class="hall_title">우편번호</span><span class="zip_code">${school.city_education}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">학교도로명 우편번호</span><span class="hall_text" data-key="roadname_code">ss</span>
+								<span class="hall_title">학교도로명 우편번호</span><span class="hall_text" data-key="roadname_code">${school.roadname_code}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">학교도로명 주소</span><span class="hall_text" data-key="roadname_address">ss</span>
+								<span class="hall_title">학교도로명 주소</span><span class="hall_text" data-key="roadname_address">${school.roadname_address}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">학교도로명 상세주소</span><span class="hall_text" data-key="roadname_detailed_address">ss</span>
+								<span class="hall_title">학교도로명 상세주소</span><span class="hall_text" data-key="roadname_detailed_address">${school.roadname_detailed_address}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">위도</span><span class="hall_text" data-key="latitude">ss</span>
+								<span class="hall_title">위도</span><span class="hall_text" data-key="latitude">${school.latitude}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">경도</span><span class="hall_text" data-key="longitude">ss</span>
+								<span class="hall_title">경도</span><span class="hall_text" data-key="longitude">${school.longitude}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">전화번호</span><span class="hall_text" data-key="phone_number">ss</span>
+								<span class="hall_title">전화번호</span><span class="hall_text" data-key="phone_number">${school.phone_number}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">팩스번호</span><span class="hall_text" data-key="fax_number">ss</span>
+								<span class="hall_title">팩스번호</span><span class="hall_text" data-key="fax_number">${school.fax_number}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">홈페이지 주소</span><span class="hall_text" data-key="homepage">ss</span>
+								<span class="hall_title">홈페이지 주소</span><span class="hall_text" data-key="homepage">${school.homepage}</span>
 							</div>
 							<div class="hall">
-								<span class="hall_title">남녀공학 구분</span><span class="hall_text" data-key="coeducation_division">ss</span>
+								<span class="hall_title">남녀공학 구분</span><span class="hall_text" data-key="coeducation_division">${school.coeducation_division}</span>
 							</div>
 
 						</div>
@@ -908,7 +907,6 @@ window.addEventListener('load', function(){
 														+ '</p></div><div style="clear:both;"></div></div>');
 							}
 						});
-
 		$(".cancel-btn").click(function() {
 			$(".add-comment").hide();
 		});
