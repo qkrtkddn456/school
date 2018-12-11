@@ -245,7 +245,6 @@ a {
 </style>
 </head>
 <body>
-${scList}
 	<!-- Navbar -->
 	<nav class="navbar">
 		<div class="container">
@@ -322,13 +321,13 @@ ${scList}
 					</thead>
 					<tbody>
 						<tr>
-							<td onclick="schoolImport()" class="schoolName" data-key="sinum">2222222</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="school_name">부천정보산업고등학교</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="roadname_address">서울특별시 강남구 일원동 </td>
-							<td onclick="schoolImport()" class="schoolName" data-key="phone_number">02-596-8555</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="fax_number">02-596-8566</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="coeducation_division">남녀공학</td>
-							<td onclick="schoolImport()" class="schoolName" data-key="homepage">http://www.sindong.es.kr/</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="sinum">${scList[0].sinum}</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="school_name">${scList[0].school_name}</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="roadname_address">${scList[0].roadname_address}</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="phone_number">${scList[0].phone_number}</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="fax_number">${scList[0].fax_number}</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="coeducation_division">${scList[0].coeducation_division}</td>
+							<td onclick="schoolImport()" class="schoolName" data-key="homepage">${scList[0].homepage}</td>
 						</tr>
 					</tbody>
 				</table>

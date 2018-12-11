@@ -616,7 +616,7 @@ a {
 						<li id="a"><a href="#" onclick="goNotice()">공지사항</a></li>
 						<li id="b"><a href="#" onclick="goMap()">근처학교 지도</a>
 							<div class="vl"></div></li>
-						<li id="c"><a href="#" onclick="goSchool()">학교리스트</a>
+						<li id="c"><a href="#" onclick="">자유게시판</a>
 							<div class="vl"></div></li>
 						<li id="d"><a href="#" onclick="goUser()">내 정보관리</a>
 							<div class="vl"></div></li>
