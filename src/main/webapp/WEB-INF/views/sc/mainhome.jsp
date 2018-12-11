@@ -2,132 +2,17 @@
 	pageEncoding="UTF-8"%>
 <title>학교 정보 통합 알리미</title>
 <style>
-body {
-	font: 20px Montserrat, sans-serif;
-	line-height: 1.8;
-	color: #f5f6f7;
-}
-
-p {
-	font-size: 16px;
-}
-
 .margin {
 	margin-bottom: 20px;
-}
-
-.bg-1 {
-	background-color: #1abc9c; /* Green */
-	color: #ffffff;
-}
-
-.bg-2 {
-	background-color: #474e5d; /* Dark Blue */
-	color: #ffffff;
-}
-
-.bg-3 {
-	background-color: #ffffff; /* White */
-	color: #555555;
-}
-
-.bg-4 {
-	background-color: #2f2f2f; /* Black Gray */
-	color: #fff;
-}
-
-.container-fluid {
-	padding-top: 70px;
-	padding-bottom: 70px;
-}
-
-.navbar {
-	padding-top: 15px;
-	padding-bottom: 8px;
-	border: 20px;
-	border-radius: 0;
-	margin-bottom: 0;
-	font-size: 12px;
-	letter-spacing: 5px;
-	background-color: none;
-}
-
-.navbar-nav  li a:hover {
-	color: #1abc9c !important;
 }
 
 #school {
 	color: #808080;
 }
 
-#main-image {
-	float: left;
-	margin-right: 20px;
-	margin-left: -90px;
-}
 
 #Main_Service {
     margin-left: 23px;
-}
-
-#a {
-	font-size: 15px;
-	margin-left: -100px;
-}
-
-#b {
-	margin-left: 75px;
-	font-size: 15px;
-}
-
-#c {
-	margin-left: 70px;
-	font-size: 15px;
-}
-
-#d {
-	margin-left: 70px;
-	font-size: 15px;
-}
-
-#imaginary_container {
-	margin-top: 20%; /* Don't copy this */
-}
-
-.stylish-input-group .input-group-addon {
-	background: white !important;
-}
-
-.stylish-input-group .form-control {
-	border-right: 0;
-	box-shadow: 0 0 0;
-	border-color: #ccc;
-}
-
-.stylish-input-group button {
-	border: 0;
-	background: transparent;
-}
-
-.col-sm-7 {
-	width: 50%;
-}
-
-.col-sm-offset-4 {
-	margin: -13px 0px 75px -575px;
-	width: 500px;
-	height: 10px;
-}
-
-.navbar-left {
-	
-}
-
-.navbar-right {
-	margin-top: -3px;
-	margin-right: 400px;
-	margin-bottom: -10px;
-	margin-left: -200px;
 }
 
 /* carousel */
@@ -321,26 +206,12 @@ html {
 	box-sizing: border-box;
 }
 
-#mySubbar {
-	margin-left: 663px;
-	margin-top: -15px;
-}
-
 .rounded-circle {
 	margin-right: 55px;
 }
 
 ul {
 	list-style: none;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	font-family: arial, verdana, tahoma;
 }
 
 body {
@@ -492,14 +363,6 @@ a {
 .News_More a {
 	color: coral;
 }
-
-.InnerWrap {
-	position: relative;
-	width: 980px;
-	margin: 0 auto;
-	margin-top: -90px;
-}
-
 #schoolmap {
 	border-style: solid;
 	border-width: 1px;
@@ -520,16 +383,7 @@ a {
 	font-family: -webkit-body;
 }
 
-#bottom {
-	margin-top: 25px;
-	border: 0;
-	border-top: 1px solid darkgray;
-}
 
-#top {
-	border-top: 1px solid darkgray;
-	`
-}
 
 #youtube {
 	width: 424px;
@@ -541,32 +395,6 @@ a {
 	width: 424px;
 	height: 238px;
 	margin: 205px 0 0 20px;
-}
-
-#pp {
-	font-size: 12px;
-	margin: 0;
-}
-
-.address {
-	margin-top: 100px;
-	margin-bottom: 20px;
-}
-
-.container {
-	width: 100%;
-	padding: 0;
-	margin-left: 2px;
-}
-
-.container>.navbar-header {
-	margin: 5px 150px 0px 880px;
-}
-
-.vl {
-	border-left: 1px solid darkgray;
-	height: 25px;
-	margin: -35px 0 0 -35px;
 }
 
 #lunch {
@@ -674,30 +502,7 @@ a {
 				allowfullscreen></iframe>
 		</div>
 	</div>
-	<hr id="bottom">
-	<div class="InnerWrap">
-		<div class="address">
-			<p id="pp">
-				총괄관리기관 : 한국교육학술정보원<span class="Line">|</span>우편번호 41061 대구광역시 동구 동내로
-				64 (동내동 351)
-			</p>
-			<p id="pp">
-				전화 053)714-0114<span class="Line">|</span>팩스 053)714-0198<span
-					class="Line">|</span>이메일 schoolinfo@keris.or.kr(공시오류신고 및 문의)<span
-					class="Line">|</span>고객상담센터(정보공시)1544-0079(내선 2)
-			</p>
-			<p id="pp" style="font-weight: bold;">
-				[<a href="/ng/pnngpi_a01_l0.do">공공데이터 이용정책</a>]
-			</p>
-			<p id="pp" class="Copyright">
-				Copyright ⓒ <strong>MINISTRY OF EDUCATION</strong>. All Rights
-				Reserved
-			</p>
-		</div>
-	</div>
 	<script>
-		
-
 		$(document).ready(function() {
 			$('#quote-carousel').carousel({
 				pause : true,
