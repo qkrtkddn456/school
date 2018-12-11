@@ -510,7 +510,7 @@ a {
 	border-radius: 7px;
 	background-image:
 		url("https://st2.depositphotos.com/8429558/11178/v/950/depositphotos_111783652-stock-illustration-abstract-city-map.jpg");
-	cursor: pointer;
+		cursor: pointer;
 }
 
 #maptext {
@@ -576,6 +576,7 @@ a {
 </head>
 <body>
 	<!-- Navbar -->
+	
 
 	<!-- First Container -->
 	<div id="Main_Service">
@@ -696,7 +697,7 @@ a {
 		</div>
 	</div>
 	<script>
-		
+
 
 		$(document).ready(function() {
 			$('#quote-carousel').carousel({
