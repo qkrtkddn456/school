@@ -119,11 +119,11 @@ p {
 	background: transparent;
 }
 
-.col-sm-6 {
+.col-sm-7 {
 	width: 50%;
 }
 
-.col-sm-offset-3 {
+.col-sm-offset-4 {
 	margin: -13px 0px -40px -575px;
 	width: 500px;
 	height:10px;
@@ -292,52 +292,7 @@ a {
 </head>
 <body>
 
-	<nav class="navbar">
-		<div class="container">
-			<div class="navbar-header">
-				<a href="#" onclick="mainPage()"><img
-					src="/resources/img/school.png" id="main-image"
-					style="cursor: pointer;" alt="Main" width="60" height="60"></a> <a
-					class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합 알리미</a>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6 col-sm-offset-3">
-						<div id="imaginary_container">
-							<div class="input-group stylish-input-group">
-								<input type="text" class="form-control"
-									placeholder="학교명 예) 부천정보산업고등학교"> <span
-									class="input-group-addon">
-									<button type="submit">
-										<span class="glyphicon glyphicon-search"></span>
-									</button>
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#" onclick="goLogin()" id="login">로그인/회원가입</a></li>
-				</ul>
-			</div>
-			<hr id="top" width="100%">
-			<div class="collapse navbar-collapse" id="mySubbar">
-				<div id="menu">
-					<ul class="nav navbar-nav navbar-left">
-						<li id="a"><a href="#" onclick="goschool()">학교찾기</a></li>
-						<li id="b"><a href="#">학교찾기</a>
-							<div class="vl"></div></li>
-						<li id="c"><a href="#">학교찾기</a>
-							<div class="vl"></div></li>
-						<li id="d"><a href="#">학교찾기</a>
-							<div class="vl"></div></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</nav>
+	
 	<div class="ContentTitle">
 		<h1 class="Title2">공지사항</h1>
 	</div>

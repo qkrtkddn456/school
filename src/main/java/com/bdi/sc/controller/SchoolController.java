@@ -21,6 +21,7 @@ public class SchoolController {
 	@GetMapping("/schools/{school_name}")
 	public String goScList(@PathVariable String school_name, Model model){
 		model.addAttribute("scList",sis.selectSchoolList(school_name));
+		model.addAttribute("search",school_name);
 		return "sc/list";
 	}
 	
