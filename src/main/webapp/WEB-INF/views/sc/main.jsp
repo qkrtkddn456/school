@@ -15,8 +15,27 @@
 	//today = mm+'/'+dd+'/'+yyyy;
 </script>
 <style>
+body {
+	font: 20px Montserrat, sans-serif;
+	font-family: arial, verdana, tahoma;
+	line-height: 1.8;
+	color: #f5f6f7;
+}
 
+.bg-1 {
+	background-color: #1abc9c; /* Green */
+	color: #ffffff;
+}
 
+.bg-2 {
+	background-color: #474e5d; /* Dark Blue */
+	color: #ffffff;
+}
+
+.bg-3 {
+	background-color: #ffffff; /* White */
+	color: #555555;
+}
 #scinfo {
 	float: left;
 	width: 20%;
@@ -28,7 +47,136 @@
 	height: 1000px;
 }
 
+.container-fluid {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
 
+.container>.navbar-header {
+	margin: 5px 150px 0px 880px;
+}
+
+.container {
+	width: 100%;
+	padding: 0;
+	margin-left: 2px;
+}
+
+.navbar {
+	padding-top: 15px;
+	padding-bottom: 8px;
+	border: 20px;
+	border-radius: 0;
+	margin-bottom: 0;
+	font-size: 12px;
+	letter-spacing: 5px;
+	background-color: none;
+}
+
+.navbar-nav  li a:hover {
+	color: #1abc9c !important;
+}
+
+#main-image {
+	float: left;
+	margin-right: 20px;
+	margin-left: -90px;
+}
+
+#mySubbar {
+	margin-left: 663px;
+	margin-top: -15px;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+#a {
+	font-size: 15px;
+	margin-left: -100px;
+}
+
+#b {
+	margin-left: 75px;
+	font-size: 15px;
+}
+
+#c {
+	margin-left: 70px;
+	font-size: 15px;
+}
+
+#d {
+	margin-left: 70px;
+	font-size: 15px;
+}
+
+#imaginary_container {
+	margin-top: 20%; /* Don't copy this */
+}
+
+.stylish-input-group .input-group-addon {
+	background: white !important;
+}
+
+.stylish-input-group .form-control {
+	border-right: 0;
+	box-shadow: 0 0 0;
+	border-color: #ccc;
+}
+
+.stylish-input-group button {
+	border: 0;
+	background: transparent;
+}
+
+.col-sm-7 {
+	width: 50%;
+}
+
+.col-sm-offset-4 {
+	margin: -13px 0px 75px -575px;
+	width: 500px;
+	height: 10px;
+}
+
+.navbar-left {
+	
+}
+
+.navbar-right {
+	margin-top: -3px;
+	margin-right: 400px;
+	margin-bottom: -10px;
+	margin-left: -200px;
+}
+
+p {
+	font-size: 16px;
+}
+
+#top {
+	border-top: 1px solid darkgray;
+}
+
+#bottom {
+	margin-top: 25px;
+	border: 0;
+	border-top: 1px solid darkgray;
+}
+
+.vl {
+	border-left: 1px solid darkgray;
+	height: 25px;
+	margin: -35px 0 0 -35px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
 /*박상우 카카오맵 css*/
 .map_wrap, .map_wrap * {
 	margin: 0;
@@ -220,9 +368,6 @@
 </style>
 </head>
 <body>
-	<!-- Navbar -->
-	
-	<!-- First Container -->
 	<div class="container-fluid bg-1 text-center">
 		<div id="scinfo">
 			<h2>학교 이름</h2>
@@ -233,17 +378,13 @@
 		</div>
 		<div id="map" style="position: relative; overflow: hidden;"></div>
 	</div>
-	<!-- Footer -->
-	<footer class="container-fluid bg-4 text-center">
-		<p>
-			Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a>
-		</p>
-	</footer>
 	<script>
+		
 		var searchinput;
 		var latitude;
 		var longitude;
 		var mapContainer, map, mapTypeControl, ps, maker, infowindow;
+		var placeName, placeAddr,mcode;
 
 		navigator.geolocation
 				.getCurrentPosition(function(pos) {
@@ -296,8 +437,7 @@
 									.addListener(
 											marker,
 											'click',
-											function() {
-												// 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
+											function() {// 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
 												infowindow
 														.setContent('<div style="padding:5px;font-size:12px;color:black;">'
 																+ place.place_name
@@ -305,7 +445,9 @@
 												infowindow.open(map, marker);
 												document
 														.querySelector('#scname').innerHTML = place.place_name;
-												meals();
+												placeAddr = place.road_address_name;
+												placeName = place.place_name;
+												mealcode(place.road_address_name,place.place_name);
 											});
 						}
 					}
@@ -315,9 +457,23 @@
 							});
 					scSearch();
 				});
-		function meals() {
+		function mealcode(placeAddr,placeName){
+			placeName = placeName.replace(' ' ,'');
+			var conf ={
+					url:"/meals",
+					method:'POST',
+					param:JSON.stringify({mealschool:placeName,mealaddress:placeAddr}),
+					success : function(res){
+						res = JSON.parse(res);
+						mcode = res.mealcode;
+						meals(mcode);
+					}
+			}
+			au.send(conf);
+		}	
+		function meals(mcode) {
 			var conf = {
-				url : 'https://schoolmenukr.ml/api/high/J100000585?hideAllergy=true',
+				url : 'https://schoolmenukr.ml/api/high/'+mcode+'?hideAllergy=true',
 				method : 'GET',
 				success : function(res) {
 					res = JSON.parse(res);
@@ -331,6 +487,15 @@
 			}
 			au.send(conf);
 		}
+		
+		/* function getData(callbackFunc) {
+			$.get('http://localhost', function (response) {
+				callbackFunc(response); // 서버에서 받은 데이터 response를 callbackFunc() 함수에 넘겨줌
+			});
+		}
+		getData(function (tableData) {
+			console.log(tableData); // $.get()의 response 값이 tableData에 전달됨
+		}); */
 	</script>
 </body>
 </html>

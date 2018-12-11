@@ -23,10 +23,9 @@ public class SchoolInfoServiceImpl implements SchoolInfoService {
 		return sdao.selectSchoolList(school_name);
 	}
 	@Override
-	public List<String> selectSchool(Integer sinum) {
-		SchoolInfo sc = sdao.selectSchool(sinum);
-		List<String> list = new ArrayList<String>(sc.hashCode());
-		return list;
+	public SchoolInfo selectSchool(Integer sinum) {
+		return sdao.selectSchool(sinum);
+		
 	}
 
 

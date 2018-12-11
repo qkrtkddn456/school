@@ -125,11 +125,11 @@ a {
 	background: transparent;
 }
 
-.col-sm-7 {
+.col-sm-6 {
 	width: 50%;
 }
 
-.col-sm-offset-4 {
+.col-sm-offset-3 {
 	margin: -13px 0px 75px -575px;
 	width: 500px;
 	height:10px;
@@ -204,7 +204,8 @@ a {
 	padding: 10px;
 	text-align: center;
 	font-size: 14px;
-	margin: 40px 0 0 -300px;	
+	margin: 40px 0 0 -300px;
+	cursor: pointer;
 	color: black;
 }
 
@@ -241,58 +242,104 @@ a {
 	margin: 0;
 	padding: 0;
 }
-.schoolName{
-	cursor:pointer;
+#noticeText{
+width:350px;
+height:30px;
+color:#000000;
+margin-left:1200px;
+margin-top: 80px;
 }
 </style>
 </head>
 <body>
-<div class="container-fluid bg-1 text-center">
-		<div class="ContentTitle">
-			<h1 class="Title2">학교검색</h1>
-		</div>
-		<div id="Contents">
-			<div class="InnerWrap">
-				<div class="Search_Word">
-					'<em>${school_name}</em> ' 검색결과 <span>(총 ${fn:length(scList)}건)</span>
-				</div>
-			</div>	
-			
-		<c:forEach var="item" items="${scList}" varStatus="status">
-			<div class="Contents">
-				<table class="table table-bordered">
-					<thead>
-						<tr>
-							<th>학교번호</th>
-							<th>학교이름</th>
-							<th>주소</th>
-							<th>전화번호</th>
-							<th>팩스번호</th>
-							<th>남녀공학</th>
-							<th>홈페이지</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td  class="schoolName" data-key="sinum" >${item.sinum}</td>
-							<td  class="schoolName" data-key="school_name" onclick="schoolSelect(${item.sinum})">${item.school_name}</td>
-							<td  class="schoolName" data-key="roadname_address">${item.roadname_address}</td>
-							<td  class="schoolName" data-key="phone_number">${item.phone_number}</td>
-							<td  class="schoolName" data-key="fax_number">${item.fax_number}</td>
-							<td  class="schoolName" data-key="coeducation_division">${item.coeducation_division}</td>
-							<td  class="schoolName" data-key="homepage"><a href="http://${item.homepage}">${item.homepage}</a></td>
-						</tr>
-					</tbody>
-				</table>
+	<!-- Navbar -->
+	<nav class="navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="#" onclick="mainPage()"><img
+					src="/resources/img/school.png" id="main-image"
+					style="display: line" alt="Main" width="60" height="60"></a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar"></button>
+				<a class="navbar-brand" href="#" onclick="mainPage()">학교 정보 통합
+					알리미</a>
 			</div>
-		</c:forEach>	
-		
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<div id="imaginary_container">
+							<div class="input-group stylish-input-group">
+								<input type="text" class="form-control"
+									placeholder="학교명 예) 부천정보산업고등학교"
+									onkeypress="if( event.keyCode==13 ){goSchool();}"> <span
+									class="input-group-addon">
+									<button type="submit" onclick="goSchool()">
+										<span class="glyphicon glyphicon-search"></span>
+									</button>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" onclick="goLogin()" id="login">로그인/회원가입</a></li>
+				</ul>
+			</div>
+			<hr id="top" width="100%">
+			<div class="collapse navbar-collapse" id="mySubbar">
+				<div id="menu">
+					<ul class="nav navbar-nav navbar-left">
+						<li id="a"><a href="#" onclick="goNotice()">공지사항</a></li>
+						<li id="b"><a href="#" onclick="goMap()">근처학교 지도</a>
+							<div class="vl"></div></li>
+						<li id="c"><a href="#" onclick="goSchool()">학교리스트</a>
+							<div class="vl"></div></li>
+						<li id="d"><a href="#" onclick="goUser()">내 정보관리</a>
+							<div class="vl"></div></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid bg-1 text-center">
+		<div class="ContentTitle">
+			<h1 class="Title2">자유개시판</h1>
+		</div>
 	</div>
-</div>
+	<div class="noticeSerch">
+	</div>
 	<script>
-		function schoolSelect(sinum){
-			var param = sinum;
-			location = "/school/"+param;
+		var ses = '${sessionScope.ses}';
+		var loginBtn = document.getElementById("login");
+		if (!ses) {
+			loginBtn.innerHTML = "로그인/회원가입";
+		} else {
+			loginBtn.innerHTML = "로그아웃";
+		}
+		function mainPage() {
+			location = "/uri/sc/mainhome";
+		}
+		function goUser() {
+			location="/uri/sc/user"
+		}
+		function goLogin() {
+			if (!ses) {
+				location = "/uri/sc/login";
+			} else {
+				location = "/logout";
+			}
+		}
+		
+		function goSchool() {
+			location = "/uri/sc/list";
+		}
+		function goNotice(){
+			location="/uri/sc/noticelist";
+		}
+		function goMap(){	
+			location="/uri/sc/main";
 		}
 	</script>
 </body>
