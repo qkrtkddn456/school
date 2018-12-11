@@ -570,6 +570,7 @@ a {
 }
 
 #lunch {
+	cursor:pointer;
 	border-radius: 70px;
 }
 </style>
@@ -584,7 +585,7 @@ a {
 			<div id="border">
 				<img id="lunch"
 					src="http://www.sannae.es.kr/tp/mobile_new/images/clip_schoolmeal_pic.gif"
-					width="600px" height="400px">
+					width="600px" height="400px" onclick="goMeals()" h>
 				<div class="accordian">
 					<ul>
 						<li>
@@ -697,23 +698,15 @@ a {
 		</div>
 	</div>
 	<script>
-
-
+	function goMeals(){
+		location = "/uri/sc/meals";
+	}
 		$(document).ready(function() {
 			$('#quote-carousel').carousel({
 				pause : true,
 				interval : 4000,
 			});
 		});
-
-		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-		var options = { //지도를 생성할 때 필요한 기본 옵션
-			center : new daum.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-			level : 3
-		//지도의 레벨(확대, 축소 정도)
-		};
-
-		var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
 	</script>
 </body>
 </html>

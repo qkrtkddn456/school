@@ -24,7 +24,7 @@ public class MealsController {
 	public @ResponseBody List<Meals> getMealsList() throws IOException{
 		return ms.getMealsList();
 	}
-	
+	//세이브 하는 매핑
 	@PostMapping("/zmfhffld/meals")
 	public @ResponseBody int saveMealsList() throws IOException{
 		return ms.saveMealsList();

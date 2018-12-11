@@ -204,8 +204,7 @@ a {
 	padding: 10px;
 	text-align: center;
 	font-size: 14px;
-	margin: 40px 0 0 -300px;
-	cursor: pointer;
+	margin: 40px 0 0 -300px;	
 	color: black;
 }
 
@@ -241,6 +240,9 @@ a {
 * {
 	margin: 0;
 	padding: 0;
+}
+.schoolName{
+	cursor:pointer;
 }
 </style>
 </head>
@@ -278,7 +280,7 @@ a {
 							<td  class="schoolName" data-key="phone_number">${item.phone_number}</td>
 							<td  class="schoolName" data-key="fax_number">${item.fax_number}</td>
 							<td  class="schoolName" data-key="coeducation_division">${item.coeducation_division}</td>
-							<td  class="schoolName" data-key="homepage">${item.homepage}</td>
+							<td  class="schoolName" data-key="homepage"><a href="http://${item.homepage}">${item.homepage}</a></td>
 						</tr>
 					</tbody>
 				</table>
