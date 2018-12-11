@@ -292,20 +292,6 @@ a {
 			var param = sinum;
 			location = "/school/"+param;
 		}
-		/* 
-		function schoolImport(){
-			var tep = document.querySelector( '.schoolName' ).innerHTML;
-			 var conf = {		
-					 url:'/schools/'+tep,
-					 method:'GET',
-					 success : function(res){
-						 res = JSON.parse(res);
-						 location = '/uri/sc/comment';	
-					 }
-			 }
-			 au.send(conf); 		 
-		} */
-		
 	</script>
 </body>
 </html>

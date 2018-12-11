@@ -25,6 +25,7 @@ public class SchoolInfoServiceImpl implements SchoolInfoService {
 	@Override
 	public SchoolInfo selectSchool(Integer sinum) {
 		return sdao.selectSchool(sinum);
+		
 	}
 
 
