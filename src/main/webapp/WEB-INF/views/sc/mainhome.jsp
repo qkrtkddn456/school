@@ -616,7 +616,7 @@ a {
 						<li id="a"><a href="#" onclick="goNotice()">공지사항</a></li>
 						<li id="b"><a href="#" onclick="goMap()">근처학교 지도</a>
 							<div class="vl"></div></li>
-						<li id="c"><a href="#" onclick="">자유게시판</a>
+						<li id="c"><a href="#" onclick="goNoticeBoard()">자유게시판</a>
 							<div class="vl"></div></li>
 						<li id="d"><a href="#" onclick="goUser()">내 정보관리</a>
 							<div class="vl"></div></li>
@@ -769,6 +769,9 @@ a {
 		}
 		function goNotice() {
 			location = "/uri/sc/noticelist";
+		}
+		function goNoticeBoard(){
+			location = "/uri/sc/noticeBoard";
 		}
 		function goMap() {
 			location = "/uri/sc/main";
