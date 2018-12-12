@@ -5,9 +5,6 @@
 .margin {
 	margin-bottom: 20px;
 }
-#school {
-	color: #808080;
-}
 #Main_Service {
     margin-left: 23px;
 }

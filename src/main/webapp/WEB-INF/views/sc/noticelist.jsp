@@ -16,20 +16,44 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
+
 body {
-	font: 20px Montserrat, sans-serif;
+	font: 14px Montserrat, sans-serif;
+	font-family: arial, verdana, tahoma;
 	line-height: 1.8;
-	color: #f5f6f7;
+	color: black;
 }
 
-p {
-	font-size: 16px;
+
+.bg-2 {
+	background-color: #474e5d; /* Dark Blue */
+	color: #ffffff;
 }
 
-.margin {
-	margin-bottom: 20px;
+.bg-3 {
+	background-color: #ffffff; /* White */
+	color: #555555;
 }
 
+.bg-4 {
+	background-color: #2f2f2f; /* Black Gray */
+	color: #fff;
+}
+
+.container-fluid {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+.container>.navbar-header {
+	margin: 5px 150px 0px 880px;
+}
+
+.container {
+	width: 100%;
+	padding: 0;
+	margin-left: 2px;
+}
 
 .navbar {
 	padding-top: 15px;
@@ -42,14 +66,24 @@ p {
 	background-color: none;
 }
 
-#school {
-	color: #808080;
+.navbar-nav  li a:hover {
+	color: #1abc9c !important;
 }
 
 #main-image {
 	float: left;
 	margin-right: 20px;
 	margin-left: -90px;
+}
+
+#mySubbar {
+	margin-left: 663px;
+	margin-top: -15px;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
 }
 
 #a {
@@ -98,7 +132,7 @@ p {
 .col-sm-offset-4 {
 	margin: -13px 0px 75px -575px;
 	width: 500px;
-	height:10px;
+	height: 10px;
 }
 
 .navbar-left {
@@ -112,41 +146,32 @@ p {
 	margin-left: -200px;
 }
 
-body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.42857143;
-	color: #333;
-}
-
-html {
-	font-size: 10px;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.glyphicon-chevron-left:before {
-	
-}
-
-.fa-chevron-right:before {
-	content: "\f054";
-}
-
-:before, :after {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-#mySubbar {
-	margin-left: 663px;
-	margin-top: -15px;
+p {
+	font-size: 16px;
 }
 
 #top {
 	border-top: 1px solid darkgray;
-	`
 }
+
+#bottom {
+	margin-top: 25px;
+	border: 0;
+	border-top: 1px solid darkgray;
+}
+
+.vl {
+	border-left: 1px solid darkgray;
+	height: 25px;
+	margin: -35px 0 0 -35px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
 
 #pp {
 	font-size: 12px;
@@ -158,26 +183,6 @@ html {
 	margin-bottom: 20px;
 }
 
-.container {
-	width: 100%;
-	padding: 0;
-	margin-left: 2px;
-}
-
-.container>.navbar-header {
-	margin: 5px 150px 0px 880px;
-}
-
-.vl {
-	border-left: 1px solid darkgray;
-	height: 25px;
-	margin: -35px 0 0 -35px;
-}
-
-a {
-	color: #666;
-	text-decoration: none;
-}
 
 .ContentTitle {
 	border-bottom: 1px solid #CCC;
@@ -194,9 +199,6 @@ a {
 	line-height: 1.0;
 }
 
-.container-fluid {
-	padding-bottom: 70px;
-}
 
 .col-md-3 {
 	margin: 20px 0 0 1070px;
@@ -209,10 +211,6 @@ a {
 
 .table {
 	width: 900px;
-}
-* {
-    margin: 0;
-    padding: 0;
 }
 </style>
 </head>

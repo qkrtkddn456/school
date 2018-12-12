@@ -237,7 +237,7 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 .mTl {
     margin-top: 30px !important;
 }
-table caption {
+.table caption {
     width: 0;
     height: 0;
     font-size: 0;
