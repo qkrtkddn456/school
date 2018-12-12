@@ -157,13 +157,11 @@ p {
 #top {
 	border-top: 1px solid darkgray;
 }
-
 #bottom {
 	margin-top: 25px;
 	border: 0;
 	border-top: 1px solid darkgray;
 }
-
 .vl {
 	border-left: 1px solid darkgray;
 	height: 25px;
@@ -175,6 +173,7 @@ p {
 	padding: 0;
 }
 </style>
+
 	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">

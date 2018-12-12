@@ -5,8 +5,8 @@
 <head>
 <meta charset="utf-8">
 <title>스프링테스트</title>
-<style">
 <style>
+
 body {
 	font: 20px Montserrat, sans-serif;
 	font-family: arial, verdana, tahoma;
@@ -148,9 +148,9 @@ p {
 }
 
 #bottom {
-	margin-top: 25px;
-	border: 0;
-	border-top: 1px solid darkgray;
+    margin-top: 1325px;
+    border: 0;
+    border-top: 1px solid darkgray;
 }
 
 .vl {
@@ -180,6 +180,7 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 .sub_right_con {
     float: right;
     width: 934px;
+    height:1300px;
     margin-right: 120px;
     margin-top: 10px;
 }
@@ -320,7 +321,7 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
     background: #949494;
     display: inline-block;
 }
-table caption {
+.table caption {
     width: 0;
     height: 0;
     font-size: 0;
@@ -361,6 +362,7 @@ a:hover {
     text-decoration: none;
     color:white;
 }
+
 </style>
 </head>
 <body>

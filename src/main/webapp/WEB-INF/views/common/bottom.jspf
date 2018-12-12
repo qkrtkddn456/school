@@ -31,11 +31,7 @@
 	margin-top: -90px;
 }
 
-#bottom {
-	margin-top: 25px;
-	border: 0;
-	border-top: 1px solid darkgray;
-}
+
 
 #pp {
 	font-size: 12px;
