@@ -469,6 +469,9 @@ th {
 	display: inline-block;
 	font-family: "Nanum Gothic";
 }
+.container-fluid{
+margin-top: -50px;
+}
 </style>
 </head>
 <body>

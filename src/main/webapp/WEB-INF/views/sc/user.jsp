@@ -43,7 +43,7 @@
 }
 
 .panel-login>.panel-heading a.active {
-	color: #6EE5A3;
+	color: skyblue;
 	font-size: 18px;
 }
 
@@ -110,7 +110,7 @@
 }
 
 .btn-register {
-	background-color: #1CB94E;
+	background-color: skyblue;
 	outline: none;
 	color: #fff;
 	font-size: 14px;
@@ -118,7 +118,7 @@
 	font-weight: normal;
 	padding: 14px 0;
 	text-transform: uppercase;
-	border-color: #1CB94A;
+	border-color: skyblue;
 }
 
 .btn-register:hover, .btn-register:focus {
@@ -148,8 +148,8 @@
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active,
 	.btn-primary.active, .open>.dropdown-toggle.btn-primary {
 	color: #fff;
-	background-color: #66cdaa;
-	border-color: #66cdaa;
+	background-color: skyblue;
+	border-color: skyblue;
 }
 
 
