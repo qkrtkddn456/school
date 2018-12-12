@@ -229,10 +229,10 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
     text-align: right !important;
 }
 .table_style01.bor {
-    border-bottom: #d7d7d7 1px solid;
+    border-bottom: skyblue 1px solid;
 }
 .table_style01 {
-    border-top: #1cb9b3 2px solid;
+    border-top: skyblue 2px solid;
     font-family: "Nanum Gothic";
 }
 .mTl {
@@ -255,7 +255,7 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
     padding: 14px 0 13px 0;
     color: #333333;
     font-size: 14px;
-    background: #eff8ef;
+    background: #F0FFFF;
     text-align: center;
 }
 .table_style01 .table_title {
@@ -297,7 +297,7 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: #ffffff;
     font-size: 16px;
-    background: #0B9F99;
+    background: skyblue;
     display: inline-block;
     margin-right: 5px;
 }
@@ -308,7 +308,7 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: #ffffff;
     font-size: 16px;
-    background: #178e8a;
+    background: skyblue;
     display: inline-block;
 }
 .table_btn03 {
@@ -327,9 +327,6 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
     font-size: 0;
     overflow: hidden;
 }
-.table_style01 .table_top_bg {
-    background: center #eff8ef;
-}
 .table_style01 .view_table_a {
     width: 70%;
     display: inline-block;
@@ -344,9 +341,6 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
     color: #666666;
     font-size: 14px;
 }
-.table_style01 .table_bottom_bg {
-    background: url(/kcc2016/images/sub/sub5_2_1_3_2_06.gif) no-repeat 75% center #eff8ef;
-}
 .clear {
     clear: both;
     font-size: 0;
@@ -356,7 +350,7 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 }
 #down {
 	margin-bottom: 100px;
-	border-bottom: #1cb9b3 1px solid;
+	border-bottom: skyblue 1px solid;
 }
 a:hover {
     text-decoration: none;

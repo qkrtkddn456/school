@@ -176,11 +176,11 @@ p {
 }
 
 .ContentTitle h1 {
+	margin-top:-30px;
 	width: 980px;
-	margin: 0 0 0 30px;
 	line-height: 1.0;
 	font-size: 30px;
-	padding: 27px 0 23px 0;
+	padding: 27px 0 23px 70px;
 	line-height: 1.0;
 }
 
@@ -368,6 +368,7 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 
 #announcementTitle {
 	font-size: 30px;
+	margin-top:-60px;
 	margin-bottom: 15px;
 }
 
@@ -392,7 +393,6 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 
 .mTxs {
 	margin-top: 10px !important;
-	margin-bottom: 150px;
 }
 
 .subTotal {
@@ -405,7 +405,7 @@ th {
 
 .page {
 	text-align: center;
-	margin-top: 650px;
+	margin-top: 680px;
 }
 
 .page span {
@@ -470,13 +470,16 @@ th {
 	display: inline-block;
 	font-family: "Nanum Gothic";
 }
+.container-fluid{
+margin-top: -50px;
+}
 </style>
 </head>
 <body>
 	<!-- Navbar -->
 	<div class="container-fluid bg-1 text-center">
 		<div class="ContentTitle">
-			<h1 class="Title2">자유개시판</h1>
+			<h1 class="Title2">자유게시판</h1>
 		</div>
 	</div>
 	<div class="announcement">

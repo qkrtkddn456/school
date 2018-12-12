@@ -105,7 +105,7 @@ label {
 }
 
 .btn-login {
-	background-color: #59B2E0;
+	background-color: skyblue;
 	outline: none;
 	color: #fff;
 	font-size: 14px;
@@ -113,7 +113,7 @@ label {
 	font-weight: normal;
 	padding: 14px 0;
 	text-transform: uppercase;
-	border-color: #59B2E6;
+	border-color: skyblue;
 }
 
 .btn-login:hover, .btn-login:focus {
@@ -128,7 +128,7 @@ label {
 }
 
 .btn-register {
-	background-color: #1CB94E;
+	background-color: skyblue;
 	outline: none;
 	color: #fff;
 	font-size: 14px;
@@ -136,7 +136,7 @@ label {
 	font-weight: normal;
 	padding: 14px 0;
 	text-transform: uppercase;
-	border-color: #1CB94A;
+	border-color: skyblue;
 }
 
 .btn-register:hover, .btn-register:focus {
@@ -166,8 +166,8 @@ label {
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active,
 	.btn-primary.active, .open>.dropdown-toggle.btn-primary {
 	color: #fff;
-	background-color: #66cdaa;
-	border-color: #66cdaa;
+	background-color: skyblue;
+	border-color: skyblue;
 }
 
 
@@ -226,9 +226,26 @@ a {
 	margin-bottom: -10px;
 	margin-left: -200px;
 }
+#bottom {
+	margin-top: 25px;
+	border: 0;
+	border-top: 1px solid darkgray;
+}
 
+.vl {
+	border-left: 1px solid darkgray;
+	height: 25px;
+	margin: -35px 0 0 -35px;
+}
 
-
+* {
+	margin: 0;
+	padding: 0;
+}
+.panel-login>.panel-heading a.active {
+    color: skyblue;
+    font-size: 18px;
+}
 </style>
 </head>
 <body>
