@@ -20,12 +20,9 @@ body {
 	font: 20px Montserrat, sans-serif;
 	font-family: arial, verdana, tahoma;
 	line-height: 1.8;
-	color: #f5f6f7;
+	color: black;
 }
 
-p {
-	font-size: 16px;
-}
 
 .bg-2 {
 	background-color: #474e5d; /* Dark Blue */
@@ -42,14 +39,19 @@ p {
 	color: #fff;
 }
 
-.container {
-	width: 100%;
-	padding: 0;
-	margin-left: 2px;
+.container-fluid {
+	padding-top: 70px;
+	padding-bottom: 70px;
 }
 
 .container>.navbar-header {
 	margin: 5px 150px 0px 880px;
+}
+
+.container {
+	width: 100%;
+	padding: 0;
+	margin-left: 2px;
 }
 
 .navbar {
@@ -65,10 +67,6 @@ p {
 
 .navbar-nav  li a:hover {
 	color: #1abc9c !important;
-}
-
-#school {
-	color: #808080;
 }
 
 #main-image {
@@ -147,6 +145,31 @@ a {
 	margin-left: -200px;
 }
 
+p {
+	font-size: 16px;
+}
+
+#top {
+	border-top: 1px solid darkgray;
+}
+
+#bottom {
+	margin-top: 25px;
+	border: 0;
+	border-top: 1px solid darkgray;
+}
+
+.vl {
+	border-left: 1px solid darkgray;
+	height: 25px;
+	margin: -35px 0 0 -35px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
 .ContentTitle {
 	border-bottom: 1px solid #CCC;
 	color: black;
@@ -223,26 +246,7 @@ a {
 	margin-left: 35%;
 }
 
-#top {
-	border-top: 1px solid darkgray;
-}
 
-#bottom {
-	margin-top: 25px;
-	border: 0;
-	border-top: 1px solid darkgray;
-}
-
-.vl {
-	border-left: 1px solid darkgray;
-	height: 25px;
-	margin: -35px 0 0 -35px;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-}
 
 #noticeText {
 	width: 350px;
@@ -254,9 +258,6 @@ a {
 
 html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 	margin: 0px;
-	padding: 0px;
-	font-family: "Nanum Gothic", "Nanum Gothic", "나눔고딕", "나눔 고딕", "ng", "굴림";
-	font-size: 13px;
 	list-style: none;
 	color: #282828;
 }

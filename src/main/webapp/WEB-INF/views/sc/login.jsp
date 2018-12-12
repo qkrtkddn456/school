@@ -170,31 +170,8 @@ label {
 	border-color: skyblue;
 }
 
-body {
-	font: 20px Montserrat, sans-serif;
-	font-family: arial, verdana, tahoma;
-	line-height: 1.8;
-}
 
-.bg-1 {
-	background-color: #1abc9c; /* Green */
-	color: #ffffff;
-}
 
-.bg-2 {
-	background-color: #474e5d; /* Dark Blue */
-	color: #ffffff;
-}
-
-.bg-3 {
-	background-color: #ffffff; /* White */
-	color: #555555;
-}
-
-.bg-4 {
-	background-color: #2f2f2f; /* Black Gray */
-	color: #fff;
-}
 
 .container-fluid {
 	padding-top: 70px;
@@ -226,59 +203,9 @@ body {
 	color: #1abc9c !important;
 }
 
-#main-image {
-	float: left;
-	margin-right: 20px;
-	margin-left: -90px;
-}
-
-#mySubbar {
-	margin-left: 663px;
-	margin-top: -15px;
-}
-
 a {
 	color: #666;
 	text-decoration: none;
-}
-
-#a {
-	font-size: 15px;
-	margin-left: -100px;
-}
-
-#b {
-	margin-left: 75px;
-	font-size: 15px;
-}
-
-#c {
-	margin-left: 70px;
-	font-size: 15px;
-}
-
-#d {
-	margin-left: 70px;
-	font-size: 15px;
-}
-
-#imaginary_container {
-	margin-top: 20%; /* Don't copy this */
-}
-
-.stylish-input-group .input-group-addon {
-	background: white !important;
-}
-
-.stylish-input-group .form-control {
-	border-right: 0;
-	box-shadow: 0 0 0;
-	border-color: #ccc;
-}
-
-.stylish-input-group button {
-	border: 0;
-	background: transparent;
 }
 
 .col-sm-7 {
@@ -291,9 +218,7 @@ a {
 	height: 10px;
 }
 
-.navbar-left {
-	
-}
+
 
 .navbar-right {
 	margin-top: -3px;
@@ -301,15 +226,6 @@ a {
 	margin-bottom: -10px;
 	margin-left: -200px;
 }
-
-p {
-	font-size: 16px;
-}
-
-#top {
-	border-top: 1px solid darkgray;
-}
-
 #bottom {
 	margin-top: 25px;
 	border: 0;
