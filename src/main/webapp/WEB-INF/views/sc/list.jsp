@@ -20,7 +20,7 @@ body {
 	font: 20px Montserrat, sans-serif;
 	font-family: arial, verdana, tahoma;
 	line-height: 1.8;
-	color: #f5f6f7;
+	color: #000000;
 }
 
 p {
@@ -174,6 +174,7 @@ a {
 	padding-top: 20px;
 	color: black;
 	margin-left: 10px;
+	margin-top: 100px;
 }
 
 .Search_Word span {
@@ -185,9 +186,6 @@ a {
 	color: #4AA9C8;
 }
 
-.table {
-	border-radius: 12px;
-}
 
 .table thead tr {
 	color: #FFFFFF;
@@ -200,12 +198,14 @@ a {
 }
 
 .table {
+	margin-top: 100px;
 	border: 1px solid #ddd;
 	padding: 10px;
 	text-align: center;
 	font-size: 14px;
 	margin: 40px 0 0 -300px;	
 	color: black;
+	margin-top: 130px;
 }
 
 .table tr td {
@@ -224,6 +224,9 @@ a {
 
 .schoolName{
 	cursor:pointer;
+}
+.container-fluid{
+margin-top: -80px;
 }
 </style>
 </head>
