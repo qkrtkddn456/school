@@ -58,7 +58,7 @@
 
 .PageBtn {
 	border: 1px solid #CCC;
-	padding: 7px 20px;
+	padding: 4px 0 0 20px;
 	background: #F5F5F5;
 	width: 72px;
 	height: 36px;
@@ -75,7 +75,7 @@
 </head>
 <body>
 
-	
+
 	<div class="ContentTitle">
 		<h1 class="Title2">공지사항</h1>
 	</div>

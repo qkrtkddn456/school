@@ -272,14 +272,13 @@ a:hover {
 					<th scope="row" class="first table_top_bg table_style01_th">이전글</th>
 					<td class="txtL"><a
 						href=""
-						class="view_table_a">불법성매매 불법야동사이트처리기한에 관하여</a>2018-11-10</td>
-				</tr>
+						class="view_table_a">부천정보산업고등학교 괜찮나요?</a>2018-11-10</td>
+				</tr>	
 				<tr>
 					<th scope="row" class="first table_bottom_bg table_style01_th">다음글</th>
 					<td class="txtL"><a
 						href=""
-						class="view_table_a">MBC SBS가 방송시간을 새벽2시에 조기 종료 합니다 그런대 방송 통신
-							위원회에서 압력을 넣어서 방송 시간을 줄였다는 소문이 사실 입니까</a>2018-11-30</td>
+						class="view_table_a">부천정보산업고등학교의 취업률이 100%라는것이 사실입니까?</a>2018-11-30</td>
 				</tr>
 			</tbody>
 		</table>
