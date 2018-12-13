@@ -1,174 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<!-- Theme Made By www.w3schools.com - No Copyright -->
 <title>학교 정보 통합 알리미</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat"
-	rel="stylesheet">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
-body {
-	font: 20px Montserrat, sans-serif;
-	font-family: arial, verdana, tahoma;
-	line-height: 1.8;
-	color: black;
-}
-
-
-.bg-2 {
-	background-color: #474e5d; /* Dark Blue */
-	color: #ffffff;
-}
-
-.bg-3 {
-	background-color: #ffffff; /* White */
-	color: #555555;
-}
-
-.bg-4 {
-	background-color: #2f2f2f; /* Black Gray */
-	color: #fff;
-}
-
-.container-fluid {
-	padding-top: 70px;
-	padding-bottom: 70px;
-}
-
-.container>.navbar-header {
-	margin: 5px 150px 0px 880px;
-}
-
-.container {
-	width: 100%;
-	padding: 0;
-	margin-left: 2px;
-}
-
-.navbar {
-	padding-top: 15px;
-	padding-bottom: 8px;
-	border: 20px;
-	border-radius: 0;
-	margin-bottom: 0;
-	font-size: 12px;
-	letter-spacing: 5px;
-	background-color: none;
-}
-
-.navbar-nav  li a:hover {
-	color: #1abc9c !important;
-}
-
-#main-image {
-	float: left;
-	margin-right: 20px;
-	margin-left: -90px;
-}
-
-#mySubbar {
-	margin-left: 663px;
-	margin-top: -15px;
-}
-
-a {
-	color: #666;
-	text-decoration: none;
-}
-
-#a {
-	font-size: 15px;
-	margin-left: -100px;
-}
-
-#b {
-	margin-left: 75px;
-	font-size: 15px;
-}
-
-#c {
-	margin-left: 70px;
-	font-size: 15px;
-}
-
-#d {
-	margin-left: 70px;
-	font-size: 15px;
-}
-
-#imaginary_container {
-	margin-top: 20%; /* Don't copy this */
-}
-
-.stylish-input-group .input-group-addon {
-	background: white !important;
-}
-
-.stylish-input-group .form-control {
-	border-right: 0;
-	box-shadow: 0 0 0;
-	border-color: #ccc;
-}
-
-.stylish-input-group button {
-	border: 0;
-	background: transparent;
-}
-
-.col-sm-7 {
-	width: 50%;
-}
-
-.col-sm-offset-4 {
-	margin: -13px 0px 75px -575px;
-	width: 500px;
-	height: 10px;
-}
-
-.navbar-left {
-	
-}
-
-.navbar-right {
-	margin-top: -3px;
-	margin-right: 400px;
-	margin-bottom: -10px;
-	margin-left: -200px;
-}
-
-p {
-	font-size: 16px;
-}
-
-#top {
-	border-top: 1px solid darkgray;
-}
-
-#bottom {
-	margin-top: 25px;
-	border: 0;
-	border-top: 1px solid darkgray;
-}
-
-.vl {
-	border-left: 1px solid darkgray;
-	height: 25px;
-	margin: -35px 0 0 -35px;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-}
 
 .ContentTitle {
 	border-bottom: 1px solid #CCC;
@@ -183,32 +16,6 @@ p {
 	padding: 27px 0 23px 70px;
 	line-height: 1.0;
 }
-
-.InnerWrap {
-	position: relative;
-	width: 980px;
-	margin: 0 auto;
-	padding-bottom: 30px;
-}
-
-.Search_Word {
-	float: left;
-	line-height: 1.0;
-	font-size: 14px;
-	padding-top: 20px;
-	color: black;
-	margin-left: 10px;
-}
-
-.Search_Word span {
-	color:;
-	font-family: 'Nanum';
-}
-
-.Search_Word em {
-	color: #4AA9C8;
-}
-
 .table {
 	border-radius: 12px;
 }
@@ -241,12 +48,6 @@ p {
 	border-top: 0;
 	text-align: center;
 }
-
-.Contents {
-	margin-left: 35%;
-}
-
-
 
 #noticeText {
 	width: 350px;
@@ -473,6 +274,7 @@ th {
 .container-fluid{
 margin-top: -50px;
 }
+
 </style>
 </head>
 <body>
@@ -706,37 +508,5 @@ margin-top: -50px;
 	<p class="mTm txtR">
 		<a href="" class="table_btn01">게시판 등록</a>
 	</p>
-	<script>
-		var ses = '${sessionScope.ses}';
-		var loginBtn = document.getElementById("login");
-		if (!ses) {
-			loginBtn.innerHTML = "로그인/회원가입";
-		} else {
-			loginBtn.innerHTML = "로그아웃";
-		}
-		function mainPage() {
-			location = "/uri/sc/mainhome";
-		}
-		function goUser() {
-			location = "/uri/sc/user"
-		}
-		function goLogin() {
-			if (!ses) {
-				location = "/uri/sc/login";
-			} else {
-				location = "/logout";
-			}
-		}
-
-		function goSchool() {
-			location = "/uri/sc/list";
-		}
-		function goNotice() {
-			location = "/uri/sc/noticelist";
-		}
-		function goMap() {
-			location = "/uri/sc/main";
-		}
-	</script>
 </body>
 </html>

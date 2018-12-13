@@ -221,26 +221,7 @@ a {
 	margin-left: 35%;
 }
 
-#top {
-	border-top: 1px solid darkgray;
-}
 
-#bottom {
-	margin-top: 25px;
-	border: 0;
-	border-top: 1px solid darkgray;
-}
-
-.vl {
-	border-left: 1px solid darkgray;
-	height: 25px;
-	margin: -35px 0 0 -35px;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-}
 .schoolName{
 	cursor:pointer;
 }
