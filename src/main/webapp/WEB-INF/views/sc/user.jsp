@@ -43,7 +43,7 @@
 }
 
 .panel-login>.panel-heading a.active {
-	color: #6EE5A3;
+	color: skyblue;
 	font-size: 18px;
 }
 
@@ -110,7 +110,7 @@
 }
 
 .btn-register {
-	background-color: #1CB94E;
+	background-color: skyblue;
 	outline: none;
 	color: #fff;
 	font-size: 14px;
@@ -118,7 +118,7 @@
 	font-weight: normal;
 	padding: 14px 0;
 	text-transform: uppercase;
-	border-color: #1CB94A;
+	border-color: skyblue;
 }
 
 .btn-register:hover, .btn-register:focus {
@@ -148,42 +148,12 @@
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active,
 	.btn-primary.active, .open>.dropdown-toggle.btn-primary {
 	color: #fff;
-	background-color: #66cdaa;
-	border-color: #66cdaa;
+	background-color: skyblue;
+	border-color: skyblue;
 }
 
 
-body {
-	font: 20px Montserrat, sans-serif;
-	font-family: arial, verdana, tahoma;
-	line-height: 1.8;
-	color: #f5f6f7;
-}
 
-.bg-1 {
-	background-color: #1abc9c; /* Green */
-	color: #ffffff;
-}
-
-.bg-2 {
-	background-color: #474e5d; /* Dark Blue */
-	color: #ffffff;
-}
-
-.bg-3 {
-	background-color: #ffffff; /* White */
-	color: #555555;
-}
-
-.bg-4 {
-	background-color: #2f2f2f; /* Black Gray */
-	color: #fff;
-}
-
-.container-fluid {
-	padding-top: 70px;
-	padding-bottom: 70px;
-}
 
 .container>.navbar-header {
 	margin: 5px 150px 0px 880px;
@@ -206,65 +176,12 @@ body {
 	background-color: none;
 }
 
-.navbar-nav  li a:hover {
-	color: #1abc9c !important;
-}
 
-#main-image {
-	float: left;
-	margin-right: 20px;
-	margin-left: -90px;
-}
-
-#mySubbar {
-	margin-left: 663px;
-	margin-top: -15px;
-}
 
 a {
 	color: #666;
 	text-decoration: none;
 }
-
-#a {
-	font-size: 15px;
-	margin-left: -100px;
-}
-
-#b {
-	margin-left: 75px;
-	font-size: 15px;
-}
-
-#c {
-	margin-left: 70px;
-	font-size: 15px;
-}
-
-#d {
-	margin-left: 70px;
-	font-size: 15px;
-}
-
-#imaginary_container {
-	margin-top: 20%; /* Don't copy this */
-}
-
-.stylish-input-group .input-group-addon {
-	background: white !important;
-}
-
-.stylish-input-group .form-control {
-	border-right: 0;
-	box-shadow: 0 0 0;
-	border-color: #ccc;
-}
-
-.stylish-input-group button {
-	border: 0;
-	background: transparent;
-}
-
 .col-sm-7 {
 	width: 50%;
 }
@@ -286,30 +203,7 @@ a {
 	margin-left: -200px;
 }
 
-p {
-	font-size: 16px;
-}
 
-#top {
-	border-top: 1px solid darkgray;
-}
-
-#bottom {
-	margin-top: 25px;
-	border: 0;
-	border-top: 1px solid darkgray;
-}
-
-.vl {
-	border-left: 1px solid darkgray;
-	height: 25px;
-	margin: -35px 0 0 -35px;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-}
 </style>
 </head>
 <body>

@@ -2,140 +2,17 @@
 	pageEncoding="UTF-8"%>
 <title>학교 정보 통합 알리미</title>
 <style>
-body {
-	font: 20px Montserrat, sans-serif;
-	line-height: 1.8;
-	color: #f5f6f7;
-}
-
-p {
-	font-size: 16px;
-}
-
 .margin {
 	margin-bottom: 20px;
 }
-
-.bg-1 {
-	background-color: #1abc9c; /* Green */
-	color: #ffffff;
-}
-
-.bg-2 {
-	background-color: #474e5d; /* Dark Blue */
-	color: #ffffff;
-}
-
-.bg-3 {
-	background-color: #ffffff; /* White */
-	color: #555555;
-}
-
-.bg-4 {
-	background-color: #2f2f2f; /* Black Gray */
-	color: #fff;
-}
-
-.container-fluid {
-	padding-top: 70px;
-	padding-bottom: 70px;
-}
-
-.navbar {
-	padding-top: 15px;
-	padding-bottom: 8px;
-	border: 20px;
-	border-radius: 0;
-	margin-bottom: 0;
-	font-size: 12px;
-	letter-spacing: 5px;
-	background-color: none;
-}
-
-.navbar-nav  li a:hover {
-	color: #1abc9c !important;
-}
-
-#school {
-	color: #808080;
-}
-
-#main-image {
-	float: left;
-	margin-right: 20px;
-	margin-left: -90px;
-}
-
 #Main_Service {
     margin-left: 23px;
 }
-
-#a {
-	font-size: 15px;
-	margin-left: -100px;
-}
-
-#b {
-	margin-left: 75px;
-	font-size: 15px;
-}
-
-#c {
-	margin-left: 70px;
-	font-size: 15px;
-}
-
-#d {
-	margin-left: 70px;
-	font-size: 15px;
-}
-
-#imaginary_container {
-	margin-top: 20%; /* Don't copy this */
-}
-
-.stylish-input-group .input-group-addon {
-	background: white !important;
-}
-
-.stylish-input-group .form-control {
-	border-right: 0;
-	box-shadow: 0 0 0;
-	border-color: #ccc;
-}
-
-.stylish-input-group button {
-	border: 0;
-	background: transparent;
-}
-
-.col-sm-7 {
-	width: 50%;
-}
-
-.col-sm-offset-4 {
-	margin: -13px 0px 75px -575px;
-	width: 500px;
-	height: 10px;
-}
-
-.navbar-left {
-	
-}
-
-.navbar-right {
-	margin-top: -3px;
-	margin-right: 400px;
-	margin-bottom: -10px;
-	margin-left: -200px;
-}
-
 /* carousel */
 #quote-carousel {
 	padding: 0 10px 30px 10px;
 	margin-top: 30px;
 }
-
 /* Control buttons  */
 #quote-carousel .carousel-control {
 	background: none;
@@ -165,11 +42,9 @@ p {
 #quote-carousel .carousel-indicators li {
 	background: #c0c0c0;
 }
-
 #quote-carousel .carousel-indicators .active {
 	background: #333333;
 }
-
 #quote-carousel img {
 	width: 250px;
 	height: 100px
@@ -179,18 +54,15 @@ p {
 	border-left: none;
 	margin: 0;
 }
-
 .item blockquote img {
 	margin-bottom: 10px;
 }
-
 .item blockquote p:before {
 	content: "\f10d";
 	font-family: 'Fontawesome';
 	float: left;
 	margin-right: 10px;
 }
-
 .carousel-control:hover, .carousel-control:focus {
 	color: #fff;
 	text-decoration: none;
@@ -198,7 +70,6 @@ p {
 	outline: 0;
 	opacity: .9;
 }
-
 .carousel-control.right {
 	right: 0;
 	left: auto;
@@ -214,7 +85,6 @@ p {
 		endColorstr='#80000000', GradientType=1);
 	background-repeat: repeat-x;
 }
-
 .carousel-control {
 	position: absolute;
 	top: 0;
@@ -228,7 +98,6 @@ p {
 	filter: alpha(opacity = 50);
 	opacity: .5;
 }
-
 a:hover, a:focus {
 	color: #2a6496;
 	text-decoration: underline;
@@ -236,7 +105,6 @@ a:hover, a:focus {
 /**
   MEDIA QUERIES
 */
-
 /* Small devices (tablets, 768px and up) */
 @media ( min-width : 768px) {
 	#quote-carousel {
@@ -244,7 +112,6 @@ a:hover, a:focus {
 		padding: 0 40px 30px 40px;
 	}
 }
-
 /* Small devices (tablets, up to 768px) */
 @media ( max-width : 768px) {
 	/* Make the indicators larger for easier clicking with fingers/thumb on mobile */
@@ -263,11 +130,9 @@ a:hover, a:focus {
 		height: 20px;
 	}
 }
-
 /**
   MEDIA QUERIES
 */
-
 /* Small devices (tablets, 768px and up) */
 @media ( min-width : 768px) {
 	#quote-carousel {
@@ -275,7 +140,6 @@ a:hover, a:focus {
 		padding: 0 40px 30px 40px;
 	}
 }
-
 /* Small devices (tablets, up to 768px) */
 @media ( max-width : 768px) {
 	/* Make the indicators larger for easier clicking with fingers/thumb on mobile */
@@ -294,55 +158,33 @@ a:hover, a:focus {
 		height: 20px;
 	}
 }
-
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 1.42857143;
 	color: #333;
 }
-
 html {
 	font-size: 10px;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
 .glyphicon-chevron-left:before {
 	
 }
-
 .fa-chevron-right:before {
 	content: "\f054";
 }
-
 :before, :after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
-#mySubbar {
-	margin-left: 663px;
-	margin-top: -15px;
-}
-
 .rounded-circle {
 	margin-right: 55px;
 }
-
 ul {
 	list-style: none;
 }
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	font-family: arial, verdana, tahoma;
-}
-
 body {
 	background-color: "white";
 	-webkit-background-size: cover;
@@ -368,14 +210,12 @@ default width = 800/5 = 160px;
 	margin: 17px 0px 0px 0px;
 	border-radius: 6px;
 }
-
 /*A small hack to prevent flickering on some browsers*/
 .accordian ul {
 	width: 1200px;
 	/*This will give ample space to the last item to move
 	instead of falling down/flickering during hovers.*/
 }
-
 .accordian li {
 	position: relative;
 	display: block;
@@ -392,7 +232,6 @@ default width = 800/5 = 160px;
 	/*If you hover on the images now you should be able to 
 	see the basic accordian*/
 }
-
 /*Reduce with of un-hovered elements*/
 .accordian ul:hover li {
 	width: 143px;
@@ -402,11 +241,9 @@ default width = 800/5 = 160px;
 .accordian ul li:hover {
 	width: 305px;
 }
-
 .accordian li img {
 	display: block;
 }
-
 /*Image title styles*/
 .image_title {
 	background: rgba(0, 0, 0, 0.5);
@@ -415,7 +252,6 @@ default width = 800/5 = 160px;
 	bottom: 0;
 	width: 305px;
 }
-
 .image_title a {
 	display: block;
 	color: #fff;
@@ -423,21 +259,18 @@ default width = 800/5 = 160px;
 	padding: 20px;
 	font-size: 16px;
 }
-
 #border {
 	height: 250px;
 	width: 900px;
 	margin-left: 50px;
 	margin-top: 100px;
 }
-
 .ChartTitle {
 	font-size: 19px;
 	line-height: 1.1;
 	height: 0px;
 	padding: 0 50px;
 }
-
 .Main_News {
 	float: left;
 	width: 250px;
@@ -450,12 +283,10 @@ default width = 800/5 = 160px;
 	box-sizing: border-box;
 	padding: 0px 25px 0 25px;
 }
-
 .NewsTitle {
 	font-size: 18px;
 	line-height: 1.0;
 }
-
 .News_Date {
 	font-family: 'Tahoma';
 	font-size: 12px;
@@ -463,43 +294,29 @@ default width = 800/5 = 160px;
 	padding-top: 18px;
 	line-height: 1.0;
 }
-
 .News_Subject {
 	font-size: 14px;
 	line-height: 1.2;
 	padding: 5px 0 3px 0;
 }
-
 .News_Cont {
 	font-family: 'Nanum';
 	line-height: 1.2;
 }
-
 .News_More {
 	padding-top: 11px !important;
 }
-
 a {
 	color: #666;
 	text-decoration: none;
 }
-
 .News_Cont a {
 	color: #777;
 	font-size: 11px;
 }
-
 .News_More a {
 	color: coral;
 }
-
-.InnerWrap {
-	position: relative;
-	width: 980px;
-	margin: 0 auto;
-	margin-top: -90px;
-}
-
 #schoolmap {
 	border-style: solid;
 	border-width: 1px;
@@ -510,74 +327,31 @@ a {
 	border-radius: 7px;
 	background-image:
 		url("https://st2.depositphotos.com/8429558/11178/v/950/depositphotos_111783652-stock-illustration-abstract-city-map.jpg");
-		cursor: pointer;
+	cursor: pointer;
 }
-
 #maptext {
 	margin: 55px 0px 0 52px;
 	font-size: 18px;
 	line-height: 1.0;
 	font-family: -webkit-body;
 }
-
-#bottom {
-	margin-top: 25px;
-	border: 0;
-	border-top: 1px solid darkgray;
-}
-
-#top {
-	border-top: 1px solid darkgray;
-	`
-}
-
 #youtube {
 	width: 424px;
 	height: 238px;
 	margin: 205px 0 0 50px;
 }
-
 #youtube2 {
 	width: 424px;
 	height: 238px;
 	margin: 205px 0 0 20px;
 }
-
-#pp {
-	font-size: 12px;
-	margin: 0;
-}
-
-.address {
-	margin-top: 100px;
-	margin-bottom: 20px;
-}
-
-.container {
-	width: 100%;
-	padding: 0;
-	margin-left: 2px;
-}
-
-.container>.navbar-header {
-	margin: 5px 150px 0px 880px;
-}
-
-.vl {
-	border-left: 1px solid darkgray;
-	height: 25px;
-	margin: -35px 0 0 -35px;
-}
-
 #lunch {
-	cursor:pointer;
 	border-radius: 70px;
 }
 </style>
 </head>
 <body>
 	<!-- Navbar -->
-	
 
 	<!-- First Container -->
 	<div id="Main_Service">
@@ -585,7 +359,7 @@ a {
 			<div id="border">
 				<img id="lunch"
 					src="http://www.sannae.es.kr/tp/mobile_new/images/clip_schoolmeal_pic.gif"
-					width="600px" height="400px" onclick="goMeals()" h>
+					width="600px" height="400px">
 				<div class="accordian">
 					<ul>
 						<li>
@@ -676,37 +450,20 @@ a {
 				allowfullscreen></iframe>
 		</div>
 	</div>
-	<hr id="bottom">
-	<div class="InnerWrap">
-		<div class="address">
-			<p id="pp">
-				총괄관리기관 : 한국교육학술정보원<span class="Line">|</span>우편번호 41061 대구광역시 동구 동내로
-				64 (동내동 351)
-			</p>
-			<p id="pp">
-				전화 053)714-0114<span class="Line">|</span>팩스 053)714-0198<span
-					class="Line">|</span>이메일 schoolinfo@keris.or.kr(공시오류신고 및 문의)<span
-					class="Line">|</span>고객상담센터(정보공시)1544-0079(내선 2)
-			</p>
-			<p id="pp" style="font-weight: bold;">
-				[<a href="/ng/pnngpi_a01_l0.do">공공데이터 이용정책</a>]
-			</p>
-			<p id="pp" class="Copyright">
-				Copyright ⓒ <strong>MINISTRY OF EDUCATION</strong>. All Rights
-				Reserved
-			</p>
-		</div>
-	</div>
 	<script>
-	function goMeals(){
-		location = "/uri/sc/meals";
-	}
 		$(document).ready(function() {
 			$('#quote-carousel').carousel({
 				pause : true,
 				interval : 4000,
 			});
 		});
+		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+		var options = { //지도를 생성할 때 필요한 기본 옵션
+			center : new daum.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+			level : 3
+		//지도의 레벨(확대, 축소 정도)
+		};
+		var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
 	</script>
 </body>
 </html>
