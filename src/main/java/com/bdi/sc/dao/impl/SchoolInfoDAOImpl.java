@@ -22,6 +22,10 @@ public class SchoolInfoDAOImpl implements SchoolInfoDAO {
 	public SchoolInfo selectSchool(Integer sinum) {
 		return ss.selectOne("com.bdi.sc.SCHOOLINFO.selectSchool",sinum);
 	}
+	@Override
+	public List<SchoolInfo> selectSchoolAddress(String school_name) {
+		return ss.selectList("com.bdi.sc.SCHOOLINFO.selectSchoolList", school_name);
+	}
 	
 	
 }

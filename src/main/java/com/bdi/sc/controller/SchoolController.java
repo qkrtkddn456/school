@@ -25,12 +25,19 @@ public class SchoolController {
 		return "sc/list";
 	}
 	
-	
 	@GetMapping("/school/{sinum}")
 	public String selectSchool(@PathVariable Integer sinum, Model model) {
 		model.addAttribute("school",sis.selectSchool(sinum));
 		return "sc/comment";
 	}
+	@GetMapping("/schoolad/{school_name}")
+	public String goScAddress(@PathVariable String school_name, Model model){
+		model.addAttribute("scList",sis.selectSchoolAddress(school_name));
+		model.addAttribute("search",school_name);
+		return "sc/schoolSerch";
+	}
+	
+	
 	
 // ajax 방식
 //	@GetMapping("/school/{sinum}")

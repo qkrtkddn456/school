@@ -367,7 +367,7 @@ a {
 			function schoolSerch() {
 				var url = "/uri/sc/schoolSerch";
 				var Option = "width=800,height=700";
-				window.open(url, "학교검색", Option);
+				window.open(url, "_blank", Option,true);
 			}
 			$(function() {
 

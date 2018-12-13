@@ -2,9 +2,10 @@
 	pageEncoding="UTF-8"%>
 <title>학교 정보 통합 알리미</title>
 <style>
-.mainContainer{
-margin-top: 10px;
+.mainContainer {
+	margin-top: 10px;
 }
+
 #popupHeader {
 	font-size: 25px;
 	width: 100%;
@@ -31,6 +32,8 @@ margin-top: 10px;
 
 .stylish-input-group .form-control {
 	box-shadow: 0 0 0;
+	margin-top: 500px;
+	width: 500px;
 }
 
 .stylish-input-group button {
@@ -77,8 +80,9 @@ margin-top: 10px;
 #serchResultBorder {
 	border: 1px solid;
 }
-.resultList{
-margin-top:30px;
+
+.resultList {
+	margin-top: 30px;
 }
 </style>
 </head>
@@ -93,45 +97,51 @@ margin-top:30px;
 					찾으시려는 도로명주소+건물번호/건물명 혹은 지번주소+번지수/건물명을 입력해주세요.<br>예) 도로명 : 불정로
 					432번길 / 지번 : 정자동 178-1, 대치동 현대아파트 * <br>단, 도로명 혹은 동(읍/면/리)만
 					검색하시는 경우 정확한 검색결과가 나오지 않을 수 있습니다.<br> <input type="text"
-						id="address" placeholder="예)정자동 178-1, 대치동 현대아파트">
-					<div class="row">
-						<div class="col-sm-6 col-sm-offset-3">
-							<div id="imaginary_container">
-								<div class="input-group stylish-input-group">
-									<span class="input-group-addon">
-										<button type="submit">
-											<span class="glyphicon glyphicon-search"></span>
-										</button>
-									</span>
-								</div>
+						class="form-control" placeholder="학교명 예) 부천정보산업고등학교"
+						onkeypress="if( event.keyCode==13 ){goSchoolAddress();}"
+						id="search1">
+					<div class="col-sm-6 col-sm-offset-3">
+						<div id="imaginary_container">
+							<div class="input-group stylish-input-group">
+								<span class="input-group-addon">
+									<button type="submit" onclick="goSchoolAddress()">
+										<span class="glyphicon glyphicon-search"></span>
+									</button>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div id="addressList">
-					<h1 id="serchResult">검색결과입니다</h1>
-					<div id="serchResultBorder"></div>
-				</div>
-					<div class="resultList">
-						<table class="table table-bordered">
-							<thead>
-								<tr>
-									<th>도로명</th>
-									<th>지번</th>
-									<th>우편번호</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>경기도 부천시 역곡로1번길 6(역곡동)</td>
-									<td>경기도 부천시 역곡동 80-7 신암빌딩</td>
-									<td>14673</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
 			</div>
+			<c:forEach var="item" items="${scList}" varStatus="status">
+				<div class="Contents">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>학교이름</th>
+								<th>학교주소</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr onclick="schoolSelectAddress('${item.roadname_address}')">
+								<td class="schoolName" data-key="school_name">${item.school_name}</td>
+								<td class="schoolName" data-key="roadname_address">${item.roadname_address}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</c:forEach>
 		</div>
+	</div>
+	<script>
+		function goSchoolAddress() {
+			var param = document.querySelector('#search1').value;
+			location = "/schoolad/" + param;
+		}
+		function schoolSelectAddress(info) {
+			opener.document.getElementById('school').value = info;
+			window.close();
+			
+		}
+	</script>
 </body>
 </html>
