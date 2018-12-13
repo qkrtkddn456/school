@@ -12,6 +12,7 @@
 	font-size: 14px;
 }
 
+
 #register-form {
 	height: 448px;
 }
