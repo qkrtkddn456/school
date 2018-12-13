@@ -41,7 +41,6 @@ p {
 	background-color: #2f2f2f; /* Black Gray */
 	color: #fff;
 }
-
 .container {
 	width: 100%;
 	padding: 0;
@@ -133,7 +132,7 @@ a {
 .col-sm-offset-4 {
 	margin: -13px 0px 75px -575px;
 	width: 500px;
-	height: 10px;
+	height:10px;
 }
 
 .navbar-left {
@@ -205,7 +204,7 @@ a {
 	padding: 10px;
 	text-align: center;
 	font-size: 14px;
-	margin: 40px 0 0 -300px;
+	margin: 40px 0 0 -300px;	
 	color: black;
 }
 
@@ -222,29 +221,9 @@ a {
 	margin-left: 35%;
 }
 
-#top {
-	border-top: 1px solid darkgray;
-}
 
-#bottom {
-	margin-top: 25px;
-	border: 0;
-	border-top: 1px solid darkgray;
-}
-
-.vl {
-	border-left: 1px solid darkgray;
-	height: 25px;
-	margin: -35px 0 0 -35px;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-.schoolName {
-	cursor: pointer;
+.schoolName{
+	cursor:pointer;
 }
 </style>
 </head>

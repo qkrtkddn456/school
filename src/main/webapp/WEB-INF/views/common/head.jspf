@@ -22,7 +22,7 @@
 	<script> var au = new AjaxUtil(); </script>
 	<style>
 body {
-	font: 20px Montserrat, sans-serif;
+	font: 14px Montserrat, sans-serif;
 	font-family: arial, verdana, tahoma;
 	line-height: 1.8;
 	color: black;
