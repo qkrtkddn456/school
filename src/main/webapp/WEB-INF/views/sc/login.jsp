@@ -277,11 +277,11 @@
 			</div>
 		</div>
 		<script>
-			function schoolSerch() {
-				var url = "/uri/sc/schoolSerch";
+			 function schoolSerch() {
+				var url = "/uri/search/schoolSerch";
 				var Option = "width=850,height=700";
 				window.open(url, "_blank", Option,true);
-			}
+			} 
 			$(function() {
 
 				$('#login-form-link').click(function(e) {
