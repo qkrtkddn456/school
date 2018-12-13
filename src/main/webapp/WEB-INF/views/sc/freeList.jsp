@@ -529,8 +529,7 @@ margin-top: -50px;
 
 					<tr>
 						<td class="first">4741</td>
-						<td class="txtL"><a href=""> MBC SBS가 방송시간을 새벽2시에 조기 종료
-								합니다 그런대 방송 통신 위원회에서 압력을 넣어서 방송 시간을 줄였다는 소문이 사실 입니까&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 조희연 교육감,송파 혁신학교 주민간담회서 폭행을 당했다는데요...??&nbsp;&nbsp;</a></td>
 						<td>허환준</td>
 						<td>2018-11-30</td>
 						<td>198</td>
@@ -538,67 +537,63 @@ margin-top: -50px;
 
 					<tr>
 						<td class="first">4740</td>
-						<td class="txtL"><a href=""> 현대건설 사기분양, 대법원 확정
-								판결&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 정의당 정책위 "교육부 업무보고에 외고,자사고,선생님이 바빠진듯"&nbsp;&nbsp;</a></td>
 						<td>김기수</td>
 						<td>2018-11-11</td>
 						<td>519</td>
 					</tr>
 					<tr>
 						<td class="first">4739</td>
-						<td class="txtL"><a href=""> 불법성매매 불법야동사이트처리기한에
-								관하여&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 교육부가 교육현장의 비리를 뿌리 뽑아서 신뢰를 회복하겠다&nbsp;&nbsp;</a></td>
 						<td>김서영</td>
 						<td>2018-11-10</td>
 						<td>496</td>
 					</tr>
 					<tr>
 						<td class="first">4738</td>
-						<td class="txtL"><a href=""> 메인뉴스의 권위에 대하여&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 국어가 이젠 핵심과목인데 국포자가 나올까?&nbsp;&nbsp;</a></td>
 						<td>김보성</td>
 						<td>2018-11-06</td>
 						<td>534</td>
 					</tr>
 					<tr>
 						<td class="first">4737</td>
-						<td class="txtL"><a href=""> 북한 조선의 소리에 공동제작하겠다는 방통위를
-								규탄한다.&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 세종누리학교에서 학부모들이 공영방송을 규탄했대&nbsp;&nbsp;</a></td>
 						<td>최창섭</td>
 						<td>2018-11-02</td>
 						<td>542</td>
 					</tr>
 					<tr>
 						<td class="first">4736</td>
-						<td class="txtL"><a href=""> 방통위의 북한의 체제선동방송&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 북가좌초등학교 증축 공사현장에서 불량 레미콘 공사중에 사고났대&nbsp;&nbsp;</a></td>
 						<td>김승현</td>
 						<td>2018-11-02</td>
 						<td>600</td>
 					</tr>
 					<tr>
 						<td class="first">4735</td>
-						<td class="txtL"><a href=""> YTN 이동형의 뉴스정면승부 진행자 하차를
-								요구합니다.&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 국어 시험문제에 구하라 나왔어&nbsp;&nbsp;</a></td>
 						<td>이인백</td>
 						<td>2018-10-21</td>
 						<td>987</td>
 					</tr>
 					<tr>
 						<td class="first">4734</td>
-						<td class="txtL"><a href=""> 외화에 자막 표기할때....&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 이제 왕따나 학급폭력을 받으면 변호사의 도움이 필요한것같아&nbsp;&nbsp;</a></td>
 						<td>이영우</td>
 						<td>2018-10-15</td>
 						<td>962</td>
 					</tr>
 					<tr>
 						<td class="first">4733</td>
-						<td class="txtL"><a href=""> 시대의 사명을 잊지마세요&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 대전A초등학교애서 석면철거작업을했는데 규정을 지키지않았나봐&nbsp;&nbsp;</a></td>
 						<td>김혜영</td>
 						<td>2018-10-14</td>
 						<td>973</td>
 					</tr>
 					<tr>
 						<td class="first">4732</td>
-						<td class="txtL"><a href=""> 오늘 방송심의&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 대구나경북지역의 학생들의 학급폭력 피해가 전국 평균보다 훨 낮대&nbsp;&nbsp;</a></td>
 						<td>노민호</td>
 						<td>2018-10-08</td>
 						<td>993</td>
