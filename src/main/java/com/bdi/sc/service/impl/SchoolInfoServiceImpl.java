@@ -27,6 +27,10 @@ public class SchoolInfoServiceImpl implements SchoolInfoService {
 		return sdao.selectSchool(sinum);
 		
 	}
+	@Override
+	public List<SchoolInfo> selectSchoolAddress(String school_name) {
+		return sdao.selectSchoolList(school_name);
+	}
 
 
 }

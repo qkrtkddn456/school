@@ -9,6 +9,12 @@
     	where school_name like concat(#{value},'%')
     </if>
   </select>
+  <select id="selectSchoolAddress" resultType="school" parameterType="string">
+    select * from school_info
+     <if test="value!=null">
+    	where school_name like concat(#{value},'%')
+    </if>
+  </select>
   <select id="selectSchool" resultType="school">
   	select * from school_info
   	where sinum = #{sinum} 
