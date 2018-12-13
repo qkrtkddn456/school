@@ -1,28 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<link
-	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
-	rel="stylesheet" id="bootstrap-css">
-<script
-	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<title>학교 정보 통합 알리미</title>
 <style>
 .row2 {
 	margin-top: -15px
-}
-
-label {
-	display: inline-block;
-	max-width: 100%;
-	margin-bottom: 5px;
-	font-weight: 700;
-	font-size: 14px;
-	color: black;
 }
 
 .forgot-password {
@@ -114,6 +95,7 @@ label {
 	padding: 14px 0;
 	text-transform: uppercase;
 	border-color: skyblue;
+	margin-bottom: 10px;
 }
 
 .btn-login:hover, .btn-login:focus {
@@ -139,10 +121,10 @@ label {
 	border-color: skyblue;
 }
 
-.btn-register:hover, .btn-register:focus {
+.btn-register:hover, .btn-register:focus, .btn-primary.active:hover, .btn-primary.active:focus {
 	color: #fff;
-	background-color: #1CA347;
-	border-color: #1CA347;
+	background-color: #53A3CD;
+	border-color: #53A3CD;
 }
 
 .funkyradio div {
@@ -170,81 +152,12 @@ label {
 	border-color: skyblue;
 }
 
-
-
-
-.container-fluid {
-	padding-top: 70px;
-	padding-bottom: 70px;
-}
-
-.container>.navbar-header {
-	margin: 5px 150px 0px 880px;
-}
-
-.container {
-	width: 100%;
-	padding: 0;
-	margin-left: 2px;
-}
-
-.navbar {
-	padding-top: 15px;
-	padding-bottom: 8px;
-	border: 20px;
-	border-radius: 0;
-	margin-bottom: 0;
-	font-size: 12px;
-	letter-spacing: 5px;
-	background-color: none;
-}
-
-.navbar-nav  li a:hover {
-	color: #1abc9c !important;
-}
-
-a {
-	color: #666;
-	text-decoration: none;
-}
-
-.col-sm-7 {
-	width: 50%;
-}
-
-.col-sm-offset-4 {
-	margin: -13px 0px 75px -575px;
-	width: 500px;
-	height: 10px;
-}
-
-
-
-.navbar-right {
-	margin-top: -3px;
-	margin-right: 400px;
-	margin-bottom: -10px;
-	margin-left: -200px;
-}
-#bottom {
-	margin-top: 25px;
-	border: 0;
-	border-top: 1px solid darkgray;
-}
-
-.vl {
-	border-left: 1px solid darkgray;
-	height: 25px;
-	margin: -35px 0 0 -35px;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-}
 .panel-login>.panel-heading a.active {
     color: skyblue;
     font-size: 18px;
+}
+#school {
+	margin-bottom: 15px;
 }
 </style>
 </head>
@@ -366,7 +279,7 @@ a {
 		<script>
 			function schoolSerch() {
 				var url = "/uri/sc/schoolSerch";
-				var Option = "width=800,height=700";
+				var Option = "width=850,height=700";
 				window.open(url, "_blank", Option,true);
 			}
 			$(function() {

@@ -221,44 +221,24 @@ a {
 	margin-left: 35%;
 }
 
-#top {
-	border-top: 1px solid darkgray;
-}
 
-#bottom {
-	margin-top: 25px;
-	border: 0;
-	border-top: 1px solid darkgray;
-}
-
-.vl {
-	border-left: 1px solid darkgray;
-	height: 25px;
-	margin: -35px 0 0 -35px;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-}
 .schoolName{
 	cursor:pointer;
 }
 </style>
 </head>
 <body>
-<div class="container-fluid bg-1 text-center">
+	<div class="container-fluid bg-1 text-center">
 		<div class="ContentTitle">
 			<h1 class="Title2">학교검색</h1>
 		</div>
 		<div id="Contents">
 			<div class="InnerWrap">
 				<div class="Search_Word">
-					'<em>${school_name}</em> ' 검색결과 <span>(총 ${fn:length(scList)}건)</span>
+					'<em>${school_name}</em> ' 검색결과 <span>(총
+						${fn:length(scList)}건)</span>
 				</div>
-			</div>	
-			
-		<c:forEach var="item" items="${scList}" varStatus="status">
+			</div>
 			<div class="Contents">
 				<table class="table table-bordered">
 					<thead>
@@ -272,23 +252,23 @@ a {
 							<th>홈페이지</th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<td  class="schoolName" data-key="sinum" >${item.sinum}</td>
-							<td  class="schoolName" data-key="school_name" onclick="schoolSelect(${item.sinum})">${item.school_name}</td>
-							<td  class="schoolName" data-key="roadname_address">${item.roadname_address}</td>
-							<td  class="schoolName" data-key="phone_number">${item.phone_number}</td>
-							<td  class="schoolName" data-key="fax_number">${item.fax_number}</td>
-							<td  class="schoolName" data-key="coeducation_division">${item.coeducation_division}</td>
-							<td  class="schoolName" data-key="homepage"><a href="http://${item.homepage}">${item.homepage}</a></td>
-						</tr>
-					</tbody>
+					<c:forEach var="item" items="${scList}" varStatus="status">
+						<tbody>
+							<tr>
+								<td data-key="sinum">${item.sinum}</td>
+								<td data-key="school_name" onclick="schoolSelect(${item.sinum})">${item.school_name}</td>
+								<td data-key="roadname_address">${item.roadname_address}</td>
+								<td data-key="phone_number">${item.phone_number}</td>
+								<td data-key="fax_number">${item.fax_number}</td>
+								<td data-key="coeducation_division">${item.coeducation_division}</td>
+								<td data-key="homepage"><a href="http://${item.homepage}">${item.homepage}</a></td>
+							</tr>
+						</tbody>
+					</c:forEach>
 				</table>
 			</div>
-		</c:forEach>	
-		
+		</div>
 	</div>
-</div>
 	<script>
 		function schoolSelect(sinum){
 			var param = sinum;
