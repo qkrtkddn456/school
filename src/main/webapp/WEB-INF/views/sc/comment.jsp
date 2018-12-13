@@ -834,7 +834,7 @@ padding-left: 10px;
 							<div class="hall">
 								<span class="hall_title">남녀공학 구분</span><span class="hall_text" data-key="coeducation_division">${school.coeducation_division}</span>
 							</div>
-
+							<div id="map" style="width:300px;height:300px;"></div>
 						</div>
 					</div>
 				</article>
@@ -911,7 +911,21 @@ padding-left: 10px;
 			$(".add-comment").hide();
 		});
 		
-		
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+	    mapOption = {
+	        center: new daum.maps.LatLng(${school.latitude}, ${school.longitude}), // 지도의 중심좌표
+	        level: 3, // 지도의 확대 레벨
+	        mapTypeId : daum.maps.MapTypeId.ROADMAP // 지도종류
+	    }; 
+	
+		// 지도를 생성한다 
+		var map = new daum.maps.Map(mapContainer, mapOption); 
+	
+		// 지도에 마커를 생성하고 표시한다
+		var marker = new daum.maps.Marker({
+		    position: new daum.maps.LatLng(${school.latitude}, ${school.longitude}), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		});
 	</script>
 </body>
 </html>
