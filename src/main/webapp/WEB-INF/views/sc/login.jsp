@@ -279,7 +279,7 @@
 		<script>
 			function schoolSerch() {
 				var url = "/uri/sc/schoolSerch";
-				var Option = "width=800,height=700";
+				var Option = "width=850,height=700";
 				window.open(url, "_blank", Option,true);
 			}
 			$(function() {
