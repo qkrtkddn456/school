@@ -13,10 +13,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ccd2d702579bace0a42e9c8e643187d&libraries=services"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 	<script src="${resPath}/js/AjaxUtil.js"></script>
 	<script> var au = new AjaxUtil(); </script>
@@ -233,14 +233,14 @@ p {
 			loginBtn.innerHTML = "로그아웃";
 		}
 		function mainPage() {
-			location = "/uri/sc/mainhome";
+			location = "/uri/main/main";
 		}
 
 		function goLogin() {
 			if (!ses) {
-				location = "/uri/sc/login";
+				location = "/uri/user/login";
 			} else {
-				location = "/logout";
+				location = "/logout2";
 			}
 		}
 		function goSchool() {
@@ -248,15 +248,15 @@ p {
 			location = "/schools/"+param;
 		}
 		function goNotice() {
-			location = "/uri/sc/noticelist";
+			location = "/uri/board/noticelist";
 		}
 		function goMap() {
-			location = "/uri/sc/main";
+			location = "/uri/map/map";
 		}
 		function goUser() {
-			location = "/uri/sc/user"
+			location = "/uri/user/userget"
 		}
 		function gofreeList(){
-			location = "/uri/sc/freeList";
+			location = "/uri/board/freeboardlist";
 		}
 		</script>

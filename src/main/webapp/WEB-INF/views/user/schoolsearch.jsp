@@ -136,7 +136,7 @@ width: 100px;
 							</tr>
 						</thead>
 						<tbody>
-							<tr onclick="schoolSelectAddress('${item.roadname_address}')">
+							<tr onclick="schoolSelectAddress('${item.sinum}','${item.school_name}')">
 								<td class="schoolName"  data-key="sinum">${item.sinum}</td>
 								<td class="schoolName" data-key="school_name">${item.school_name}</td>
 								<td class="schoolName" data-key="roadname_address">${item.roadname_address}</td>
@@ -152,11 +152,10 @@ width: 100px;
 			var param = document.querySelector('#search1').value;
 			location = "/schoolad/" + param;
 		}
-		function schoolSelectAddress(info) {
-			opener.document.getElementById('school').value = info;
+		function schoolSelectAddress(sinum,name) {
+			opener.document.getElementById('school').value = name;
+			opener.document.getElementById('sinum').value = sinum;
 			window.close();
 			
 		}
 	</script>
-</body>
-</html>

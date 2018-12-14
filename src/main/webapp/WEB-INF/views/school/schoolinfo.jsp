@@ -927,5 +927,3 @@ padding-left: 10px;
 		    map: map // 마커를 표시할 지도 객체
 		});
 	</script>
-</body>
-</html>
