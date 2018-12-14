@@ -18,8 +18,8 @@
   </insert>
   <update id="updateSchoolComment" parameterType="schoolcomment">
   	update schoolcomment
-  	set schoolcommenttext=#{schoolcommenttext},schoolcommentgrade=#{schoolcommentgrade},sinum=#{sinum},studentnum=#{studentnum}
-  	where schoolcommentnum =#{schoolcommentnum}
+  	set schoolcommenttext=#{schoolcommenttext},schoolcommentgrade=#{schoolcommentgrade}
+  	where schoolcommentnum =#{schoolcommentnum} and studentnum=#{studentnum} and sinum=#{sinum}
   </update>
   <delete id="deleteSchoolComment" parameterType="schoolcomment">
   	delete from schoolcomment
