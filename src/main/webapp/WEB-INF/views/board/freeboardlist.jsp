@@ -1,21 +1,8 @@
-	<%@ page language="java" contentType="text/html; charset=UTF-8"
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <title>학교 정보 통합 알리미</title>
 <style>
-
-.ContentTitle {
-	border-bottom: 1px solid #CCC;
-	color: black;
-}
-
-.ContentTitle h1 {
-	margin-top:-30px;
-	width: 980px;
-	line-height: 1.0;
-	font-size: 30px;
-	padding: 27px 0 23px 70px;
-	line-height: 1.0;
-}
 .table {
 	border-radius: 12px;
 }
@@ -71,8 +58,8 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .sub5_2_1_3_div01 {
-	width: 1000px;
-	margin-left: 470px;
+	width: 934px;
+	margin-left: 497px;
 	border: #cccccc 1px solid;
 	background: #f5f5f5;
 	padding: 12px 0 12px 91px;
@@ -90,9 +77,9 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .disN {
-	width: 1000px;
+	width: 934px;
 	height: 30px;
-	margin-left: 470px;
+	margin-left: 497px;
 }
 
 .sub5_2_1_3_div01>ul>li.first {
@@ -109,7 +96,7 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .sub5_2_1_3_div01>ul>li>select {
-	margin-left: 50px;
+	margin-left: 5px;
 	margin-right: 15px;
 	width: 126px;
 	height: 28px;
@@ -153,26 +140,6 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 	margin-right: 10px;
 }
 
-.announcement {
-	border: 1px solid;
-	margin-top: 20px;
-	border-top: 0;
-	border-bottom: 0;
-	border-left: 0;
-	border-right: 0;
-	width: 1000px;
-	margin-left: 470px;
-	font-size: 20px;
-	margin-bottom: 40px;
-	font-family: "Nanum Gothic";
-}
-
-#announcementTitle {
-	font-size: 30px;
-	margin-top:-60px;
-	margin-bottom: 15px;
-}
-
 .table_style01 {
 	border-top: skyblue 2px solid;
 	border-bottom: skyblue 1px solid;
@@ -197,16 +164,25 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .subTotal {
-	padding-right: 880px;
+	padding-right: 840px;
+	font-family: "Nanum Gothic";
 }
 
 th {
 	text-align: center;
+	border-left: #d7d7d7 1px solid;
+	border-bottom: #d7d7d7 1px solid;
+	background-color: #F0FFFF;
+	height: 50px;
+}
+
+.table_style01 .first {
+	border-left: 0;
 }
 
 .page {
 	text-align: center;
-	margin-top: 680px;
+	margin-top: 620px;
 }
 
 .page span {
@@ -270,24 +246,79 @@ th {
 	background: skyblue;
 	display: inline-block;
 	font-family: "Nanum Gothic";
-}
-.container-fluid{
-margin-top: -50px;
+	margin-right: -130px;
 }
 
+#text {
+    width: 934px;
+    margin-left: 497px;
+    margin-top: 30px;
+    font-family: "Nanum Gothic";
+}
+
+.clear {
+	clear: both;
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+	height: 0 !important;
+}
+
+.sub_title {
+	color: #454545;
+	font-size: 30px;
+}
+
+.mBl {
+	margin-bottom: 30px !important;
+}
+
+.sub_p01 {
+	color: #333333;
+	font-size: 16px;
+	margin-bottom: 50px;
+}
+
+.sub_p01>span {
+	color: #333333;
+	font-size: 27px;
+	font-family: "Nanum Gothic";
+	display: block;
+	padding-bottom: 10px;
+}
+
+.sub_p01>span .col1 {
+	color: #1875d2;
+	font-size: 27px;
+}
+
+.sub03_5_p01 {
+	color: #666666;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+a:hover {
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
 </style>
 </head>
 <body>
-	<!-- Navbar -->
-	<div class="container-fluid bg-1 text-center">
-		<div class="ContentTitle">
-			<h1 class="Title2">자유게시판</h1>
-		</div>
-	</div>
-	<div class="announcement">
-		<h1 id="announcementTitle">학생여러분의 의견을 자유롭게 게시할 수 있는 곳입니다.</h1>
-		학생여러분의 의견을 자유롭게 표현하는 공간입니다. 다만, 게시판의 품위를 유지하기 위해 다음의 글들은 삭제할 수 있으며,
-		타인의 명예훼손, 법령위반 등은 처벌될 수 있습니다.
+	<div id=text>
+		<div class="clear"></div>
+		<!--내용-->
+		<h3 class="sub_title mBl">자유게시판</h3>
+		<p class="sub_p01 style02">
+			<span><span class="col1">학생여러분의 의견</span>을 자유롭게 게시할 수 있는 곳입니다.</span>학생여러분의
+			의견을 자유롭게 표현하는 공간입니다. 다만, 게시판의 품위를 유지하기 위해 다음의 글들은 삭제할 수 있으며, 타인의
+			명예훼손, 법령위반 등은 처벌될 수 있습니다.
+		</p>
+		<p class="sub03_5_p01">
+			도배글, 상업적 광고물, 음란성 글, 욕설, 지나친 인신공격성 글, 지역감정을 조장하는 글 등 게시판의 품위를 손상하는 글<br>※
+			주민번호, 핸드폰번호, 이메일 등 개인정보가 포함된 내용의 글은 등록을 삼가 주세요.
+		</p>
 	</div>
 	<div class="sub5_2_1_3_div01 mTs">
 		<ul>
@@ -302,11 +333,9 @@ margin-top: -50px;
 		</ul>
 	</div>
 	<div class="subTotal mTs">
+		Total 몇 건
 		<div class="disN">
-			<table cellpadding="0" cellspacing="0"
-				summary="자유게시판 제목, 작성자, 작성일등에 대한 정보를 제공합니다."
-				class="table_style01 mTxs" width="100%">
-				<caption>자유게시판</caption>
+			<table class="table_style01 mTxs" width="100%">
 				<colgroup>
 					<col width="8%">
 					<col width="*">
@@ -331,7 +360,8 @@ margin-top: -50px;
 
 					<tr>
 						<td class="first">4741</td>
-						<td class="txtL"><a href=""> 조희연 교육감,송파 혁신학교 주민간담회서 폭행을 당했다는데요...??&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 조희연 교육감,송파 혁신학교 주민간담회서 폭행을
+								당했다는데요...??&nbsp;&nbsp;</a></td>
 						<td>허환준</td>
 						<td>2018-11-30</td>
 						<td>198</td>
@@ -339,35 +369,40 @@ margin-top: -50px;
 
 					<tr>
 						<td class="first">4740</td>
-						<td class="txtL"><a href=""> 정의당 정책위 "교육부 업무보고에 외고,자사고,선생님이 바빠진듯"&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 정의당 정책위 "교육부 업무보고에
+								외고,자사고,선생님이 바빠진듯"&nbsp;&nbsp;</a></td>
 						<td>김기수</td>
 						<td>2018-11-11</td>
 						<td>519</td>
 					</tr>
 					<tr>
 						<td class="first">4739</td>
-						<td class="txtL"><a href=""> 교육부가 교육현장의 비리를 뿌리 뽑아서 신뢰를 회복하겠다&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 교육부가 교육현장의 비리를 뿌리 뽑아서 신뢰를
+								회복하겠다&nbsp;&nbsp;</a></td>
 						<td>김서영</td>
 						<td>2018-11-10</td>
 						<td>496</td>
 					</tr>
 					<tr>
 						<td class="first">4738</td>
-						<td class="txtL"><a href=""> 국어가 이젠 핵심과목인데 국포자가 나올까?&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 국어가 이젠 핵심과목인데 국포자가
+								나올까?&nbsp;&nbsp;</a></td>
 						<td>김보성</td>
 						<td>2018-11-06</td>
 						<td>534</td>
 					</tr>
 					<tr>
 						<td class="first">4737</td>
-						<td class="txtL"><a href=""> 세종누리학교에서 학부모들이 공영방송을 규탄했대&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 세종누리학교에서 학부모들이 공영방송을
+								규탄했대&nbsp;&nbsp;</a></td>
 						<td>최창섭</td>
 						<td>2018-11-02</td>
 						<td>542</td>
 					</tr>
 					<tr>
 						<td class="first">4736</td>
-						<td class="txtL"><a href=""> 북가좌초등학교 증축 공사현장에서 불량 레미콘 공사중에 사고났대&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 북가좌초등학교 증축 공사현장에서 불량 레미콘
+								공사중에 사고났대&nbsp;&nbsp;</a></td>
 						<td>김승현</td>
 						<td>2018-11-02</td>
 						<td>600</td>
@@ -381,21 +416,24 @@ margin-top: -50px;
 					</tr>
 					<tr>
 						<td class="first">4734</td>
-						<td class="txtL"><a href=""> 이제 왕따나 학급폭력을 받으면 변호사의 도움이 필요한것같아&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 이제 왕따나 학급폭력을 받으면 변호사의 도움이
+								필요한것같아&nbsp;&nbsp;</a></td>
 						<td>이영우</td>
 						<td>2018-10-15</td>
 						<td>962</td>
 					</tr>
 					<tr>
 						<td class="first">4733</td>
-						<td class="txtL"><a href=""> 대전A초등학교애서 석면철거작업을했는데 규정을 지키지않았나봐&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 대전A초등학교애서 석면철거작업을했는데 규정을
+								지키지않았나봐&nbsp;&nbsp;</a></td>
 						<td>김혜영</td>
 						<td>2018-10-14</td>
 						<td>973</td>
 					</tr>
 					<tr>
 						<td class="first">4732</td>
-						<td class="txtL"><a href=""> 대구나경북지역의 학생들의 학급폭력 피해가 전국 평균보다 훨 낮대&nbsp;&nbsp;</a></td>
+						<td class="txtL"><a href=""> 대구나경북지역의 학생들의 학급폭력 피해가 전국
+								평균보다 훨 낮대&nbsp;&nbsp;</a></td>
 						<td>노민호</td>
 						<td>2018-10-08</td>
 						<td>993</td>
@@ -501,5 +539,10 @@ margin-top: -50px;
 				alt="마지막으로"></a></span>
 	</div>
 	<p class="mTm txtR">
-		<a href="" class="table_btn01">게시판 등록</a>
+		<a class="table_btn01" onclick="goboardinsert()">등록</a>
 	</p>
+	<script>
+	function goboardinsert() {
+		location = "/uri/board/boardinsert";
+	}
+	</script>
