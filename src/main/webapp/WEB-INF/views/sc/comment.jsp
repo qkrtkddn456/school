@@ -637,6 +637,7 @@ a {
 .NameArea {
 	margin-top: 50px;
 	margin-left: -227px;
+	margin-bottom: 20px;
 }
 
 .HomeContent {
