@@ -145,6 +145,11 @@
 	background-color: #b0c4de;
 	border-color: #b0c4de;
 }
+.btn-primarytwo{
+	color: #fff;
+    background-color: skyblue;
+    border-color: skyblue;
+}
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active,
 	.btn-primary.active, .open>.dropdown-toggle.btn-primary {
@@ -242,7 +247,7 @@
 									<div class="form-group">
 										<input type="text" name="school" id="school" tabindex="1"
 											class="form-control" placeholder="학교" value=""> <a
-											class="btn btn-primary btn-sm active" data-toggle="happy"
+											class="btn btn-primarytwo btn-sm active" data-toggle="happy"
 											id="serch" onclick="schoolSerch()">학교검색</a> </span>
 									</div>
 

@@ -5,6 +5,7 @@
 .row2 {
 	margin-top: -15px
 }
+
 .panel-login {
 	border-color: #ccc;
 	-webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
@@ -111,7 +112,8 @@
 	border-color: skyblue;
 }
 
-.btn-register:hover, .btn-register:focus, .btn-primary.active:hover, .btn-primary.active:focus {
+.btn-register:hover, .btn-register:focus, .btn-primary.active:hover,
+	.btn-primary.active:focus {
 	color: #fff;
 	background-color: #53A3CD;
 	border-color: #53A3CD;
@@ -121,6 +123,11 @@
 	color: #fff;
 	background-color: #b0c4de;
 	border-color: #b0c4de;
+}
+.btn-primarytwo{
+	color: #fff;
+    background-color: skyblue;
+    border-color: skyblue;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active,
@@ -133,19 +140,18 @@
 #school {
 	margin-bottom: 15px;
 }
-
 </style>
 </head>
 <body>
-	
+
 	<div class="container">
 		<div class="row ">
 			<div class="col-md-6 col-md-offset-3 ">
 				<div class="panel panel-login ">
 					<div class="panel-heading">
 						<div class="row ">
-								<a href="#" class="active" id="login-form-link">회원수정</a>
-							
+							<a href="#" class="active" id="login-form-link">회원수정</a>
+
 						</div>
 						<hr>
 					</div>
@@ -177,7 +183,9 @@
 									</div>
 									<div class="form-group">
 										<input type="text" name="school" id="school" tabindex="1"
-											class="form-control" placeholder="학교" value="">
+											class="form-control" placeholder="학교" value=""> <a
+											class="btn btn-primarytwo btn-sm active" data-toggle="happy"
+											id="serch" onclick="schoolSerch()">학교검색</a> </span>
 									</div>
 
 
@@ -213,7 +221,12 @@
 		</div>
 
 		<script>
-		
+			function schoolSerch() {
+				var url = "/uri/search/schoolSerch";
+				var Option = "width=850,height=700";
+				window.open(url, "_blank", Option, true);
+			}
+
 			$(function() {
 
 				$('#login-form-link').click(function(e) {
@@ -232,26 +245,33 @@
 				});
 
 			});
-			
-			$('#radioBtn a').on('click', function(){
-			    var sel = $(this).data('title');
-			    var tog = $(this).data('toggle');
-			    $('#'+tog).prop('value', sel);
-			    
-			    $('a[data-toggle="'+tog+'"]').not('[data-title="'+sel+'"]').removeClass('active').addClass('notActive');
-			    $('a[data-toggle="'+tog+'"][data-title="'+sel+'"]').removeClass('notActive').addClass('active');
-			})
-			
+
+			$('#radioBtn a').on(
+					'click',
+					function() {
+						var sel = $(this).data('title');
+						var tog = $(this).data('toggle');
+						$('#' + tog).prop('value', sel);
+
+						$('a[data-toggle="' + tog + '"]').not(
+								'[data-title="' + sel + '"]').removeClass(
+								'active').addClass('notActive');
+						$(
+								'a[data-toggle="' + tog + '"][data-title="'
+										+ sel + '"]').removeClass('notActive')
+								.addClass('active');
+					})
+
 			var gender = 0;
-			
+
 			function male() {
 				gender = 0;
 			}
-			
+
 			function female() {
 				gender = 1;
 			}
-			
+
 			function signup() {
 				var id = document.getElementById("id").value;
 				var pwd = document.getElementById("password").value;
@@ -260,41 +280,50 @@
 				var age = document.getElementById("age").value;
 				var school = document.getElementById("school").value;
 				var conf = {
-						url:'/sts',
-						method:'POST',
-						param:JSON.stringify({stname:name,stage:age,stschool:school,stgen:gender,stid:id,
-						stpwd:pwd}),
-						success : function(res){
-							res = JSON.parse(res);
-							if(res == 2){
-								alert("아이디가 중복되었습니다");
-							}else if(res == 1){
-								alert("회원가입이 완료되었습니다");
-								location.href="/uri/sc/main";
-							}else{
-								alert("회원가입에 실패하였습니다");
-							}	
+					url : '/sts',
+					method : 'POST',
+					param : JSON.stringify({
+						stname : name,
+						stage : age,
+						stschool : school,
+						stgen : gender,
+						stid : id,
+						stpwd : pwd
+					}),
+					success : function(res) {
+						res = JSON.parse(res);
+						if (res == 2) {
+							alert("아이디가 중복되었습니다");
+						} else if (res == 1) {
+							alert("회원가입이 완료되었습니다");
+							location.href = "/uri/sc/main";
+						} else {
+							alert("회원가입에 실패하였습니다");
 						}
+					}
 				}
 
 				au.send(conf);
-				
-			}			
-			
-			function login(){
+
+			}
+
+			function login() {
 				var loginid = document.getElementById('loginid').value;
 				var loginpwd = document.getElementById('loginpwd').value;
 				var conf = {
-						 url:'/login',
-						 method:'POST',
-						 param : JSON.stringify({stid:loginid,stpwd:loginpwd}),
-						 success : function(res){
-							 res = JSON.parse(res);
-							 alert(res.msg);
-							 location.href="/uri/sc/main"
-						 }
-				 }
-				 au.send(conf);
+					url : '/login',
+					method : 'POST',
+					param : JSON.stringify({
+						stid : loginid,
+						stpwd : loginpwd
+					}),
+					success : function(res) {
+						res = JSON.parse(res);
+						alert(res.msg);
+						location.href = "/uri/sc/main"
+					}
+				}
+				au.send(conf);
 			}
 		</script>
 	</div>

@@ -90,7 +90,7 @@ width: 600px;
 font-size: 20px;
 text-align: center;
 background-color: #F0FFFF;
-width: 100px;
+width: 250px;
 }
 .schoolName{
 text-align: center;
@@ -130,9 +130,9 @@ width: 100px;
 					<table class="table table-bordered">
 						<thead>
 							<tr>
-								<th class="schoolnavbar">학교번호</th>
-								<th class="schoolnavbar">학교이름</th>
-								<th class="schoolnavbar">학교주소</th>
+								<th class="schoolnavbar _1">학교번호</th>
+								<th class="schoolnavbar _2">학교이름</th>
+								<th class="schoolnavbar _3">학교주소</th>
 							</tr>
 						</thead>
 						<tbody>
