@@ -34,7 +34,7 @@ public class SchoolController {
 	public String goScAddress(@PathVariable String school_name, Model model){
 		model.addAttribute("scList",sis.selectSchoolAddress(school_name));
 		model.addAttribute("search",school_name);
-		return "/search/schoolSerch";
+		return "sc/schoolSerch";
 	}
 	
 	
