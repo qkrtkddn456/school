@@ -62,7 +62,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr onclick="location.href='/uri/sc/notice'"
+						<tr onclick="location.href='/uri/board/notice'"
 							style="cursor: pointer;">
 							<td>1</td>
 							<td>2018년 홈페이지 만족도 조사 실시</td>
@@ -140,5 +140,3 @@
 											});
 						});
 	</script>
-</body>
-</html>

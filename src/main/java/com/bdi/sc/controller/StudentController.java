@@ -57,6 +57,6 @@ public class StudentController {
 	@GetMapping(value="/logout2")
 	public String logout(HttpSession hSession) {
 		hSession.invalidate();
-		return "sc/mainhome";
+		return "main/main";
 	}
 }

@@ -296,5 +296,3 @@ function removeAllChildNods(el) {
     }
 }
 </script>
-</body>
-</html>

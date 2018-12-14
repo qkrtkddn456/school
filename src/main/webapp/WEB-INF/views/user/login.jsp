@@ -245,12 +245,16 @@
 											class="form-control" placeholder="나이" value="">
 									</div>
 									<div class="form-group">
-										<input type="text" name="school" id="school" tabindex="1"
-											class="form-control" placeholder="학교" value=""> <a
-											class="btn btn-primarytwo btn-sm active" data-toggle="happy"
-											id="serch" onclick="schoolSerch()">학교검색</a> </span>
+										<input type="text" name="email" id="email" tabindex="1"
+											class="form-control" placeholder="이메일" value="">
 									</div>
-
+									<div class="form-group">
+										<input type="text" name="school" id="school" tabindex="1"
+											class="form-control" placeholder="학교" value="" readOnly> <a
+											class="btn btn-primarytwo btn-sm active" data-toggle="happy"
+											id="serch" onclick="schoolSerch()">학교검색</a> 
+									</div>
+									<input type="hidden" name="sinum" id="sinum">
 
 									<div class="form-group">
 										<div class="input-group">
@@ -284,7 +288,7 @@
 		</div>
 		<script>
 			 function schoolSerch() {
-				var url = "/uri/sc/schoolSerch";
+				var url = "/uri/user/schoolsearch";
 				var Option = "width=850,height=700";
 				window.open(url, "_blank", Option,true);
 			} 
@@ -339,52 +343,56 @@
 				var pwd2 = document.getElementById("confirm-password").value;
 				var name = document.getElementById("username").value;
 				var age = document.getElementById("age").value;
-				var school = document.getElementById("school").value;
-				var conf = {
-					url : '/sts',
-					method : 'POST',
-					param : JSON.stringify({
-						stname : name,
-						stage : age,
-						stschool : school,
-						stgen : gender,
-						stid : id,
-						stpwd : pwd
-					}),
-					success : function(res) {
-						res = JSON.parse(res);
-						location.href = "/uri/sc/mainhome";
-						if (res == 2) {
-							alert("아이디가 중복되었습니다");
-						} else if (res == 1) {
-							alert("회원가입이 완료되었습니다");
-							location.href = "/";
-						} else {
-							alert("회원가입에 실패하였습니다");
+				var sinum = document.getElementById("sinum").value;
+				var email = document.getElementById("email").value;
+				if(pwd == pwd2){
+					var conf = {
+						url : '/student',
+						method : 'POST',
+						param : JSON.stringify({
+							studentname : name,
+							studentage : age,
+							sinum : sinum,
+							studentgender : gender,
+							studentid : id,
+							studentpwd : pwd,
+							studentemail : email
+						}),
+						success : function(res) {
+							res = JSON.parse(res);
+							location.href = "/uri/main/main";
+							if (res == 2) {
+								alert("아이디가 중복되었습니다");
+							} else if (res == 1) {
+								alert("회원가입이 완료되었습니다");
+								location.href = "/";
+							} else {
+								alert("회원가입에 실패하였습니다");
+							}
+
 						}
-
 					}
+					au.send(conf);
+				}else{
+					alert('비밀번호 확인이 다릅니다.');
 				}
-
-				au.send(conf);
-
 			}
 
 			function login() {
 				var loginid = document.getElementById('loginid').value;
 				var loginpwd = document.getElementById('loginpwd').value;
 				var conf = {
-					url : '/login',
+					url : '/login2',
 					method : 'POST',
 					param : JSON.stringify({
-						stid : loginid,
-						stpwd : loginpwd
+						studentid : loginid,
+						studentpwd : loginpwd
 					}),
 					success : function(res) {
 						res = JSON.parse(res);
 						alert(res.msg);
 						if (res.login == 1) {
-							location = "/uri/sc/mainhome";
+							location = "/uri/main/main";
 						}
 					}
 				}
@@ -392,5 +400,3 @@
 			}
 		</script>
 	</div>
-</body>
-</html>
