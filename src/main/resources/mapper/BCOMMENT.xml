@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdi.sc.BCOMMENT">
+  <select id="selectBCommentList" resultType="bcomment">
+    select * from bcomment
+  </select>
+  
+   <select id="selectBComment" resultType="bcomment">
+    select * from bcomment
+    where bcommentnum=#{bcommentnum}
+  </select>
+  
+  <insert id="insertBComment" parameterType="bcomment">
+	insert into bcomment(bcommenttext,studentnum,boardnum)
+	values(#{bcommenttext},#{studentnum},#{boardnum})
+  </insert>
+  <update id="updateBComment" parameterType="bcomment">
+  	update bcomment
+  	set bcommenttext=#{bcommenttext}
+  	where bcommentnum =#{bcommentnum} and studentnum=#{studentnum} and boardnum=#{boardnum}
+  </update>
+  <delete id="deleteBComment" parameterType="bcomment">
+  	delete from bcomment
+  	where bcommentnum = #{bcommentnum}
+  </delete>
+  
+</mapper>

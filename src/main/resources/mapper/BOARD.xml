@@ -18,8 +18,8 @@
   </insert>
   <update id="updateBoard" parameterType="board">
   	update board
-  	set boardtitle=#{boardtitle},boardtext=#{boardtext},studentnum=#{studentnum}
-  	where boardnum =#{boardnum}
+  	set boardtitle=#{boardtitle},boardtext=#{boardtext}
+  	where boardnum =#{boardnum} and studentnum=#{studentnum}
   </update>
   <delete id="deleteBoard" parameterType="board">
   	delete from board
