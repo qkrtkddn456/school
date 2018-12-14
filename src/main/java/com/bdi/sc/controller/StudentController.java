@@ -45,7 +45,7 @@ public class StudentController {
 	public @ResponseBody int deleteST(@PathVariable int studentnum) {
 		return sts.deleteST(studentnum);
 	}
-	@PostMapping(value="/login2")
+	@PostMapping(value="/login")
 	public @ResponseBody Map<String, Object> login(@RequestBody StudentInfo student, HttpSession hSession) {
 		Map<String, Object> rMap = sts.login(student);
 		if("1".equals(rMap.get("login"))) {
@@ -54,7 +54,7 @@ public class StudentController {
 		}
 		return rMap;
 	}
-	@GetMapping(value="/logout2")
+	@GetMapping(value="/logout")
 	public String logout(HttpSession hSession) {
 		hSession.invalidate();
 		return "main/main";

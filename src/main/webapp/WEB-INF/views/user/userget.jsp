@@ -162,7 +162,7 @@
 									style="display: block;">
 									<div class="form-group">
 										<input type="text" name="id" id="id" tabindex="1"
-											class="form-control idck" placeholder="아이디" value="">
+											class="form-control idck" placeholder="아이디" value="${user.studentid }" readOnly>
 									</div>
 									<div class="form-group">
 										<input type="password" name="password" id="password"
@@ -175,19 +175,24 @@
 									</div>
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1"
-											class="form-control" placeholder="이름" value="">
+											class="form-control" placeholder="이름" value="${user.studentname }">
 									</div>
 									<div class="form-group">
 										<input type="number" name="age" id="age" tabindex="1"
-											class="form-control" placeholder="나이" value="">
+											class="form-control" placeholder="나이" value="${user.studentage }">
+									</div>
+									<div class="form-group">
+										<input type="text" name="email" id="email" tabindex="1"
+											class="form-control" placeholder="이메일" value="">
 									</div>
 									<div class="form-group">
 										<input type="text" name="school" id="school" tabindex="1"
-											class="form-control" placeholder="학교" value=""> <a
+											class="form-control" placeholder="학교" value="${user.schoolname }" readOnly> <a
 											class="btn btn-primarytwo btn-sm active" data-toggle="happy"
-											id="serch" onclick="schoolSerch()">학교검색</a> </span>
+											id="search" onclick="schoolSearch()" >학교검색</a>
 									</div>
-
+									<input type="hidden" name="sinum" id="sinum" value="${user.sinum }">
+									<input type="hidden" name="studentnum" id="studentnum" value="${user.studentnum }">
 
 									<div class="form-group">
 										<div class="input-group">
@@ -221,8 +226,8 @@
 		</div>
 
 		<script>
-			function schoolSerch() {
-				var url = "/uri/search/schoolSerch";
+			function schoolSearch() {
+				var url = "/uri/user/schoolsearch";
 				var Option = "width=850,height=700";
 				window.open(url, "_blank", Option, true);
 			}
@@ -272,58 +277,48 @@
 				gender = 1;
 			}
 
+			
 			function signup() {
-				var id = document.getElementById("id").value;
+				var studentnum = document.getElementById("studentnum").value;
+				var name = document.getElementById("username").value;
 				var pwd = document.getElementById("password").value;
 				var pwd2 = document.getElementById("confirm-password").value;
-				var name = document.getElementById("username").value;
-				var age = document.getElementById("age").value;
 				var school = document.getElementById("school").value;
-				var conf = {
-					url : '/sts',
-					method : 'POST',
-					param : JSON.stringify({
-						stname : name,
-						stage : age,
-						stschool : school,
-						stgen : gender,
-						stid : id,
-						stpwd : pwd
-					}),
-					success : function(res) {
-						res = JSON.parse(res);
-						if (res == 2) {
-							alert("아이디가 중복되었습니다");
-						} else if (res == 1) {
-							alert("회원가입이 완료되었습니다");
-							location.href = "/uri/sc/main";
-						} else {
-							alert("회원가입에 실패하였습니다");
+				var age = document.getElementById("age").value;
+				var email = document.getElementById("email").value;
+				var sinum = document.getElementById("sinum").value;
+				if(pwd == pwd2){
+					var conf = {	
+						url : '/student',
+						method : 'PUT',
+						param : JSON.stringify({
+							studentnum : studentnum,
+							studentname : name,
+							studentpwd : pwd,
+							schoolname : school,
+							studentage : age,
+							studentgender : gender,
+							studentemail : email,
+							sinum:sinum
+						}),
+						success : function(res) {
+							res = JSON.parse(res);
+							if (res == 2) {
+								alert("아이디가 중복되었습니다");
+							} else if (res == 1) {
+								alert("회원수정이 완료되었습니다");
+								location.href = "/uri/main/main";
+							} else {
+								alert("회원수정에 실패하였습니다");
+							}
 						}
 					}
+	
+					au.send(conf);
+				}else{
+					alert('비밀번호 확인이 다릅니다.');
 				}
 
-				au.send(conf);
-
-			}
-
-			function login() {
-				var loginid = document.getElementById('loginid').value;
-				var loginpwd = document.getElementById('loginpwd').value;
-				var conf = {
-					url : '/login',
-					method : 'POST',
-					param : JSON.stringify({
-						stid : loginid,
-						stpwd : loginpwd
-					}),
-					success : function(res) {
-						res = JSON.parse(res);
-						alert(res.msg);
-						location.href = "/uri/main/main"
-					}
-				}
-				au.send(conf);
 			}
 		</script>
 	</div>

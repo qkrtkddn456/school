@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import com.bdi.sc.dao.StudentDAO;
 import com.bdi.sc.service.StudentService;
-import com.bdi.sc.vo.STVO;
 import com.bdi.sc.vo.StudentInfo;
 
 @Service

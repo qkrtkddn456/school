@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.bdi.sc.dao.StudentDAO;
-import com.bdi.sc.vo.STVO;
 import com.bdi.sc.vo.StudentInfo;
 
 @Repository

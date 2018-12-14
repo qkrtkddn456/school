@@ -2,7 +2,7 @@ package com.bdi.sc.service.impl;
 
 import java.io.IOException;
 
-public class TEST {
+public class MealTest {
 
 	public static void main(String[] agrs) throws IOException {
 		

@@ -1,4 +1,4 @@
-package com.bdi.sc;
+/*package com.bdi.sc;
 
 import static org.junit.Assert.*;
 
@@ -32,3 +32,4 @@ public class DBConnectionTest {
 	}
 
 }
+*/

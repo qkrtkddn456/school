@@ -1,4 +1,4 @@
-package com.bdi.sc;
+/*package com.bdi.sc;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -43,3 +43,4 @@ public class MealTest2 {
 			System.out.println( "실행 시간 : " + ( end - start )/1000.0 +"초"); //실행 시간 계산 및 출력
 	}
 }
+*/

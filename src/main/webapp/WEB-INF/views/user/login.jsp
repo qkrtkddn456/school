@@ -252,7 +252,7 @@
 										<input type="text" name="school" id="school" tabindex="1"
 											class="form-control" placeholder="학교" value="" readOnly> <a
 											class="btn btn-primarytwo btn-sm active" data-toggle="happy"
-											id="serch" onclick="schoolSerch()">학교검색</a> 
+											id="search" onclick="schoolSearch()">학교검색</a> 
 									</div>
 									<input type="hidden" name="sinum" id="sinum">
 
@@ -287,7 +287,7 @@
 			</div>
 		</div>
 		<script>
-			 function schoolSerch() {
+			 function schoolSearch() {
 				var url = "/uri/user/schoolsearch";
 				var Option = "width=850,height=700";
 				window.open(url, "_blank", Option,true);
@@ -345,6 +345,7 @@
 				var age = document.getElementById("age").value;
 				var sinum = document.getElementById("sinum").value;
 				var email = document.getElementById("email").value;
+				var school = document.getElementById("school").value;
 				if(pwd == pwd2){
 					var conf = {
 						url : '/student',
@@ -356,7 +357,8 @@
 							studentgender : gender,
 							studentid : id,
 							studentpwd : pwd,
-							studentemail : email
+							studentemail : email,
+							schoolname:school
 						}),
 						success : function(res) {
 							res = JSON.parse(res);
@@ -382,7 +384,7 @@
 				var loginid = document.getElementById('loginid').value;
 				var loginpwd = document.getElementById('loginpwd').value;
 				var conf = {
-					url : '/login2',
+					url : '/login',
 					method : 'POST',
 					param : JSON.stringify({
 						studentid : loginid,

@@ -1,4 +1,4 @@
-package com.bdi.sc;
+/*package com.bdi.sc;
 
 import java.io.IOException;
 
@@ -19,3 +19,4 @@ public class JsupTest {
 	}
 	
 }
+*/

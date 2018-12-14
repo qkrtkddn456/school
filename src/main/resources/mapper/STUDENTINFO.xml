@@ -13,12 +13,12 @@
   </select>
   
   <insert id="insertStudent" parameterType="student">
-	insert into student_info(studentname,studentid,studentpwd,studentage,studentgender,studentemail,sinum)
-	values(#{studentname},#{studentid},#{studentpwd},#{studentage},#{studentgender},#{studentemail},#{sinum})
+	insert into student_info(studentname,studentid,studentpwd,studentage,studentgender,studentemail,sinum,schoolname)
+	values(#{studentname},#{studentid},#{studentpwd},#{studentage},#{studentgender},#{studentemail},#{sinum},#{schoolname})
   </insert>
   <update id="updateStudent" parameterType="student">
   	update student_info
-  	set studentname=#{studentname},studentpwd=#{studentpwd},studentage=#{studentage},studentgender=#{studentgender},studentemail=#{studentemail},sinum=#{sinum}
+  	set studentname=#{studentname},studentpwd=#{studentpwd},studentage=#{studentage},studentgender=#{studentgender},studentemail=#{studentemail},sinum=#{sinum},schoolname=#{schoolname}
   	where studentnum =#{studentnum}
   </update>
   <delete id="deleteStudent" parameterType="student">
