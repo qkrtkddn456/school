@@ -201,9 +201,14 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 }
 
 th {
-	text-align: center;
+    text-align: center;
+    border-left: #d7d7d7 1px solid;
+    border-bottom: #d7d7d7 1px solid;
+    
 }
-
+.table_style01 .first {
+    border-left: 0;
+}
 .page {
 	text-align: center;
 	margin-top: 680px;
@@ -501,5 +506,5 @@ margin-top: -50px;
 				alt="마지막으로"></a></span>
 	</div>
 	<p class="mTm txtR">
-		<a href="" class="table_btn01">게시판 등록</a>
+		<a href="" class="table_btn01">등록</a>
 	</p>
