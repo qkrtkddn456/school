@@ -188,9 +188,10 @@ a {
 
 
 .table thead tr {
-	color: #FFFFFF;
-	background-color: #4AA9C8;
+	color: #000000;
 	border: 2px solid #ddd;
+	border-left: 0;
+	border-right: 0;
 }
 
 .table thead tr th {
@@ -216,7 +217,12 @@ a {
 	border-top: 0;
 	text-align: center;
 }
-
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 0;
+}
+.table-bordered{
+border: 0px solid #ddd;
+}
 .Contents {
 	margin-left: 35%;
 }
