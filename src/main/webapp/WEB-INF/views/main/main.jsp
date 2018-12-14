@@ -273,5 +273,3 @@ html {
 		};
 		var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
 	</script>
-</body>
-</html>

@@ -95,8 +95,6 @@
 	</p>
 	<script>
 		function gonoticelist() {
-			location = "/uri/sc/noticelist";
+			location = "/uri/board/noticelist";
 		}
 	</script>
-</body>
-</html>

@@ -503,5 +503,3 @@ margin-top: -50px;
 	<p class="mTm txtR">
 		<a href="" class="table_btn01">게시판 등록</a>
 	</p>
-</body>
-</html>

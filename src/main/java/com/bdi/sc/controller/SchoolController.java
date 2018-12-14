@@ -22,19 +22,20 @@ public class SchoolController {
 	public String goScList(@PathVariable String school_name, Model model){
 		model.addAttribute("scList",sis.selectSchoolList(school_name));
 		model.addAttribute("search",school_name);
-		return "sc/list";
+		return "school/schoolinfolist";
 	}
 	
 	@GetMapping("/school/{sinum}")
 	public String selectSchool(@PathVariable Integer sinum, Model model) {
 		model.addAttribute("school",sis.selectSchool(sinum));
-		return "sc/comment";
+		return "school/schoolinfo";
 	}
 	@GetMapping("/schoolad/{school_name}")
 	public String goScAddress(@PathVariable String school_name, Model model){
 		model.addAttribute("scList",sis.selectSchoolAddress(school_name));
 		model.addAttribute("search",school_name);
-		return "sc/schoolSerch";
+
+		return "/user/schoolsearch";
 	}
 	
 	
