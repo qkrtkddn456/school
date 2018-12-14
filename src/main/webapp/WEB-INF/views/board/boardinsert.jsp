@@ -244,6 +244,3 @@ a:hover {
 		<a class="table_btn04"
 			onclick="gofreeList()">목록</a>
 	</p>
-
-</body>
-</html>
