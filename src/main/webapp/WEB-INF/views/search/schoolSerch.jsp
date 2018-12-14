@@ -38,10 +38,6 @@
 width: 600px;
 }
 
-.stylish-input-group button {
-	border: 0;
-	background: transparent;
-}
 
 .glyphicon-search:before {
 	content: "\e003";
@@ -67,11 +63,6 @@ width: 600px;
 	border: 3px solid #D8D8D8;
 	padding: 10px 10px 10px 10px;
 	border: 3px solid #D8D8D8;
-}
-
-#address {
-	margin-left: 50px;
-	width: 450px;
 }
 
 #serchResult {

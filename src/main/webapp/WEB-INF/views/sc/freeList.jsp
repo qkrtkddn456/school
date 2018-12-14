@@ -201,7 +201,9 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 }
 
 th {
-	text-align: center;
+    text-align: center;
+    border-bottom: #d7d7d7 1px solid;
+    border-left: #d7d7d7 1px solid;
 }
 
 .page {
@@ -270,11 +272,19 @@ th {
 	background: skyblue;
 	display: inline-block;
 	font-family: "Nanum Gothic";
+	margin-right: -167px;
 }
 .container-fluid{
 margin-top: -50px;
 }
-
+a:hover {
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+.table_style01 .first {
+    border-left: 0;
+}
 </style>
 </head>
 <body>
@@ -501,7 +511,12 @@ margin-top: -50px;
 				alt="마지막으로"></a></span>
 	</div>
 	<p class="mTm txtR">
-		<a href="" class="table_btn01">게시판 등록</a>
+		<a class="table_btn01" onclick="goBoard()">등록</a>
 	</p>
+	<script>
+	function goBoard() {
+		location = "/uri/sc/board";
+	}
+	</script>
 </body>
 </html>
