@@ -124,10 +124,11 @@
 	background-color: #b0c4de;
 	border-color: #b0c4de;
 }
-.btn-primarytwo{
+
+.btn-primarytwo {
 	color: #fff;
-    background-color: skyblue;
-    border-color: skyblue;
+	background-color: skyblue;
+	border-color: skyblue;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active,
@@ -162,7 +163,8 @@
 									style="display: block;">
 									<div class="form-group">
 										<input type="text" name="id" id="id" tabindex="1"
-											class="form-control idck" placeholder="아이디" value="${user.studentid }" readOnly>
+											class="form-control idck" placeholder="아이디"
+											value="${user.studentid }" readOnly>
 									</div>
 									<div class="form-group">
 										<input type="password" name="password" id="password"
@@ -175,11 +177,13 @@
 									</div>
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1"
-											class="form-control" placeholder="이름" value="${user.studentname }">
+											class="form-control" placeholder="이름"
+											value="${user.studentname }">
 									</div>
 									<div class="form-group">
 										<input type="number" name="age" id="age" tabindex="1"
-											class="form-control" placeholder="나이" value="${user.studentage }">
+											class="form-control" placeholder="나이"
+											value="${user.studentage }">
 									</div>
 									<div class="form-group">
 										<input type="text" name="email" id="email" tabindex="1"
@@ -187,12 +191,14 @@
 									</div>
 									<div class="form-group">
 										<input type="text" name="school" id="school" tabindex="1"
-											class="form-control" placeholder="학교" value="${user.schoolname }" readOnly> <a
+											class="form-control" placeholder="학교"
+											value="${user.schoolname }" readOnly> <a
 											class="btn btn-primarytwo btn-sm active" data-toggle="happy"
-											id="search" onclick="schoolSearch()" >학교검색</a>
+											id="search" onclick="schoolSearch()">학교검색</a>
 									</div>
-									<input type="hidden" name="sinum" id="sinum" value="${user.sinum }">
-									<input type="hidden" name="studentnum" id="studentnum" value="${user.studentnum }">
+									<input type="hidden" name="sinum" id="sinum"
+										value="${user.sinum }"> <input type="hidden"
+										name="studentnum" id="studentnum" value="${user.studentnum }">
 
 									<div class="form-group">
 										<div class="input-group">
@@ -277,7 +283,6 @@
 				gender = 1;
 			}
 
-			
 			function signup() {
 				var studentnum = document.getElementById("studentnum").value;
 				var name = document.getElementById("username").value;
@@ -287,8 +292,16 @@
 				var age = document.getElementById("age").value;
 				var email = document.getElementById("email").value;
 				var sinum = document.getElementById("sinum").value;
-				if(pwd == pwd2){
-					var conf = {	
+				if (pwd.length < 6) {
+					alert("비밀번호는 6글자 이상입니다.")
+				} else if (!name) {
+					alert("이름을 입력해주세요.")
+				} else if (!age) {
+					alert("나이를 입력해주세요.")
+				} else if (!email) {
+					alert("이메일을 입력해주세요.")
+				} else if (pwd == pwd2) {
+					var conf = {
 						url : '/student',
 						method : 'PUT',
 						param : JSON.stringify({
@@ -299,7 +312,7 @@
 							studentage : age,
 							studentgender : gender,
 							studentemail : email,
-							sinum:sinum
+							sinum : sinum
 						}),
 						success : function(res) {
 							res = JSON.parse(res);
@@ -313,9 +326,9 @@
 							}
 						}
 					}
-	
+
 					au.send(conf);
-				}else{
+				} else {
 					alert('비밀번호 확인이 다릅니다.');
 				}
 
