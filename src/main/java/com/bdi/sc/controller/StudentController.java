@@ -59,4 +59,9 @@ public class StudentController {
 		hSession.invalidate();
 		return "main/main";
 	}
+	@GetMapping(value="/sesupdate/{studentnum}")
+	public String sessionUpdate(@PathVariable int studentnum, HttpSession hSession) {
+		hSession.setAttribute("user", sts.selectST(studentnum));
+		return "/main/main";
+	}
 }

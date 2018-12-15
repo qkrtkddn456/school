@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<title>학교 정보 통합 알리미</title>
+<title>학교 정보 통합 알리미</title>
 <style>
 .row2 {
 	margin-top: -15px
@@ -11,7 +11,6 @@
 	color: #888;
 	font-size: 14px;
 }
-
 
 #register-form {
 	height: 448px;
@@ -122,7 +121,8 @@
 	border-color: skyblue;
 }
 
-.btn-register:hover, .btn-register:focus, .btn-primary.active:hover, .btn-primary.active:focus {
+.btn-register:hover, .btn-register:focus, .btn-primary.active:hover,
+	.btn-primary.active:focus {
 	color: #fff;
 	background-color: #53A3CD;
 	border-color: #53A3CD;
@@ -145,10 +145,11 @@
 	background-color: #b0c4de;
 	border-color: #b0c4de;
 }
-.btn-primarytwo{
+
+.btn-primarytwo {
 	color: #fff;
-    background-color: skyblue;
-    border-color: skyblue;
+	background-color: skyblue;
+	border-color: skyblue;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active,
@@ -159,16 +160,17 @@
 }
 
 .panel-login>.panel-heading a.active {
-    color: skyblue;
-    font-size: 18px;
+	color: skyblue;
+	font-size: 18px;
 }
+
 #school {
 	margin-bottom: 15px;
 }
 </style>
 </head>
 <body>
-	
+
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
@@ -199,8 +201,8 @@
 									</div>
 									<div class="form-group text-center">
 										<input type="checkbox" tabindex="3" class="" name="remember"
-											id="remember"> <label for="remember"> 아이디 저장
-										</label>
+											id="remember"> <label for="remember">
+											아이디 저장 </label>
 									</div>
 									<div class="row">
 										<div class="col-sm-6 col-sm-offset-3">
@@ -250,9 +252,9 @@
 									</div>
 									<div class="form-group">
 										<input type="text" name="school" id="school" tabindex="1"
-											class="form-control" placeholder="학교" value="" readOnly> <a
-											class="btn btn-primarytwo btn-sm active" data-toggle="happy"
-											id="search" onclick="schoolSearch()">학교검색</a> 
+											class="form-control" placeholder="학교" value="" readOnly>
+										<a class="btn btn-primarytwo btn-sm active"
+											data-toggle="happy" id="search" onclick="schoolSearch()">학교검색</a>
 									</div>
 									<input type="hidden" name="sinum" id="sinum">
 
@@ -346,7 +348,21 @@
 				var sinum = document.getElementById("sinum").value;
 				var email = document.getElementById("email").value;
 				var school = document.getElementById("school").value;
-				if(pwd == pwd2){
+				var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+				
+				if(id.length<6) {
+					alert("아디디는 6글자 이상입니다.")
+				}else if(pwd.length<6) {
+					alert("비밀번호는 6글자 이상입니다.")
+				}else if(!name) {
+					alert("이름을 입력해주세요.")
+				}else if(!age) {
+					alert("나이를 입력해주세요.")
+				}else if(!email) {
+					alert("이메일을 입력해주세요.")
+				}else if(filter.test(email)==false) {
+					alert("올바른 이메일 형식이 아닙니다.")
+				}else if(pwd == pwd2){
 					var conf = {
 						url : '/student',
 						method : 'POST',
@@ -362,12 +378,11 @@
 						}),
 						success : function(res) {
 							res = JSON.parse(res);
-							location.href = "/uri/main/main";
 							if (res == 2) {
 								alert("아이디가 중복되었습니다");
 							} else if (res == 1) {
 								alert("회원가입이 완료되었습니다");
-								location.href = "/";
+								location.href = "/uri/main/main";
 							} else {
 								alert("회원가입에 실패하였습니다");
 							}
@@ -378,6 +393,8 @@
 				}else{
 					alert('비밀번호 확인이 다릅니다.');
 				}
+				
+				
 			}
 
 			function login() {
