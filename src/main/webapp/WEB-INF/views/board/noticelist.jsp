@@ -2,7 +2,6 @@
 	pageEncoding="UTF-8"%>
 <title>학교 정보 통합 알리미</title>
 <style>
-
 .ContentTitle {
 	border-bottom: 1px solid #CCC;
 	color: black;
@@ -18,7 +17,6 @@
 	line-height: 1.0;
 }
 
-
 .col-md-3 {
 	margin: 20px 0 0 1070px;
 	width: 400px;
@@ -30,6 +28,43 @@
 
 .table {
 	width: 900px;
+}
+.page{
+margin-top: 650px;
+margin-left: 750px;
+}
+.page span {
+    display: inline-block;
+    text-align: center
+}
+.page span a:hover, .page span a.on {
+    background: skyblue;
+    color: #ffffff;
+    border: 1px solid #17a19c;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.page span a {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #d9d9d9;
+    margin: 0 1.5px 3px 1.5px;
+    color: #767676;
+}
+
+.insertButton {
+	margin-top: 700px;
+	margin-left: 1500px;
+}
+#insert-button{
+margin-left: 30px;
+background-color: skyblue;
+color: #ffffff;
+border-color: skyblue;
 }
 </style>
 </head>
@@ -71,10 +106,24 @@
 					</tbody>
 				</table>
 			</div>
+			<div class="page">
+				<span><a href="" class="img"><img
+						src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_07.gif"
+						alt="처음으로"></a><a href="" class="img lfs2"><img
+						src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_09.gif"
+						alt="이전으로"></a><a href="#" class="on">1</a><a href="">2</a><a
+					href="">3</a><a href="">4</a><a href="=">5</a><a href="=">6</a><a
+					href="">7</a><a href="">8</a><a href="">9</a><a href="">10</a><a
+					href="" class="img rts2"><img
+						src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_11.gif"
+						alt="다음으로"></a><a href="" class="img"><img
+						src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_13.gif"
+						alt="마지막으로"></a></span>
+				<button id="insert-button" onclick="gonoticeinsert()">등록</button>
+			</div>
 		</div>
 	</div>
 	<script>
-		
 		$(document)
 				.ready(
 						function() {
