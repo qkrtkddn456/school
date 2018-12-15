@@ -782,7 +782,7 @@ a {
 	background-position: 0 bottom;
 }
 
-.star-input>.input>label:hover ~label{
+.star-input>.input>label:hover ~label {
 	background-image: none;
 }
 
@@ -845,6 +845,9 @@ a {
 .star-input>output>b {
 	font: bold 18px Helvetica, Arial, sans-serif;
 	vertical-align: middle;
+}
+.add-comment-text-btn{
+margin-left: 20px;
 }
 </style>
 <script>
@@ -1024,28 +1027,6 @@ a {
 						<div class="clear-rating clear-rating-active" title="Clear">
 							<span class="krajee-icon-clear"></span>
 						</div>
-						<div class="rating-stars" title="Two Stars">
-							<span class="star-input"> <span class="input"> <input
-									type="radio" name="star-input" id="p1" value="1"><label
-									for="p1">1</label> <input type="radio" name="star-input"
-									id="p2" value="2"><label for="p2">2</label> <input
-									type="radio" name="star-input" id="p3" value="3"><label
-									for="p3">3</label> <input type="radio" name="star-input"
-									id="p4" value="4"><label for="p4">4</label> <input
-									type="radio" name="star-input" id="p5" value="5"><label
-									for="p5">5</label> <input type="radio" name="star-input"
-									id="p6" value="6"><label for="p6">6</label> <input
-									type="radio" name="star-input" id="p7" value="7"><label
-									for="p7">7</label> <input type="radio" name="star-input"
-									id="p8" value="8"><label for="p8">8</label> <input
-									type="radio" name="star-input" id="p9" value="9"><label
-									for="p9">9</label> <input type="radio" name="star-input"
-									id="p10" value="10"><label for="p10">10</label>
-							</span> <output for="star-input">
-									<b>0</b>점
-								</output>
-							</span>
-						</div>
 					</div>
 					<div
 						class="rating-container theme-krajee-svg rating-sm rating-animate">
@@ -1061,6 +1042,27 @@ a {
 			</div>
 			<div class="add-comment">
 				<div class="box">
+					<div class="rating-stars" title="Two Stars">
+						<span class="star-input"> <span class="input"> <input
+								type="radio" name="star-input" id="p1" value="1"><label
+								for="p1">1</label> <input type="radio" name="star-input" id="p2"
+								value="2"><label for="p2">2</label> <input type="radio"
+								name="star-input" id="p3" value="3"><label for="p3">3</label>
+								<input type="radio" name="star-input" id="p4" value="4"><label
+								for="p4">4</label> <input type="radio" name="star-input" id="p5"
+								value="5"><label for="p5">5</label> <input type="radio"
+								name="star-input" id="p6" value="6"><label for="p6">6</label>
+								<input type="radio" name="star-input" id="p7" value="7"><label
+								for="p7">7</label> <input type="radio" name="star-input" id="p8"
+								value="8"><label for="p8">8</label> <input type="radio"
+								name="star-input" id="p9" value="9"><label for="p9">9</label>
+								<input type="radio" name="star-input" id="p10" value="10"><label
+								for="p10">10</label>
+						</span> <output for="star-input">
+								<b>0</b>점
+							</output>
+						</span>
+					</div>
 					<div class="add-comment-img">
 						<img src="https://t1.daumcdn.net/cfile/tistory/99EA8C3359DC92641A">
 					</div>
@@ -1070,8 +1072,8 @@ a {
 					<div style="clear: both;"></div>
 				</div>
 				<div class="add-comment-text-btn">
-					<button class="post-comment-btn">Post Comment</button>
-					<button class="cancel-btn">Cancel</button>
+					<button class="post-comment-btn">댓글달기</button>
+					<button class="cancel-btn">취소</button>
 				</div>
 			</div>
 		</div>
