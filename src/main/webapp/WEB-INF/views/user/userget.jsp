@@ -12,7 +12,7 @@
 	-moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
 	box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
 	width: 555px;
-	height: 548px;
+	height: 630px;
 	margin: 30px 0 0 180px;
 }
 

@@ -191,15 +191,18 @@
 									style="display: block;">
 									<div class="form-group">
 										<input type="text" name="loginid" id="loginid" tabindex="1"
-											class="form-control" placeholder="아이디" value="">
+											class="form-control" placeholder="아이디" value=""
+											onkeypress="if( event.keyCode==13 ){login();}">
 									</div>
 									<div class="form-group">
 										<input type="password" name="loginpwd" id="loginpwd"
-											tabindex="2" class="form-control" placeholder="비밀번호">
+											tabindex="2" class="form-control" placeholder="비밀번호"
+											onkeypress="if( event.keyCode==13 ){login();}">
 									</div>
 									<div class="form-group text-center">
 										<input type="checkbox" tabindex="3" class="" name="remember"
-											id="remember"> <label for="remember"> 아이디 저장
+											id="remember"> <label for="remember"
+											> 아이디 저장
 										</label>
 									</div>
 									<div class="row">
@@ -225,7 +228,8 @@
 									role="form" style="display: none;">
 									<div class="form-group">
 										<input type="text" name="id" id="id" tabindex="1"
-											class="form-control idck" placeholder="아이디" value="">
+											class="form-control idck" placeholder="아이디" value=""
+											onkeypress="if( event.keyCode==13 ){login();}">
 									</div>
 									<div class="form-group">
 										<input type="password" name="password" id="password"
