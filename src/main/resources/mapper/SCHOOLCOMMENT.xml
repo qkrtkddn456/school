@@ -13,12 +13,12 @@
   </select>
   
   <insert id="insertSchoolComment" parameterType="schoolcomment">
-	insert into schoolcomment(schoolcommenttext,schoolcommentgrade,sinum,studentnum)
-	values(#{schoolcommenttext},#{schoolcommentgrade},#{sinum},#{studentnum})
+	insert into schoolcomment(schoolcommenttext,schoolcommentgrade,sinum,studentnum,credate)
+	values(#{schoolcommenttext},#{schoolcommentgrade},#{sinum},#{studentnum},now())
   </insert>
   <update id="updateSchoolComment" parameterType="schoolcomment">
   	update schoolcomment
-  	set schoolcommenttext=#{schoolcommenttext},schoolcommentgrade=#{schoolcommentgrade}
+  	set schoolcommenttext=#{schoolcommenttext},schoolcommentgrade=#{schoolcommentgrade},moddate=now()
   	where schoolcommentnum =#{schoolcommentnum} and studentnum=#{studentnum} and sinum=#{sinum}
   </update>
   <delete id="deleteSchoolComment" parameterType="schoolcomment">

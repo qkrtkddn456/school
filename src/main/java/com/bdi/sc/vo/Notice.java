@@ -13,4 +13,6 @@ public class Notice {
 	private String noticetext;
 	private Integer noticeviews;
 	private Integer studentnum;
+	private String credate;
+	private String moddate;
 }

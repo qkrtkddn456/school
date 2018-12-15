@@ -13,12 +13,12 @@
   </select>
   
   <insert id="insertBComment" parameterType="bcomment">
-	insert into bcomment(bcommenttext,studentnum,boardnum)
-	values(#{bcommenttext},#{studentnum},#{boardnum})
+	insert into bcomment(bcommenttext,studentnum,boardnum,credate)
+	values(#{bcommenttext},#{studentnum},#{boardnum},now())
   </insert>
   <update id="updateBComment" parameterType="bcomment">
   	update bcomment
-  	set bcommenttext=#{bcommenttext}
+  	set bcommenttext=#{bcommenttext},moddate = now()
   	where bcommentnum =#{bcommentnum} and studentnum=#{studentnum} and boardnum=#{boardnum}
   </update>
   <delete id="deleteBComment" parameterType="bcomment">

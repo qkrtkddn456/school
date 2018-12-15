@@ -13,12 +13,12 @@
   </select>
   
   <insert id="insertNotice" parameterType="notice">
-	insert into notice(noticetitle,noticetext,studentnum)
-	values(#{noticetitle},#{noticetext},#{studentnum})
+	insert into notice(noticetitle,noticetext,studentnum,credate)
+	values(#{noticetitle},#{noticetext},#{studentnum},now())
   </insert>
   <update id="updateNotice" parameterType="notice">
   	update notice
-  	set noticetitle=#{noticetitle}, noticetext=#{noticetext}
+  	set noticetitle=#{noticetitle}, noticetext=#{noticetext}, moddate = now()
   	where noticenum = #{noticenum} and studentnum = #{studentnum}
   </update>
   <delete id="deleteNotice" parameterType="notice">
