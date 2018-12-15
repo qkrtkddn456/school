@@ -13,12 +13,12 @@
   </select>
   
   <insert id="insertBoard" parameterType="board">
-	insert into board(boardtitle,boardtext,studentnum)
-	values(#{boardtitle},#{boardtext},#{studentnum})
+	insert into board(boardtitle,boardtext,studentnum,credate)
+	values(#{boardtitle},#{boardtext},#{studentnum},now())
   </insert>
   <update id="updateBoard" parameterType="board">
   	update board
-  	set boardtitle=#{boardtitle},boardtext=#{boardtext}
+  	set boardtitle=#{boardtitle},boardtext=#{boardtext},moddate = now()
   	where boardnum =#{boardnum} and studentnum=#{studentnum}
   </update>
   <delete id="deleteBoard" parameterType="board">

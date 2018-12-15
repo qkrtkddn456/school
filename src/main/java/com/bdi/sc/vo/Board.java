@@ -12,4 +12,6 @@ public class Board {
 	private String boardtext;
 	private Integer boardviews;
 	private Integer studentnum;
+	private String credate;
+	private String moddate;
 }

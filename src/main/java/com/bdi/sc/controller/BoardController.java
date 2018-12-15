@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,12 +24,15 @@ public class BoardController {
 	BoardService bs;
 	
 	@GetMapping(value="/board")
-	public @ResponseBody List<Board> selectPIList(Board board) {
-		return bs.selectBoardList(board);
+	public String selectPIList(Board board,Model model) {
+		model.addAttribute("boardlist",bs.selectBoardList(board));
+		return "board/freeboardlist";
 	}
 	@GetMapping(value="/board/{boardnum}")
-	public @ResponseBody Board selectPI(@PathVariable Integer boardnum) {
-		return bs.selectBoard(boardnum);
+	public String selectPI(@PathVariable Integer boardnum, Model model) {
+		model.addAttribute("board",bs.selectBoard(boardnum));
+		model.addAttribute("student",bs.selectStudentName(bs.selectBoard(boardnum).getStudentnum()));
+		return "board/freeboard";
 	}
 	
 	@PostMapping(value="/board")
@@ -42,7 +46,7 @@ public class BoardController {
 	}
 	
 	@DeleteMapping(value="/board/{boardnum}")
-	public @ResponseBody int deletePI(@PathVariable Integer boardnum) {
-		return bs.deleteBoard(boardnum);
+	public @ResponseBody int deletePI(@PathVariable Integer boardnum,@PathVariable Integer studentnum) {
+		return bs.deleteBoard(boardnum,studentnum);
 	}
 }
