@@ -33,8 +33,8 @@ input {
 }
 
 .table_style01 {
-	border-top: skyblue 2px solid;
-	border-bottom: skyblue 1px solid;
+	border-top: #ddd 2px solid;
+	border-bottom: #ddd 1px solid;
 	font-family: "Nanum Gothic";
 }
 
@@ -65,7 +65,7 @@ input {
 	padding: 14px 0 13px 0;
 	color: #333333;
 	font-size: 14px;
-	background: #F0FFFF;
+	background: #EDEBEB;
 }
 
 .table_style01 td {
@@ -111,7 +111,7 @@ textarea {
 }
 
 .btnSearch01 {
-	background: #00559E !important;
+	background: dimgrey !important;
 	color: #fff !important;
 	font-weight: bold;
 	vertical-align: middle;
@@ -128,15 +128,15 @@ textarea {
 }
 
 .table_btn04 {
-	width: 89px;
-	height: 36px;
-	line-height: 36px;
-	text-align: center;
-	color: #ffffff;
-	font-size: 16px;
-	background: skyblue;
-	display: inline-block;
-	margin-right: 472px;
+    width: 89px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: dimgray;
+    font-size: 16px;
+    background: #EDEBEB;
+    display: inline-block;
+    margin-right: 488px;
 }
 
 .clear {
@@ -181,13 +181,6 @@ textarea {
 	line-height: 20px;
 }
 
-#text {
-	width: 934px;
-	margin-left: 497px;
-	margin-top: 30px;
-	font-family: "Nanum Gothic";
-}
-
 a:hover {
 	text-decoration: none;
 	color: white;
@@ -196,20 +189,6 @@ a:hover {
 </style>
 </head>
 <body>
-	<div id=text>
-		<div class="clear"></div>
-		<!--내용-->
-		<h3 class="sub_title mBl">자유게시판</h3>
-		<p class="sub_p01 style02">
-			<span><span class="col1">학생여러분의 의견</span>을 자유롭게 게시할 수 있는 곳입니다.</span>학생여러분의
-			의견을 자유롭게 표현하는 공간입니다. 다만, 게시판의 품위를 유지하기 위해 다음의 글들은 삭제할 수 있으며, 타인의
-			명예훼손, 법령위반 등은 처벌될 수 있습니다.
-		</p>
-		<p class="sub03_5_p01">
-			도배글, 상업적 광고물, 음란성 글, 욕설, 지나친 인신공격성 글, 지역감정을 조장하는 글 등 게시판의 품위를 손상하는 글<br>※
-			주민번호, 핸드폰번호, 이메일 등 개인정보가 포함된 내용의 글은 등록을 삼가 주세요.
-		</p>
-	</div>
 	<div class="sub5_2_1_3_div02 mTs">
 		* 표시는 반드시 입력해 주시기 바랍니다. <input type="hidden" name="board.regId"
 			value="13534"> <input type="hidden" name="board.regNm"
@@ -220,10 +199,6 @@ a:hover {
 				<col width="*">
 			</colgroup>
 			<tbody>
-				<tr>
-					<th scope="row" class="first">작성자</th>
-					<td class="txtL c_blue">이름</td>
-				</tr>
 				<tr>
 					<th scope="row" class="first"><label for="subject">*제목</label></th>
 					<td class="txtL"><input type="text" id="subject"
