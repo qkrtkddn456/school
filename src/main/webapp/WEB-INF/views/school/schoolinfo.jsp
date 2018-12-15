@@ -846,8 +846,9 @@ a {
 	font: bold 18px Helvetica, Arial, sans-serif;
 	vertical-align: middle;
 }
-.add-comment-text-btn{
-margin-left: 20px;
+
+.add-comment-text-btn {
+	margin-left: 20px;
 }
 </style>
 <script>

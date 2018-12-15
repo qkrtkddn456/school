@@ -290,7 +290,7 @@
 		</div>
 		<script>
 			 function schoolSearch() {
-				var url = "/uri/user/schoolsearch";
+				var url = "${resPath}/schoolsearch.html";
 				var Option = "width=850,height=700";
 				window.open(url, "_blank", Option,true);
 			} 

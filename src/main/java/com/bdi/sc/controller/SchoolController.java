@@ -1,6 +1,8 @@
 package com.bdi.sc.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,11 +33,13 @@ public class SchoolController {
 		return "school/schoolinfo";
 	}
 	@GetMapping("/schoolad/{school_name}")
-	public String goScAddress(@PathVariable String school_name, Model model){
-		model.addAttribute("scList",sis.selectSchoolAddress(school_name));
-		model.addAttribute("search",school_name);
-
-		return "/user/schoolsearch";
+	public @ResponseBody Map<String,List<SchoolInfo>> goScAddress(@PathVariable String school_name, Model model){
+//		model.addAttribute("scList",sis.selectSchoolAddress(school_name));
+//		model.addAttribute("search",school_name);
+		Map<String,List<SchoolInfo>> map = new HashMap<String,List<SchoolInfo>>();
+		map.put("scList", sis.selectSchoolAddress(school_name));
+		
+		return map;
 	}
 	
 	
