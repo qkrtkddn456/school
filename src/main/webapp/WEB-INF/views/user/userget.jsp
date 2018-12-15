@@ -203,14 +203,12 @@
 									<div class="form-group">
 										<div class="input-group">
 											<div id="radioBtn" class="btn-group">
-												<a class="btn btn-primary btn-sm active" data-toggle="happy"
+												<a class="btn btn-primary btn-sm active"  data-toggle="happy"
 													data-title="Y" id="gender" onclick="male()">남</a> <a
 													class="btn btn-primary btn-sm notActive"
 													data-toggle="happy" data-title="N" id="gender"
 													onclick="female()">여</a>
 											</div>
-											<input type="hidden" name="happy" id="happy">
-
 										</div>
 									</div>
 
@@ -274,13 +272,14 @@
 					})
 
 			var gender = 0;
-
+			
 			function male() {
 				gender = 0;
 			}
 
 			function female() {
 				gender = 1;
+				
 			}
 
 			function signup() {
@@ -304,6 +303,8 @@
 					alert("이메일을 입력해주세요.")
 				} else if(filter.test(email)==false) {
 					alert("올바른 이메일 형식이 아닙니다.")
+				} else if(age < 0) {
+					alert("나이는 0세 이상입니다.")
 				} else if (pwd == pwd2) {
 					var conf = {
 						url : '/student',

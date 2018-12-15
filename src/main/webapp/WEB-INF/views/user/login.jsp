@@ -200,9 +200,7 @@
 											tabindex="2" class="form-control" placeholder="비밀번호">
 									</div>
 									<div class="form-group text-center">
-										<input type="checkbox" tabindex="3" class="" name="remember"
-											id="remember"> <label for="remember">
-											아이디 저장 </label>
+										<input type="checkbox" id="idSaveCheck">아이디 저장
 									</div>
 									<div class="row">
 										<div class="col-sm-6 col-sm-offset-3">
@@ -289,11 +287,69 @@
 			</div>
 		</div>
 		<script>
-			 function schoolSearch() {
+			/*아이디 저장*/
+			$(document).ready(function() {
+
+				// 저장된 쿠키값을 가져와서 ID 칸에 넣어준다. 없으면 공백으로 들어감.
+				var key = getCookie("key");
+				$("#loginid").val(key);
+
+				if ($("#loginid").val() != "") { // 그 전에 ID를 저장해서 처음 페이지 로딩 시, 입력 칸에 저장된 ID가 표시된 상태라면,
+					$("#idSaveCheck").attr("checked", true); // ID 저장하기를 체크 상태로 두기.
+				}
+
+				$("#idSaveCheck").change(function() { // 체크박스에 변화가 있다면,
+					if ($("#idSaveCheck").is(":checked")) { // ID 저장하기 체크했을 때,
+						setCookie("key", $("#loginid").val(), 7); // 7일 동안 쿠키 보관
+					} else { // ID 저장하기 체크 해제 시,
+						deleteCookie("key");
+					}
+				});
+
+				// ID 저장하기를 체크한 상태에서 ID를 입력하는 경우, 이럴 때도 쿠키 저장.
+				$("#loginid").keyup(function() { // ID 입력 칸에 ID를 입력할 때,
+					if ($("#idSaveCheck").is(":checked")) { // ID 저장하기를 체크한 상태라면,
+						setCookie("key", $("#loginid").val(), 7); // 7일 동안 쿠키 보관
+					}
+				});
+			});
+
+			function setCookie(cookieName, value, exdays) {
+				var exdate = new Date();
+				exdate.setDate(exdate.getDate() + exdays);
+				var cookieValue = escape(value)
+						+ ((exdays == null) ? "" : "; expires="
+								+ exdate.toGMTString());
+				document.cookie = cookieName + "=" + cookieValue;
+			}
+
+			function deleteCookie(cookieName) {
+				var expireDate = new Date();
+				expireDate.setDate(expireDate.getDate() - 1);
+				document.cookie = cookieName + "= " + "; expires="
+						+ expireDate.toGMTString();
+			}
+
+			function getCookie(cookieName) {
+				cookieName = cookieName + '=';
+				var cookieData = document.cookie;
+				var start = cookieData.indexOf(cookieName);
+				var cookieValue = '';
+				if (start != -1) {
+					start += cookieName.length;
+					var end = cookieData.indexOf(';', start);
+					if (end == -1)
+						end = cookieData.length;
+					cookieValue = cookieData.substring(start, end);
+				}
+				return unescape(cookieValue);
+			}
+
+			function schoolSearch() {
 				var url = "/uri/user/schoolsearch";
 				var Option = "width=850,height=700";
-				window.open(url, "_blank", Option,true);
-			} 
+				window.open(url, "_blank", Option, true);
+			}
 			$(function() {
 
 				$('#login-form-link').click(function(e) {
@@ -349,20 +405,22 @@
 				var email = document.getElementById("email").value;
 				var school = document.getElementById("school").value;
 				var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-				
-				if(id.length<6) {
+
+				if (id.length < 6) {
 					alert("아디디는 6글자 이상입니다.")
-				}else if(pwd.length<6) {
+				} else if (pwd.length < 6) {
 					alert("비밀번호는 6글자 이상입니다.")
-				}else if(!name) {
+				} else if (!name) {
 					alert("이름을 입력해주세요.")
-				}else if(!age) {
+				} else if (!age) {
 					alert("나이를 입력해주세요.")
-				}else if(!email) {
+				} else if (!email) {
 					alert("이메일을 입력해주세요.")
-				}else if(filter.test(email)==false) {
+				} else if (filter.test(email) == false) {
 					alert("올바른 이메일 형식이 아닙니다.")
-				}else if(pwd == pwd2){
+				} else if (age < 0) {
+					alert("나이는 0세 이상입니다.")
+				} else if (pwd == pwd2) {
 					var conf = {
 						url : '/student',
 						method : 'POST',
@@ -374,7 +432,7 @@
 							studentid : id,
 							studentpwd : pwd,
 							studentemail : email,
-							schoolname:school
+							schoolname : school
 						}),
 						success : function(res) {
 							res = JSON.parse(res);
@@ -390,11 +448,10 @@
 						}
 					}
 					au.send(conf);
-				}else{
+				} else {
 					alert('비밀번호 확인이 다릅니다.');
 				}
-				
-				
+
 			}
 
 			function login() {
