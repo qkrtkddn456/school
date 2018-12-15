@@ -183,7 +183,7 @@
 									</div>
 									<div class="form-group">
 										<input type="text" name="email" id="email" tabindex="1"
-											class="form-control" placeholder="이메일" value="">
+											class="form-control" placeholder="이메일" value="${user.studentemail }">
 									</div>
 									<div class="form-group">
 										<input type="text" name="school" id="school" tabindex="1"
@@ -307,7 +307,7 @@
 								alert("아이디가 중복되었습니다");
 							} else if (res == 1) {
 								alert("회원수정이 완료되었습니다");
-								location.href = "/uri/main/main";
+								location.href = "/sesupdate/"+studentnum;
 							} else {
 								alert("회원수정에 실패하였습니다");
 							}
