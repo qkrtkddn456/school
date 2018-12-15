@@ -9,5 +9,5 @@ public interface BoardDAO {
 	public Board selectBoard(Integer boardnum);
 	public int insertBoard(Board board);
 	public int updateBoard(Board board);
-	public int deleteBoard(Integer boardnum);
+	public int deleteBoard(Integer boardnum,Integer studentnum);
 }

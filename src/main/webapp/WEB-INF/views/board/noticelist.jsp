@@ -69,7 +69,6 @@ border-color: skyblue;
 </style>
 </head>
 <body>
-
 	<div class="ContentTitle">
 		<h1 class="Title2">공지사항</h1>
 	</div>
@@ -96,14 +95,16 @@ border-color: skyblue;
 							<th>작성일</th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr onclick="location.href='/uri/board/notice'"
-							style="cursor: pointer;">
-							<td>1</td>
-							<td>2018년 홈페이지 만족도 조사 실시</td>
-							<td>2018-12-05</td>
-						</tr>
-					</tbody>
+					<c:forEach var="item" items="${noticelist}">
+						<tbody>
+							<tr onclick="location.href='/uri/board/notice'"
+								style="cursor: pointer;">
+								<td>${item.noticenum}</td>
+								<td>${item.noticetitle}</td>
+								<td>${item.noticetext}</td>
+							</tr>
+						</tbody>
+					</c:forEach>
 				</table>
 			</div>
 			<div class="page">

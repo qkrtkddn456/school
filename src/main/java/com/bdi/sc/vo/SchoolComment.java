@@ -12,4 +12,6 @@ public class SchoolComment {
 	private Integer schoolcommentgrade;
 	private Integer sinum;
 	private Integer studentnum;
+	private String credate;
+	private String moddate;
 }

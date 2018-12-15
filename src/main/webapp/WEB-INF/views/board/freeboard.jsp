@@ -5,26 +5,18 @@
 
 #login {
 	font-size: 12px;
-    letter-spacing: 5px;
 }
 
 #bottom {
-    margin-top: 1325px;
-    border: 0;
-    border-top: 1px solid darkgray;
+    margin-top: 1270px;
 }
 
-html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
-    padding: 0px;
-    font-size: 13px;
-    list-style: none;
-    color: #282828;
-}
 .sub_content_w {
     width: 1200px;
     margin: 0 auto;
     padding-bottom: 40px;
 }
+
 .sub_right_con {
     float: right;
     width: 934px;
@@ -43,15 +35,14 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 .mBl {
     margin-bottom: 30px !important;
 }
+
 .sub_p01 {
     color: #333333;
     font-size: 16px;
     margin-bottom: 50px;
     
 }.sub_p01 > span {
-    color: #333333;
     font-size: 27px;
-    font-family: "Nanum Gothic";
     display: block;
     padding-bottom: 10px;
 }
@@ -67,26 +58,16 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 .mTm {
     margin-top: 20px !important;
 }
-.txtR {
-    text-align: right !important;
-}
+
 .table_style01.bor {
     border-bottom: skyblue 1px solid;
 }
 .table_style01 {
     border-top: skyblue 2px solid;
-    font-family: "Nanum Gothic";
 }
 .mTl {
     margin-top: 30px !important;
 }
-.table caption {
-    width: 0;
-    height: 0;
-    font-size: 0;
-    overflow: hidden;
-}
-
 .table_style01 .first {
     border-left: 0;
 }
@@ -95,11 +76,12 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
     border-left: #d7d7d7 1px solid;
     border-bottom: #d7d7d7 1px solid;
     padding: 14px 0 13px 0;
-    color: #333333;
     font-size: 14px;
     background: #F0FFFF;
     text-align: center;
+    color: #333333;
 }
+
 .table_style01 .table_title {
     color: #2549af;
     font-size: 13px;
@@ -109,22 +91,16 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
     border-left: #d7d7d7 1px solid;
     border-bottom: #d7d7d7 1px solid;
     padding: 16px 15px 15px 15px;
-    color: #666666;
     font-size: 14px;
-    text-align: center;
+    color: #666666;
 }
-.txtL {
-    text-align: left !important;
-}
+
 .table_style01 .table_con {
     color: #666666;
     font-size: 13px;
     text-align: left;
     padding: 30px 45px;
     border: 0;
-}
-.pwcf_p {
-    position: relative;
 }
 .mTm {
     margin-top: 20px !important;
@@ -163,32 +139,15 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
     background: #949494;
     display: inline-block;
 }
-.table caption {
-    width: 0;
-    height: 0;
-    font-size: 0;
-    overflow: hidden;
-}
+
 .table_style01 .view_table_a {
     width: 70%;
-    display: inline-block;
     margin-right: 130px
 }
 .table_style01 td a {
     display: inline-block;
     line-height: 20px;
     margin-top: 2px;
-}
-.table_style01 td a {
-    color: #666666;
-    font-size: 14px;
-}
-.clear {
-    clear: both;
-    font-size: 0;
-    line-height: 0;
-    overflow: hidden;
-    height: 0 !important;
 }
 #down {
 	margin-bottom: 100px;
@@ -197,6 +156,9 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 a:hover {
     text-decoration: none;
     color:white;
+}
+a{
+	cursor: pointer;
 }
 
 </style>
@@ -227,26 +189,19 @@ a:hover {
 			<tbody>
 				<tr>
 					<th scope="row" class="first">제목</th>
-					<td class="table_title" colspan="3">제목제목제목제목제목</td>
+					<td class="table_title" colspan="3">${board.boardtitle}</td>
 				</tr>
 				<tr>
 					<th scope="row" class="first">작성자</th>
-					<td class="txtL">김기수</td>
+					<td class="txtL">${student}</td>
 					<th scope="row">작성일</th>
-					<td class="txtL">2018-11-11</td>
+					<td class="txtL">${board.credate}</td>
 				</tr>
 
 				<tr>
-					<td colspan="4" class="table_con"><br> <br>현대건설에 사기를
-						당해 신용불량자로 최악의 인생을 살아가고 있습니다.<br> <br>아래 주소 검색 하시면 자세히 보실
-						수 있습니다. <br>http://blog.daum.net/pig9959/8841277<br> <br>우리나라
-						대기업 현대건설이 너무나 비윤리(형법347조1항 사기)적인 방법으로 상가를 <br>분양하여,<br>저
-						김기수는 살고 있던 아파트, 상가, 모든 재산, 등등을 빼앗기고 신용불량자로서<br>하루하루 뼈를 깎는
-						고통으로 최악의 인생을 살아가고 있습니다.<br>너무나 비윤리적인 현대건설의 기업 운영을, 대한민국 모든
-						소비자들에게 알리고 <br>현대건설에 속지 말 것을, 대 국민적으로 알리고 있습니다.<br> <br>아래
-						주소 검색 하시면 자세히 보실 수 있습니다. <br>http://blog.daum.net/pig9959/8841277<br>
-						<br>김기수올림<br> <br> <br> <br> <br> <br>
-						<br> <br></td>
+					<td colspan="4" class="table_con">
+					${board.boardtext}
+					</td>
 				</tr>
 			</tbody>
 		</table>
@@ -254,9 +209,9 @@ a:hover {
 
 		<p class="mTm txtR pwcf_p">
 
-			<a href="" class="table_btn01">목록</a><a href="" id="table_delete"
-				class="table_btn02 pwcfB">삭제</a> <a href="" id="table_modify"
-				class="table_btn03">수정</a> <a href="" class="table_btn02">등록</a>
+			<a class="table_btn01" onclick="goFreeBoardList()">목록</a><a id="table_delete" onclick="goBoardDelete()"
+				class="table_btn02 pwcfB">삭제</a> <a id="table_modify"
+				class="table_btn03" onclick="goBoardUpdate()">수정</a> <a class="table_btn02">등록</a>
 		</p>
 
 <div id="down">
@@ -285,3 +240,26 @@ a:hover {
 		</div>
 	</div>
 	</div>
+	<script>
+	
+	/* function goBoardDelete(){
+		var conf ={
+				url : '/board',
+				method : 'DELETE',
+				success: function(res){
+					res = JSON.parse(res);
+					if(res==1){
+						alert('삭제가 완료되었습니다');
+						gofreeBoardList();	
+					}else{
+						aler('삭제에 실패하였습니다');
+					}
+				}
+			}
+			au.send(conf);
+	} */
+	
+	function goBoardUpdate(){
+		
+	}
+	</script>

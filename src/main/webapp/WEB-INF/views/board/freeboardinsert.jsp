@@ -175,7 +175,7 @@ a:hover {
 			<tbody>
 				<tr>
 					<th scope="row" class="first">작성자</th>
-					<td class="txtL c_blue">이름</td>
+					<td class="txtL c_blue">${user.studentname}</td>
 				</tr>
 				<tr>
 					<th scope="row" class="first"><label for="subject">*제목</label></th>
@@ -192,7 +192,37 @@ a:hover {
 		</table>
 	</div>
 	<p class="mTm txtR">
-		<input type="submit" title="확인" class="btnSearch01"
-			onclick="boardEnrollment()" value="확인"> <a
-			class="table_btn04" onclick="gofreeList()">목록</a>
+		<input type="submit" title="등록" class="btnSearch01"
+			onclick="boardEnrollment()" value="등록"> <a
+			class="table_btn04" onclick="goFreeBoardList()">목록</a>
 	</p>
+	<script>
+		function boardEnrollment(){
+			var subject = document.getElementById('subject').value;
+			var content = document.getElementById('content').value;
+			var studentnum = '${user.studentnum}';
+			if(!subject){
+				alert('제목을 입력해주세요');
+			}else if(!content){
+				alert('내용을 입력해주세요');
+			}else{
+				var conf ={
+					url : '/board',
+					method : 'POST',
+					param : JSON.stringify({
+						boardtitle:subject, boardtext : content, studentnum:studentnum
+					}),
+					success: function(res){
+						res = JSON.parse(res);
+						if(res==1){
+							alert('등록이 완료되었습니다');
+							gofreeBoardList();		
+						}else{
+							aler('수정에 실패하였습니다');
+						}
+					}
+				}
+				au.send(conf);
+			}
+		}
+	</script>

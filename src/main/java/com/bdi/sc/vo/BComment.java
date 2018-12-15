@@ -12,4 +12,6 @@ public class BComment {
 	private String bcommenttext;
 	private Integer studentnum;
 	private Integer boardnum;
+	private String credate;
+	private String moddate;
 }

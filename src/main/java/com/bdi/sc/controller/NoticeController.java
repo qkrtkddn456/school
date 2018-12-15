@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,8 +23,9 @@ public class NoticeController {
 	NoticeService ns;
 	
 	@GetMapping(value="/notice")
-	public @ResponseBody List<Notice> selectNoticeList(Notice notice) {
-		return ns.selectNoticeList(notice);
+	public String selectNoticeList(Notice notice,Model model) {
+		model.addAttribute("noticelist",ns.selectNoticeList(notice));
+		return "/board/noticelist";
 	}
 	@GetMapping(value="/notice/{noticenum}")
 	public @ResponseBody Notice selectNotice(@PathVariable Integer noticenum) {
