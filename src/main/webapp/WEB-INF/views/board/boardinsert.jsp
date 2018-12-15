@@ -2,17 +2,6 @@
 	pageEncoding="UTF-8"%>
 <title>학교 정보 통합 알리미</title>
 <style>
-.sub_right_con div, .sub_right_con dl, .sub_right_con dt, .sub_right_con dd,
-	.sub_right_con ul, .sub_right_con ol, .sub_right_con li, .sub_right_con p,
-	.sub_right_con h1, .sub_right_con h2, .sub_right_con h3, .sub_right_con h4,
-	.sub_right_con h5, .sub_right_con h6, .sub_right_con a {
-	font-family: "Nanum Gothic";
-}
-
-.sub5_2_1_3_div02 {
-	color: #444444;
-	font-size: 13px;
-}
 
 .mTs {
 	margin-top: 15px !important;
@@ -22,25 +11,15 @@
 html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 	margin: 0px;
 	padding: 0px;
-	list-style: none;
-	color: #282828;
-}
-
-input {
-	vertical-align: middle;
-	margin: 0;
-	padding: 0;
 }
 
 .table_style01 {
 	border-top: skyblue 2px solid;
 	border-bottom: skyblue 1px solid;
-	font-family: "Nanum Gothic";
 }
 
 .mTxs {
 	margin-top: 10px !important;
-	background-color: white;
 	width: 934px;
 	height: 388px;
 }
@@ -63,7 +42,6 @@ input {
 	border-left: #d7d7d7 1px solid;
 	border-top: #d7d7d7 1px solid;
 	padding: 14px 0 13px 0;
-	color: #333333;
 	font-size: 14px;
 	background: #F0FFFF;
 }
@@ -72,25 +50,19 @@ input {
 	border-left: #d7d7d7 1px solid;
 	border-top: #d7d7d7 1px solid;
 	padding: 16px 15px 15px 15px;
-	color: #666666;
 	font-size: 14px;
-	text-align: center;
 }
 
 .c_blue {
 	color: #2549af !important;
 }
 
-.txtL {
-	text-align: left !important;
-}
-
 label {
 	cursor: pointer;
 }
-
-.tab_input.w512 {
-	width: 496px;
+.sub5_2_1_3_div02 {
+    color: #444444;
+    font-size: 13px;
 }
 
 .tab_input {
@@ -105,24 +77,16 @@ label {
 	border: #cccccc 1px solid;
 }
 
-textarea {
-	font-family: "NotoSansCJKkr";
-	vertical-align: middle;
-}
-
 .btnSearch01 {
 	background: #00559E !important;
 	color: #fff !important;
 	font-weight: bold;
 	vertical-align: middle;
 	height: 29px !important;
-	line-height: 29px !important;
 	border: 0;
 	cursor: pointer;
 	width: 80px;
 	height: 30px;
-	line-height: 30px;
-	display: inline-block;
 	float: left;
 	margin-left: 497px;
 }
@@ -137,14 +101,6 @@ textarea {
 	background: skyblue;
 	display: inline-block;
 	margin-right: 472px;
-}
-
-.clear {
-	clear: both;
-	font-size: 0;
-	line-height: 0;
-	overflow: hidden;
-	height: 0 !important;
 }
 
 .mBl {
@@ -163,16 +119,13 @@ textarea {
 }
 
 .sub_p01>span {
-	color: #333333;
 	font-size: 27px;
-	font-family: "Nanum Gothic";
 	display: block;
 	padding-bottom: 10px;
 }
 
 .sub_p01>span .col1 {
 	color: #1875d2;
-	font-size: 27px;
 }
 
 .sub03_5_p01 {

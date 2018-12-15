@@ -3,9 +3,6 @@
 	pageEncoding="UTF-8"%>
 <title>학교 정보 통합 알리미</title>
 <style>
-.table {
-	border-radius: 12px;
-}
 
 .table thead tr {
 	color: #FFFFFF;

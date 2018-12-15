@@ -4,7 +4,6 @@
 <style>
 .ContentTitle {
 	border-bottom: 1px solid #CCC;
-	color: black;
 	margin: -10px 0 0 0;
 }
 
@@ -64,7 +63,6 @@
 	height: 36px;
 	margin-left: 1365px;
 	margin-top: 50px;
-	height: 36px;
 }
 
 .Btn {

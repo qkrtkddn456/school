@@ -2,12 +2,7 @@
 	pageEncoding="UTF-8"%>
 <title>학교 정보 통합 알리미</title>
 <style>
-.sub_right_con div, .sub_right_con dl, .sub_right_con dt, .sub_right_con dd,
-	.sub_right_con ul, .sub_right_con ol, .sub_right_con li, .sub_right_con p,
-	.sub_right_con h1, .sub_right_con h2, .sub_right_con h3, .sub_right_con h4,
-	.sub_right_con h5, .sub_right_con h6, .sub_right_con a {
-	font-family: "Nanum Gothic";
-}
+
 
 .sub5_2_1_3_div02 {
 	color: #444444;
@@ -19,18 +14,6 @@
 	margin-left: 497px;
 }
 
-html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
-	margin: 0px;
-	padding: 0px;
-	list-style: none;
-	color: #282828;
-}
-
-input {
-	vertical-align: middle;
-	margin: 0;
-	padding: 0;
-}
 
 .table_style01 {
 	border-top: #ddd 2px solid;
@@ -40,7 +23,6 @@ input {
 
 .mTxs {
 	margin-top: 10px !important;
-	background-color: white;
 	width: 934px;
 	height: 388px;
 }
@@ -77,10 +59,6 @@ input {
 	text-align: center;
 }
 
-.c_blue {
-	color: #2549af !important;
-}
-
 .txtL {
 	text-align: left !important;
 }
@@ -105,24 +83,15 @@ label {
 	border: #cccccc 1px solid;
 }
 
-textarea {
-	font-family: "NotoSansCJKkr";
-	vertical-align: middle;
-}
-
 .btnSearch01 {
 	background: dimgrey !important;
 	color: #fff !important;
 	font-weight: bold;
-	vertical-align: middle;
 	height: 29px !important;
-	line-height: 29px !important;
 	border: 0;
 	cursor: pointer;
 	width: 80px;
 	height: 30px;
-	line-height: 30px;
-	display: inline-block;
 	float: left;
 	margin-left: 497px;
 }
@@ -183,7 +152,6 @@ textarea {
 
 a:hover {
 	text-decoration: none;
-	color: white;
 	cursor: pointer;
 }
 </style>

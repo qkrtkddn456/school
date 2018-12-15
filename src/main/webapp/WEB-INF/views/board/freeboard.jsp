@@ -5,26 +5,18 @@
 
 #login {
 	font-size: 12px;
-    letter-spacing: 5px;
 }
 
 #bottom {
-    margin-top: 1325px;
-    border: 0;
-    border-top: 1px solid darkgray;
+    margin-top: 1270px;
 }
 
-html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
-    padding: 0px;
-    font-size: 13px;
-    list-style: none;
-    color: #282828;
-}
 .sub_content_w {
     width: 1200px;
     margin: 0 auto;
     padding-bottom: 40px;
 }
+
 .sub_right_con {
     float: right;
     width: 934px;
@@ -43,15 +35,14 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 .mBl {
     margin-bottom: 30px !important;
 }
+
 .sub_p01 {
     color: #333333;
     font-size: 16px;
     margin-bottom: 50px;
     
 }.sub_p01 > span {
-    color: #333333;
     font-size: 27px;
-    font-family: "Nanum Gothic";
     display: block;
     padding-bottom: 10px;
 }
@@ -67,26 +58,16 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 .mTm {
     margin-top: 20px !important;
 }
-.txtR {
-    text-align: right !important;
-}
+
 .table_style01.bor {
     border-bottom: skyblue 1px solid;
 }
 .table_style01 {
     border-top: skyblue 2px solid;
-    font-family: "Nanum Gothic";
 }
 .mTl {
     margin-top: 30px !important;
 }
-.table caption {
-    width: 0;
-    height: 0;
-    font-size: 0;
-    overflow: hidden;
-}
-
 .table_style01 .first {
     border-left: 0;
 }
@@ -95,11 +76,12 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
     border-left: #d7d7d7 1px solid;
     border-bottom: #d7d7d7 1px solid;
     padding: 14px 0 13px 0;
-    color: #333333;
     font-size: 14px;
     background: #F0FFFF;
     text-align: center;
+    color: #333333;
 }
+
 .table_style01 .table_title {
     color: #2549af;
     font-size: 13px;
@@ -109,22 +91,16 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
     border-left: #d7d7d7 1px solid;
     border-bottom: #d7d7d7 1px solid;
     padding: 16px 15px 15px 15px;
-    color: #666666;
     font-size: 14px;
-    text-align: center;
+    color: #666666;
 }
-.txtL {
-    text-align: left !important;
-}
+
 .table_style01 .table_con {
     color: #666666;
     font-size: 13px;
     text-align: left;
     padding: 30px 45px;
     border: 0;
-}
-.pwcf_p {
-    position: relative;
 }
 .mTm {
     margin-top: 20px !important;
@@ -163,32 +139,15 @@ html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
     background: #949494;
     display: inline-block;
 }
-.table caption {
-    width: 0;
-    height: 0;
-    font-size: 0;
-    overflow: hidden;
-}
+
 .table_style01 .view_table_a {
     width: 70%;
-    display: inline-block;
     margin-right: 130px
 }
 .table_style01 td a {
     display: inline-block;
     line-height: 20px;
     margin-top: 2px;
-}
-.table_style01 td a {
-    color: #666666;
-    font-size: 14px;
-}
-.clear {
-    clear: both;
-    font-size: 0;
-    line-height: 0;
-    overflow: hidden;
-    height: 0 !important;
 }
 #down {
 	margin-bottom: 100px;
@@ -209,7 +168,7 @@ a:hover {
 		<h3 class="sub_title mBl">자유게시판</h3>
 		<p class="sub_p01 style02">
 			<span><span class="col1">학생여러분의 의견</span>을 자유롭게 게시할 수 있는 곳입니다.</span>학생여러분의
-			의견을 자유롭게 표현하는 공간입니다. 다만, 게시판의 품위를 유지하기 위해 다음의 글들은 삭제할 수 있으며,타인의 명예훼손,
+			의견을 자유롭게 표현하는 공간입니다. 다만, 게시판의 품위를 유지하기 위해 다음의 글들은 삭제할 수 있으며, 타인의 명예훼손,
 			법령위반 등은 처벌될 수 있습니다.
 		</p>
 		<p class="sub03_5_p01">
@@ -261,8 +220,7 @@ a:hover {
 
 <div id="down">
 		<table class="table_style01 mTl"
-			width="100%" summary="이전글, 다음글">
-			<caption>이전글, 다음글</caption>
+			width="100%" >
 			<colgroup>
 				<col width="15%">
 				<col width="*">
