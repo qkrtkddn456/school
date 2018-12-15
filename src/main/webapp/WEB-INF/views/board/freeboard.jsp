@@ -198,6 +198,9 @@ a:hover {
     text-decoration: none;
     color:white;
 }
+a{
+	cursor: pointer;
+}
 
 </style>
 </head>
@@ -227,26 +230,19 @@ a:hover {
 			<tbody>
 				<tr>
 					<th scope="row" class="first">제목</th>
-					<td class="table_title" colspan="3">제목제목제목제목제목</td>
+					<td class="table_title" colspan="3">${board.boardtitle}</td>
 				</tr>
 				<tr>
 					<th scope="row" class="first">작성자</th>
-					<td class="txtL">김기수</td>
+					<td class="txtL">${student}</td>
 					<th scope="row">작성일</th>
-					<td class="txtL">2018-11-11</td>
+					<td class="txtL">${board.credate}</td>
 				</tr>
 
 				<tr>
-					<td colspan="4" class="table_con"><br> <br>현대건설에 사기를
-						당해 신용불량자로 최악의 인생을 살아가고 있습니다.<br> <br>아래 주소 검색 하시면 자세히 보실
-						수 있습니다. <br>http://blog.daum.net/pig9959/8841277<br> <br>우리나라
-						대기업 현대건설이 너무나 비윤리(형법347조1항 사기)적인 방법으로 상가를 <br>분양하여,<br>저
-						김기수는 살고 있던 아파트, 상가, 모든 재산, 등등을 빼앗기고 신용불량자로서<br>하루하루 뼈를 깎는
-						고통으로 최악의 인생을 살아가고 있습니다.<br>너무나 비윤리적인 현대건설의 기업 운영을, 대한민국 모든
-						소비자들에게 알리고 <br>현대건설에 속지 말 것을, 대 국민적으로 알리고 있습니다.<br> <br>아래
-						주소 검색 하시면 자세히 보실 수 있습니다. <br>http://blog.daum.net/pig9959/8841277<br>
-						<br>김기수올림<br> <br> <br> <br> <br> <br>
-						<br> <br></td>
+					<td colspan="4" class="table_con">
+					${board.boardtext}
+					</td>
 				</tr>
 			</tbody>
 		</table>
@@ -254,9 +250,9 @@ a:hover {
 
 		<p class="mTm txtR pwcf_p">
 
-			<a href="" class="table_btn01">목록</a><a href="" id="table_delete"
-				class="table_btn02 pwcfB">삭제</a> <a href="" id="table_modify"
-				class="table_btn03">수정</a> <a href="" class="table_btn02">등록</a>
+			<a class="table_btn01" onclick="goFreeBoardList()">목록</a><a id="table_delete" onclick="goBoardDelete()"
+				class="table_btn02 pwcfB">삭제</a> <a id="table_modify"
+				class="table_btn03" onclick="goBoardUpdate()">수정</a> <a class="table_btn02">등록</a>
 		</p>
 
 <div id="down">
@@ -285,3 +281,26 @@ a:hover {
 		</div>
 	</div>
 	</div>
+	<script>
+	
+	/* function goBoardDelete(){
+		var conf ={
+				url : '/board',
+				method : 'DELETE',
+				success: function(res){
+					res = JSON.parse(res);
+					if(res==1){
+						alert('삭제가 완료되었습니다');
+						gofreeBoardList();	
+					}else{
+						aler('삭제에 실패하였습니다');
+					}
+				}
+			}
+			au.send(conf);
+	} */
+	
+	function goBoardUpdate(){
+		
+	}
+	</script>

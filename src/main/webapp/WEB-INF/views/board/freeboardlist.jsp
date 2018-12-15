@@ -303,6 +303,9 @@ a:hover {
 	color: white;
 	cursor: pointer;
 }
+.title{
+	cursor:pointer;
+}
 </style>
 </head>
 <body>
@@ -352,94 +355,20 @@ a:hover {
 						<th scope="col">조회수</th>
 					</tr>
 				</thead>
-				<tbody>
-					<!-- 게시판 리스트 목록 Start -->
-					
-				</tbody>
+				<!-- 게시판 리스트 목록 Start -->
+				<c:forEach var="item" items="${boardlist}">	
+					<tbody>	
+						<tr>
+							<td class="first">${item.boardnum}</td>
+							<td class="txtL"><span class="title" onclick="goFreeBoard(${item.boardnum})">${item.boardtitle }&nbsp;&nbsp;</span></td>
+							<td>${item.studentname}</td>
+							<td>${item.credate}</td>
+							<td>${item.views}</td>
+						</tr>
+					</tbody>
+				</c:forEach>
 			</table>
 		</div>
-		<ul class="table_style01_m mTxs">
-			<li>
-				<p class="rtp1">
-					<a href=""><span class="rtp-span1">4741.</span><span
-						class="rtp-span2">MBC SBS가 방송시간을 새벽2시에 조기 종료 합니다 그런대 방송 통신
-							위원회에서 압력을 넣어서 방송 시간을 줄였다는 소문이 사실 입니까</span></a>
-				</p>
-				<p class="rtp2">| 작성자 : 허환준 | 작성일 : 2018-11-30 | 조회수 : 198 |</p>
-			</li>
-
-			<li>
-				<p class="rtp1">
-					<a href=""><span class="rtp-span1">4740.</span><span
-						class="rtp-span2">현대건설 사기분양, 대법원 확정 판결</span></a>
-				</p>
-				<p class="rtp2">| 작성자 : 김기수 | 작성일 : 2018-11-11 | 조회수 : 519 |</p>
-			</li>
-
-			<li>
-				<p class="rtp1">
-					<a href=""><span class="rtp-span1">4739.</span><span
-						class="rtp-span2">불법성매매 불법야동사이트처리기한에 관하여</span></a>
-				</p>
-				<p class="rtp2">| 작성자 : 김서영 | 작성일 : 2018-11-10 | 조회수 : 496 |</p>
-			</li>
-
-			<li>
-				<p class="rtp1">
-					<a href=""><span class="rtp-span1">4738.</span><span
-						class="rtp-span2">메인뉴스의 권위에 대하여</span></a>
-				</p>
-				<p class="rtp2">| 작성자 : 김보성 | 작성일 : 2018-11-06 | 조회수 : 534 |</p>
-			</li>
-
-			<li>
-				<p class="rtp1">
-					<a href=""><span class="rtp-span1">4737.</span><span
-						class="rtp-span2">북한 조선의 소리에 공동제작하겠다는 방통위를 규탄한다.</span></a>
-				</p>
-				<p class="rtp2">| 작성자 : 최창섭 | 작성일 : 2018-11-02 | 조회수 : 542 |</p>
-			</li>
-
-			<li>
-				<p class="rtp1">
-					<a href=""><span class="rtp-span1">4736.</span><span
-						class="rtp-span2">방통위의 북한의 체제선동방송</span></a>
-				</p>
-				<p class="rtp2">| 작성자 : 김승현 | 작성일 : 2018-11-02 | 조회수 : 600 |</p>
-			</li>
-
-			<li>
-				<p class="rtp1">
-					<a href=""><span class="rtp-span1">4735.</span><span
-						class="rtp-span2">YTN 이동형의 뉴스정면승부 진행자 하차를 요구합니다.</span></a>
-				</p>
-				<p class="rtp2">| 작성자 : 이인백 | 작성일 : 2018-10-21 | 조회수 : 987 |</p>
-			</li>
-
-			<li>
-				<p class="rtp1">
-					<a href=""><span class="rtp-span1">4734.</span><span
-						class="rtp-span2">외화에 자막 표기할때....</span></a>
-				</p>
-				<p class="rtp2">| 작성자 : 이영우 | 작성일 : 2018-10-15 | 조회수 : 962 |</p>
-			</li>
-
-			<li>
-				<p class="rtp1">
-					<a href=""><span class="rtp-span1">4733.</span><span
-						class="rtp-span2">시대의 사명을 잊지마세요</span></a>
-				</p>
-				<p class="rtp2">| 작성자 : 김혜영 | 작성일 : 2018-10-14 | 조회수 : 973 |</p>
-			</li>
-			<li>
-				<p class="rtp1">
-					<a href=""><span class="rtp-span1">4732.</span><span
-						class="rtp-span2">오늘 방송심의</span></a>
-				</p>
-				<p class="rtp2">| 작성자 : 노민호 | 작성일 : 2018-10-08 | 조회수 : 993 |</p>
-			</li>
-			<!-- 모바일 게시판 리스트 목록 End -->
-		</ul>
 	</div>
 	<div class="page">
 		<span><a href="" class="img"><img
@@ -460,6 +389,15 @@ a:hover {
 	</p>
 	<script>
 	function goboardinsert() {
-		location = "/uri/board/boardinsert";
+		if(!ses){
+			alert('로그인을 해주세요!');
+			location = '/uri/user/login';
+		}else{
+			location = "/uri/board/freeboardinsert";
+		}
+	}
+	
+	function goFreeBoard(boardnum){
+		location = '/board/'+boardnum;
 	}
 	</script>
