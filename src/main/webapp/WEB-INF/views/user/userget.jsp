@@ -292,6 +292,8 @@
 				var age = document.getElementById("age").value;
 				var email = document.getElementById("email").value;
 				var sinum = document.getElementById("sinum").value;
+				var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+				
 				if (pwd.length < 6) {
 					alert("비밀번호는 6글자 이상입니다.")
 				} else if (!name) {
@@ -300,6 +302,8 @@
 					alert("나이를 입력해주세요.")
 				} else if (!email) {
 					alert("이메일을 입력해주세요.")
+				} else if(filter.test(email)==false) {
+					alert("올바른 이메일 형식이 아닙니다.")
 				} else if (pwd == pwd2) {
 					var conf = {
 						url : '/student',
