@@ -173,7 +173,6 @@ p {
 	padding: 0;
 }
 </style>
-	${user}
 	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
