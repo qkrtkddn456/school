@@ -143,7 +143,6 @@ label {
 
 a:hover {
 	text-decoration: none;
-	color: white;
 	cursor: pointer;
 }
 </style>

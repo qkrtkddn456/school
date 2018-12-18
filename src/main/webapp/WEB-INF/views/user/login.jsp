@@ -2,9 +2,6 @@
 	pageEncoding="UTF-8"%>
 <title>학교 정보 통합 알리미</title>
 <style>
-.row2 {
-	margin-top: -15px
-}
 
 .forgot-password {
 	text-decoration: underline;
@@ -16,9 +13,6 @@
 	height: 448px;
 }
 
-#login-form {
-	height: 0px;
-}
 
 .panel-login {
 	border-color: #ccc;
@@ -128,17 +122,6 @@
 	border-color: #53A3CD;
 }
 
-.funkyradio div {
-	clear: both;
-	overflow: hidden;
-}
-
-.funkyradio label {
-	width: 100%;
-	border-radius: 3px;
-	border: 1px solid #D1D3D4;
-	font-weight: normal;
-}
 
 .btn-primary {
 	color: #fff;

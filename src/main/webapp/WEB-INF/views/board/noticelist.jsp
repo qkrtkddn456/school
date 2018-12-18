@@ -56,10 +56,6 @@ margin-left: 750px;
     color: #767676;
 }
 
-.insertButton {
-	margin-top: 700px;
-	margin-left: 1500px;
-}
 #insert-button{
 margin-left: 30px;
 background-color: skyblue;

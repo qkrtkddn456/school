@@ -116,40 +116,6 @@ label {
 	height: 0 !important;
 }
 
-.mBl {
-	margin-bottom: 30px !important;
-}
-
-.sub_title {
-	color: #454545;
-	font-size: 30px;
-}
-
-.sub_p01 {
-	color: #333333;
-	font-size: 16px;
-	margin-bottom: 50px;
-}
-
-.sub_p01>span {
-	color: #333333;
-	font-size: 27px;
-	font-family: "Nanum Gothic";
-	display: block;
-	padding-bottom: 10px;
-}
-
-.sub_p01>span .col1 {
-	color: #1875d2;
-	font-size: 27px;
-}
-
-.sub03_5_p01 {
-	color: #666666;
-	font-size: 13px;
-	line-height: 20px;
-}
-
 a:hover {
 	text-decoration: none;
 	cursor: pointer;

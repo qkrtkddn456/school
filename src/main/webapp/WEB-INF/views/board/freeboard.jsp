@@ -155,12 +155,8 @@
 }
 a:hover {
     text-decoration: none;
-    color:white;
+    cursor: pointer;
 }
-a{
-	cursor: pointer;
-}
-
 </style>
 </head>
 <body>
