@@ -40,7 +40,7 @@ public class BoardDAOImpl implements BoardDAO {
 	}
 
 	@Override
-	public int deleteBoard(Integer boardnum,Integer studentnum) {
+	public int deleteBoard(Integer boardnum) {
 		return ss.delete("com.bdi.sc.BOARD.deleteBoard",boardnum);
 	}
 

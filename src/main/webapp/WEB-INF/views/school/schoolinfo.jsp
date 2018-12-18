@@ -298,6 +298,8 @@
 							class="mapD_Class _04">고</span>
 						</span> <span style="position: relative; top: 3px" id="schoolName">${school.school_name}</span>
 					</h1>
+					<div id="map" style="width:1000px;height:350px;"></div>
+					
 					<div class="HomeContent">
 						<table class="table table-hover text-center">
 							<thead>
@@ -437,6 +439,10 @@
 						<div class="clear-rating clear-rating-active" title="Clear">
 							<span class="krajee-icon-clear"></span>
 						</div>
+					</div>
+					<div style="clear: both;"></div>
+					<div class="comment-btn">
+						<input type="textarea" class="text" placeholder="Add a comment...">
 					</div>
 				</div>
 			</div>

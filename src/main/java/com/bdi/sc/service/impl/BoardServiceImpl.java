@@ -72,9 +72,8 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public int deleteBoard(Integer boardnum,Integer studentnum) {
-		// 
-		return bdao.deleteBoard(boardnum,studentnum);
+	public int deleteBoard(Integer boardnum) {
+		return bdao.deleteBoard(boardnum);
 	}
 
 }

@@ -238,22 +238,37 @@ a:hover {
 	</div>
 	<script>
 	
-	/* function goBoardDelete(){
-		var conf ={
-				url : '/board',
-				method : 'DELETE',
-				success: function(res){
-					res = JSON.parse(res);
-					if(res==1){
-						alert('삭제가 완료되었습니다');
-						gofreeBoardList();	
-					}else{
-						aler('삭제에 실패하였습니다');
-					}
-				}
+	 function goBoardDelete(){
+		 var boardstudentnum = '${board.studentnum}';
+		 var userstudentnum = '${user.studentnum}';
+		 
+		 if(!ses){
+			 alert('로그인을 해주세요.');
+			 location = '/uri/user/login';
+		 }else if(boardstudentnum != userstudentnum){
+			 alert('본인의 게시물만 삭제할 수 있습니다.');
+		 }else{
+		  	if(confirm("정말 삭제하시겠습니까??") == true){    //확인
+				 var conf ={
+							url : '/board/' + ${board.boardnum},
+							method : 'DELETE',
+							success: function(res){
+								res = JSON.parse(res);
+								if(res==1){
+									alert('삭제되었습니다.');
+									goFreeBoardList();
+								}else{
+									aler('삭제에 실패하였습니다');
+								}
+							}
+						}
+				 au.send(conf);
+			}else{   //취소
+				return;
 			}
-			au.send(conf);
-	} */
+		 }
+		
+	} 
 	
 	function goBoardUpdate(){
 		
