@@ -2,7 +2,6 @@
 	pageEncoding="UTF-8"%>
 <title>학교 정보 통합 알리미</title>
 <style>
-
 .forgot-password {
 	text-decoration: underline;
 	color: #888;
@@ -12,7 +11,6 @@
 #register-form {
 	height: 448px;
 }
-
 
 .panel-login {
 	border-color: #ccc;
@@ -121,7 +119,6 @@
 	background-color: #53A3CD;
 	border-color: #53A3CD;
 }
-
 
 .btn-primary {
 	color: #fff;
@@ -425,6 +422,8 @@
 							} else if (res == 1) {
 								alert("회원가입이 완료되었습니다");
 								location.href = "/uri/main/main";
+							} else if (res == 3) {
+								alert("이메일이 중복되었습니다.");
 							} else {
 								alert("회원가입에 실패하였습니다");
 							}

@@ -31,10 +31,13 @@ public class StudentServiceImpl implements StudentService {
 	@Override
 	public int insertST(StudentInfo student) {
 		int idc = this.idcheck(student);
-		if(idc == 0) {
+		int emc = this.emailcheck(student);
+		if(idc == 0 && emc == 0) {
 			return stdao.insertST(student);
-		}else {
+		}else if(idc != 0){
 			return 2;
+		}else {
+			return 3;
 		}
 	}
 
@@ -69,6 +72,12 @@ public class StudentServiceImpl implements StudentService {
 	public int idcheck(StudentInfo studentid) {
 		
 		return stdao.idcheck(studentid);
+	}
+
+	@Override
+	public int emailcheck(StudentInfo studentemail) {
+
+		return stdao.emailcheck(studentemail);
 	}
 
 }

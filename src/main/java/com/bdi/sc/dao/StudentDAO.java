@@ -13,4 +13,5 @@ public interface StudentDAO {
 	public int deleteST(int studentnum);
 	public StudentInfo login(StudentInfo student);
 	public int idcheck(StudentInfo student);	
+	public int emailcheck(StudentInfo student);	
 }
