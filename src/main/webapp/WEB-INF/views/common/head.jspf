@@ -264,4 +264,7 @@ p {
 		function goFreeBoardList(){
 			location = "/board";
 		}
+		function goNoticeList() {
+			location = "/notice";
+		}
 		</script>

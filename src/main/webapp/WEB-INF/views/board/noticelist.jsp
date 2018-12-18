@@ -29,38 +29,46 @@
 .table {
 	width: 900px;
 }
-.page{
-margin-top: 650px;
-margin-left: 750px;
+
+.page {
+	margin-top: 650px;
+	margin-left: 750px;
 }
+
 .page span {
-    display: inline-block;
-    text-align: center
+	display: inline-block;
+	text-align: center
 }
+
 .page span a:hover, .page span a.on {
-    background: skyblue;
-    color: #ffffff;
-    border: 1px solid #17a19c;
+    background: darkgray;
+    border: 1px solid #d9d9d9;
     font-weight: bold;
     text-decoration: underline;
 }
+
 .page span a {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 12px;
-    line-height: 25px;
-    width: 25px;
-    height: 25px;
-    border: 1px solid #d9d9d9;
-    margin: 0 1.5px 3px 1.5px;
-    color: #767676;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+	line-height: 25px;
+	width: 25px;
+	height: 25px;
+	border: 1px solid #d9d9d9;
+	margin: 0 1.5px 3px 1.5px;
+	color: #767676;
 }
 
-#insert-button{
-margin-left: 30px;
-background-color: skyblue;
-color: #ffffff;
-border-color: skyblue;
+#insert-button {
+	margin-left: 100px !important;
+	width: 89px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 16px;
+	background: darkgray;
+	display: inline-block;
 }
 </style>
 </head>
@@ -93,11 +101,11 @@ border-color: skyblue;
 					</thead>
 					<c:forEach var="item" items="${noticelist}">
 						<tbody>
-							<tr onclick="location.href='/uri/board/notice'"
+							<tr onclick="goNotice(${item.noticenum})"
 								style="cursor: pointer;">
 								<td>${item.noticenum}</td>
 								<td>${item.noticetitle}</td>
-								<td>${item.noticetext}</td>
+								<td>${item.credate}</td>
 							</tr>
 						</tbody>
 					</c:forEach>
@@ -116,11 +124,22 @@ border-color: skyblue;
 						alt="다음으로"></a><a href="" class="img"><img
 						src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_13.gif"
 						alt="마지막으로"></a></span>
-				<button id="insert-button" onclick="gonoticeinsert()">등록</button>
+				<button id="insert-button" onclick="goNoticeInsert()">등록</button>
 			</div>
 		</div>
 	</div>
 	<script>
+	function goNotice(noticenum) {
+		location = '/notice/' + noticenum;
+	}
+	function goNoticeInsert() {
+		if(!ses){
+			alert('로그인을 해주세요!');
+			location = '/uri/user/login';
+		}else{
+			location = "/uri/board/noticeinsert";
+		}
+	}
 		$(document)
 				.ready(
 						function() {

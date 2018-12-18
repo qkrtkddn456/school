@@ -25,11 +25,12 @@ public class NoticeController {
 	@GetMapping(value="/notice")
 	public String selectNoticeList(Notice notice,Model model) {
 		model.addAttribute("noticelist",ns.selectNoticeList(notice));
-		return "/board/noticelist";
+		return "board/noticelist";
 	}
 	@GetMapping(value="/notice/{noticenum}")
-	public @ResponseBody Notice selectNotice(@PathVariable Integer noticenum) {
-		return ns.selectNotice(noticenum);
+	public String selectNotice(@PathVariable Integer noticenum, Model model) {
+		model.addAttribute("notice",ns.selectNotice(noticenum));
+		return "board/notice";
 	}
 	
 	@PostMapping(value="/notice")

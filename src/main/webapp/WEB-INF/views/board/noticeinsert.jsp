@@ -149,6 +149,40 @@ a:hover {
 	</div>
 	<p class="mTm txtR">
 		<input type="submit" title="확인" class="btnSearch01"
-			onclick="boardEnrollment()" value="확인"> <a
-			class="table_btn04" onclick="gofreeList()">목록</a>
+			onclick="noticeEnrollment()" value="확인"> <a
+			class="table_btn04" onclick="goNoticeList()">목록</a>
 	</p>
+	<script>
+		function noticeEnrollment(){
+			var subject = document.getElementById('subject').value;
+			var content = document.getElementById('content').value;
+			var studentnum = '${user.studentnum}';
+			if(!subject){
+				alert('제목을 입력해주세요');
+			}else if(!content){
+				alert('내용을 입력해주세요');
+			}else{
+				if(confirm("등록 하시겠습니까?") == true){
+					var conf ={
+							url : '/notice',
+							method : 'POST',
+							param : JSON.stringify({
+								noticetitle:subject, noticetext : content, studentnum:studentnum
+							}),
+							success: function(res){
+								res = JSON.parse(res);
+								if(res==1){
+									alert('등록이 완료되었습니다');
+									goNoticeList();		
+								}else{
+									aler('등록에 실패하였습니다');
+								}
+							}
+						}
+						au.send(conf);
+				}else{
+					return;
+				}
+			}
+		}
+	</script>
