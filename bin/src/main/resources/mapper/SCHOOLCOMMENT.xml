@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdi.sc.SCHOOLCOMMENT">
+  <select id="selectSchoolCommentList" resultType="schoolcomment">
+    select * from schoolcomment
+  </select>
+  
+   <select id="selectSchoolComment" resultType="schoolcomment">
+    select * from schoolcomment
+    where schoolcommentnum=#{schoolcommentnum}
+  </select>
+  
+  <insert id="insertSchoolComment" parameterType="schoolcomment">
+	insert into schoolcomment(schoolcommenttext,schoolcommentgrade,sinum,studentnum,credate)
+	values(#{schoolcommenttext},#{schoolcommentgrade},#{sinum},#{studentnum},now())
+  </insert>
+  <update id="updateSchoolComment" parameterType="schoolcomment">
+  	update schoolcomment
+  	set schoolcommenttext=#{schoolcommenttext},schoolcommentgrade=#{schoolcommentgrade},moddate=now()
+  	where schoolcommentnum =#{schoolcommentnum} and studentnum=#{studentnum} and sinum=#{sinum}
+  </update>
+  <delete id="deleteSchoolComment" parameterType="schoolcomment">
+  	delete from schoolcomment
+  	where schoolcommentnum = #{schoolcommentnum}
+  </delete>
+  
+</mapper>
