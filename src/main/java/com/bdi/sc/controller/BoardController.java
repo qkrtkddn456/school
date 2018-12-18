@@ -44,9 +44,9 @@ public class BoardController {
 	public @ResponseBody int updatePI(@RequestBody Board board) {
 		return bs.updateBoard(board);
 	}
-	
+		
 	@DeleteMapping(value="/board/{boardnum}")
-	public @ResponseBody int deletePI(@PathVariable Integer boardnum,@PathVariable Integer studentnum) {
-		return bs.deleteBoard(boardnum,studentnum);
+	public @ResponseBody int deletePI(@PathVariable Integer boardnum) {
+		return bs.deleteBoard(boardnum);
 	}
 }

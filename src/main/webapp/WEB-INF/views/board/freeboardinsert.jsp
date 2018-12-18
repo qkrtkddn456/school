@@ -100,7 +100,7 @@ label {
 	font-size: 16px;
 	background: skyblue;
 	display: inline-block;
-	margin-right: 472px;
+	
 }
 
 .mBl {
@@ -192,9 +192,9 @@ a:hover {
 		</table>
 	</div>
 	<p class="mTm txtR">
+		<a class="table_btn04" onclick="goFreeBoardList()">목록</a>
 		<input type="submit" title="등록" class="btnSearch01"
-			onclick="boardEnrollment()" value="등록"> <a
-			class="table_btn04" onclick="goFreeBoardList()">목록</a>
+			onclick="boardEnrollment()" value="등록"> 
 	</p>
 	<script>
 		function boardEnrollment(){
@@ -206,23 +206,27 @@ a:hover {
 			}else if(!content){
 				alert('내용을 입력해주세요');
 			}else{
-				var conf ={
-					url : '/board',
-					method : 'POST',
-					param : JSON.stringify({
-						boardtitle:subject, boardtext : content, studentnum:studentnum
-					}),
-					success: function(res){
-						res = JSON.parse(res);
-						if(res==1){
-							alert('등록이 완료되었습니다');
-							gofreeBoardList();		
-						}else{
-							aler('수정에 실패하였습니다');
+				if(confirm("등록 하시겠습니까?") == true){
+					var conf ={
+							url : '/board',
+							method : 'POST',
+							param : JSON.stringify({
+								boardtitle:subject, boardtext : content, studentnum:studentnum
+							}),
+							success: function(res){
+								res = JSON.parse(res);
+								if(res==1){
+									alert('등록이 완료되었습니다');
+									goFreeBoardList();		
+								}else{
+									aler('등록에 실패하였습니다');
+								}
+							}
 						}
-					}
+						au.send(conf);
+				}else{
+					return;
 				}
-				au.send(conf);
 			}
 		}
 	</script>

@@ -894,7 +894,7 @@ a {
 							<span class="mapD_Area _10">경기</span> <span
 							class="mapD_Class _04">고</span>
 						</span> <span style="position: relative; top: 3px" id="schoolName">${school.school_name}</span>
-					</h1>
+					</h1><div id="map" style="width:1000px;height:350px;"></div>
 					<div class="HomeContent">
 						<h1 class="Home">학교정보</h1>
 						<table class="table table-hover text-center">
@@ -1010,10 +1010,12 @@ a {
 									<td>${school.coeducation_division}</td>
 								</tr>
 							</tbody>
+							
 						</table>
-
+						
 
 					</div>
+					
 				</article>
 			</div>
 		</div>
@@ -1059,6 +1061,7 @@ a {
 								name="star-input" id="p9" value="9"><label for="p9">9</label>
 								<input type="radio" name="star-input" id="p10" value="10"><label
 								for="p10">10</label>
+								
 						</span> <output for="star-input">
 								<b>0</b>점
 							</output>
@@ -1079,6 +1082,7 @@ a {
 			</div>
 		</div>
 	</div>
+	
 	<script>
 	//평점
 	// star rating

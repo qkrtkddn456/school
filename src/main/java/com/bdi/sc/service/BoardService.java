@@ -11,6 +11,6 @@ public interface BoardService {
 	public Board selectBoard(Integer boardnum);
 	public int insertBoard(Board board);
 	public int updateBoard(Board board);
-	public int deleteBoard(Integer boardnum, Integer studentnum);
+	public int deleteBoard(Integer boardnum);
 	public String selectStudentName(Integer studentnum);
 }
