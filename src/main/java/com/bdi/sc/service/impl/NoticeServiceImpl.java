@@ -19,7 +19,8 @@ public class NoticeServiceImpl implements NoticeService {
 		// 
 		return ndao.selectNoticeList(notice);
 	}
-
+	
+	
 	@Override
 	public Notice selectNotice(Integer noticenum) {
 		// 

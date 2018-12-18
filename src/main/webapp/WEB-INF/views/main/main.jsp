@@ -3,28 +3,13 @@
 <title>학교 정보 통합 알리미</title>
 <style>
 
-.margin {
-	margin-bottom: 20px;
-}
 #Main_Service {
     margin-left: 23px;
 }
 
-
 a:hover, a:focus {
 	color: #2a6496;
 	text-decoration: underline;
-}
-
-body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.42857143;
-	color: #333;
-}
-html {
-	font-size: 10px;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .accordian {

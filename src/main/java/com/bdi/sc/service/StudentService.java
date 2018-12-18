@@ -14,4 +14,5 @@ public interface StudentService {
 	public int deleteST(int studentnum);
 	public Map<String, Object> login(StudentInfo student);
 	public int idcheck(StudentInfo studentid);
+	public int emailcheck(StudentInfo studentemail);
 }
