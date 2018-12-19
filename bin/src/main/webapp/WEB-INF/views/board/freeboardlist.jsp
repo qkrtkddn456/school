@@ -36,14 +36,6 @@
 	text-align: center;
 }
 
-#noticeText {
-	width: 350px;
-	height: 30px;
-	color: #000000;
-	margin-left: 1200px;
-	margin-top: 80px;
-}
-
 html, body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
 	margin: 0px;
 	list-style: none;
@@ -256,14 +248,6 @@ th {
     font-family: "Nanum Gothic";
 }
 
-.clear {
-	clear: both;
-	font-size: 0;
-	line-height: 0;
-	overflow: hidden;
-	height: 0 !important;
-}
-
 .sub_title {
 	color: #454545;
 	font-size: 30px;
@@ -300,7 +284,6 @@ th {
 
 a:hover {
 	text-decoration: none;
-	color: white;
 	cursor: pointer;
 }
 .title{

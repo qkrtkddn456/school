@@ -355,6 +355,26 @@ a {
 	font-family: -webkit-body;
 }
 
+#map {
+	left: 30%;
+}
+
+#addressname {
+	width: 800px;
+	margin-left: 30%;
+	margin-bottom: 20px;
+	background-color: #f8f8f8;
+}
+
+#mapschoolname {
+	color: #000000;
+}
+
+}
+#mapschooladdress {
+	color: #A4A4A4;
+}
+
 #bottom {
 	margin-top: 25px;
 	border: 0;
@@ -425,7 +445,7 @@ a {
 
 /*댓글*/
 .main-section {
-	width: 50%;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -462,10 +482,6 @@ a {
 	margin-top: 10px;
 }
 
-.comment-box {
-	margin-top: 30px;
-}
-
 .count-btn, .enter-btn {
 	float: left;
 }
@@ -483,12 +499,8 @@ a {
 	border: 1px solid #000;
 }
 
-.comment-btn {
-	margin-top: 30px;
-}
-
 .comment-btn input {
-	width: 80%;
+	width: 400px;
 	padding: 10px;
 }
 
@@ -497,6 +509,8 @@ a {
 	background-color: #F5F5F5;
 	border-top: 1px solid #d2d2d2;
 	display: none;
+	width: 1000px;
+	margin-left: 26%;
 }
 
 .add-comment-img {
@@ -532,6 +546,10 @@ a {
 	border: none;
 	border: 1px solid #d2d2d2;
 	border-radius: 3px;
+}
+
+.comment-btn {
+	margin-left: 700px;
 }
 
 .cancel-btn:hover {
@@ -644,7 +662,6 @@ a {
 .HomeContent {
 	margin-left: 40px;
 	width: 1002px;
-	height: 1280px;
 	margin-bottom: 5%;
 	border: 1px solid #424242;
 	border-left: 0;
@@ -709,6 +726,12 @@ a {
 
 .zip_code {
 	padding-left: 10px;
+}
+
+.table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 0;
 }
 
 .table>caption+thead>tr:first-child>td, .table>caption+thead>tr:first-child>th,
@@ -850,6 +873,17 @@ a {
 .add-comment-text-btn {
 	margin-left: 20px;
 }
+
+#secondtable tr {
+	width: 50%;
+}
+
+#tablebutton {
+	background-color: white;
+	color: skyblue;
+	border-color: skyblue;
+	font-size: 20px;
+}
 </style>
 <script>
 /* window.addEventListener('load', function(){
@@ -896,7 +930,9 @@ a {
 						</span> <span style="position: relative; top: 3px" id="schoolName">${school.school_name}</span>
 					</h1>
 					<div class="HomeContent">
-						<h1 class="Home">학교정보</h1>
+						<h1 class="Home">
+							학교정보 <span><button onmouseover="show('secondtable')" onmouseout="hide('tablebutton')" id="tablebutton">자료더보기</button></span>
+						</h1>
 						<table class="table table-hover text-center">
 							<thead>
 								<tr>
@@ -906,8 +942,8 @@ a {
 							</thead>
 							<tbody>
 								<tr>
-									<th scope="row">시도교육청</th>
-									<td>${school.city_education}</td>
+									<th scope="row" style="width: 50%;">시도교육청</th>
+									<td style="height: 50%;">${school.city_education}</td>
 								</tr>
 								<tr>
 									<th scope="row">지역교육청</th>
@@ -937,9 +973,14 @@ a {
 									<th scope="row">학교특성</th>
 									<td>${school.school_characteristics}</td>
 								</tr>
+							</tbody>
+						</table>
+						<table class="table table-hover text-center"
+							style="visibility: collapse;" id="secondtable">
+							<tbody>
 								<tr>
-									<th scope="row">분교여부</th>
-									<td>${school.branch_division}</td>
+									<th scope="row" style="width: 50%;">분교여부</th>
+									<td style="height: 50%;">${school.branch_division}</td>
 								</tr>
 								<tr>
 									<th scope="row">설립유형</th>
@@ -1011,12 +1052,16 @@ a {
 								</tr>
 							</tbody>
 						</table>
-
-
 					</div>
 				</article>
 			</div>
-		</div>
+			<div class="schoolmap">
+				<div id="map" style="width: 800px; height: 200px;"></div>
+				<div id="addressname">
+					<span id="mapschoolname">${school.school_name}</span><br> <span
+						id="mapschooladdress">${school.roadname_address}</span>
+				</div>
+			</div>
 	</section>
 	<div class="main-section">
 		<div class="content">
@@ -1059,6 +1104,7 @@ a {
 								name="star-input" id="p9" value="9"><label for="p9">9</label>
 								<input type="radio" name="star-input" id="p10" value="10"><label
 								for="p10">10</label>
+
 						</span> <output for="star-input">
 								<b>0</b>점
 							</output>
@@ -1079,7 +1125,17 @@ a {
 			</div>
 		</div>
 	</div>
+
 	<script>
+	/*예제*/
+	/*.style.visibility = "visible";*/
+	function show(id) {
+		document.getElementById(id).style.visibility = "visible";
+	  }
+	  function hide(id) {
+	    document.getElementById(id).style.visibility = "collapse";
+	  }
+	  
 	//평점
 	// star rating
 var starRating = function(){
