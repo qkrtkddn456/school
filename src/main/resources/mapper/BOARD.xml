@@ -4,7 +4,13 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bdi.sc.BOARD">
   <select id="selectBoardList" resultType="board">
-    select * from board 
+    select b.*,si.studentname as 'st.studentname' from board b, student_info si 
+	where b.studentnum = si.studentnum order by b.boardnum desc limit #{page.start},7
+  </select>
+  
+  <select id="selectBoardCount" resultType="board">
+    select count(1) from board b, student_info si 
+	where b.studentnum = si.studentnum
   </select>
   
    <select id="selectBoard" resultType="board">

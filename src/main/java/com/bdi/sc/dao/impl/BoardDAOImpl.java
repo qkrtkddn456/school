@@ -20,7 +20,11 @@ public class BoardDAOImpl implements BoardDAO {
 		// 
 		return ss.selectList("com.bdi.sc.BOARD.selectBoardList",board);
 	}
-
+	
+	@Override
+	public int selectBoardCount(Board board) {
+		return ss.selectOne("com.bdi.sc.BOARD.selectBoardCount",board);
+	}
 	@Override
 	public Board selectBoard(Integer boardnum) {
 		// 

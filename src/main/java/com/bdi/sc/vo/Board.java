@@ -14,4 +14,6 @@ public class Board {
 	private Integer studentnum;
 	private String credate;
 	private String moddate;
+	private StudentInfo st;
+	private Page page;
 }
