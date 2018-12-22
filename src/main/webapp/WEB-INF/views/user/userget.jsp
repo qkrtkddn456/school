@@ -72,6 +72,7 @@
 	border-color: #ccc;
 }
 
+
 .btn-login {
 	background-color: #59B2E0;
 	outline: none;
@@ -132,7 +133,7 @@
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active,
-	.btn-primary.active, .open>.dropdown-toggle.btn-primary {
+	.btn-primary.active, .btn-primarytwo:hover, .btn-primarytwo:hover, .open>.dropdown-toggle.btn-primary {
 	color: #fff;
 	background-color: skyblue;
 	border-color: skyblue;

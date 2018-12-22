@@ -55,10 +55,6 @@
     font-size: 13px;
     line-height: 20px;
 }
-.mTm {
-    margin-top: 20px !important;
-}
-
 .table_style01.bor {
     border-bottom: skyblue 1px solid;
 }
@@ -155,12 +151,8 @@
 }
 a:hover {
     text-decoration: none;
-    color:white;
+    cursor: pointer;
 }
-a{
-	cursor: pointer;
-}
-
 </style>
 </head>
 <body>
@@ -211,7 +203,7 @@ a{
 
 			<a class="table_btn01" onclick="goFreeBoardList()">목록</a><a id="table_delete" onclick="goBoardDelete()"
 				class="table_btn02 pwcfB">삭제</a> <a id="table_modify"
-				class="table_btn03" onclick="goBoardUpdate()">수정</a> <a class="table_btn02">등록</a>
+				class="table_btn03" onclick="goBoardUpdate()">수정</a> <a class="table_btn02" onclick="goboardinsert()">등록</a>
 		</p>
 
 <div id="down">
@@ -276,5 +268,17 @@ a{
 	
 	function goBoardUpdate(){
 		
+	}
+	function goboardinsert() {
+		if(!ses){
+			alert('로그인을 해주세요!');
+			location = '/uri/user/login';
+		}else{
+			location = "/uri/board/freeboardinsert";
+		}
+	}
+	
+	function goFreeBoard(boardnum){
+		location = '/board/'+boardnum;
 	}
 	</script>

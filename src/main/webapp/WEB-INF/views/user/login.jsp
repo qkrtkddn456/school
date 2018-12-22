@@ -2,10 +2,6 @@
 	pageEncoding="UTF-8"%>
 <title>학교 정보 통합 알리미</title>
 <style>
-.row2 {
-	margin-top: -15px
-}
-
 .forgot-password {
 	text-decoration: underline;
 	color: #888;
@@ -14,10 +10,6 @@
 
 #register-form {
 	height: 448px;
-}
-
-#login-form {
-	height: 0px;
 }
 
 .panel-login {
@@ -126,18 +118,6 @@
 	color: #fff;
 	background-color: #53A3CD;
 	border-color: #53A3CD;
-}
-
-.funkyradio div {
-	clear: both;
-	overflow: hidden;
-}
-
-.funkyradio label {
-	width: 100%;
-	border-radius: 3px;
-	border: 1px solid #D1D3D4;
-	font-weight: normal;
 }
 
 .btn-primary {
@@ -442,6 +422,8 @@
 							} else if (res == 1) {
 								alert("회원가입이 완료되었습니다");
 								location.href = "/uri/main/main";
+							} else if (res == 3) {
+								alert("이메일이 중복되었습니다.");
 							} else {
 								alert("회원가입에 실패하였습니다");
 							}

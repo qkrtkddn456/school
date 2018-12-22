@@ -34,4 +34,8 @@
    	select count(studentid) from student_info
   	where studentid=#{studentid}
   </select>
+  <select id="emailcheck" resultType="int">
+  	select count(studentemail) from student_info
+  	where studentemail=#{studentemail}
+  </select>
 </mapper>

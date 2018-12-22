@@ -1,136 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <style>
-body {
-	font: 20px Montserrat, sans-serif;
-	font-family: arial, verdana, tahoma;
-	line-height: 1.8;
-	color: #000000;
-}
-
-p {
-	font-size: 16px;
-}
-
-.bg-2 {
-	background-color: #474e5d; /* Dark Blue */
-	color: #ffffff;
-}
-
-.bg-3 {
-	background-color: #ffffff; /* White */
-	color: #555555;
-}
-
-.bg-4 {
-	background-color: #2f2f2f; /* Black Gray */
-	color: #fff;
-}
-.container {
-	width: 100%;
-	padding: 0;
-	margin-left: 2px;
-}
-
-.container>.navbar-header {
-	margin: 5px 150px 0px 880px;
-}
-
-.navbar {
-	padding-top: 15px;
-	padding-bottom: 8px;
-	border: 20px;
-	border-radius: 0;
-	margin-bottom: 0;
-	font-size: 12px;
-	letter-spacing: 5px;
-	background-color: none;
-}
-
-.navbar-nav  li a:hover {
-	color: #1abc9c !important;
-}
-
-#school {
-	color: #808080;
-}
-
-#main-image {
-	float: left;
-	margin-right: 20px;
-	margin-left: -90px;
-}
-
-#mySubbar {
-	margin-left: 663px;
-	margin-top: -15px;
-}
-
-a {
-	color: #666;
-	text-decoration: none;
-}
-
-#a {
-	font-size: 15px;
-	margin-left: -100px;
-}
-
-#b {
-	margin-left: 75px;
-	font-size: 15px;
-}
-
-#c {
-	margin-left: 70px;
-	font-size: 15px;
-}
-
-#d {
-	margin-left: 70px;
-	font-size: 15px;
-}
-
-#imaginary_container {
-	margin-top: 20%; /* Don't copy this */
-}
-
-.stylish-input-group .input-group-addon {
-	background: white !important;
-}
-
-.stylish-input-group .form-control {
-	border-right: 0;
-	box-shadow: 0 0 0;
-	border-color: #ccc;
-}
-
-.stylish-input-group button {
-	border: 0;
-	background: transparent;
-}
-
-.col-sm-7 {
-	width: 50%;
-}
-
-.col-sm-offset-4 {
-	margin: -13px 0px 75px -575px;
-	width: 500px;
-	height:10px;
-}
-
-.navbar-left {
-	
-}
-
-.navbar-right {
-	margin-top: -3px;
-	margin-right: 400px;
-	margin-bottom: -10px;
-	margin-left: -200px;
-}
-
 .ContentTitle {
 	border-bottom: 1px solid #CCC;
 	color: black;
@@ -162,15 +32,9 @@ a {
 	margin-top: 100px;
 }
 
-.Search_Word span {
-	color:;
-	font-family: 'Nanum';
-}
-
 .Search_Word em {
 	color: #4AA9C8;
 }
-
 
 .table thead tr {
 	color: #000000;
@@ -179,45 +43,38 @@ a {
 	border-right: 0;
 }
 
-.table thead tr th {
-	border: 2px solid #ddd;
-}
-
 .table {
 	margin-top: 100px;
 	border: 1px solid #ddd;
 	padding: 10px;
 	text-align: center;
 	font-size: 14px;
-	margin: 40px 0 0 -300px;	
+	margin: 40px 0 0 -300px;
 	color: black;
 	margin-top: 130px;
-}
-
-.table tr td {
-	border: 2px solid #ddd;
 }
 
 .table>thead:first-child>tr:first-child>th {
 	border-top: 0;
 	text-align: center;
 }
-.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
-    border: 0;
+
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th,
+	.table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th,
+	.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+	border: 0;
 }
-.table-bordered{
-border: 0px solid #ddd;
+
+.table-bordered {
+	border: 0;
 }
+
 .Contents {
 	margin-left: 35%;
 }
 
-
-.schoolName{
-	cursor:pointer;
-}
-.container-fluid{
-margin-top: -80px;
+.container-fluid {
+	margin-top: -80px;
 }
 </style>
 </head>

@@ -56,18 +56,28 @@
 }
 
 .PageBtn {
-	border: 1px solid #CCC;
-	padding: 4px 0 0 20px;
-	background: #F5F5F5;
-	width: 72px;
-	height: 36px;
-	margin-left: 1365px;
-	margin-top: 50px;
+    margin-top: 20px !important;
+    text-align: right !important;
+    margin-right: 475px;
 }
 
 .Btn {
-	font-family: 'Nanum';
-	font-size: 15px;
+	width: 89px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    background: darkgray;
+    display: inline-block;
+    margin-right: 5px;
+	
+}
+
+.Btn:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
 }
 </style>
 </head>
@@ -78,21 +88,62 @@
 		<h1 class="Title2">공지사항</h1>
 	</div>
 	<div id="headline">
-		<span class="Subject">제목</span>
+		<span class="Subject">${notice.noticetitle}</span>
 		<p class="InfoTxt">
-			<span class="Bitem">작성일 : 2018-12-06</span>
+			<span class="Bitem">작성일 : ${notice.credate}</span>
 		</p>
 	</div>
 	<div id="notice">
 		<p id="view">
-			내용<br> dkdlkfjldkj<br>
+			내용<br> ${notice.noticetext}<br>
 		</p>
 	</div>
+	
 	<p class="PageBtn" onclick="" style="cursor: pointer;">
-		<a class="Btn" onclick="gonoticelist()">목록</a>
+		<a class="Btn" onclick="goNoticeList()">목록</a>
+		<a class="Btn" onclick="goNoticeUpdate()">수정</a>
+		<a class="Btn" onclick="goNoticeDelete()">삭제</a>
+		<a class="Btn" onclick="goNoticeInsert()">등록</a>
 	</p>
 	<script>
-		function gonoticelist() {
-			location = "/uri/board/noticelist";
+	function goNoticeInsert() {
+		if(!ses){
+			alert('로그인을 해주세요!');
+			location = '/uri/user/login';
+		}else{
+			location = "/uri/board/noticeinsert";
 		}
+	}
+	
+	function goNoticeDelete(){
+		 var noticestudentnum = '${notice.studentnum}';
+		 var userstudentnum = '${user.studentnum}';
+		 
+		 if(!ses){
+			 alert('로그인을 해주세요.');
+			 location = '/uri/user/login';
+		 }else if(noticestudentnum != userstudentnum){
+			 alert('본인의 게시물만 삭제할 수 있습니다.');
+		 }else{
+		  	if(confirm("정말 삭제하시겠습니까??") == true){    //확인
+				 var conf ={
+							url : '/notice/' + ${notice.noticenum},
+							method : 'DELETE',
+							success: function(res){
+								res = JSON.parse(res);
+								if(res==1){
+									alert('삭제되었습니다.');
+									goNoticeList();
+								}else{
+									aler('삭제에 실패하였습니다');
+								}
+							}
+						}
+				 au.send(conf);
+			}else{   //취소
+				return;
+			}
+		 }
+		
+	} 
 	</script>

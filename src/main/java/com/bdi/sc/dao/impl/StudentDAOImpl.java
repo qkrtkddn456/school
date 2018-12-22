@@ -56,6 +56,12 @@ public class StudentDAOImpl implements StudentDAO {
 		
 		return ss.selectOne("com.bdi.sc.STUDENTINFO.idcheck",studentid);
 	}
+
+	@Override
+	public int emailcheck(StudentInfo studentemail) {
+
+		return ss.selectOne("com.bdi.sc.STUDENTINFO.emailcheck", studentemail);
+	}
 	
 
 }
