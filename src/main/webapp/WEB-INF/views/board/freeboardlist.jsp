@@ -344,9 +344,9 @@ a:hover {
 						<tr>
 							<td class="first">${item.boardnum}</td>
 							<td class="txtL"><span class="title" onclick="goFreeBoard(${item.boardnum})">${item.boardtitle }&nbsp;&nbsp;</span></td>
-							<td>${item.studentname}</td>
+							<td>${item.st.studentname}</td>
 							<td>${item.credate}</td>
-							<td>${item.views}</td>
+							<td>${item.boardviews}</td>
 						</tr>
 					</tbody>
 				</c:forEach>
@@ -358,9 +358,9 @@ a:hover {
 				src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_07.gif"
 				alt="처음으로"></a><a href="" class="img lfs2"><img
 				src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_09.gif"
-				alt="이전으로"></a><a href="#" class="on">1</a><a href="">2</a><a
-			href="">3</a><a href="">4</a><a href="=">5</a><a href="=">6</a><a
-			href="">7</a><a href="">8</a><a href="">9</a><a href="">10</a><a
+				alt="이전으로"></a><a href="/board?page.page=1" class="on" id="1">1</a><a href="/board?page.page=2" id="2">2</a><a
+			href="" id="3">3</a><a href="" id="4">4</a><a href="=" id="5">5</a><a href="=" id="6">6</a><a
+			href="" id="7">7</a><a href="" id="8">8</a><a href="" id="9">9</a><a href="" id="10">10</a><a
 			href="" class="img rts2"><img
 				src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_11.gif"
 				alt="다음으로"></a><a href="" class="img"><img
@@ -383,4 +383,16 @@ a:hover {
 	function goFreeBoard(boardnum){
 		location = '/board/'+boardnum;
 	}
+	
+		
+	var reply_click = function(){
+	
+	    //alert("Button clicked, id "+this.id+", text"+this.innerHTML);
+	};
+	for(var i=1; i<=10; i++){
+		document.getElementById(i).onclick = reply_click;
+	}
+	
+	
+	
 	</script>

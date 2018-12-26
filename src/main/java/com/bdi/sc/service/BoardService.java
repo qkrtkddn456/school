@@ -7,7 +7,7 @@ import com.bdi.sc.vo.Board;
 
 public interface BoardService {
 
-	public  List<Map<String,Object>> selectBoardList(Board board);
+	public  List<Board> selectBoardList(Board board);
 	public Board selectBoard(Integer boardnum);
 	public int insertBoard(Board board);
 	public int updateBoard(Board board);

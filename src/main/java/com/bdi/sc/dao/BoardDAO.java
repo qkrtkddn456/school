@@ -10,4 +10,5 @@ public interface BoardDAO {
 	public int insertBoard(Board board);
 	public int updateBoard(Board board);
 	public int deleteBoard(Integer boardnum);
+	public int selectBoardCount(Board board) ;
 }

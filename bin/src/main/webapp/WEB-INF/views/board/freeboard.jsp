@@ -55,10 +55,6 @@
     font-size: 13px;
     line-height: 20px;
 }
-.mTm {
-    margin-top: 20px !important;
-}
-
 .table_style01.bor {
     border-bottom: skyblue 1px solid;
 }
@@ -155,12 +151,8 @@
 }
 a:hover {
     text-decoration: none;
-    color:white;
+    cursor: pointer;
 }
-a{
-	cursor: pointer;
-}
-
 </style>
 </head>
 <body>
@@ -211,7 +203,7 @@ a{
 
 			<a class="table_btn01" onclick="goFreeBoardList()">목록</a><a id="table_delete" onclick="goBoardDelete()"
 				class="table_btn02 pwcfB">삭제</a> <a id="table_modify"
-				class="table_btn03" onclick="goBoardUpdate()">수정</a> <a class="table_btn02">등록</a>
+				class="table_btn03" onclick="goBoardUpdate()">수정</a> <a class="table_btn02" onclick="goboardinsert()">등록</a>
 		</p>
 
 <div id="down">
@@ -242,24 +234,51 @@ a{
 	</div>
 	<script>
 	
-	/* function goBoardDelete(){
-		var conf ={
-				url : '/board',
-				method : 'DELETE',
-				success: function(res){
-					res = JSON.parse(res);
-					if(res==1){
-						alert('삭제가 완료되었습니다');
-						gofreeBoardList();	
-					}else{
-						aler('삭제에 실패하였습니다');
-					}
-				}
+	 function goBoardDelete(){
+		 var boardstudentnum = '${board.studentnum}';
+		 var userstudentnum = '${user.studentnum}';
+		 
+		 if(!ses){
+			 alert('로그인을 해주세요.');
+			 location = '/uri/user/login';
+		 }else if(boardstudentnum != userstudentnum){
+			 alert('본인의 게시물만 삭제할 수 있습니다.');
+		 }else{
+		  	if(confirm("정말 삭제하시겠습니까??") == true){    //확인
+				 var conf ={
+							url : '/board/' + ${board.boardnum},
+							method : 'DELETE',
+							success: function(res){
+								res = JSON.parse(res);
+								if(res==1){
+									alert('삭제되었습니다.');
+									goFreeBoardList();
+								}else{
+									aler('삭제에 실패하였습니다');
+								}
+							}
+						}
+				 au.send(conf);
+			}else{   //취소
+				return;
 			}
-			au.send(conf);
-	} */
+		 }
+		
+	} 
 	
 	function goBoardUpdate(){
 		
+	}
+	function goboardinsert() {
+		if(!ses){
+			alert('로그인을 해주세요!');
+			location = '/uri/user/login';
+		}else{
+			location = "/uri/board/freeboardinsert";
+		}
+	}
+	
+	function goFreeBoard(boardnum){
+		location = '/board/'+boardnum;
 	}
 	</script>
