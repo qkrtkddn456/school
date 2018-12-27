@@ -12,16 +12,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
+
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.bdi.sc.service.BoardService;
 import com.bdi.sc.vo.Board;
-import com.bdi.sc.vo.Page;
+
 
 import lombok.extern.slf4j.Slf4j;
 
-import com.bdi.sc.vo.Board;
+
 
 @Controller
 @Slf4j
@@ -34,6 +34,7 @@ public class BoardController {
 	public String selectPIList(Model model,@ModelAttribute Board board) {
 		log.info("board=>{}",board);
 		model.addAttribute("boardlist",bs.selectBoardList(board));
+		model.addAttribute("page",bs.selectPage(board));
 		return "board/freeboardlist";
 	}
 	@GetMapping(value="/board/{boardnum}")

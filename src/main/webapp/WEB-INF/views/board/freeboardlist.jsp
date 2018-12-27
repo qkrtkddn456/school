@@ -354,20 +354,26 @@ a:hover {
 		</div>
 	</div>
 	<div class="page">
-		<span><a href="" class="img"><img
-				src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_07.gif"
-				alt="처음으로"></a><a href="" class="img lfs2"><img
-				src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_09.gif"
-				alt="이전으로"></a><a href="/board?page.page=1" class="on" id="1">1</a><a href="/board?page.page=2" id="2">2</a><a
-			href="" id="3">3</a><a href="" id="4">4</a><a href="=" id="5">5</a><a href="=" id="6">6</a><a
-			href="" id="7">7</a><a href="" id="8">8</a><a href="" id="9">9</a><a href="" id="10">10</a><a
-			href="" class="img rts2"><img
-				src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_11.gif"
-				alt="다음으로"></a><a href="" class="img"><img
-				src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_13.gif"
-				alt="마지막으로"></a></span>
+		<span>
+			<a href="/board?page.page=1" class="img"><img src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_07.gif" alt="처음으로"></a>
+			<c:if test="${page.sBlock != 1}">
+			<a href="/board?page.page=${page.eBlock-page.blockCnt}" class="img lfs2"><img src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_09.gif" alt="이전으로"></a>
+			</c:if>
+			<c:forEach begin="${page.sBlock}" end = "${page.eBlock}" var="i">
+				<c:if test="${i eq page.page}">
+					<a class="on"> ${i} </a>
+				</c:if>
+				<c:if test="${i ne page.page}">
+					<a href="/board?page.page=${i}"> ${i} </a>
+				</c:if>
+			</c:forEach>
+			<c:if test="${page.eBlock <page.totalPage}">
+				<a href="/board?page.page=${page.eBlock+1}" class="img rts2"><img src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_11.gif" alt="다음으로"></a>
+			</c:if>
+			<a href="/board?page.page=${page.totalPage}" class="img"><img src="https://kcc.go.kr/kcc2016/images/sub/sub5_2_1_3_13.gif" alt="마지막으로"></a>
+		</span>
 	</div>
-	<p class="mTm txtR">
+	<p class="mTm txtR">	
 		<a class="table_btn01" onclick="goboardinsert()">등록</a>
 	</p>
 	<script>

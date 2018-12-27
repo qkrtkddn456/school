@@ -1,9 +1,9 @@
 package com.bdi.sc.service;
 
 import java.util.List;
-import java.util.Map;
 
 import com.bdi.sc.vo.Board;
+import com.bdi.sc.vo.PageInfo;
 
 public interface BoardService {
 
@@ -13,4 +13,5 @@ public interface BoardService {
 	public int updateBoard(Board board);
 	public int deleteBoard(Integer boardnum);
 	public String selectStudentName(Integer studentnum);
+	public PageInfo selectPage(Board board);
 }

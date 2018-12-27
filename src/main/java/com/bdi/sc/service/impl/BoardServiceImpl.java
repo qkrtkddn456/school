@@ -9,7 +9,8 @@ import com.bdi.sc.dao.BoardDAO;
 import com.bdi.sc.dao.StudentDAO;
 import com.bdi.sc.service.BoardService;
 import com.bdi.sc.vo.Board;
-import com.bdi.sc.vo.Page;
+
+import com.bdi.sc.vo.PageInfo;
 
 @Service
 public class BoardServiceImpl implements BoardService {
@@ -23,15 +24,26 @@ public class BoardServiceImpl implements BoardService {
 	
 	@Override 
 	public List<Board> selectBoardList(Board board) {
-		Page p = new Page();
+//		Page p = new Page();
+//		if(board.getPage() == null) {
+//			board.setPage(p);
+//			return bdao.selectBoardList(board);
+//		}
+//		p.setTotalcnt(bdao.selectBoardCount(board));
+//		p.pageCount();
 		if(board.getPage() == null) {
-			board.setPage(p);
+			PageInfo pi = new PageInfo();
+			board.setPage(pi);
 			return bdao.selectBoardList(board);
 		}
-		p.setTotalcnt(bdao.selectBoardCount(board));
-		
+		PageInfo pi = board.getPage();
+		pi.setTotalCnt(bdao.selectBoardCount(board));
+		pi.pageCount();
+		board.setPage(pi);
 		return bdao.selectBoardList(board);
 	}
+	
+	
 	
 	
 	@Override
@@ -61,5 +73,26 @@ public class BoardServiceImpl implements BoardService {
 	public int deleteBoard(Integer boardnum) {
 		return bdao.deleteBoard(boardnum);
 	}
+
+
+
+
+	@Override
+	public PageInfo selectPage(Board board) {
+		PageInfo pi = board.getPage();
+		pi.setTotalCnt(bdao.selectBoardCount(board));
+		pi.pageCount();
+		board.setPage(pi);
+		return board.getPage();
+	}
+
+
+
+
+
+
+	
+	
+	
 
 }

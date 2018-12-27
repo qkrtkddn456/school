@@ -5,10 +5,10 @@
 <mapper namespace="com.bdi.sc.BOARD">
   <select id="selectBoardList" resultType="board">
     select b.*,si.studentname as 'st.studentname' from board b, student_info si 
-	where b.studentnum = si.studentnum order by b.boardnum desc limit #{page.start},7
+	where b.studentnum = si.studentnum order by b.boardnum desc limit #{page.limitFNum},#{page.limitLNum}
   </select>
   
-  <select id="selectBoardCount" resultType="board">
+  <select id="selectBoardCount" resultType="int" parameterType="board">
     select count(1) from board b, student_info si 
 	where b.studentnum = si.studentnum
   </select>
